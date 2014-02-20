@@ -1,0 +1,212 @@
+23.6.2013
+Version 049 r156
+* new config versEEPROM, eeprom is initialized when versEEPROM changes
+* added CRC checks to EEPROM structure
+
+22.6.2013
+Version 049 r155
+RCmin and RCmax are not constrained any more, they can be set independent from each other.
+ * in Absolute Mode: RC direction can be changed by sign change of RCmin/RCmax
+ * in Relative Mode: RC direction can be changed by choosing RCgain negative. RCmin/RCmax act as angle limits
+ 
+20.6.2013
+Version 049 r153
+fixed acc initialization issues
+accMag calculation used uninitialized value
+
+15.6.2013
+Version 049 r152
+minor bug fixes
+  * accOutput=false when saved to EEPROM_readAnything
+  * PID I default value updated
+
+12.6.2013
+Version 049 r77
+* code size reduction, because some non UNO platforms have flash size issues
+  * reworked RC handling and bug fixes (thanks to micha-24 for the contribution)
+  * RC channels numbers match AOI naming now
+  * GUI help text enhancements
+  * reduced control noise, changed PID I scale (by 10)
+
+*******************************
+  Important Note for r77
+*******************************
+  ->  PID I must be divided by 10 for same result
+      e.g. instead I=60 use I=6
+
+General Note:
+  If you update from earlier versions, EEPROM parameters should be reset to their initial values.
+Use console command SD and WE
+or in blg_tools GUI "defaults" and "save to flash" 
+
+7.6.2013
+049B r69
+  * GUI updates by meister
+  * minor bug fixes
+  * updated release history and readme.txt
+	  
+3.6.2013	  
+049 r61:
+- minor bug fix: "par" command did not accept all names 
+
+2.6.2013
+049 r58:
+IMPORTANT: a known issue exist in "par" command handling (it does not accept all parameter names)
+use 049 r61 instead
+
+* RC improvements
+  - support of PPM sum signal
+  - rc channel numbers can be assigned to functions separately
+  - config for RC low pass filter
+  - config for mpu lpf
+  - config for gimbal zero positions
+* improved gyro calibration, should be more reliable now
+* p-value 16-bit overrun fixed
+* unified config parameter setting with new "par" command
+* minor fixes
+
+28.5.2013
+049 r45:
+- RC +/-45 degree glitch fixed at pitch, roll still unchanged
+- faster lock at startup
+- OAC output runs at 25Hz, is same rate as used by 046...
+- RC low pass filters have been set slower in absolute mode
+
+23.5.2013
+049 r40:
+- RC functionality has been refined, runs smoothly now
+- gyro calibration improved, still calibration is unprecise occasionally
+
+20.5.2013
+049 ALPHA r34:
+- major rework, with new IMU calculation and PID controller.
+  (the actual numbers for P,I and D have no relation to previous versions, see example screenshots in GUI dir for reference)
+- proper handling of camera facing down (pitch 90 deg).
+- sensor orientation can be configured (see new command SSO).
+
+open issues are
+- RC mode movements not smooth enough.
+- RC relative mode not functional.
+- GUI needs upgrade by meister :-)
+
+
+048 B: quite some work
+- Refactoring of code to increase maintainability
+- Auto detect of MPU address (thanks to meister)
+- complete rework of controller algorithm (Alois Hahn, Thanks!)
+  P is Proportional gain for Gyro
+  D is Damping gain for Gyro
+  I is integral gain for ACC Drift compensation and horizon stabilization
+  
+  Should be way easier to find correct parameters now
+  But beware: The numbers for P,D and I have nothing to do with numbers from previous versions
+
+- Gravity weighted Drift compensation
+- Reduced floating point operations, main control loop runs now at 1kHz (was 450 to 700Hz)
+- new gyro calibration: routine detects movements and starts over as long as the gimbal is not free of movement.
+- Switching routine for gyro axes to allow for 90deg view downwards without the gimbal going ape
+- reworked RC Control algortihm
+- modified and included meisters GUI (again: thanks to Alois Hahn)
+
+To be done: Cleanup of Serial Protocol, Cleanup of TCL GUI, still some issues when looking downward....
+
+
+
+
+047 B:
+- internal development Version, not released
+
+046 B: minor bugfixes (actually bugfixes that should have been in 045B)and improvements
+- introduce rcGain parameter to influence movement rate over rc controll
+- modified and included meisters GUI
+
+045 B: minor bugfixes and improvements, switched to Beta status
+- change PID parameters to long int, resolution is still 0.001 (to overcome the 32 limit)
+- change resolution for ACC weight to 0.0001 (for better fine tuning)
+- modified and included meisters GUI
+
+
+044 A: 
+- add choice between absolute and proportional RC positioning
+- add continious angle output for debugging/GUI purposes, toggled by serial command
+- add choice between raw ACC and DMP for Horizont stabilization
+  (DMP is experimental for now, PIDs have to be changed/lowered)
+  (Default is ACC)
+- Serial Protocol:
+WE    (Writes active config to eeprom)
+RE    (Restores values from eeprom to active config)
+TC    (transmits all config values in eeprom save order)
+SD    (Set Defaults)
+SP gyroPitchKp gyroPitchKi gyroPitchKd    (Set PID for Pitch)
+SR gyroRollKp gyroRollKi gyroRollKd    (Set PID for Roll)
+SA accelWeight    (Set Weight in accelWeight/1000)
+SF nPolesMotorPitch nPolesMotorRoll
+SE maxPWMmotorPitch maxPWMmotorRoll     (Used for Power limitiation on each motor 255=high, 1=low)
+SM dirMotorPitch dirMotorRoll motorNumberPitch motorNumberRoll
+GC    (Recalibrates the Gyro Offsets)
+TRC   (transmitts RC Config)
+SRC minRCPitch maxRCPitch minRCRoll maxRCRoll (angles -90..90)
+SCA rcAbsolute (1 = true, RC control is absolute; 0 = false, RC control is proportional)
+TCA   (Transmit RC control absolute or not)
+UAC useACC (1 = true, ACC; 0 = false, DMP)
+TAC   (Transmit ACC status)
+OAC accOutput (Toggle Angle output in ACC mode: 1 = true, 0 = false)
+ODM dmpOutput  (Toggle Angle output in DMP mode: 1 = true, 0 = false)
+HE    (This output)
+
+043 A: 
+- introduce RC Channel input :-)
+  Use A1 and A2 as PWM input pins for Pitch and Roll, DO NOT CONNECT +5V from REC-Receiver to Controller
+- add RC input config to serial protocol  
+  Type HE in terminal to see additional Protocol stuff (min max Angles per Axis)
+- start Code optimization: atan2 now runs ~2 times faster
+
+042 A: 
+- memory optimizations
+- reintroduce a way to motor power control (use fixed progmem arrays):
+PWM from 1 to 255
+
+041 A: MAJOR UPDATE!!!
+- removed "config.h", added serial protocol
+-- configurable parameters now stored in eeprom
+-- relevant parameters can be changes online now
+- Still: floating point math!!!
+-CAVEAT only 100%Power for now, was not able to finish that this weekend.
+
+040 A: Test version, not published
+
+039 A: MAJOR REWORK!!!
+- Removed usage of DMP completely
+- Relay on raw Gyro and raw ACC only! 
+Gyro is used at ~1kHz to counter movements, ACC vs set point
+is mixed into gyro signal to ensure horizontal camera (IMU) position
+- global max PWM duty cycle and Power devider per motor can be configured in config.h 
+Hint: lower torque = lower power allows for higher P on Pitch for me.
+- code cleanup, removed obsolete stuff.
+- 32kHz PWM works now for motor movement updates for up to 8 kHz. 
+( No more beeping :-), i dont care for energy loss at the moment )
+
+038 A: Test version, not published
+
+037 A:
+- NEW: Motor Power Management. Two Options: 
+  -- Fixed max Torque/Power (caveat: 
+  -- Lower Torque/Power for slower Movements -> EXPERIMENTAL (removed in 039)
+- NEW: Use DMP output for I and D Part in control loop at 100Hz (or 200Hz), use raw Gyro at 500Hz for P-Part 
+  -- Caveat: setting the sample rate to 500Hz for gyro screws up the dmp algorithm for now. 
+     Some more research required ro configure the mpu correctly.
+     Therefore sample rate for gyro is set to 200Hz as well, resulting in loss of accuracy.
+  --> Remove choice of DMP/RAW_GYRO
+- Code cleanup
+- Removed the wiring.c modificitaions, does not work as intented anyway --> back to CC_FACTOR usage
+- Moved some definitions from config.h to definitions.h, dont change them for now.
+- Switched off Gyro and Accel write to DMP-FIFO, speeding up the code by ~200us per DMP read
+
+036 A:
+- Choose between DMP and Raw Gyro Stabilisation
+  (Raw Gyro is only a tech demo implementation for now: P controller only, no setpoint)
+- Faster Motor routine using uint8_t overflow for counter. Sinus Array length therefore is fixed now to 256.
+- Raw Gyro can be filtered with low pass (change alpha below)
+- YOU HAVE TO CHANGE wiring.c, see below !!!!
+- DOES IT WORK? Well....no fo now.
+*/
