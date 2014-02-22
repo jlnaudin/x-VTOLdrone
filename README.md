@@ -9,7 +9,9 @@ about autonomous flying robots and multicopters.
 #Latest News
 * [**Gimbal Testing the RCtimer 2 axis Gimbal IMU board v1.1 with the BruGi 049 firmware**]
 (https://github.com/jlnaudin/x-VTOLdrone/wiki/Gimbal---Testing-the-RCtimer-2-axis-Gimbal-IMU-board-v1.1-with-the-BruGi-049-firmware)
-![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/BruGitest3.jpg "The RCtimer 2 axis Gimbal IMU board")
+
+**The VIDEO of gimbal test flight with the BruGi 049 firmware**: 
+[![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/BruGigimbaltest.jpg)](http://player.vimeo.com/video/87352432)
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/Gimbal/images/BruGiGimbal_JLN1.jpg "The RCtimer 2 axis Gimbal IMU board")
 
 
