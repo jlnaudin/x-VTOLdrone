@@ -20,6 +20,7 @@ about autonomous flying robots and multicopters.
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/xVTOLdrone2.jpg "The ArduCopter v3.2 in action")
 
 ***
+Visit the x-drone area: https://github.com/jlnaudin/x-drone
 
 More infos at: http://diydrones.com/profile/JeanLouisNaudin
 
