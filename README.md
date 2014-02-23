@@ -3,7 +3,7 @@ x-VTOLdrone
 
 Welcome to the VTOL (Vertical Take Off and Landing) Drone area dedicated to experimental research and development
 about autonomous flying robots and multicopters.
-![alt text](https://raw.github.com/jlnaudin/VTOLdrone/master/images/xVTOLdrone1.jpg "The ArduCopter v3.2 in action")
+![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/xVTOLdrone1.jpg "The ArduCopter v3.2 in action")
 
 **All these informations are published free in Open Source under [GNU licence] (https://github.com/jlnaudin/x-VTOLdrone/blob/master/LICENSE) for a non-commercial and a private use only**
 
@@ -17,7 +17,7 @@ about autonomous flying robots and multicopters.
 
 ***
 
-![alt text](https://raw.github.com/jlnaudin/VTOLdrone/master/images/xVTOLdrone1.jpg "The ArduCopter v3.2 in action")
+![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/xVTOLdrone2.jpg "The ArduCopter v3.2 in action")
 
 ***
 
