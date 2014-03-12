@@ -15,7 +15,7 @@
 
 // Flight modes
 // ------------
-#define YAW_HOLD                        0       // heading hold at heading in nav_yaw but allow input from pilot
+#define YAW_HOLD                        0       // heading hold at heading in control_yaw but allow input from pilot
 #define YAW_ACRO                        1       // pilot controlled yaw using rate controller
 #define YAW_LOOK_AT_NEXT_WP             2       // point towards next waypoint (no pilot input accepted)
 #define YAW_LOOK_AT_LOCATION            3       // point towards a location held in yaw_look_at_WP (no pilot input accepted)
@@ -72,6 +72,7 @@
 #define AUX_SWITCH_AUTO             16      // change to auto flight mode
 #define AUX_SWITCH_AUTOTUNE         17      // auto tune
 #define AUX_SWITCH_LAND             18      // change to LAND flight mode
+#define AUX_SWITCH_EPM              19      // Operate the EPM cargo gripper low=off, middle=neutral, high=on
 
 // values used by the ap.ch7_opt and ap.ch8_opt flags
 #define AUX_SWITCH_LOW              0       // indicates auxiliar switch is in the low position (pwm <1200)
@@ -89,28 +90,11 @@
 #define OCTA_QUAD_FRAME 7
 #define SINGLE_FRAME 8
 
-#define PLUS_FRAME 0
-#define X_FRAME 1
-#define V_FRAME 2
-
-// LED output
-#define NORMAL_LEDS 0
-#define SAVE_TRIM_LEDS 1
-
-
 // Internal defines, don't edit and expect things to work
 // -------------------------------------------------------
 
-#define TRUE 1
-#define FALSE 0
 #define ToRad(x) radians(x)	// *pi/180
 #define ToDeg(x) degrees(x)	// *180/pi
-
-#define DEBUG 0
-#define LOITER_RANGE 60 // for calculating power outside of loiter radius
-
-#define T6 1000000
-#define T7 10000000
 
 // GPS type codes - use the names, not the numbers
 #define GPS_PROTOCOL_NONE       -1
@@ -127,11 +111,6 @@
 #define HIL_MODE_DISABLED               0
 #define HIL_MODE_ATTITUDE               1
 #define HIL_MODE_SENSORS                2
-
-// Altitude status definitions
-#define REACHED_ALT                     0
-#define DESCENDING                      1
-#define ASCENDING                       2
 
 // Auto Pilot modes
 // ----------------
@@ -185,11 +164,19 @@
 #define CH6_DECLINATION                 38  // compass declination in radians
 #define CH6_CIRCLE_RATE                 39  // circle turn rate in degrees (hard coded to about 45 degrees in either direction)
 #define CH6_SONAR_GAIN                  41  // sonar gain
+#define CH6_LOIT_SPEED                  42  // maximum speed during loiter (0 to 10m/s)
 
 // Acro Trainer types
 #define ACRO_TRAINER_DISABLED   0
 #define ACRO_TRAINER_LEVELING   1
 #define ACRO_TRAINER_LIMITED    2
+
+// RC Feel roll/pitch definitions
+#define RC_FEEL_RP_VERY_SOFT        0
+#define RC_FEEL_RP_SOFT             25
+#define RC_FEEL_RP_MEDIUM           50
+#define RC_FEEL_RP_CRISP            75
+#define RC_FEEL_RP_VERY_CRISP       100
 
 // Commands - Note that APM now uses a subset of the MAVLink protocol
 // commands.  See enum MAV_CMD in the GCS_Mavlink library
@@ -197,6 +184,10 @@
                     // requested
 #define NO_COMMAND 0
 
+// Earth frame and body frame definitions used by rate controllers
+#define EARTH_FRAME         0
+#define BODY_FRAME          1
+#define BODY_EARTH_FRAME    2
 
 // Navigation modes held in nav_mode variable
 #define NAV_NONE        0
@@ -233,41 +224,6 @@
 #define LAND_STATE_FLY_TO_LOCATION  0
 #define LAND_STATE_DESCENDING       1
 
-//repeating events
-#define RELAY_TOGGLE 5
-
-//  GCS Message ID's
-/// NOTE: to ensure we never block on sending MAVLink messages
-/// please keep each MSG_ to a single MAVLink message. If need be
-/// create new MSG_ IDs for additional messages on the same
-/// stream
-enum ap_message {
-    MSG_HEARTBEAT,
-    MSG_ATTITUDE,
-    MSG_LOCATION,
-    MSG_EXTENDED_STATUS1,
-    MSG_EXTENDED_STATUS2,
-    MSG_NAV_CONTROLLER_OUTPUT,
-    MSG_CURRENT_WAYPOINT,
-    MSG_VFR_HUD,
-    MSG_RADIO_OUT,
-    MSG_RADIO_IN,
-    MSG_RAW_IMU1,
-    MSG_RAW_IMU2,
-    MSG_RAW_IMU3,
-    MSG_GPS_RAW,
-    MSG_SYSTEM_TIME,
-    MSG_SERVO_OUT,
-    MSG_NEXT_WAYPOINT,
-    MSG_NEXT_PARAM,
-    MSG_STATUSTEXT,
-    MSG_LIMITS_STATUS,
-    MSG_AHRS,
-    MSG_SIMSTATE,
-    MSG_HWSTATUS,
-    MSG_RETRY_DEFERRED // this must be last
-};
-
 //  Logging parameters
 #define TYPE_AIRSTART_MSG               0x00
 #define TYPE_GROUNDSTART_MSG            0x01
@@ -279,12 +235,11 @@ enum ap_message {
 #define LOG_CMD_MSG                     0x08
 #define LOG_CURRENT_MSG                 0x09
 #define LOG_STARTUP_MSG                 0x0A
-#define LOG_MOTORS_MSG                  0x0B
 #define LOG_OPTFLOW_MSG                 0x0C
 #define LOG_EVENT_MSG                   0x0D
-#define LOG_PID_MSG                     0x0E
+#define LOG_PID_MSG                     0x0E    // deprecated
 #define LOG_COMPASS_MSG                 0x0F
-#define LOG_INAV_MSG                    0x11
+#define LOG_INAV_MSG                    0x11    // deprecated
 #define LOG_CAMERA_MSG                  0x12
 #define LOG_ERROR_MSG                   0x13
 #define LOG_DATA_INT16_MSG              0x14
@@ -294,6 +249,7 @@ enum ap_message {
 #define LOG_DATA_FLOAT_MSG              0x18
 #define LOG_AUTOTUNE_MSG                0x19
 #define LOG_AUTOTUNEDETAILS_MSG         0x1A
+#define LOG_COMPASS2_MSG                0x1B
 #define LOG_INDEX_MSG                   0xF0
 #define MAX_NUM_LOGS                    50
 
@@ -303,15 +259,15 @@ enum ap_message {
 #define MASK_LOG_PM                     (1<<3)
 #define MASK_LOG_CTUN                   (1<<4)
 #define MASK_LOG_NTUN                   (1<<5)
-#define MASK_LOG_MODE                   (1<<6)  // not used
+#define MASK_LOG_RCIN                   (1<<6)
 #define MASK_LOG_IMU                    (1<<7)
 #define MASK_LOG_CMD                    (1<<8)
 #define MASK_LOG_CURRENT                (1<<9)
-#define MASK_LOG_MOTORS                 (1<<10)
+#define MASK_LOG_RCOUT                  (1<<10)
 #define MASK_LOG_OPTFLOW                (1<<11)
-#define MASK_LOG_PID                    (1<<12)
+#define MASK_LOG_PID                    (1<<12) // deprecated
 #define MASK_LOG_COMPASS                (1<<13)
-#define MASK_LOG_INAV                   (1<<14)
+#define MASK_LOG_INAV                   (1<<14) // deprecated
 #define MASK_LOG_CAMERA                 (1<<15)
 
 // DATA - event logging
@@ -351,55 +307,11 @@ enum ap_message {
 #define DATA_ACRO_TRAINER_DISABLED      43
 #define DATA_ACRO_TRAINER_LEVELING      44
 #define DATA_ACRO_TRAINER_LIMITED       45
+#define DATA_EPM_ON                     46
+#define DATA_EPM_OFF                    47
+#define DATA_EPM_NEUTRAL                48
 
-
-
-/* ************************************************************** */
-/* Expansion PIN's that people can use for various things. */
-
-// AN0 - 7 are located at edge of IMU PCB "above" pressure sensor and
-// Expansion port
-// AN0 - 5 are also located next to voltage dividers and sliding SW2 switch
-// AN0 - 3 has 10kOhm resistor in serial, include 3.9kOhm to make it as
-// voltage divider
-// AN4 - 5 are direct GPIO pins from atmega1280 and they are the latest pins
-// next to SW2 switch
-// Look more ArduCopter Wiki for voltage dividers and other ports
-#define AN0  54  // resistor, vdiv use, divider 1 closest to relay
-#define AN1  55  // resistor, vdiv use, divider 2
-#define AN2  56  // resistor, vdiv use, divider 3
-#define AN3  57  // resistor, vdiv use, divider 4 closest to SW2
-#define AN4  58  // direct GPIO pin, default as analog input, next to SW2
-                 // switch
-#define AN5  59  // direct GPIO pin, default as analog input, next to SW2
-                 // switch
-#define AN6  60  // direct GPIO pin, default as analog input, close to
-                 // Pressure sensor, Expansion Ports
-#define AN7  61  // direct GPIO pin, default as analog input, close to
-                 // Pressure sensor, Expansion Ports
-
-// AN8 - 15 are located at edge of IMU PCB "above" pressure sensor and
-// Expansion port
-// AN8 - 15 PINs are not connected anywhere, they are located as last 8 pins
-// on edge of the board above Expansion Ports
-// even pins (8,10,12,14) are at edge of board, Odd pins (9,11,13,15) are on
-// inner row
-#define AN8  62  // NC
-#define AN9  63  // NC
-#define AN10  64 // NC
-#define AN11  65 // NC
-#define AN12  66 // NC
-#define AN13  67 // NC
-#define AN14  68 // NC
-#define AN15  69 // NC
-
-#define RELAY_APM1_PIN 47
-#define RELAY_APM2_PIN 13
-
-#define PIEZO_PIN AN5           //Last pin on the back ADC connector
-
-// RADIANS
-#define RADX100 0.000174532925f
+// Centi-degrees to radians
 #define DEGX100 5729.57795f
 
 

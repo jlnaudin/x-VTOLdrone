@@ -1,3 +1,6 @@
+#include <AP_HAL.h>
+
+#if CONFIG_HAL_BOARD == HAL_BOARD_LINUX
 
 #include "RCOutput.h"
 
@@ -14,13 +17,7 @@ uint16_t LinuxRCOutput::get_freq(uint8_t ch) {
 void LinuxRCOutput::enable_ch(uint8_t ch)
 {}
 
-void LinuxRCOutput::enable_mask(uint32_t chmask)
-{}
-
 void LinuxRCOutput::disable_ch(uint8_t ch)
-{}
-
-void LinuxRCOutput::disable_mask(uint32_t chmask)
 {}
 
 void LinuxRCOutput::write(uint8_t ch, uint16_t period_us)
@@ -36,3 +33,4 @@ uint16_t LinuxRCOutput::read(uint8_t ch) {
 void LinuxRCOutput::read(uint16_t* period_us, uint8_t len)
 {}
 
+#endif // CONFIG_HAL_BOARD

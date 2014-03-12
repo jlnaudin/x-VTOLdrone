@@ -86,20 +86,22 @@ static void process_now_command()
         do_set_home();
         break;
 
-    case MAV_CMD_DO_SET_SERVO:             // 183
-        do_set_servo();
+    case MAV_CMD_DO_SET_SERVO:
+        ServoRelayEvents.do_set_servo(command_cond_queue.p1, command_cond_queue.alt);
         break;
-
-    case MAV_CMD_DO_SET_RELAY:             // 181
-        do_set_relay();
+        
+    case MAV_CMD_DO_SET_RELAY:
+        ServoRelayEvents.do_set_relay(command_cond_queue.p1, command_cond_queue.alt);
         break;
-
-    case MAV_CMD_DO_REPEAT_SERVO:             // 184
-        do_repeat_servo();
+        
+    case MAV_CMD_DO_REPEAT_SERVO:
+        ServoRelayEvents.do_repeat_servo(command_cond_queue.p1, command_cond_queue.alt,
+                                         command_cond_queue.lat, command_cond_queue.lng);
         break;
-
-    case MAV_CMD_DO_REPEAT_RELAY:             // 182
-        do_repeat_relay();
+        
+    case MAV_CMD_DO_REPEAT_RELAY:
+        ServoRelayEvents.do_repeat_relay(command_cond_queue.p1, command_cond_queue.alt,
+                                         command_cond_queue.lat);
         break;
 
     case MAV_CMD_DO_SET_ROI:                // 201
@@ -531,7 +533,6 @@ static bool verify_nav_wp()
     // check if timer has run out
     if (((millis() - loiter_time) / 1000) >= loiter_time_max) {
         gcs_send_text_fmt(PSTR("Reached Command #%i"),command_nav_index);
-        copter_leds_nav_blink = 15;             // Cause the CopterLEDs to blink three times to indicate waypoint reached
         return true;
     }else{
         return false;
@@ -756,7 +757,7 @@ static void do_yaw()
         yaw_look_at_heading = wrap_360_cd(command_cond_queue.alt * 100);
     }else{
         // relative angle
-        yaw_look_at_heading = wrap_360_cd(nav_yaw + command_cond_queue.alt * 100);
+        yaw_look_at_heading = wrap_360_cd(control_yaw + command_cond_queue.alt * 100);
     }
 
     // get turn speed
@@ -764,7 +765,7 @@ static void do_yaw()
         // default to regular auto slew rate
         yaw_look_at_heading_slew = AUTO_YAW_SLEW_RATE;
     }else{
-        int32_t turn_rate = (wrap_180_cd(yaw_look_at_heading - nav_yaw) / 100) / command_cond_queue.lat;
+        int32_t turn_rate = (wrap_180_cd(yaw_look_at_heading - control_yaw) / 100) / command_cond_queue.lat;
         yaw_look_at_heading_slew = constrain_int32(turn_rate, 1, 360);    // deg / sec
     }
 
@@ -897,102 +898,6 @@ static void do_set_home()
         //home_is_set 	= true;
         set_home_is_set(true);
     }
-}
-
-static void do_set_servo()
-{
-    uint8_t channel_num = 0xff;
-
-    switch( command_cond_queue.p1 ) {
-        case 1:
-            channel_num = CH_1;
-            break;
-        case 2:
-            channel_num = CH_2;
-            break;
-        case 3:
-            channel_num = CH_3;
-            break;
-        case 4:
-            channel_num = CH_4;
-            break;
-        case 5:
-            channel_num = CH_5;
-            break;
-        case 6:
-            channel_num = CH_6;
-            break;
-        case 7:
-            channel_num = CH_7;
-            break;
-        case 8:
-            channel_num = CH_8;
-            break;
-        case 9:
-            // not used
-            break;
-        case 10:
-            channel_num = CH_10;
-            break;
-        case 11:
-            channel_num = CH_11;
-            break;
-    }
-
-    // send output to channel
-    if (channel_num != 0xff) {
-        hal.rcout->enable_ch(channel_num);
-        hal.rcout->write(channel_num, command_cond_queue.alt);
-    }
-}
-
-static void do_set_relay()
-{
-    if (command_cond_queue.p1 == 1) {
-        relay.on();
-    } else if (command_cond_queue.p1 == 0) {
-        relay.off();
-    }else{
-        relay.toggle();
-    }
-}
-
-static void do_repeat_servo()
-{
-    event_id = command_cond_queue.p1 - 1;
-
-    if(command_cond_queue.p1 >= CH_5 + 1 && command_cond_queue.p1 <= CH_8 + 1) {
-
-        event_timer             = 0;
-        event_value             = command_cond_queue.alt;
-        event_repeat    = command_cond_queue.lat * 2;
-        event_delay             = command_cond_queue.lng * 500.0f;         // /2 (half cycle time) * 1000 (convert to milliseconds)
-
-        switch(command_cond_queue.p1) {
-        case CH_5:
-            event_undo_value = g.rc_5.radio_trim;
-            break;
-        case CH_6:
-            event_undo_value = g.rc_6.radio_trim;
-            break;
-        case CH_7:
-            event_undo_value = g.rc_7.radio_trim;
-            break;
-        case CH_8:
-            event_undo_value = g.rc_8.radio_trim;
-            break;
-        }
-        update_events();
-    }
-}
-
-static void do_repeat_relay()
-{
-    event_id                = RELAY_TOGGLE;
-    event_timer             = 0;
-    event_delay             = command_cond_queue.lat * 500.0f;     // /2 (half cycle time) * 1000 (convert to milliseconds)
-    event_repeat    = command_cond_queue.alt * 2;
-    update_events();
 }
 
 // do_roi - starts actions required by MAV_CMD_NAV_ROI

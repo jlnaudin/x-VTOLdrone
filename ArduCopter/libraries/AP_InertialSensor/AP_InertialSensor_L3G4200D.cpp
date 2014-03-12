@@ -234,33 +234,33 @@ bool AP_InertialSensor_L3G4200D::update(void)
     if (!wait_for_sample(1000)) {
         return false;
     }
-    Vector3f accel_scale = _accel_scale.get();
+    Vector3f accel_scale = _accel_scale[0].get();
 
-    _previous_accel = _accel;
+    _previous_accel[0] = _accel[0];
 
     hal.scheduler->suspend_timer_procs();
-    _accel = _accel_filtered;
-    _gyro = _gyro_filtered;
+    _accel[0] = _accel_filtered;
+    _gyro[0] = _gyro_filtered;
     _gyro_samples_available = 0;
     hal.scheduler->resume_timer_procs();
 
     // add offsets and rotation
-    _accel.rotate(_board_orientation);
+    _accel[0].rotate(_board_orientation);
 
     // Adjust for chip scaling to get m/s/s
-    _accel *= ADXL345_ACCELEROMETER_SCALE_M_S;
+    _accel[0] *= ADXL345_ACCELEROMETER_SCALE_M_S;
 
     // Now the calibration scale factor
-    _accel.x *= accel_scale.x;
-    _accel.y *= accel_scale.y;
-    _accel.z *= accel_scale.z;
-    _accel   -= _accel_offset;
+    _accel[0].x *= accel_scale.x;
+    _accel[0].y *= accel_scale.y;
+    _accel[0].z *= accel_scale.z;
+    _accel[0]   -= _accel_offset[0];
 
-    _gyro.rotate(_board_orientation);
+    _gyro[0].rotate(_board_orientation);
 
     // Adjust for chip scaling to get radians/sec
-    _gyro *= L3G4200D_GYRO_SCALE_R_S;
-    _gyro -= _gyro_offset;
+    _gyro[0] *= L3G4200D_GYRO_SCALE_R_S;
+    _gyro[0] -= _gyro_offset[0];
 
     if (_last_filter_hz != _mpu6000_filter) {
         _set_filter_frequency(_mpu6000_filter);
@@ -344,14 +344,14 @@ void AP_InertialSensor_L3G4200D::_accumulate(void)
     i2c_sem->give();
 }
 
-bool AP_InertialSensor_L3G4200D::sample_available(void)
+bool AP_InertialSensor_L3G4200D::_sample_available(void)
 {
     return (_gyro_samples_available >= _gyro_samples_needed);
 }
 
 bool AP_InertialSensor_L3G4200D::wait_for_sample(uint16_t timeout_ms)
 {
-    if (sample_available()) {
+    if (_sample_available()) {
         _last_sample_time = hal.scheduler->micros();
         return true;
     }
@@ -359,7 +359,7 @@ bool AP_InertialSensor_L3G4200D::wait_for_sample(uint16_t timeout_ms)
     while ((hal.scheduler->millis() - start) < timeout_ms) {
         hal.scheduler->delay_microseconds(100);
         _accumulate();
-        if (sample_available()) {
+        if (_sample_available()) {
             _last_sample_time = hal.scheduler->micros();
             return true;
         }

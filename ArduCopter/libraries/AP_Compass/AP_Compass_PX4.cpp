@@ -42,38 +42,40 @@ extern const AP_HAL::HAL& hal;
 
 bool AP_Compass_PX4::init(void)
 {
-	_mag_fd = open(MAG_DEVICE_PATH, O_RDONLY);
-	if (_mag_fd < 0) {
+	_mag_fd[0] = open(MAG_DEVICE_PATH, O_RDONLY);
+	if (_mag_fd[0] < 0) {
         hal.console->printf("Unable to open " MAG_DEVICE_PATH "\n");
         return false;
 	}
 
-	/* set the driver to poll at 100Hz */
-	if (0 != ioctl(_mag_fd, SENSORIOCSPOLLRATE, 100)) {
-        hal.console->printf("Failed to setup compass poll rate\n");
-        return false;                
+	_mag_fd[1] = open(MAG_DEVICE_PATH "1", O_RDONLY);
+	if (_mag_fd[1] >= 0) {
+        _num_instances = 2;
+	} else {
+        _num_instances = 1;
     }
 
-    // average over up to 20 samples
-    if (ioctl(_mag_fd, SENSORIOCSQUEUEDEPTH, 20) != 0) {
-        hal.console->printf("Failed to setup compass queue\n");
-        return false;                
-    }
+    for (uint8_t i=0; i<_num_instances; i++) {
+        // average over up to 20 samples
+        if (ioctl(_mag_fd[i], SENSORIOCSQUEUEDEPTH, 20) != 0) {
+            hal.console->printf("Failed to setup compass queue\n");
+            return false;                
+        }
 
-    // remember if the compass is external
-	_is_external = (ioctl(_mag_fd, MAGIOCGEXTERNAL, 0) > 0);
-    if (_is_external) {
-        hal.console->printf("Using external compass\n");
+        // remember if the compass is external
+        _is_external[i] = (ioctl(_mag_fd[i], MAGIOCGEXTERNAL, 0) > 0);
+        if (_is_external[0]) {
+            hal.console->printf("Using external compass[%u]\n", (unsigned)i);
+        }
+        _count[0] = 0;
+        _sum[i].zero();
+        _healthy[i] = false;
     }
-
-    healthy = false;
-    _count = 0;
-    _sum.zero();
 
     // give the driver a chance to run, and gather one sample
     hal.scheduler->delay(40);
     accumulate();
-    if (_count == 0) {
+    if (_count[0] == 0) {
         hal.console->printf("Failed initial compass accumulate\n");        
     }
     return true;
@@ -81,72 +83,73 @@ bool AP_Compass_PX4::init(void)
 
 bool AP_Compass_PX4::read(void)
 {
-    bool was_healthy = healthy;
     // try to accumulate one more sample, so we have the latest data
     accumulate();
 
     // consider the compass healthy if we got a reading in the last 0.2s
-    healthy = (hrt_absolute_time() - _last_timestamp < 200000);
-    if (!healthy || _count == 0) {
-        if (was_healthy) {
-            hal.console->printf("Compass unhealthy deltat=%u _count=%u\n",
-                                (unsigned)(hrt_absolute_time() - _last_timestamp),
-                                (unsigned)_count);
+    for (uint8_t i=0; i<_num_instances; i++) {
+        _healthy[i] = (hrt_absolute_time() - _last_timestamp[i] < 200000);
+    }
+
+    for (uint8_t i=0; i<_num_instances; i++) {
+        _sum[i] /= _count[i];
+        _sum[i] *= 1000;
+
+        // apply default board orientation for this compass type. This is
+        // a noop on most boards
+        _sum[i].rotate(MAG_BOARD_ORIENTATION);
+
+        // override any user setting of COMPASS_EXTERNAL 
+        _external.set(_is_external[0]);
+
+        if (_is_external[i]) {
+            // add user selectable orientation
+            _sum[i].rotate((enum Rotation)_orientation.get());
+        } else {
+            // add in board orientation from AHRS
+            _sum[i].rotate(_board_orientation);
         }
-        return healthy;
+
+        _sum[i] += _offset[i].get();
+
+        // apply motor compensation
+        if (_motor_comp_type != AP_COMPASS_MOT_COMP_DISABLED && _thr_or_curr != 0.0f) {
+            _motor_offset[i] = _motor_compensation[i].get() * _thr_or_curr;
+            _sum[i] += _motor_offset[i];
+        } else {
+            _motor_offset[i].zero();
+        }
+    
+        _field[i] = _sum[i];
+    
+        _sum[i].zero();
+        _count[i] = 0;
     }
 
-    _sum /= _count;
-    _sum *= 1000;
-
-    // apply default board orientation for this compass type. This is
-    // a noop on most boards
-    _sum.rotate(MAG_BOARD_ORIENTATION);
-
-    // override any user setting of COMPASS_EXTERNAL 
-    _external.set(_is_external);
-
-    if (_external) {
-        // add user selectable orientation
-        _sum.rotate((enum Rotation)_orientation.get());
-    } else {
-        // add in board orientation from AHRS
-        _sum.rotate(_board_orientation);
-    }
-
-    _sum += _offset.get();
-
-    // apply motor compensation
-    if (_motor_comp_type != AP_COMPASS_MOT_COMP_DISABLED && _thr_or_curr != 0.0f) {
-        _motor_offset = _motor_compensation.get() * _thr_or_curr;
-        _sum += _motor_offset;
-    } else {
-        _motor_offset.x = 0;
-        _motor_offset.y = 0;
-        _motor_offset.z = 0;
-    }
+    last_update = _last_timestamp[0];
     
-    mag_x = _sum.x;
-    mag_y = _sum.y;
-    mag_z = _sum.z;
-    
-    _sum.zero();
-    _count = 0;
-
-    last_update = _last_timestamp;
-    
-    return true;
+    return _healthy[0];
 }
 
 void AP_Compass_PX4::accumulate(void)
 {
     struct mag_report mag_report;
-    while (::read(_mag_fd, &mag_report, sizeof(mag_report)) == sizeof(mag_report) &&
-           mag_report.timestamp != _last_timestamp) {
-        _sum += Vector3f(mag_report.x, mag_report.y, mag_report.z);
-        _count++;
-        _last_timestamp = mag_report.timestamp;
+    for (uint8_t i=0; i<_num_instances; i++) {
+        while (::read(_mag_fd[i], &mag_report, sizeof(mag_report)) == sizeof(mag_report) &&
+               mag_report.timestamp != _last_timestamp[i]) {
+            _sum[i] += Vector3f(mag_report.x, mag_report.y, mag_report.z);
+            _count[i]++;
+            _last_timestamp[i] = mag_report.timestamp;
+        }
     }
+}
+
+uint8_t AP_Compass_PX4::_get_primary(void) const
+{
+    for (uint8_t i=0; i<_num_instances; i++) {
+        if (_healthy[i]) return i;
+    }    
+    return 0;
 }
 
 #endif // CONFIG_HAL_BOARD

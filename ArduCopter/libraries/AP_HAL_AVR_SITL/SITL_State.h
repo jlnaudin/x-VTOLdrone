@@ -42,10 +42,11 @@ public:
     static void loop_hook(void);
     uint16_t base_port(void) const { return _base_port; }
 
-    // simulated airspeed
-    static uint16_t airspeed_pin_value;
-    static uint16_t voltage_pin_value;
-    static uint16_t current_pin_value;
+    // simulated airspeed, sonar and battery monitor
+    static uint16_t sonar_pin_value;    // pin 0
+    static uint16_t airspeed_pin_value; // pin 1
+    static uint16_t voltage_pin_value;  // pin 13
+    static uint16_t current_pin_value;  // pin 12
 
 private:
     void _parse_command_line(int argc, char * const argv[]);
@@ -89,11 +90,12 @@ private:
     static void _update_ins(float roll, 	float pitch, 	float yaw,		// Relative to earth
 			    double rollRate, 	double pitchRate,double yawRate,	// Local to plane
 			    double xAccel, 	double yAccel, 	double zAccel,		// Local to plane
-			    float airspeed);
+			    float airspeed,	float altitude);
     static void _fdm_input(void);
     static void _simulator_output(void);
     static void _apply_servo_filter(float deltat);
     static uint16_t _airspeed_sensor(float airspeed);
+    static uint16_t _ground_sonar(float altitude);
     static float _gyro_drift(void);
     static float _rand_float(void);
     static Vector3f _rand_vec3f(void);

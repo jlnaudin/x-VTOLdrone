@@ -1,5 +1,15 @@
 /// -*- tab-width: 4; Mode: C++; c-basic-offset: 4; indent-tabs-mode: nil -*-
 
+// local variables
+float roll_in_filtered;     // roll-in in filtered with RC_FEEL_RP parameter
+float pitch_in_filtered;    // pitch-in filtered with RC_FEEL_RP parameter
+
+static void reset_roll_pitch_in_filters(int16_t roll_in, int16_t pitch_in)
+{
+    roll_in_filtered = constrain_int16(roll_in, -ROLL_PITCH_INPUT_MAX, ROLL_PITCH_INPUT_MAX);
+    pitch_in_filtered = constrain_int16(pitch_in, -ROLL_PITCH_INPUT_MAX, ROLL_PITCH_INPUT_MAX);
+}
+
 // get_pilot_desired_angle - transform pilot's roll or pitch input into a desired lean angle
 // returns desired angle in centi-degrees
 static void get_pilot_desired_lean_angles(int16_t roll_in, int16_t pitch_in, int16_t &roll_out, int16_t &pitch_out)
@@ -11,10 +21,31 @@ static void get_pilot_desired_lean_angles(int16_t roll_in, int16_t pitch_in, int
     roll_in = constrain_int16(roll_in, -ROLL_PITCH_INPUT_MAX, ROLL_PITCH_INPUT_MAX);
     pitch_in = constrain_int16(pitch_in, -ROLL_PITCH_INPUT_MAX, ROLL_PITCH_INPUT_MAX);
 
-    // return immediately if no scaling required
+    // filter input for feel
+    if (g.rc_feel_rp >= RC_FEEL_RP_VERY_CRISP) {
+        // no filtering required
+        roll_in_filtered = roll_in;
+        pitch_in_filtered = pitch_in;
+    }else{
+        float filter_gain;
+        if (g.rc_feel_rp >= RC_FEEL_RP_CRISP) {
+            filter_gain = 0.5;
+        } else if(g.rc_feel_rp >= RC_FEEL_RP_MEDIUM) {
+            filter_gain = 0.3;
+        } else if(g.rc_feel_rp >= RC_FEEL_RP_SOFT) {
+            filter_gain = 0.05;
+        } else {
+            // must be RC_FEEL_RP_VERY_SOFT
+            filter_gain = 0.02;
+        }
+        roll_in_filtered = roll_in_filtered * (1.0 - filter_gain) + (float)roll_in * filter_gain;
+        pitch_in_filtered = pitch_in_filtered * (1.0 - filter_gain) + (float)pitch_in * filter_gain;
+    }
+
+    // return filtered roll if no scaling required
     if (g.angle_max == ROLL_PITCH_INPUT_MAX) {
-        roll_out = roll_in;
-        pitch_out = pitch_in;
+        roll_out = (int16_t)roll_in_filtered;
+        pitch_out = (int16_t)pitch_in_filtered;
         return;
     }
 
@@ -25,8 +56,8 @@ static void get_pilot_desired_lean_angles(int16_t roll_in, int16_t pitch_in, int
     }
 
     // convert pilot input to lean angle
-    roll_out = roll_in * _scaler;
-    pitch_out = pitch_in * _scaler;
+    roll_out = (int16_t)(roll_in_filtered * _scaler);
+    pitch_out = (int16_t)(pitch_in_filtered * _scaler);
 }
 
 static void
@@ -70,7 +101,6 @@ get_stabilize_yaw(int32_t target_angle)
 {
     int32_t target_rate;
     int32_t angle_error;
-    int32_t output = 0;
 
     // angle error
     angle_error = wrap_180_cd(target_angle - ahrs.yaw_sensor);
@@ -85,17 +115,6 @@ get_stabilize_yaw(int32_t target_angle)
 #if FRAME_CONFIG == HELI_FRAME
     if(motors.tail_type() == AP_MOTORS_HELI_TAILTYPE_SERVO_EXTGYRO) {
         g.rc_4.servo_out = constrain_int32(target_rate, -4500, 4500);
-    }
-#endif
-
-#if LOGGING_ENABLED == ENABLED
-    // log output if PID logging is on and we are tuning the yaw
-    if( g.log_bitmask & MASK_LOG_PID && g.radio_tuning == CH6_STABILIZE_YAW_KP ) {
-        pid_log_counter++;
-        if( pid_log_counter >= 10 ) {               // (update rate / desired output rate) = (100hz / 10hz) = 10
-            pid_log_counter = 0;
-            Log_Write_PID(CH6_STABILIZE_YAW_KP, angle_error, target_rate, 0, 0, output, tuning_value);
-        }
     }
 #endif
 
@@ -381,11 +400,11 @@ get_yaw_rate_stabilized_ef(int32_t stick_angle)
     int32_t target_rate = stick_angle * g.acro_yaw_p;
 
     // convert the input to the desired yaw rate
-    nav_yaw += target_rate * G_Dt;
-    nav_yaw = wrap_360_cd(nav_yaw);
+    control_yaw += target_rate * G_Dt;
+    control_yaw = wrap_360_cd(control_yaw);
 
     // calculate difference between desired heading and current heading
-    angle_error = wrap_180_cd(nav_yaw - ahrs.yaw_sensor);
+    angle_error = wrap_180_cd(control_yaw - ahrs.yaw_sensor);
 
     // limit the maximum overshoot
     angle_error	= constrain_int32(angle_error, -MAX_YAW_OVERSHOOT, MAX_YAW_OVERSHOOT);
@@ -401,8 +420,8 @@ get_yaw_rate_stabilized_ef(int32_t stick_angle)
     }
 #endif // HELI_FRAME
 
-    // update nav_yaw to be within max_angle_overshoot of our current heading
-    nav_yaw = wrap_360_cd(angle_error + ahrs.yaw_sensor);
+    // update control_yaw to be within max_angle_overshoot of our current heading
+    control_yaw = wrap_360_cd(angle_error + ahrs.yaw_sensor);
 
     // set earth frame targets for rate controller
 	set_yaw_rate_target(g.pi_stabilize_yaw.get_p(angle_error)+target_rate, EARTH_FRAME);
@@ -513,17 +532,6 @@ get_rate_roll(int32_t target_rate)
     // constrain output
     output = constrain_int32(output, -5000, 5000);
 
-#if LOGGING_ENABLED == ENABLED
-    // log output if PID logging is on and we are tuning the rate P, I or D gains
-    if( g.log_bitmask & MASK_LOG_PID && (g.radio_tuning == CH6_RATE_ROLL_PITCH_KP || g.radio_tuning == CH6_RATE_ROLL_PITCH_KI || g.radio_tuning == CH6_RATE_ROLL_PITCH_KD) ) {
-        pid_log_counter++;                          // Note: get_rate_pitch pid logging relies on this function to update pid_log_counter so if you change the line above you must change the equivalent line in get_rate_pitch
-        if( pid_log_counter >= 10 ) {               // (update rate / desired output rate) = (100hz / 10hz) = 10
-            pid_log_counter = 0;
-            Log_Write_PID(CH6_RATE_ROLL_PITCH_KP, rate_error, p, i, d, output, tuning_value);
-        }
-    }
-#endif
-
     // output control
     return output;
 }
@@ -557,15 +565,6 @@ get_rate_pitch(int32_t target_rate)
     // constrain output
     output = constrain_int32(output, -5000, 5000);
 
-#if LOGGING_ENABLED == ENABLED
-    // log output if PID logging is on and we are tuning the rate P, I or D gains
-    if( g.log_bitmask & MASK_LOG_PID && (g.radio_tuning == CH6_RATE_ROLL_PITCH_KP || g.radio_tuning == CH6_RATE_ROLL_PITCH_KI || g.radio_tuning == CH6_RATE_ROLL_PITCH_KD) ) {
-        if( pid_log_counter == 0 ) {               // relies on get_rate_roll having updated pid_log_counter
-            Log_Write_PID(CH6_RATE_ROLL_PITCH_KP+100, rate_error, p, i, d, output, tuning_value);
-        }
-    }
-#endif
-
     // output control
     return output;
 }
@@ -596,17 +595,6 @@ get_rate_yaw(int32_t target_rate)
 
     output  = p+i+d;
     output = constrain_int32(output, -4500, 4500);
-
-#if LOGGING_ENABLED == ENABLED
-    // log output if PID loggins is on and we are tuning the yaw
-    if( g.log_bitmask & MASK_LOG_PID && g.radio_tuning == CH6_YAW_RATE_KP ) {
-        pid_log_counter++;
-        if( pid_log_counter >= 10 ) {               // (update rate / desired output rate) = (100hz / 10hz) = 10
-            pid_log_counter = 0;
-            Log_Write_PID(CH6_YAW_RATE_KP, rate_error, p, i, d, output, tuning_value);
-        }
-    }
-#endif
 
     // constrain output
     return output;
@@ -645,17 +633,6 @@ get_of_roll(int32_t input_roll)
         }
         // limit amount of change and maximum angle
         of_roll = constrain_int32(new_roll, (of_roll-20), (of_roll+20));
-
- #if LOGGING_ENABLED == ENABLED
-        // log output if PID logging is on and we are tuning the rate P, I or D gains
-        if( g.log_bitmask & MASK_LOG_PID && (g.radio_tuning == CH6_OPTFLOW_KP || g.radio_tuning == CH6_OPTFLOW_KI || g.radio_tuning == CH6_OPTFLOW_KD) ) {
-            pid_log_counter++;              // Note: get_of_pitch pid logging relies on this function updating pid_log_counter so if you change the line above you must change the equivalent line in get_of_pitch
-            if( pid_log_counter >= 5 ) {    // (update rate / desired output rate) = (100hz / 10hz) = 10
-                pid_log_counter = 0;
-                Log_Write_PID(CH6_OPTFLOW_KP, tot_x_cm, p, i, d, of_roll, tuning_value);
-            }
-        }
- #endif // LOGGING_ENABLED == ENABLED
     }
 
     // limit max angle
@@ -699,15 +676,6 @@ get_of_pitch(int32_t input_pitch)
 
         // limit amount of change
         of_pitch = constrain_int32(new_pitch, (of_pitch-20), (of_pitch+20));
-
- #if LOGGING_ENABLED == ENABLED
-        // log output if PID logging is on and we are tuning the rate P, I or D gains
-        if( g.log_bitmask & MASK_LOG_PID && (g.radio_tuning == CH6_OPTFLOW_KP || g.radio_tuning == CH6_OPTFLOW_KI || g.radio_tuning == CH6_OPTFLOW_KD) ) {
-            if( pid_log_counter == 0 ) {        // relies on get_of_roll having updated the pid_log_counter
-                Log_Write_PID(CH6_OPTFLOW_KP+100, tot_y_cm, p, i, d, of_pitch, tuning_value);
-            }
-        }
- #endif // LOGGING_ENABLED == ENABLED
     }
 
     // limit max angle
@@ -732,7 +700,7 @@ static void get_circle_yaw()
     // if circle radius is zero do panorama
     if( g.circle_radius == 0 ) {
         // slew yaw towards circle angle
-        nav_yaw = get_yaw_slew(nav_yaw, ToDeg(circle_angle)*100, AUTO_YAW_SLEW_RATE);
+        control_yaw = get_yaw_slew(control_yaw, ToDeg(circle_angle)*100, AUTO_YAW_SLEW_RATE);
     }else{
         look_at_yaw_counter++;
         if( look_at_yaw_counter >= 10 ) {
@@ -740,11 +708,11 @@ static void get_circle_yaw()
             yaw_look_at_WP_bearing = pv_get_bearing_cd(inertial_nav.get_position(), yaw_look_at_WP);
         }
         // slew yaw
-        nav_yaw = get_yaw_slew(nav_yaw, yaw_look_at_WP_bearing, AUTO_YAW_SLEW_RATE);
+        control_yaw = get_yaw_slew(control_yaw, yaw_look_at_WP_bearing, AUTO_YAW_SLEW_RATE);
     }
 
     // call stabilize yaw controller
-    get_stabilize_yaw(nav_yaw);
+    get_stabilize_yaw(control_yaw);
 }
 
 // get_look_at_yaw - updates bearing to location held in look_at_yaw_WP and calls stabilize yaw controller
@@ -760,20 +728,20 @@ static void get_look_at_yaw()
     }
 
     // slew yaw and call stabilize controller
-    nav_yaw = get_yaw_slew(nav_yaw, yaw_look_at_WP_bearing, AUTO_YAW_SLEW_RATE);
-    get_stabilize_yaw(nav_yaw);
+    control_yaw = get_yaw_slew(control_yaw, yaw_look_at_WP_bearing, AUTO_YAW_SLEW_RATE);
+    get_stabilize_yaw(control_yaw);
 }
 
 static void get_look_ahead_yaw(int16_t pilot_yaw)
 {
     // Commanded Yaw to automatically look ahead.
     if (g_gps->fix && g_gps->ground_speed_cm > YAW_LOOK_AHEAD_MIN_SPEED) {
-        nav_yaw = get_yaw_slew(nav_yaw, g_gps->ground_course_cd, AUTO_YAW_SLEW_RATE);
-        get_stabilize_yaw(wrap_360_cd(nav_yaw + pilot_yaw));   // Allow pilot to "skid" around corners up to 45 degrees
+        control_yaw = get_yaw_slew(control_yaw, g_gps->ground_course_cd, AUTO_YAW_SLEW_RATE);
+        get_stabilize_yaw(wrap_360_cd(control_yaw + pilot_yaw));   // Allow pilot to "skid" around corners up to 45 degrees
     }else{
-        nav_yaw += pilot_yaw * g.acro_yaw_p * G_Dt;
-        nav_yaw = wrap_360_cd(nav_yaw);
-        get_stabilize_yaw(nav_yaw);
+        control_yaw += pilot_yaw * g.acro_yaw_p * G_Dt;
+        control_yaw = wrap_360_cd(control_yaw);
+        get_stabilize_yaw(control_yaw);
     }
 }
 
@@ -919,17 +887,6 @@ get_throttle_accel(int16_t z_target_accel)
 
     output =  constrain_float(p+i+d+g.throttle_cruise, g.throttle_min, g.throttle_max);
 
-#if LOGGING_ENABLED == ENABLED
-    // log output if PID loggins is on and we are tuning the yaw
-    if( g.log_bitmask & MASK_LOG_PID && (g.radio_tuning == CH6_THROTTLE_ACCEL_KP || g.radio_tuning == CH6_THROTTLE_ACCEL_KI || g.radio_tuning == CH6_THROTTLE_ACCEL_KD) ) {
-        pid_log_counter++;
-        if( pid_log_counter >= 10 ) {               // (update rate / desired output rate) = (50hz / 10hz) = 5hz
-            pid_log_counter = 0;
-            Log_Write_PID(CH6_THROTTLE_ACCEL_KP, z_accel_error, p, i, d, output, tuning_value);
-        }
-    }
-#endif
-
     return output;
 }
 
@@ -1059,17 +1016,6 @@ get_throttle_rate(float z_target_speed)
     output += p;
     output = constrain_int32(output, -32000, 32000);
 
-#if LOGGING_ENABLED == ENABLED
-    // log output if PID loggins is on and we are tuning the yaw
-    if( g.log_bitmask & MASK_LOG_PID && (g.radio_tuning == CH6_THROTTLE_RATE_KP || g.radio_tuning == CH6_THROTTLE_RATE_KD) ) {
-        pid_log_counter++;
-        if( pid_log_counter >= 10 ) {               // (update rate / desired output rate) = (50hz / 10hz) = 5hz
-            pid_log_counter = 0;
-            Log_Write_PID(CH6_THROTTLE_RATE_KP, z_rate_error, p, 0, 0, output, tuning_value);
-        }
-    }
-#endif
-
     // set target for accel based throttle controller
     set_throttle_accel_target(output);
 
@@ -1179,7 +1125,11 @@ get_throttle_land()
         get_throttle_rate_stabilized(-abs(g.land_speed));
 
         // disarm when the landing detector says we've landed and throttle is at min (or we're in failsafe so we have no pilot thorottle input)
+#if LAND_REQUIRE_MIN_THROTTLE_TO_DISARM == ENABLED
         if( ap.land_complete && (g.rc_3.control_in == 0 || failsafe.radio) ) {
+#else
+        if (ap.land_complete) {
+#endif
             init_disarm_motors();
         }
     }
@@ -1207,7 +1157,7 @@ static bool update_land_detector()
                 land_detector = 0;
             }
         }
-    }else{
+    }else if (g.rc_3.control_in != 0 || failsafe.radio){    // zero throttle locks land_complete as true
         // we've sensed movement up or down so reset land_detector
         land_detector = 0;
         if(ap.land_complete) {

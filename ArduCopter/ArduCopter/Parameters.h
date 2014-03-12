@@ -67,6 +67,12 @@ public:
         // relay object
         k_param_relay,
 
+        // EPM object
+        k_param_epm,
+
+        // BoardConfig object
+        k_param_BoardConfig,
+
         // Misc
         //
         k_param_log_bitmask = 20,
@@ -83,13 +89,15 @@ public:
         k_param_circle_rate,
         k_param_sonar_gain,
         k_param_ch8_option,
-        k_param_arming_check_enabled,
+        k_param_arming_check,
         k_param_sprayer,
         k_param_angle_max,
         k_param_gps_hdop_good,
         k_param_battery,
         k_param_fs_batt_mah,
-        k_param_angle_rate_max,         // 38
+        k_param_angle_rate_max,
+        k_param_rssi_range,
+        k_param_rc_feel_rp,             // 40
 
         // 65: AP_Limits Library
         k_param_limits = 65,            // deprecated - remove
@@ -134,11 +142,13 @@ public:
         // 110: Telemetry control
         //
         k_param_gcs0 = 110,
-        k_param_gcs3,
+        k_param_gcs1,
         k_param_sysid_this_mav,
         k_param_sysid_my_gcs,
-        k_param_serial3_baud,
+        k_param_serial1_baud,
         k_param_telem_delay,
+        k_param_gcs2,
+        k_param_serial2_baud,
 
         //
         // 140: Sensor parameters
@@ -160,7 +170,7 @@ public:
         k_param_sonar_type,
         k_param_super_simple = 155,
         k_param_axis_enabled = 157, // deprecated - remove with next eeprom number change
-        k_param_copter_leds_mode,
+        k_param_copter_leds_mode,   // deprecated - remove with next eeprom number change
         k_param_ahrs, // AHRS group // 159
 
         //
@@ -281,7 +291,10 @@ public:
     //
     AP_Int16        sysid_this_mav;
     AP_Int16        sysid_my_gcs;
-    AP_Int8         serial3_baud;
+    AP_Int8         serial1_baud;
+#if MAVLINK_COMM_NUM_BUFFERS > 2
+    AP_Int8         serial2_baud;
+#endif
     AP_Int8         telem_delay;
 
     AP_Int16        rtl_altitude;
@@ -303,14 +316,14 @@ public:
     AP_Int8         optflow_enabled;
     AP_Int8         super_simple;
     AP_Int16        rtl_alt_final;
-    AP_Int8         copter_leds_mode;           // Operating mode of LED
-                                                // lighting system
 
     AP_Int8         rssi_pin;
+    AP_Float        rssi_range;                 // allows to set max voltage for rssi pin such as 5.0, 3.3 etc. 
     AP_Int8         wp_yaw_behavior;            // controls how the autopilot controls yaw during missions
     AP_Int16        angle_max;                  // maximum lean angle of the copter in centi-degrees
     AP_Int32        angle_rate_max;             // maximum rotation rate in roll/pitch axis requested by angle controller used in stabilize, loiter, rtl, auto flight modes
-
+    AP_Int8         rc_feel_rp;                 // controls vehicle response to user input with 0 being extremely soft and 100 begin extremely crisp
+    
     // Waypoints
     //
     AP_Int8         command_total;
@@ -351,7 +364,7 @@ public:
     AP_Int8         frame_orientation;
     AP_Int8         ch7_option;
     AP_Int8         ch8_option;
-    AP_Int8         arming_check_enabled;
+    AP_Int8         arming_check;
 
 #if FRAME_CONFIG ==     HELI_FRAME
     // Heli
@@ -376,11 +389,12 @@ public:
     RC_Channel_aux          rc_6;
     RC_Channel_aux          rc_7;
     RC_Channel_aux          rc_8;
-    RC_Channel_aux          rc_10;
-    RC_Channel_aux          rc_11;
-
 #if CONFIG_HAL_BOARD == HAL_BOARD_PX4
     RC_Channel_aux          rc_9;
+#endif
+    RC_Channel_aux          rc_10;
+    RC_Channel_aux          rc_11;
+#if CONFIG_HAL_BOARD == HAL_BOARD_PX4
     RC_Channel_aux          rc_12;
 #endif
 

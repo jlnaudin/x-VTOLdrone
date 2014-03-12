@@ -24,6 +24,8 @@
 #include <ToshibaLED_I2C.h>
 #include <ToshibaLED_PX4.h>
 #include <ToneAlarm_PX4.h>
+#include <ExternalLED.h>
+#include <Buzzer.h>
 
 class AP_Notify
 {
@@ -40,6 +42,9 @@ public:
         uint16_t failsafe_radio     : 1;    // 1 if radio failsafe
         uint16_t failsafe_battery   : 1;    // 1 if battery failsafe
         uint16_t failsafe_gps       : 1;    // 1 if gps failsafe
+
+        // additional flags
+        uint16_t external_leds      : 1;    // 1 if external LEDs are enabled (normally only used for copter)
     };
 
     // the notify flags are static to allow direct class access
@@ -47,7 +52,7 @@ public:
     static struct notify_type flags;
 
     // initialisation
-    void init(void);
+    void init(bool enable_external_leds);
 
     /// update - allow updates of leds that cannot be updated during a timed interrupt
     void update(void);
@@ -58,6 +63,10 @@ private:
 #if CONFIG_HAL_BOARD == HAL_BOARD_PX4
     ToshibaLED_PX4 toshibaled;
     ToneAlarm_PX4 tonealarm;
+#elif CONFIG_HAL_BOARD == HAL_BOARD_APM1 || CONFIG_HAL_BOARD == HAL_BOARD_APM2 
+    ToshibaLED_I2C toshibaled;
+    ExternalLED externalled;
+    Buzzer buzzer;
 #else
     ToshibaLED_I2C toshibaled;
 #endif

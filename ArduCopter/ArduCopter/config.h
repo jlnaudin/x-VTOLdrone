@@ -69,11 +69,13 @@
  # define CONFIG_IMU_TYPE   CONFIG_IMU_SITL
  # define CONFIG_SONAR_SOURCE SONAR_SOURCE_ANALOG_PIN
  # define MAGNETOMETER ENABLED
+ # define OPTFLOW DISABLED
 #elif CONFIG_HAL_BOARD == HAL_BOARD_PX4
  # define CONFIG_IMU_TYPE   CONFIG_IMU_PX4
  # define CONFIG_BARO       AP_BARO_PX4
  # define CONFIG_SONAR_SOURCE SONAR_SOURCE_ANALOG_PIN
  # define MAGNETOMETER ENABLED
+ # define OPTFLOW DISABLED
 #elif CONFIG_HAL_BOARD == HAL_BOARD_FLYMAPLE
  # define CONFIG_IMU_TYPE CONFIG_IMU_FLYMAPLE
  # define CONFIG_BARO AP_BARO_BMP085
@@ -81,6 +83,7 @@
  # define CONFIG_ADC        DISABLED
  # define MAGNETOMETER ENABLED
  # define CONFIG_SONAR_SOURCE SONAR_SOURCE_ANALOG_PIN
+ # define OPTFLOW DISABLED
 #elif CONFIG_HAL_BOARD == HAL_BOARD_LINUX
  # define CONFIG_IMU_TYPE CONFIG_IMU_L3G4200D
  # define CONFIG_BARO AP_BARO_BMP085
@@ -88,6 +91,7 @@
  # define CONFIG_ADC        DISABLED
  # define MAGNETOMETER ENABLED
  # define CONFIG_SONAR_SOURCE SONAR_SOURCE_ANALOG_PIN
+ # define OPTFLOW DISABLED
 #endif
 
 //////////////////////////////////////////////////////////////////////////////
@@ -96,32 +100,33 @@
 #ifndef FRAME_CONFIG
  # define FRAME_CONFIG   QUAD_FRAME
 #endif
-#ifndef FRAME_ORIENTATION
- # define FRAME_ORIENTATION      X_FRAME
-#endif
 
 /////////////////////////////////////////////////////////////////////////////////
 // TradHeli defaults
 #if FRAME_CONFIG == HELI_FRAME
-  # define RC_FAST_SPEED                125
-  # define WP_YAW_BEHAVIOR_DEFAULT      WP_YAW_BEHAVIOR_LOOK_AHEAD
-  # define RATE_INTEGRATOR_LEAK_RATE    0.02f
-  # define RATE_ROLL_D                  0
-  # define RATE_PITCH_D                 0
-  # define HELI_PITCH_FF                0
-  # define HELI_ROLL_FF                 0
-  # define HELI_YAW_FF                  0  
-  # define STABILIZE_THR                THROTTLE_MANUAL_HELI
-  # define MPU6K_FILTER                 10
-  # define HELI_STAB_COLLECTIVE_MIN_DEFAULT   0
-  # define HELI_STAB_COLLECTIVE_MAX_DEFAULT   1000
-  # define THR_MIN_DEFAULT              0
+  # define RC_FAST_SPEED                        125
+  # define WP_YAW_BEHAVIOR_DEFAULT              WP_YAW_BEHAVIOR_LOOK_AHEAD
+  # define RATE_INTEGRATOR_LEAK_RATE            0.02f
+  # define RATE_ROLL_D                          0
+  # define RATE_PITCH_D                         0
+  # define HELI_PITCH_FF                        0
+  # define HELI_ROLL_FF                         0
+  # define HELI_YAW_FF                          0  
+  # define STABILIZE_THR                        THROTTLE_MANUAL_HELI
+  # define DRIFT_THR                            THROTTLE_MANUAL_HELI
+  # define MPU6K_FILTER                         10
+  # define HELI_STAB_COLLECTIVE_MIN_DEFAULT     0
+  # define HELI_STAB_COLLECTIVE_MAX_DEFAULT     1000
+  # define THR_MIN_DEFAULT                      0
+  # define AUTOTUNE                             DISABLED
+  
   # ifndef HELI_CC_COMP
     #define HELI_CC_COMP DISABLED
   #endif
   # ifndef HELI_PIRO_COMP
     #define HELI_PIRO_COMP DISABLED
   #endif
+  
 #endif
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -148,9 +153,6 @@
 #ifndef CONFIG_IMU_TYPE
  # define CONFIG_IMU_TYPE CONFIG_IMU_OILPAN
 #endif
-#ifndef MPU6K_FILTER
- # define MPU6K_FILTER MPU6K_DEFAULT_FILTER
-#endif
 
 //////////////////////////////////////////////////////////////////////////////
 // ADC Enable - used to eliminate for systems which don't have ADC.
@@ -174,59 +176,14 @@
 // LED and IO Pins
 //
 #if CONFIG_HAL_BOARD == HAL_BOARD_APM1
- # define LED_ON           HIGH
- # define LED_OFF          LOW
 #elif CONFIG_HAL_BOARD == HAL_BOARD_APM2
- # define LED_ON           LOW
- # define LED_OFF          HIGH
 #elif CONFIG_HAL_BOARD == HAL_BOARD_AVR_SITL
- # define LED_ON           LOW
- # define LED_OFF          HIGH
 #elif CONFIG_HAL_BOARD == HAL_BOARD_PX4
- # define LED_ON           LOW
- # define LED_OFF          HIGH
 #elif CONFIG_HAL_BOARD == HAL_BOARD_FLYMAPLE
- # define LED_ON           LOW
- # define LED_OFF          HIGH
 #elif CONFIG_HAL_BOARD == HAL_BOARD_LINUX
  # define LED_ON           LOW
  # define LED_OFF          HIGH
 #endif
-
-////////////////////////////////////////////////////////////////////////////////
-// CopterLEDs
-//
-
-#ifndef COPTER_LEDS
- #define COPTER_LEDS ENABLED
-#endif
-
-#define COPTER_LED_ON           HIGH
-#define COPTER_LED_OFF          LOW
-
-#if CONFIG_HAL_BOARD == HAL_BOARD_APM2
- #define COPTER_LED_1 AN4       // Motor or Aux LED
- #define COPTER_LED_2 AN5       // Motor LED or Beeper
- #define COPTER_LED_3 AN6       // Motor or GPS LED
- #define COPTER_LED_4 AN7       // Motor LED
- #define COPTER_LED_5 AN8       // Motor LED
- #define COPTER_LED_6 AN9       // Motor LED
- #define COPTER_LED_7 AN10      // Motor LED
- #define COPTER_LED_8 AN11      // Motor LED
-#elif CONFIG_HAL_BOARD == HAL_BOARD_APM1 || CONFIG_HAL_BOARD == HAL_BOARD_AVR_SITL || CONFIG_HAL_BOARD == HAL_BOARD_PX4
- #define COPTER_LED_1 AN8       // Motor or Aux LED
- #define COPTER_LED_2 AN9       // Motor LED
- #define COPTER_LED_3 AN10      // Motor or GPS LED
- #define COPTER_LED_4 AN11      // Motor LED
- #define COPTER_LED_5 AN12      // Motor LED
- #define COPTER_LED_6 AN13      // Motor LED
- #define COPTER_LED_7 AN14      // Motor LED
- #define COPTER_LED_8 AN15      // Motor LED
-#else
- // not supported yet on this board
- #undef COPTER_LEDS
-#endif
-
 
 //////////////////////////////////////////////////////////////////////////////
 // Barometer
@@ -332,8 +289,11 @@
 #ifndef SERIAL0_BAUD
  # define SERIAL0_BAUD                   115200
 #endif
-#ifndef SERIAL3_BAUD
- # define SERIAL3_BAUD                    57600
+#ifndef SERIAL1_BAUD
+ # define SERIAL1_BAUD                    57600
+#endif
+#ifndef SERIAL2_BAUD
+ # define SERIAL2_BAUD                    57600
 #endif
 
 
@@ -414,15 +374,6 @@
 #ifndef OPTFLOW                         // sets global enabled/disabled flag for optflow (as seen in CLI)
  # define OPTFLOW                       ENABLED
 #endif
-#ifndef OPTFLOW_ORIENTATION
- # define OPTFLOW_ORIENTATION    AP_OPTICALFLOW_ADNS3080_PINS_FORWARD
-#endif
-#ifndef OPTFLOW_RESOLUTION
- # define OPTFLOW_RESOLUTION     ADNS3080_RESOLUTION_1600
-#endif
-#ifndef OPTFLOW_FOV
- # define OPTFLOW_FOV                    AP_OPTICALFLOW_ADNS3080_08_FOV
-#endif
 // optical flow based loiter PI values
 #ifndef OPTFLOW_ROLL_P
  #define OPTFLOW_ROLL_P 2.5f
@@ -456,6 +407,12 @@
 //  Crop Sprayer
 #ifndef SPRAYER
  # define SPRAYER  DISABLED
+#endif
+
+//////////////////////////////////////////////////////////////////////////////
+//	EPM cargo gripper
+#ifndef EPM_ENABLED
+ # define EPM_ENABLED DISABLED
 #endif
 
 //////////////////////////////////////////////////////////////////////////////
@@ -504,6 +461,9 @@
 #ifndef LAND_DETECTOR_TRIGGER
  # define LAND_DETECTOR_TRIGGER 50    // number of 50hz iterations with near zero climb rate and low throttle that triggers landing complete.
 #endif
+#ifndef LAND_REQUIRE_MIN_THROTTLE_TO_DISARM // require pilot to reduce throttle to minimum before vehicle will disarm
+ # define LAND_REQUIRE_MIN_THROTTLE_TO_DISARM ENABLED
+#endif
 
 //////////////////////////////////////////////////////////////////////////////
 // CAMERA TRIGGER AND CONTROL
@@ -527,13 +487,6 @@
 //////////////////////////////////////////////////////////////////////////////
 // Attitude Control
 //
-
-// definitions for earth frame and body frame
-// used to specify frame to rate controllers
-#define EARTH_FRAME         0
-#define BODY_FRAME          1
-#define BODY_EARTH_FRAME    2
-
 
 // Flight mode roll, pitch, yaw, throttle and navigation definitions
 
@@ -563,6 +516,11 @@
 
 #ifndef ACRO_LEVEL_MAX_ANGLE
  # define ACRO_LEVEL_MAX_ANGLE      3000
+#endif
+
+// Drift Mode
+#ifndef DRIFT_THR
+ # define DRIFT_THR                 THROTTLE_MANUAL_TILT_COMPENSATED
 #endif
 
 // Sport Mode
@@ -982,74 +940,33 @@
  # define LOGGING_ENABLED                ENABLED
 #endif
 
-
-#ifndef LOG_ATTITUDE_FAST
- # define LOG_ATTITUDE_FAST             DISABLED
+#if CONFIG_HAL_BOARD == HAL_BOARD_APM1 || CONFIG_HAL_BOARD == HAL_BOARD_APM2 || CONFIG_HAL_BOARD == HAL_BOARD_AVR_SITL
+ // APM1 & APM2 default logging
+ # define DEFAULT_LOG_BITMASK \
+    MASK_LOG_ATTITUDE_MED | \
+    MASK_LOG_GPS | \
+    MASK_LOG_PM | \
+    MASK_LOG_CTUN | \
+    MASK_LOG_NTUN | \
+    MASK_LOG_RCIN | \
+    MASK_LOG_CMD | \
+    MASK_LOG_CURRENT
+#else
+ // PX4, Pixhawk, FlyMaple default logging
+ # define DEFAULT_LOG_BITMASK \
+    MASK_LOG_ATTITUDE_MED | \
+    MASK_LOG_GPS | \
+    MASK_LOG_PM | \
+    MASK_LOG_CTUN | \
+    MASK_LOG_NTUN | \
+    MASK_LOG_RCIN | \
+    MASK_LOG_IMU | \
+    MASK_LOG_CMD | \
+    MASK_LOG_CURRENT | \
+    MASK_LOG_RCOUT | \
+    MASK_LOG_COMPASS | \
+    MASK_LOG_CAMERA
 #endif
-#ifndef LOG_ATTITUDE_MED
- # define LOG_ATTITUDE_MED              ENABLED
-#endif
-#ifndef LOG_GPS
- # define LOG_GPS                       ENABLED
-#endif
-#ifndef LOG_PM
- # define LOG_PM                        ENABLED
-#endif
-#ifndef LOG_CTUN
- # define LOG_CTUN                      ENABLED
-#endif
-#ifndef LOG_NTUN
- # define LOG_NTUN                      ENABLED
-#endif
-#ifndef LOG_IMU
- # define LOG_IMU                       DISABLED
-#endif
-#ifndef LOG_CMD
- # define LOG_CMD                       ENABLED
-#endif
-// current
-#ifndef LOG_CURRENT
- # define LOG_CURRENT                   ENABLED
-#endif
-// quad motor PWMs
-#ifndef LOG_MOTORS
- # define LOG_MOTORS                    DISABLED
-#endif
-// optical flow
-#ifndef LOG_OPTFLOW
- # define LOG_OPTFLOW                   DISABLED
-#endif
-#ifndef LOG_PID
- # define LOG_PID                       DISABLED
-#endif
-#ifndef LOG_COMPASS
- # define LOG_COMPASS                   DISABLED
-#endif
-#ifndef LOG_INAV
- # define LOG_INAV                      DISABLED
-#endif
-#ifndef LOG_CAMERA
- # define LOG_CAMERA                    ENABLED
-#endif
-
-// calculate the default log_bitmask
-#define LOGBIT(_s)     (LOG_ ## _s ? MASK_LOG_ ## _s : 0)
-
-#define DEFAULT_LOG_BITMASK \
-    LOGBIT(ATTITUDE_FAST)   | \
-    LOGBIT(ATTITUDE_MED)    | \
-    LOGBIT(GPS)             | \
-    LOGBIT(PM)              | \
-    LOGBIT(CTUN)            | \
-    LOGBIT(NTUN)            | \
-    LOGBIT(IMU)             | \
-    LOGBIT(CMD)             | \
-    LOGBIT(CURRENT)         | \
-    LOGBIT(MOTORS)          | \
-    LOGBIT(OPTFLOW)         | \
-    LOGBIT(PID)             | \
-    LOGBIT(COMPASS)         | \
-    LOGBIT(INAV)
 
 //////////////////////////////////////////////////////////////////////////////
 // AP_Limits Defaults

@@ -53,6 +53,10 @@
 #include <math.h>
 #include <string.h>
 
+#if MATH_CHECK_INDEXES
+#include <assert.h>
+#endif
+
 template <typename T>
 class Matrix3;
 
@@ -111,6 +115,23 @@ public:
     // uniform scaling
     Vector3<T> &operator /=(const T num);
 
+    // allow a vector3 to be used as an array, 0 indexed
+    T & operator[](uint8_t i) {
+        T *_v = &x;
+#if MATH_CHECK_INDEXES
+        assert(i >= 0 && i < 3);
+#endif
+        return _v[i];
+    }
+
+    const T & operator[](uint8_t i) const {
+        const T *_v = &x;
+#if MATH_CHECK_INDEXES
+        assert(i >= 0 && i < 3);
+#endif
+        return _v[i];
+    }
+
     // dot product
     T operator *(const Vector3<T> &v) const;
 
@@ -131,6 +152,9 @@ public:
 
     // check if any elements are infinity
     bool is_inf(void) const;
+
+    // check if all elements are zero
+    bool is_zero(void) const { return x==0 && y == 0 && z == 0; }
 
     // rotate by a standard rotation
     void rotate(enum Rotation rotation);

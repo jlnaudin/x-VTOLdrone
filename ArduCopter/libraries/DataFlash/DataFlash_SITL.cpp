@@ -13,6 +13,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdint.h>
+#include <assert.h>
 #include "DataFlash.h"
 
 #define DF_PAGE_SIZE 512
@@ -24,8 +25,9 @@ static int flash_fd;
 static uint8_t buffer[2][DF_PAGE_SIZE];
 
 // Public Methods //////////////////////////////////////////////////////////////
-void DataFlash_SITL::Init(void)
+void DataFlash_SITL::Init(const struct LogStructure *structure, uint8_t num_types)
 {
+    DataFlash_Class::Init(structure, num_types);
 	if (flash_fd == 0) {
 		flash_fd = open("dataflash.bin", O_RDWR, 0777);
 		if (flash_fd == -1) {
@@ -85,12 +87,14 @@ void DataFlash_SITL::WaitReady()
 
 void DataFlash_SITL::PageToBuffer(unsigned char BufferNum, uint16_t PageAdr)
 {
-	pread(flash_fd, buffer[BufferNum], DF_PAGE_SIZE, PageAdr*DF_PAGE_SIZE);
+    assert(PageAdr>=1);
+	pread(flash_fd, buffer[BufferNum], DF_PAGE_SIZE, (PageAdr-1)*DF_PAGE_SIZE);
 }
 
 void DataFlash_SITL::BufferToPage (unsigned char BufferNum, uint16_t PageAdr, unsigned char wait)
 {
-	pwrite(flash_fd, buffer[BufferNum], DF_PAGE_SIZE, PageAdr*DF_PAGE_SIZE);
+    assert(PageAdr>=1);
+	pwrite(flash_fd, buffer[BufferNum], DF_PAGE_SIZE, (PageAdr-1)*(uint32_t)DF_PAGE_SIZE);
 }
 
 void DataFlash_SITL::BufferWrite (unsigned char BufferNum, uint16_t IntPageAdr, unsigned char Data)
@@ -102,6 +106,9 @@ void DataFlash_SITL::BlockWrite(uint8_t BufferNum, uint16_t IntPageAdr,
                                 const void *pHeader, uint8_t hdr_size,
                                 const void *pBuffer, uint16_t size)
 {
+    if (!_writes_enabled) {
+        return;
+    }
     if (hdr_size) {
         memcpy(&buffer[BufferNum][IntPageAdr],
                pHeader,
@@ -133,14 +140,16 @@ void DataFlash_SITL::PageErase (uint16_t PageAdr)
 {
 	uint8_t fill[DF_PAGE_SIZE];
 	memset(fill, 0xFF, sizeof(fill));
-	pwrite(flash_fd, fill, DF_PAGE_SIZE, PageAdr*DF_PAGE_SIZE);
+    assert(PageAdr>=1);
+	pwrite(flash_fd, fill, DF_PAGE_SIZE, (PageAdr-1)*DF_PAGE_SIZE);
 }
 
 void DataFlash_SITL::BlockErase (uint16_t BlockAdr)
 {
 	uint8_t fill[DF_PAGE_SIZE*8];
 	memset(fill, 0xFF, sizeof(fill));
-	pwrite(flash_fd, fill, DF_PAGE_SIZE*8, BlockAdr*DF_PAGE_SIZE*8);
+    assert(BlockAdr>=1);
+	pwrite(flash_fd, fill, DF_PAGE_SIZE*8, (BlockAdr-1)*DF_PAGE_SIZE*8);
 }
 
 

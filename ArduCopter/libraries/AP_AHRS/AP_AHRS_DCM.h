@@ -42,8 +42,10 @@ public:
     const Vector3f get_gyro(void) const {
         return _omega + _omega_P + _omega_yaw_P;
     }
+
+    // return rotation matrix representing rotaton from body to earth axes
     const Matrix3f &get_dcm_matrix(void) const {
-        return _dcm_matrix;
+        return _body_dcm_matrix;
     }
 
     // return the current drift correction integrator value
@@ -54,6 +56,9 @@ public:
     // Methods
     void            update(void);
     void            reset(bool recover_eulers = false);
+
+    // reset the current attitude, used on new IMU calibration
+    void reset_attitude(const float &roll, const float &pitch, const float &yaw);
 
     // dead-reckoning support
     bool get_position(struct Location &loc);
@@ -89,8 +94,11 @@ private:
     void            estimate_wind(Vector3f &velocity);
     bool            have_gps(void) const;
 
-    // primary representation of attitude
+    // primary representation of attitude of board used for all inertial calculations
     Matrix3f _dcm_matrix;
+
+    // primary representation of attitude of flight vehicle body
+    Matrix3f _body_dcm_matrix;
 
     Vector3f _omega_P;                          // accel Omega proportional correction
     Vector3f _omega_yaw_P;                      // proportional yaw correction

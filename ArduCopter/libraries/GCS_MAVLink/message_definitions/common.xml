@@ -49,6 +49,12 @@
                <entry value="14" name="MAV_AUTOPILOT_AUTOQUAD">
                     <description>AutoQuad -- http://autoquad.org</description>
                </entry>
+               <entry value="15" name="MAV_AUTOPILOT_ARMAZILA">
+                    <description>Armazila -- http://armazila.com</description>
+               </entry>
+               <entry value="16" name="MAV_AUTOPILOT_AEROB">
+                    <description>Aerob -- http://aerob.ru</description>
+               </entry>
           </enum>
           <enum name="MAV_TYPE">
                <entry value="0" name="MAV_TYPE_GENERIC">
@@ -371,6 +377,15 @@
                </entry>
                <entry value="65536" name="MAV_SYS_STATUS_SENSOR_RC_RECEIVER">
                     <description>0x10000 rc receiver</description>
+               </entry>
+               <entry value="131072" name="MAV_SYS_STATUS_SENSOR_3D_GYRO2">
+                    <description>0x20000 2nd 3D gyro</description>
+               </entry>
+               <entry value="262144" name="MAV_SYS_STATUS_SENSOR_3D_ACCEL2">
+                    <description>0x40000 2nd 3D accelerometer</description>
+               </entry>
+               <entry value="524288" name="MAV_SYS_STATUS_SENSOR_3D_MAG2">
+                    <description>0x80000 2nd 3D magnetometer</description>
                </entry>
           </enum>
           <enum name="MAV_FRAME">
@@ -741,6 +756,11 @@
                     <description>Arms / Disarms a component</description>
                     <param index="1">1 to arm, 0 to disarm</param>
                </entry>
+               <entry value="500" name="MAV_CMD_START_RX_PAIR">
+                    <description>Starts receiver pairing</description>
+                    <param index="1">0:Spektrum</param>
+                    <param index="2">0:Spektrum DSM2, 1:Spektrum DSMX</param>
+               </entry>
           </enum>
           <enum name="MAV_DATA_STREAM">
                <description>Data stream IDs. A data stream is not a fixed set of messages, but rather a
@@ -1050,7 +1070,7 @@
                <field type="int32_t" name="lon">Longitude (WGS84), in degrees * 1E7</field>
                <field type="int32_t" name="alt">Altitude (WGS84), in meters * 1000 (positive for up)</field>
                <field type="uint16_t" name="eph">GPS HDOP horizontal dilution of position in cm (m*100). If unknown, set to: UINT16_MAX</field>
-               <field type="uint16_t" name="epv">GPS VDOP horizontal dilution of position in cm (m*100). If unknown, set to: UINT16_MAX</field>
+               <field type="uint16_t" name="epv">GPS VDOP vertical dilution of position in cm (m*100). If unknown, set to: UINT16_MAX</field>
                <field type="uint16_t" name="vel">GPS ground speed (m/s * 100). If unknown, set to: UINT16_MAX</field>
                <field type="uint16_t" name="cog">Course over ground (NOT heading, but direction of movement) in degrees * 100, 0.0..359.99 degrees. If unknown, set to: UINT16_MAX</field>
                <field type="uint8_t" name="satellites_visible">Number of satellites visible. If unknown, set to 255</field>
@@ -1463,7 +1483,7 @@
                <field type="float" name="climb">Current climb rate in meters/second</field>
           </message>
           <message id="76" name="COMMAND_LONG">
-               <description>Send a command with up to four parameters to the MAV</description>
+               <description>Send a command with up to seven parameters to the MAV</description>
                <field type="uint8_t" name="target_system">System which should execute the command</field>
                <field type="uint8_t" name="target_component">Component which should execute the command, 0 for all components</field>
                <field type="uint16_t" name="command">Command ID, as defined by MAV_CMD enum.</field>
@@ -1713,7 +1733,7 @@
              <field type="int32_t" name="lon">Longitude (WGS84), in degrees * 1E7</field>
              <field type="int32_t" name="alt">Altitude (WGS84), in meters * 1000 (positive for up)</field>
              <field type="uint16_t" name="eph">GPS HDOP horizontal dilution of position in cm (m*100). If unknown, set to: 65535</field>
-             <field type="uint16_t" name="epv">GPS VDOP horizontal dilution of position in cm (m*100). If unknown, set to: 65535</field>
+             <field type="uint16_t" name="epv">GPS VDOP vertical dilution of position in cm (m*100). If unknown, set to: 65535</field>
              <field type="uint16_t" name="vel">GPS ground speed (m/s * 100). If unknown, set to: 65535</field>
              <field type="int16_t" name="vn">GPS velocity in cm/s in NORTH direction in earth-fixed NED frame</field>
              <field type="int16_t" name="ve">GPS velocity in cm/s in EAST direction in earth-fixed NED frame</field>
@@ -1751,6 +1771,59 @@
              <field type="int16_t" name="yacc">Y acceleration (mg)</field>
              <field type="int16_t" name="zacc">Z acceleration (mg)</field>
          </message>
+         <message id="116" name="SCALED_IMU2">
+           <description>The RAW IMU readings for secondary 9DOF sensor setup. This message should contain the scaled values to the described units</description>
+           <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
+           <field type="int16_t" name="xacc">X acceleration (mg)</field>
+           <field type="int16_t" name="yacc">Y acceleration (mg)</field>
+           <field type="int16_t" name="zacc">Z acceleration (mg)</field>
+           <field type="int16_t" name="xgyro">Angular speed around X axis (millirad /sec)</field>
+           <field type="int16_t" name="ygyro">Angular speed around Y axis (millirad /sec)</field>
+           <field type="int16_t" name="zgyro">Angular speed around Z axis (millirad /sec)</field>
+           <field type="int16_t" name="xmag">X Magnetic field (milli tesla)</field>
+           <field type="int16_t" name="ymag">Y Magnetic field (milli tesla)</field>
+           <field type="int16_t" name="zmag">Z Magnetic field (milli tesla)</field>
+         </message>
+         <message id="117" name="LOG_REQUEST_LIST">
+           <description>Request a list of available logs. On some systems calling this may stop on-board logging until LOG_REQUEST_END is called.</description>
+           <field type="uint8_t" name="target_system">System ID</field>
+           <field type="uint8_t" name="target_component">Component ID</field>
+           <field type="uint16_t" name="start">First log id (0 for first available)</field>
+           <field type="uint16_t" name="end">Last log id (0xffff for last available)</field>
+         </message>
+         <message id="118" name="LOG_ENTRY">
+           <description>Reply to LOG_REQUEST_LIST</description>
+           <field type="uint16_t" name="id">Log id</field>
+           <field type="uint16_t" name="num_logs">Total number of logs</field>
+           <field type="uint16_t" name="last_log_num">High log number</field>
+           <field type="uint32_t" name="time_utc">UTC timestamp of log in seconds since 1970, or 0 if not available</field>
+           <field type="uint32_t" name="size">Size of the log (may be approximate) in bytes</field>
+         </message>
+         <message id="119" name="LOG_REQUEST_DATA">
+           <description>Request a chunk of a log</description>
+           <field type="uint8_t" name="target_system">System ID</field>
+           <field type="uint8_t" name="target_component">Component ID</field>
+           <field type="uint16_t" name="id">Log id (from LOG_ENTRY reply)</field>
+           <field type="uint32_t" name="ofs">Offset into the log</field>
+           <field type="uint32_t" name="count">Number of bytes</field>
+         </message>
+         <message id="120" name="LOG_DATA">
+           <description>Reply to LOG_REQUEST_DATA</description>
+           <field type="uint16_t" name="id">Log id (from LOG_ENTRY reply)</field>
+           <field type="uint32_t" name="ofs">Offset into the log</field>
+           <field type="uint8_t" name="count">Number of bytes (zero for end of log)</field>
+           <field type="uint8_t[90]" name="data">log data</field>
+         </message>
+         <message id="121" name="LOG_ERASE">
+           <description>Erase all logs</description>
+           <field type="uint8_t" name="target_system">System ID</field>
+           <field type="uint8_t" name="target_component">Component ID</field>
+         </message>
+         <message id="122" name="LOG_REQUEST_END">
+           <description>Stop log transfer and resume normal logging</description>
+           <field type="uint8_t" name="target_system">System ID</field>
+           <field type="uint8_t" name="target_component">Component ID</field>
+         </message>
          <message id="147" name="BATTERY_STATUS">
                <description>Transmitte battery informations for a accu pack.</description>
                <field type="uint8_t" name="accu_id">Accupack ID</field>
@@ -1761,6 +1834,8 @@
                <field type="uint16_t" name="voltage_cell_5">Battery voltage of cell 5, in millivolts (1 = 1 millivolt), -1: no cell</field>
                <field type="uint16_t" name="voltage_cell_6">Battery voltage of cell 6, in millivolts (1 = 1 millivolt), -1: no cell</field>
                <field type="int16_t" name="current_battery">Battery current, in 10*milliamperes (1 = 10 milliampere), -1: autopilot does not measure the current</field>
+               <field type="int32_t" name="current_consumed">Consumed charge, in milliampere hours (1 = 1 mAh), -1: autopilot does not provide mAh consumption estimate</field>
+               <field type="int32_t" name="energy_consumed">Consumed energy, in 100*Joules (intergrated U*I*dt)  (1 = 100 Joule), -1: autopilot does not provide energy consumption estimate</field>
                <field type="int8_t" name="battery_remaining">Remaining battery energy: (0%: 0, 100%: 100), -1: autopilot does not estimate the remaining battery</field>
           </message>
           <message id="148" name="SETPOINT_8DOF">

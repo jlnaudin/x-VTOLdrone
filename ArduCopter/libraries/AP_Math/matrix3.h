@@ -125,6 +125,23 @@ public:
         return *this = *this / num;
     }
 
+    // allow a Matrix3 to be used as an array of vectors, 0 indexed
+    Vector3<T> & operator[](uint8_t i) {
+        Vector3<T> *_v = &a;
+#if MATH_CHECK_INDEXES
+        assert(i >= 0 && i < 3);
+#endif
+        return _v[i];
+    }
+
+    const Vector3<T> & operator[](uint8_t i) const {
+        const Vector3<T> *_v = &a;
+#if MATH_CHECK_INDEXES
+        assert(i >= 0 && i < 3);
+#endif
+        return _v[i];
+    }
+
     // multiplication by a vector
     Vector3<T> operator         *(const Vector3<T> &v) const;
 
@@ -163,9 +180,9 @@ public:
     // transpose the matrix
     Matrix3<T>          transposed(void) const;
 
-    Matrix3<T>          transpose(void)
+    void transpose(void)
     {
-        return *this = transposed();
+        *this = transposed();
     }
 
     // zero the matrix
@@ -198,6 +215,10 @@ public:
     // apply an additional rotation from a body frame gyro vector
     // to a rotation matrix but only use X, Y elements from gyro vector
     void        rotateXY(const Vector3<T> &g);
+
+    // apply an additional inverse rotation to a rotation matrix but 
+    // only use X, Y elements from rotation vector
+    void        rotateXYinv(const Vector3<T> &g);
 };
 
 typedef Matrix3<int16_t>                Matrix3i;

@@ -7,7 +7,6 @@ static int8_t   setup_accel_scale       (uint8_t argc, const Menu::arg *argv);
 static int8_t   setup_compass           (uint8_t argc, const Menu::arg *argv);
 static int8_t   setup_compassmot        (uint8_t argc, const Menu::arg *argv);
 static int8_t   setup_erase             (uint8_t argc, const Menu::arg *argv);
-static int8_t   setup_frame             (uint8_t argc, const Menu::arg *argv);
 static int8_t   setup_flightmodes       (uint8_t argc, const Menu::arg *argv);
 static int8_t   setup_optflow           (uint8_t argc, const Menu::arg *argv);
 static int8_t   setup_radio             (uint8_t argc, const Menu::arg *argv);
@@ -26,7 +25,6 @@ const struct Menu::command setup_menu_commands[] PROGMEM = {
     {"compass",                     setup_compass},
     {"compassmot",                  setup_compassmot},
     {"erase",                       setup_erase},
-    {"frame",                       setup_frame},
     {"modes",                       setup_flightmodes},
     {"optflow",                     setup_optflow},
     {"radio",                       setup_radio},
@@ -183,15 +181,13 @@ setup_compassmot(uint8_t argc, const Menu::arg *argv)
     compass.read();
 
     // exit immediately if the compass is not healthy
-    if( !compass.healthy ) {
+    if( !compass.healthy() ) {
         cliSerial->print_P(PSTR("check compass\n"));
         return 0;
     }
 
     // store initial x,y,z compass values
-    compass_base.x = compass.mag_x;
-    compass_base.y = compass.mag_y;
-    compass_base.z = compass.mag_z;
+    compass_base = compass.get_field();
 
     // initialise motor compensation
     motor_compensation = Vector3f(0,0,0);
@@ -210,7 +206,7 @@ setup_compassmot(uint8_t argc, const Menu::arg *argv)
     last_run_time = millis();
 
     // main run while there is no user input and the compass is healthy
-    while(!cliSerial->available() && compass.healthy) {
+    while(!cliSerial->available() && compass.healthy()) {
 
         // 50hz loop
         if( millis() - last_run_time > 20 ) {
@@ -234,18 +230,14 @@ setup_compassmot(uint8_t argc, const Menu::arg *argv)
 
             // if throttle is zero, update base x,y,z values
             if( throttle_pct == 0.0f ) {
-                compass_base.x = compass_base.x * 0.99f + (float)compass.mag_x * 0.01f;
-                compass_base.y = compass_base.y * 0.99f + (float)compass.mag_y * 0.01f;
-                compass_base.z = compass_base.z * 0.99f + (float)compass.mag_z * 0.01f;
+                compass_base = compass_base * 0.99f + compass.get_field() * 0.01f;
 
                 // causing printing to happen as soon as throttle is lifted
                 print_counter = 49;
             }else{
 
                 // calculate diff from compass base and scale with throttle
-                motor_impact.x = compass.mag_x - compass_base.x;
-                motor_impact.y = compass.mag_y - compass_base.y;
-                motor_impact.z = compass.mag_z - compass_base.z;
+                motor_impact = compass.get_field() - compass_base;
 
                 // throttle based compensation
                 if( comp_type == AP_COMPASS_MOT_COMP_THROTTLE ) {
@@ -333,27 +325,6 @@ static int8_t
 setup_erase(uint8_t argc, const Menu::arg *argv)
 {
     zero_eeprom();
-    return 0;
-}
-
-static int8_t
-setup_frame(uint8_t argc, const Menu::arg *argv)
-{
-    if (!strcmp_P(argv[1].str, PSTR("x"))) {
-        g.frame_orientation.set_and_save(X_FRAME);
-    } else if (!strcmp_P(argv[1].str, PSTR("p"))) {
-        g.frame_orientation.set_and_save(PLUS_FRAME);
-    } else if (!strcmp_P(argv[1].str, PSTR("+"))) {
-        g.frame_orientation.set_and_save(PLUS_FRAME);
-    } else if (!strcmp_P(argv[1].str, PSTR("v"))) {
-        g.frame_orientation.set_and_save(V_FRAME);
-    }else{
-        cliSerial->printf_P(PSTR("\nOp:[x,+,v]\n"));
-        report_frame();
-        return 0;
-    }
-
-    report_frame();
     return 0;
 }
 
@@ -566,7 +537,7 @@ setup_factory(uint8_t argc, const Menu::arg *argv)
         return(-1);
 
     AP_Param::erase_all();
-    cliSerial->printf_P(PSTR("\nReboot APM"));
+    cliSerial->printf_P(PSTR("\nReboot board"));
 
     delay(1000);
 
@@ -739,15 +710,6 @@ static void report_frame()
     cliSerial->printf_P(PSTR("Octa frame\n"));
  #elif FRAME_CONFIG == HELI_FRAME
     cliSerial->printf_P(PSTR("Heli frame\n"));
- #endif
-
- #if FRAME_CONFIG != HELI_FRAME
-    if(g.frame_orientation == X_FRAME)
-        cliSerial->printf_P(PSTR("X mode\n"));
-    else if(g.frame_orientation == PLUS_FRAME)
-        cliSerial->printf_P(PSTR("+ mode\n"));
-    else if(g.frame_orientation == V_FRAME)
-        cliSerial->printf_P(PSTR("V mode\n"));
  #endif
 
     print_blanks(2);

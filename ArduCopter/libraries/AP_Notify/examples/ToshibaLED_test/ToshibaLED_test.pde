@@ -6,6 +6,10 @@
 #include <AP_Param.h>
 #include <Filter.h>
 #include <AP_ADC.h>
+#include <AP_InertialSensor.h>
+#include <AP_GPS.h>
+#include <AP_Baro.h>
+#include <DataFlash.h>
 #include <GCS_MAVLink.h>
 #include <AP_Declination.h>
 #include <AP_HAL.h>

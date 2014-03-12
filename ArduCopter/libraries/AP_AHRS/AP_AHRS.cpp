@@ -62,23 +62,26 @@ const AP_Param::GroupInfo AP_AHRS::var_info[] PROGMEM = {
 
     // @Param: TRIM_X
     // @DisplayName: AHRS Trim Roll
-    // @Description: Compensates for the roll angle difference between the control board and the frame
+    // @Description: Compensates for the roll angle difference between the control board and the frame. Positive values make the vehicle roll right.
     // @Units: Radians
-    // @Range: -10 10
-    // @User: Advanced
+    // @Range: -0.1745 +0.1745
+    // @Increment: 0.01
+    // @User: User
 
     // @Param: TRIM_Y
     // @DisplayName: AHRS Trim Pitch
-    // @Description: Compensates for the pitch angle difference between the control board and the frame
+    // @Description: Compensates for the pitch angle difference between the control board and the frame. Positive values make the vehicle pitch up/back.
     // @Units: Radians
-    // @Range: -10 10
-    // @User: Advanced
+    // @Range: -0.1745 +0.1745
+    // @Increment: 0.01
+    // @User: User
 
     // @Param: TRIM_Z
     // @DisplayName: AHRS Trim Yaw
     // @Description: Not Used
     // @Units: Radians
-    // @Range: -10 10
+    // @Range: -0.1745 +0.1745
+    // @Increment: 0.01
     // @User: Advanced
     AP_GROUPINFO("TRIM", 8, AP_AHRS, _trim, 0),
 
@@ -111,13 +114,13 @@ const AP_Param::GroupInfo AP_AHRS::var_info[] PROGMEM = {
     // @Range: 0 5
     // @Increment: 1
     // @User: Advanced
-    AP_GROUPINFO("GPS_DELAY", 12, AP_AHRS, _gps_delay, 2),
+    AP_GROUPINFO("GPS_DELAY", 12, AP_AHRS, _gps_delay, 1),
 
     AP_GROUPEND
 };
 
 // return airspeed estimate if available
-bool AP_AHRS::airspeed_estimate(float *airspeed_ret)
+bool AP_AHRS::airspeed_estimate(float *airspeed_ret) const
 {
 	if (_airspeed && _airspeed->use()) {
 		*airspeed_ret = _airspeed->get_airspeed();
