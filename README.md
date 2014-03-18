@@ -12,6 +12,8 @@ about autonomous flying robots and multicopters.
 #Latest News
 **The VIDEO of gimbal flight on the Spider quadcopter with the BruGi 049 firmware**: 
 [![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadGimbal01.jpg)](http://player.vimeo.com/video/89244740)
+* [**Tuto: The Spider quadcopter, Build & Fly**]
+(https://github.com/jlnaudin/x-VTOLdrone/wiki/Tuto:-The-Spider-quadcopter,-Build-&-Fly)
 * [**Gimbal Testing the RCtimer 2 axis Gimbal IMU board v1.1 with the BruGi 049 firmware**]
 (https://github.com/jlnaudin/x-VTOLdrone/wiki/Gimbal---Testing-the-RCtimer-2-axis-Gimbal-IMU-board-v1.1-with-the-BruGi-049-firmware)
 
