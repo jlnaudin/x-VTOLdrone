@@ -12,6 +12,7 @@ about autonomous flying robots and multicopters.
 #Latest News
 * [**PX4 F450 quadcopter built and tested in flight**]
 (https://github.com/jlnaudin/x-VTOLdrone/wiki/PX4-F450-quadcopter-built-and-tested-in-flight)
+
 **The VIDEO of gimbal flight on the Spider quadcopter with the BruGi 049 firmware**: 
 [![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadGimbal01.jpg)](http://player.vimeo.com/video/89244740)
 * [**Tuto: The Spider quadcopter, Build & Fly**]
