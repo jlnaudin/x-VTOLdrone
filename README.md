@@ -5,11 +5,13 @@ Welcome to the VTOL (Vertical Take Off and Landing) Drone area dedicated to expe
 about autonomous flying robots and multicopters.
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadX01.JPG "The Spider quad")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadX02.JPG "The Spider quad")
-![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadX05.JPG "The Spider quad")
+![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/F450PX4/F450PX4JLN03.JPG "The PX4 in the quadcopter")
 
 **All these informations are published free in Open Source under [GNU licence] (https://github.com/jlnaudin/x-VTOLdrone/blob/master/LICENSE) for a non-commercial and a private use only**
 
 #Latest News
+* [**PX4 F450 quadcopter built and tested in flight**]
+(https://github.com/jlnaudin/x-VTOLdrone/wiki/PX4-F450-quadcopter-built-and-tested-in-flight)
 **The VIDEO of gimbal flight on the Spider quadcopter with the BruGi 049 firmware**: 
 [![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadGimbal01.jpg)](http://player.vimeo.com/video/89244740)
 * [**Tuto: The Spider quadcopter, Build & Fly**]
