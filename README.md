@@ -4,7 +4,6 @@ x-VTOLdrone
 Welcome to the VTOL (Vertical Take Off and Landing) Drone area dedicated to experimental research and development
 about autonomous flying robots and multicopters.
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadX01.JPG "The Spider quad")
-![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadX02.JPG "The Spider quad")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/F450PX4/F450PX4JLN03.JPG "The PX4 in the quadcopter")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/F450PX4/F450PX4JLN11.JPG "The PX4 in the field")
 
