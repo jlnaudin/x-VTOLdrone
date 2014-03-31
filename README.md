@@ -10,6 +10,9 @@ about autonomous flying robots and multicopters.
 **All these informations are published free in Open Source under [GNU licence] (https://github.com/jlnaudin/x-VTOLdrone/blob/master/LICENSE) for a non-commercial and a private use only**
 
 #Latest News
+**Full autonomous mission with the PX4-F450 quadcopter**: 
+[![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/PX4F450automission.jpg)](http://player.vimeo.com/video/90517805)
+
 * [**PX4 F450 quadcopter built and tested in flight**]
 (https://github.com/jlnaudin/x-VTOLdrone/wiki/PX4-F450-quadcopter-built-and-tested-in-flight)
 
