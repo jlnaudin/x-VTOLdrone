@@ -10,7 +10,7 @@ about autonomous flying robots and multicopters.
 **All these informations are published free in Open Source under [GNU licence] (https://github.com/jlnaudin/x-VTOLdrone/blob/master/LICENSE) for a non-commercial and a private use only**
 
 #Latest News
-**F-450 AIOP quadcopter successfully tested in flight with the Arducopter MPNG v3.0-r4**
+**F-450 AIOP quadcopter successfully tested in flight with the Arducopter MPNG v3.0-r4:**
 
 https://github.com/jlnaudin/x-VTOLdrone/blob/master/ArduCopter%20MPNG/README.md
 
