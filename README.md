@@ -10,6 +10,9 @@ about autonomous flying robots and multicopters.
 **All these informations are published free in Open Source under [GNU licence] (https://github.com/jlnaudin/x-VTOLdrone/blob/master/LICENSE) for a non-commercial and a private use only**
 
 #Latest News
+**AIOP F450 quadcopter tested in flight with Arducopter MPNG v3.0-4**
+https://github.com/jlnaudin/x-VTOLdrone/blob/master/ArduCopter%20MPNG/README.md
+
 **Full autonomous mission with the SPIDER quad with a GoPro3 stabilized with a gimbal**: 
 [![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadAutoFlight.jpg)](http://player.vimeo.com/video/90737422)
 
