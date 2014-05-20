@@ -1,5 +1,14 @@
 # Release Notes for MegaPirateNG 3.0.1 R4 (based on ArduPilot 3.0.1)
 
+Supported boards:
+* RCTimer Crius V2
+* Crius V1 or compatible
+* HobbyKing AllInOne Pro boards
+* HobbyKing MultiWii Pro board with ITG3205 and BMA180, BMP085
+* Black Vortex
+* MultiWii PRO Ez3.0 Blacked MAG Editon Flight Controller (No compass)
+* PARIS v5 Mega iOSD
+
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/AIOParducopter301.jpg "The AIOP v1.0 connections setup")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1a.JPG "The F450")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1b.jpg "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
