@@ -5,9 +5,9 @@
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1b.jpg "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1c.jpg "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1d.jpg "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
-![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1e.jpg "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
-![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1f.jpg "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
-![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1g.jpg "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
+![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1e.JPG "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
+![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1f.JPG "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
+![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1g.JPG "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/xF450-AIOP_PID.jpg "The PID for the F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
 ## How to compile and configure MegaPirateNG
 Follow instructions at: http://docs.megapirateng.com
