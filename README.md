@@ -10,6 +10,10 @@ about autonomous flying robots and multicopters.
 **All these informations are published free in Open Source under [GNU licence] (https://github.com/jlnaudin/x-VTOLdrone/blob/master/LICENSE) for a non-commercial and a private use only**
 
 #Latest News
+
+* [**Test flight: The Cheerson CX-20 auto-pathfinder tested with arducopter v3.1.2**]
+(https://github.com/jlnaudin/x-VTOLdrone/wiki/CX-20-Auto-pathfinder-(Cheerson)-tested-with-the-APM---ArduCopter-v3.1.2---maiden-flight)
+
 **F-450 AIOP quadcopter successfully tested in flight with the Arducopter MPNG v3.0-r4:**
 
 https://github.com/jlnaudin/x-VTOLdrone/blob/master/ArduCopter%20MPNG/README.md
