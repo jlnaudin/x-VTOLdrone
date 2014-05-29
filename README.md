@@ -14,15 +14,15 @@ about autonomous flying robots and multicopters.
 * [**Test flight: The Cheerson CX-20 auto-pathfinder tested with arducopter v3.1.2**]
 (https://github.com/jlnaudin/x-VTOLdrone/wiki/CX-20-Auto-pathfinder-(Cheerson)-tested-with-the-APM---ArduCopter-v3.1.2---maiden-flight)
 
-**F-450 AIOP quadcopter successfully tested in flight with the Arducopter MPNG v3.0-r4:**
+**The VIDEO of the maiden flight with the CX-20 and filmed from the GoPro 3**: 
+[![alt text](https://raw.githubusercontent.com/jlnaudin/x-VTOLdrone/master/images/CX20/CX20jln11.jpg)](http://player.vimeo.com/video/96607810)
 
-https://github.com/jlnaudin/x-VTOLdrone/blob/master/ArduCopter%20MPNG/README.md
+* [**F-450 AIOP quadcopter successfully tested in flight with the Arducopter MPNG v3.0-r4:**]
+
+(https://github.com/jlnaudin/x-VTOLdrone/blob/master/ArduCopter%20MPNG/README.md)
 
 **Full autonomous mission with the SPIDER quad with a GoPro3 stabilized with a gimbal**: 
 [![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/SpiderQuadAutoFlight.jpg)](http://player.vimeo.com/video/90737422)
-
-**Full autonomous mission with the PX4-F450 quadcopter**: 
-[![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/images/F450PX4/PX4F450automission.jpg)](http://player.vimeo.com/video/90517805)
 
 * [**PX4 F450 quadcopter built and tested in flight**]
 (https://github.com/jlnaudin/x-VTOLdrone/wiki/PX4-F450-quadcopter-built-and-tested-in-flight)
