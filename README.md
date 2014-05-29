@@ -18,7 +18,6 @@ about autonomous flying robots and multicopters.
 [![alt text](https://raw.githubusercontent.com/jlnaudin/x-VTOLdrone/master/images/CX20/CX20jln11.jpg)](http://player.vimeo.com/video/96607810)
 
 * [**F-450 AIOP quadcopter successfully tested in flight with the Arducopter MPNG v3.0-r4:**]
-
 (https://github.com/jlnaudin/x-VTOLdrone/blob/master/ArduCopter%20MPNG/README.md)
 
 **Full autonomous mission with the SPIDER quad with a GoPro3 stabilized with a gimbal**: 
