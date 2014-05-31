@@ -17,6 +17,10 @@ about autonomous flying robots and multicopters.
 **The VIDEO of the maiden flight with the CX-20 and filmed from the GoPro 3**: 
 [![alt text](https://raw.githubusercontent.com/jlnaudin/x-VTOLdrone/master/images/CX20/CX20jln11.jpg)](http://player.vimeo.com/video/96607810)
 
+**The Cheerson CX-20 Vs the DJI Phantom in GPS Position Hold (LOITER)**: 
+[![alt text](https://raw.githubusercontent.com/jlnaudin/x-VTOLdrone/master/images/CX20/Cx20vsPhantom.jpg)](http://player.vimeo.com/video/96928699)
+
+
 * [**F-450 AIOP quadcopter successfully tested in flight with the Arducopter MPNG v3.0-r4:**]
 (https://github.com/jlnaudin/x-VTOLdrone/blob/master/ArduCopter%20MPNG/README.md)
 
