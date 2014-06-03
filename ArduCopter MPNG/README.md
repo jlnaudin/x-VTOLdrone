@@ -10,6 +10,8 @@ Supported boards:
 * PARIS v5 Mega iOSD
 
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/AIOParducopter301.jpg "The AIOP v1.0 connections setup")
+![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/AIOPublox.jpg "The Ublox GPS to the AIOP v1.0 connections setup")
+![alt text](https://
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/AIOP1setup.jpg "The AIOP v1.0 connections setup")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1a.JPG "The F450")
 ![alt text](https://raw.github.com/jlnaudin/x-VTOLdrone/master/ArduCopter%20MPNG/images/F450-AIOPv1b.jpg "The F450 with the AIOP v1.0 and AC MPNG v3.1-r4")
