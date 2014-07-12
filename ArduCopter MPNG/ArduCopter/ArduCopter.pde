@@ -1,6 +1,6 @@
 /// -*- tab-width: 4; Mode: C++; c-basic-offset: 4; indent-tabs-mode: nil -*-
 #ifndef THISFIRMWARE
-#  define THISFIRMWARE "ArduCopter-MPNG V3.0.1 R4"
+#  define THISFIRMWARE "ArduCopter-MPNG V3.0.1 R4-JLN"
 #endif
 /*
  *  ArduCopter Version 3.0
@@ -13,6 +13,9 @@
  *  modify it under the terms of the GNU Lesser General Public
  *  License as published by the Free Software Foundation; either
  *  version 2.1 of the License, or (at your option) any later version.
+ *
+ // Jean-Louis Naudin (JLN) updates: Last update : July 12, 2014
+ // 2014-07-12: Update for COPTER_LED status
  *
  *  Special Thanks for Contributors (in alphabetical order by first name):
  *

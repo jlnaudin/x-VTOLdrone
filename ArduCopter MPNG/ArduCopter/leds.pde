@@ -241,10 +241,12 @@ static void update_copter_leds(void)
 
         case GPS::NO_GPS:
             copter_leds_GPS_off();                                  //if no valid GPS signal, turn GPS LED off
+            copter_leds_MODE_off();
             break;
 
         case GPS::NO_FIX:
             copter_leds_GPS_slow_blink();                           //if GPS has valid reads, but no fix, blink GPS LED slow
+            copter_leds_MODE_off();
             break;
 
         case GPS::GPS_OK_FIX_2D:
@@ -258,9 +260,15 @@ static void update_copter_leds(void)
                     }
                 } else {
                     copter_leds_GPS_on();							//Turn GPS LEDs on when gps has valid fix AND home is set
+                    if((control_mode == AUTO) || (control_mode == RTL))
+                    { copter_leds_MODE_on();
+                    } else {
+                      copter_leds_MODE_off();
+                    }
                 }
             } else {
                 copter_leds_GPS_fast_blink();                       //if GPS has fix, but home is not set, blink GPS LED fast
+                copter_leds_MODE_off();                
             }
             break;
         }
@@ -373,7 +381,7 @@ static void copter_leds_oscillate(void) {
         if ( !(g.copter_leds_mode & COPTER_LEDS_BITMASK_GPS)) {
             digitalWrite(COPTER_LED_3, COPTER_LED_OFF);
         }
-        digitalWrite(COPTER_LED_4, COPTER_LED_OFF);
+   //     digitalWrite(COPTER_LED_4, COPTER_LED_OFF);
         digitalWrite(COPTER_LED_5, COPTER_LED_ON);
         digitalWrite(COPTER_LED_6, COPTER_LED_ON);
         digitalWrite(COPTER_LED_7, COPTER_LED_OFF);
@@ -392,7 +400,7 @@ static void copter_leds_oscillate(void) {
         if ( !(g.copter_leds_mode & COPTER_LEDS_BITMASK_GPS) ) {
             digitalWrite(COPTER_LED_3, COPTER_LED_ON);
         }
-        digitalWrite(COPTER_LED_4, COPTER_LED_ON);
+    //    digitalWrite(COPTER_LED_4, COPTER_LED_ON);
         digitalWrite(COPTER_LED_5, COPTER_LED_OFF);
         digitalWrite(COPTER_LED_6, COPTER_LED_OFF);
         digitalWrite(COPTER_LED_7, COPTER_LED_ON);
@@ -408,6 +416,14 @@ static void copter_leds_GPS_on(void) {
 
 static void copter_leds_GPS_off(void) {
     digitalWrite(COPTER_LED_3, COPTER_LED_OFF);
+}
+
+static void copter_leds_MODE_on(void) {
+    digitalWrite(COPTER_LED_4, COPTER_LED_ON);
+}
+
+static void copter_leds_MODE_off(void) {
+    digitalWrite(COPTER_LED_4, COPTER_LED_OFF);
 }
 
 static void copter_leds_GPS_slow_blink(void) {

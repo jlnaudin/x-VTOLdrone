@@ -290,8 +290,8 @@
 #elif CONFIG_HAL_BOARD == HAL_BOARD_MPNG
  #define COPTER_LED_1 AN4         // Motor or Aux LED
  #define COPTER_LED_2 AN5         // Motor LED
- #define COPTER_LED_3 AN6         // Motor or GPS LED
- #define COPTER_LED_4 AN7         // Motor LED
+ #define COPTER_LED_3 AN3   //AN6         // Motor or GPS LED
+ #define COPTER_LED_4 AN2   //AN7         // AUTO/RTL mode enabled
  #define COPTER_LED_5 -1         // Motor LED
  #define COPTER_LED_6 -1         // Motor LED
  #define COPTER_LED_7 -1        // Motor LED
