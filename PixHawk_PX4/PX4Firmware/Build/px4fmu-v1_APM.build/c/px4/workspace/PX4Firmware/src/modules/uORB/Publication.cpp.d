@@ -1,0 +1,26 @@
+Publication.cpp.o: \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/Publication.cpp \
+ c:/px4/workspace/PX4Firmware/src/include/visibility.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/Publication.hpp \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/uORB.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/nuttx-export/include/sys/types.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/nuttx-export/include/nuttx/config.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/nuttx-export/include/nuttx/compiler.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/nuttx-export/include/stdint.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/nuttx-export/include/arch/types.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/nuttx-export/include/limits.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/nuttx-export/include/arch/limits.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/nuttx-export/include/stdbool.h \
+ c:/px4/workspace/PX4Firmware/src/modules/systemlib/visibility.h \
+ c:/px4/workspace/PX4Firmware/src/include/containers/List.hpp \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_attitude.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/../uORB.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_local_position.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_global_position.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/debug_key_value.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/actuator_controls.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_global_velocity_setpoint.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_attitude_setpoint.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_rates_setpoint.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/actuator_outputs.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/encoders.h

@@ -1,0 +1,31 @@
+Subscription.cpp.o: \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/Subscription.cpp \
+ c:/px4/workspace/PX4Firmware/src/include/visibility.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/Subscription.hpp \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/uORB.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/nuttx-export/include/sys/types.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/nuttx-export/include/nuttx/config.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/nuttx-export/include/nuttx/compiler.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/nuttx-export/include/stdint.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/nuttx-export/include/arch/types.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/nuttx-export/include/limits.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/nuttx-export/include/arch/limits.h \
+ c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/nuttx-export/include/stdbool.h \
+ c:/px4/workspace/PX4Firmware/src/modules/systemlib/visibility.h \
+ c:/px4/workspace/PX4Firmware/src/include/containers/List.hpp \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/parameter_update.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/../uORB.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/actuator_controls.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_gps_position.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/sensor_combined.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_attitude.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_global_position.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/encoders.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/position_setpoint_triplet.h \
+ c:/px4/workspace/PX4Firmware/src/modules/navigator/navigator_state.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_status.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/manual_control_setpoint.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_local_position_setpoint.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_local_position.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_attitude_setpoint.h \
+ c:/px4/workspace/PX4Firmware/src/modules/uORB/topics/vehicle_rates_setpoint.h

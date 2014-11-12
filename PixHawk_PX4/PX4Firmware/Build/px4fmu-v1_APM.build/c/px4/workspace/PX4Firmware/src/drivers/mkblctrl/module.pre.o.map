@@ -1,0 +1,537 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD mkblctrl.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 mkblctrl.cpp.o
+ *(.gnu.warning)
+
+.text._ZN2MK16control_callbackEjhhRf
+                0x00000000       0x34
+ .text._ZN2MK16control_callbackEjhhRf
+                0x00000000       0x34 mkblctrl.cpp.o
+                0x00000000                MK::control_callback(unsigned int, unsigned char, unsigned char, float&)
+
+.text._ZN6device3I2C11set_addressEt
+                0x00000000       0x28
+ .text._ZN6device3I2C11set_addressEt
+                0x00000000       0x28 mkblctrl.cpp.o
+                0x00000000                device::I2C::set_address(unsigned short)
+
+.text._ZN2MK12mk_servo_armEb
+                0x00000000       0x28
+ .text._ZN2MK12mk_servo_armEb
+                0x00000000       0x28 mkblctrl.cpp.o
+                0x00000000                MK::mk_servo_arm(bool)
+
+.text._ZN2MK7scalingEfffff
+                0x00000000       0x8c
+ .text._ZN2MK7scalingEfffff
+                0x00000000       0x8c mkblctrl.cpp.o
+                0x00000000                MK::scaling(float, float, float, float, float)
+
+.text._ZN2MK26set_overrideSecurityChecksEb
+                0x00000000       0x28
+ .text._ZN2MK26set_overrideSecurityChecksEb
+                0x00000000       0x28 mkblctrl.cpp.o
+                0x00000000                MK::set_overrideSecurityChecks(bool)
+
+.text._ZN2MK14set_motor_testEb
+                0x00000000       0x28
+ .text._ZN2MK14set_motor_testEb
+                0x00000000       0x28 mkblctrl.cpp.o
+                0x00000000                MK::set_motor_test(bool)
+
+.text._ZN2MK15set_motor_countEj
+                0x00000000      0x13c
+ .text._ZN2MK15set_motor_countEj
+                0x00000000      0x13c mkblctrl.cpp.o
+                0x00000000                MK::set_motor_count(unsigned int)
+
+.text._ZN2MK13set_frametypeEi
+                0x00000000       0x24
+ .text._ZN2MK13set_frametypeEi
+                0x00000000       0x24 mkblctrl.cpp.o
+                0x00000000                MK::set_frametype(int)
+
+.text._ZN2MK11set_px4modeEi
+                0x00000000       0x24
+ .text._ZN2MK11set_px4modeEi
+                0x00000000       0x24 mkblctrl.cpp.o
+                0x00000000                MK::set_px4mode(int)
+
+.text._ZN2MK15set_update_rateEj
+                0x00000000       0x34
+ .text._ZN2MK15set_update_rateEj
+                0x00000000       0x34 mkblctrl.cpp.o
+                0x00000000                MK::set_update_rate(unsigned int)
+
+.text._ZN6device6Device4lockEv
+                0x00000000       0x2c
+ .text._ZN6device6Device4lockEv
+                0x00000000       0x2c mkblctrl.cpp.o
+                0x00000000                device::Device::lock()
+
+.text._ZN6device6Device6unlockEv
+                0x00000000       0x28
+ .text._ZN6device6Device6unlockEv
+                0x00000000       0x28 mkblctrl.cpp.o
+                0x00000000                device::Device::unlock()
+
+.text._ZN2MK13mk_servo_testEj
+                0x00000000      0x144
+ .text._ZN2MK13mk_servo_testEj
+                0x00000000      0x144 mkblctrl.cpp.o
+                0x00000000                MK::mk_servo_test(unsigned int)
+
+.text._ZN2MK18mk_servo_set_valueEjs
+                0x00000000       0x8c
+ .text._ZN2MK18mk_servo_set_valueEjs
+                0x00000000       0x8c mkblctrl.cpp.o
+                0x00000000                MK::mk_servo_set_value(unsigned int, short)
+
+.text._ZN2MK12mk_servo_setEjs
+                0x00000000      0x14c
+ .text._ZN2MK12mk_servo_setEjs
+                0x00000000      0x14c mkblctrl.cpp.o
+                0x00000000                MK::mk_servo_set(unsigned int, short)
+
+.text._ZN2MK5writeEP4filePKcj
+                0x00000000       0xa4
+ .text._ZN2MK5writeEP4filePKcj
+                0x00000000       0xa4 mkblctrl.cpp.o
+                0x00000000                MK::write(file*, char const*, unsigned int)
+
+.text._ZN2MK9pwm_ioctlEP4fileim
+                0x00000000      0x230
+ .text._ZN2MK9pwm_ioctlEP4fileim
+                0x00000000      0x230 mkblctrl.cpp.o
+                0x00000000                MK::pwm_ioctl(file*, int, unsigned long)
+
+.text._ZN2MK5ioctlEP4fileim
+                0x00000000       0x4c
+ .text._ZN2MK5ioctlEP4fileim
+                0x00000000       0x4c mkblctrl.cpp.o
+                0x00000000                MK::ioctl(file*, int, unsigned long)
+
+.text._ZN2MK19mk_check_for_blctrlEjbb
+                0x00000000      0x15c
+ .text._ZN2MK19mk_check_for_blctrlEjbb
+                0x00000000      0x15c mkblctrl.cpp.o
+                0x00000000                MK::mk_check_for_blctrl(unsigned int, bool, bool)
+
+.text._ZN12_GLOBAL__N_111mk_new_modeEiibiib
+                0x00000000       0x90
+ .text._ZN12_GLOBAL__N_111mk_new_modeEiibiib
+                0x00000000       0x90 mkblctrl.cpp.o
+
+.text._ZN2MK9task_mainEv
+                0x00000000      0x340
+ .text._ZN2MK9task_mainEv
+                0x00000000      0x340 mkblctrl.cpp.o
+                0x00000000                MK::task_main()
+
+.text._ZN2MK20task_main_trampolineEiPPc
+                0x00000000       0x1c
+ .text._ZN2MK20task_main_trampolineEiPPc
+                0x00000000       0x1c mkblctrl.cpp.o
+                0x00000000                MK::task_main_trampoline(int, char**)
+
+.text._ZN2MK4initEj
+                0x00000000       0xc8
+ .text._ZN2MK4initEj
+                0x00000000       0xc8 mkblctrl.cpp.o
+                0x00000000                MK::init(unsigned int)
+
+.text._ZN2MKD2Ev
+                0x00000000       0x6c
+ .text._ZN2MKD2Ev
+                0x00000000       0x6c mkblctrl.cpp.o
+                0x00000000                MK::~MK()
+                0x00000000                MK::~MK()
+
+.text._ZN2MKD0Ev
+                0x00000000       0x2c
+ .text._ZN2MKD0Ev
+                0x00000000       0x2c mkblctrl.cpp.o
+                0x00000000                MK::~MK()
+
+.text._ZN2MKC2EiPKc
+                0x00000000       0xa8
+ .text._ZN2MKC2EiPKc
+                0x00000000       0xa8 mkblctrl.cpp.o
+                0x00000000                MK::MK(int, char const*)
+                0x00000000                MK::MK(int, char const*)
+
+.text._ZN12_GLOBAL__N_18mk_startEjPc
+                0x00000000       0xdc
+ .text._ZN12_GLOBAL__N_18mk_startEjPc
+                0x00000000       0xdc mkblctrl.cpp.o
+
+.text.mkblctrl_main
+                0x00000000      0x268
+ .text.mkblctrl_main
+                0x00000000      0x268 mkblctrl.cpp.o
+                0x00000000                mkblctrl_main
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata._ZL17blctrlAddr_quad_x
+                0x00000000       0x20
+ .rodata._ZL17blctrlAddr_quad_x
+                0x00000000       0x20 mkblctrl.cpp.o
+
+.rodata._ZL17blctrlAddr_octo_x
+                0x00000000       0x20
+ .rodata._ZL17blctrlAddr_octo_x
+                0x00000000       0x20 mkblctrl.cpp.o
+
+.rodata.str1.1  0x00000000      0x641
+ .rodata.str1.1
+                0x00000000      0x641 mkblctrl.cpp.o
+
+.rodata._ZL20blctrlAddr_octo_plus
+                0x00000000       0x20
+ .rodata._ZL20blctrlAddr_octo_plus
+                0x00000000       0x20 mkblctrl.cpp.o
+
+.rodata._ZL20blctrlAddr_quad_plus
+                0x00000000       0x20
+ .rodata._ZL20blctrlAddr_quad_plus
+                0x00000000       0x20 mkblctrl.cpp.o
+
+.rodata._ZTV2MK
+                0x00000000       0x68
+ .rodata._ZTV2MK
+                0x00000000       0x68 mkblctrl.cpp.o
+                0x00000000                vtable for MK
+
+.rodata._ZL20blctrlAddr_hexa_plus
+                0x00000000       0x20
+ .rodata._ZL20blctrlAddr_hexa_plus
+                0x00000000       0x20 mkblctrl.cpp.o
+
+.rodata._ZL17blctrlAddr_hexa_x
+                0x00000000       0x20
+ .rodata._ZL17blctrlAddr_hexa_x
+                0x00000000       0x20 mkblctrl.cpp.o
+
+.rodata._ZL14blctrlAddr_px4
+                0x00000000       0x20
+ .rodata._ZL14blctrlAddr_px4
+                0x00000000       0x20 mkblctrl.cpp.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 mkblctrl.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 mkblctrl.cpp.o
+ *(COMMON)
+
+.bss.addrTranslator
+                0x00000000       0x20
+ .bss.addrTranslator
+                0x00000000       0x20 mkblctrl.cpp.o
+                0x00000000                addrTranslator
+
+.bss.Motor      0x00000000      0x160
+ .bss.Motor     0x00000000      0x160 mkblctrl.cpp.o
+                0x00000000                Motor
+
+.bss._ZN12_GLOBAL__N_14g_mkE
+                0x00000000        0x4
+ .bss._ZN12_GLOBAL__N_14g_mkE
+                0x00000000        0x4 mkblctrl.cpp.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x71
+ *(.comment)
+ .comment       0x00000000       0x71 mkblctrl.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 mkblctrl.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 mkblctrl.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 mkblctrl.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xf8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0xf8 mkblctrl.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x269d
+ *(.debug_info)
+ .debug_info    0x00000000     0x269d mkblctrl.cpp.o
+
+.debug_abbrev   0x00000000      0x535
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x535 mkblctrl.cpp.o
+
+.debug_line     0x00000000      0xa46
+ *(.debug_line)
+ .debug_line    0x00000000      0xa46 mkblctrl.cpp.o
+
+.debug_frame    0x00000000      0x3a4
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x3a4 mkblctrl.cpp.o
+
+.debug_str      0x00000000     0x1326
+ *(.debug_str)
+ .debug_str     0x00000000     0x1326 mkblctrl.cpp.o
+
+.debug_loc      0x00000000     0x1242
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x1242 mkblctrl.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x2f8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x2f8 mkblctrl.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 mkblctrl.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/drivers/mkblctrl/module.pre.o elf32-littlearm)

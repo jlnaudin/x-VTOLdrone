@@ -1,0 +1,1405 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD err.c.o
+LOAD hx_stream.c.o
+LOAD perf_counter.c.o
+LOAD param/param.c.o
+LOAD bson/tinybson.c.o
+LOAD conversions.c.o
+LOAD cpuload.c.o
+LOAD getopt_long.c.o
+LOAD up_cxxinitialize.c.o
+LOAD pid/pid.c.o
+LOAD systemlib.c.o
+LOAD airspeed.c.o
+LOAD system_params.c.o
+LOAD mavlink_log.c.o
+LOAD rc_check.c.o
+LOAD otp.c.o
+LOAD board_serial.c.o
+LOAD pwm_limit/pwm_limit.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 err.c.o
+ .text          0x00000000        0x0 hx_stream.c.o
+ .text          0x00000000        0x0 perf_counter.c.o
+ .text          0x00000000        0x0 param/param.c.o
+ .text          0x00000000        0x0 bson/tinybson.c.o
+ .text          0x00000000        0x0 conversions.c.o
+ .text          0x00000000        0x0 cpuload.c.o
+ .text          0x00000000        0x0 getopt_long.c.o
+ .text          0x00000000        0x0 up_cxxinitialize.c.o
+ .text          0x00000000        0x0 pid/pid.c.o
+ .text          0x00000000        0x0 systemlib.c.o
+ .text          0x00000000        0x0 airspeed.c.o
+ .text          0x00000000        0x0 system_params.c.o
+ .text          0x00000000        0x0 mavlink_log.c.o
+ .text          0x00000000        0x0 rc_check.c.o
+ .text          0x00000000        0x0 otp.c.o
+ .text          0x00000000        0x0 board_serial.c.o
+ .text          0x00000000        0x0 pwm_limit/pwm_limit.c.o
+ *(.gnu.warning)
+
+.text.getprogname
+                0x00000000       0x28
+ .text.getprogname
+                0x00000000       0x28 err.c.o
+                0x00000000                getprogname
+
+.text.warnerr_core
+                0x00000000       0x84
+ .text.warnerr_core
+                0x00000000       0x84 err.c.o
+
+.text.vwarnx    0x00000000       0x30
+ .text.vwarnx   0x00000000       0x30 err.c.o
+                0x00000000                vwarnx
+
+.text.warnx     0x00000000       0x34
+ .text.warnx    0x00000000       0x34 err.c.o
+                0x00000000                warnx
+
+.text.vwarnc    0x00000000       0x30
+ .text.vwarnc   0x00000000       0x30 err.c.o
+                0x00000000                vwarnc
+
+.text.warnc     0x00000000       0x3c
+ .text.warnc    0x00000000       0x3c err.c.o
+                0x00000000                warnc
+
+.text.vwarn     0x00000000       0x30
+ .text.vwarn    0x00000000       0x30 err.c.o
+                0x00000000                vwarn
+
+.text.warn      0x00000000       0x34
+ .text.warn     0x00000000       0x34 err.c.o
+                0x00000000                warn
+
+.text.verrx     0x00000000       0x28
+ .text.verrx    0x00000000       0x28 err.c.o
+                0x00000000                verrx
+
+.text.errx      0x00000000       0x24
+ .text.errx     0x00000000       0x24 err.c.o
+                0x00000000                errx
+
+.text.verrc     0x00000000       0x28
+ .text.verrc    0x00000000       0x28 err.c.o
+                0x00000000                verrc
+
+.text.errc      0x00000000       0x28
+ .text.errc     0x00000000       0x28 err.c.o
+                0x00000000                errc
+
+.text.verr      0x00000000       0x28
+ .text.verr     0x00000000       0x28 err.c.o
+                0x00000000                verr
+
+.text.err       0x00000000       0x24
+ .text.err      0x00000000       0x24 err.c.o
+                0x00000000                err
+
+.text.hx_stream_send_next
+                0x00000000       0x94
+ .text.hx_stream_send_next
+                0x00000000       0x94 hx_stream.c.o
+                0x00000000                hx_stream_send_next
+
+.text.hx_stream_reset
+                0x00000000       0x30
+ .text.hx_stream_reset
+                0x00000000       0x30 hx_stream.c.o
+                0x00000000                hx_stream_reset
+
+.text.hx_stream_set_counters
+                0x00000000       0x34
+ .text.hx_stream_set_counters
+                0x00000000       0x34 hx_stream.c.o
+                0x00000000                hx_stream_set_counters
+
+.text.hx_rx_frame
+                0x00000000       0x7c
+ .text.hx_rx_frame
+                0x00000000       0x7c hx_stream.c.o
+
+.text.hx_stream_start
+                0x00000000       0x44
+ .text.hx_stream_start
+                0x00000000       0x44 hx_stream.c.o
+                0x00000000                hx_stream_start
+
+.text.hx_tx_raw
+                0x00000000       0x38
+ .text.hx_tx_raw
+                0x00000000       0x38 hx_stream.c.o
+
+.text.hx_stream_send
+                0x00000000       0x5c
+ .text.hx_stream_send
+                0x00000000       0x5c hx_stream.c.o
+                0x00000000                hx_stream_send
+
+.text.hx_stream_free
+                0x00000000       0x38
+ .text.hx_stream_free
+                0x00000000       0x38 hx_stream.c.o
+                0x00000000                hx_stream_free
+
+.text.hx_stream_init
+                0x00000000       0x40
+ .text.hx_stream_init
+                0x00000000       0x40 hx_stream.c.o
+                0x00000000                hx_stream_init
+
+.text.hx_stream_rx
+                0x00000000       0x58
+ .text.hx_stream_rx
+                0x00000000       0x58 hx_stream.c.o
+                0x00000000                hx_stream_rx
+
+.text.perf_event_count
+                0x00000000       0x38
+ .text.perf_event_count
+                0x00000000       0x38 perf_counter.c.o
+                0x00000000                perf_event_count
+
+.text.perf_reset
+                0x00000000       0x70
+ .text.perf_reset
+                0x00000000       0x70 perf_counter.c.o
+                0x00000000                perf_reset
+
+.text.perf_reset_all
+                0x00000000       0x34
+ .text.perf_reset_all
+                0x00000000       0x34 perf_counter.c.o
+                0x00000000                perf_reset_all
+
+.text.perf_print_counter
+                0x00000000       0xc0
+ .text.perf_print_counter
+                0x00000000       0xc0 perf_counter.c.o
+                0x00000000                perf_print_counter
+
+.text.perf_print_all
+                0x00000000       0x34
+ .text.perf_print_all
+                0x00000000       0x34 perf_counter.c.o
+                0x00000000                perf_print_all
+
+.text.perf_end  0x00000000       0x94
+ .text.perf_end
+                0x00000000       0x94 perf_counter.c.o
+                0x00000000                perf_end
+
+.text.perf_count
+                0x00000000       0xa8
+ .text.perf_count
+                0x00000000       0xa8 perf_counter.c.o
+                0x00000000                perf_count
+
+.text.perf_alloc
+                0x00000000       0x58
+ .text.perf_alloc
+                0x00000000       0x58 perf_counter.c.o
+                0x00000000                perf_alloc
+
+.text.perf_cancel
+                0x00000000       0x30
+ .text.perf_cancel
+                0x00000000       0x30 perf_counter.c.o
+                0x00000000                perf_cancel
+
+.text.perf_begin
+                0x00000000       0x34
+ .text.perf_begin
+                0x00000000       0x34 perf_counter.c.o
+                0x00000000                perf_begin
+
+.text.perf_free
+                0x00000000       0x34
+ .text.perf_free
+                0x00000000       0x34 perf_counter.c.o
+                0x00000000                perf_free
+
+.text.param_assert_locked
+                0x00000000       0x20
+ .text.param_assert_locked
+                0x00000000       0x20 param/param.c.o
+
+.text.param_find_changed
+                0x00000000       0x7c
+ .text.param_find_changed
+                0x00000000       0x7c param/param.c.o
+
+.text.handle_in_range
+                0x00000000       0x40
+ .text.handle_in_range
+                0x00000000       0x40 param/param.c.o
+
+.text.param_foreach
+                0x00000000       0x48
+ .text.param_foreach
+                0x00000000       0x48 param/param.c.o
+                0x00000000                param_foreach
+
+.text.param_lock
+                0x00000000       0x20
+ .text.param_lock
+                0x00000000       0x20 param/param.c.o
+
+.text.param_unlock
+                0x00000000       0x20
+ .text.param_unlock
+                0x00000000       0x20 param/param.c.o
+
+.text.param_compare_values
+                0x00000000       0x34
+ .text.param_compare_values
+                0x00000000       0x34 param/param.c.o
+
+.text.param_get_default_file
+                0x00000000       0x30
+ .text.param_get_default_file
+                0x00000000       0x30 param/param.c.o
+                0x00000000                param_get_default_file
+
+.text.param_type
+                0x00000000       0x3c
+ .text.param_type
+                0x00000000       0x3c param/param.c.o
+                0x00000000                param_type
+
+.text.param_get_value_ptr
+                0x00000000       0x58
+ .text.param_get_value_ptr
+                0x00000000       0x58 param/param.c.o
+
+.text.param_size
+                0x00000000       0x50
+ .text.param_size
+                0x00000000       0x50 param/param.c.o
+                0x00000000                param_size
+
+.text.param_value_unsaved
+                0x00000000       0x34
+ .text.param_value_unsaved
+                0x00000000       0x34 param/param.c.o
+                0x00000000                param_value_unsaved
+
+.text.param_value_is_default
+                0x00000000       0x30
+ .text.param_value_is_default
+                0x00000000       0x30 param/param.c.o
+                0x00000000                param_value_is_default
+
+.text.param_name
+                0x00000000       0x38
+ .text.param_name
+                0x00000000       0x38 param/param.c.o
+                0x00000000                param_name
+
+.text.param_get_index
+                0x00000000       0x2c
+ .text.param_get_index
+                0x00000000       0x2c param/param.c.o
+                0x00000000                param_get_index
+
+.text.param_for_index
+                0x00000000       0x40
+ .text.param_for_index
+                0x00000000       0x40 param/param.c.o
+                0x00000000                param_for_index
+
+.text.param_count
+                0x00000000       0x34
+ .text.param_count
+                0x00000000       0x34 param/param.c.o
+                0x00000000                param_count
+
+.text.param_import_internal
+                0x00000000       0x4c
+ .text.param_import_internal
+                0x00000000       0x4c param/param.c.o
+
+.text.param_import
+                0x00000000       0x2c
+ .text.param_import
+                0x00000000       0x2c param/param.c.o
+                0x00000000                param_import
+
+.text.param_get
+                0x00000000       0x4c
+ .text.param_get
+                0x00000000       0x4c param/param.c.o
+                0x00000000                param_get
+
+.text.param_notify_changes
+                0x00000000       0x48
+ .text.param_notify_changes
+                0x00000000       0x48 param/param.c.o
+
+.text.param_set_internal
+                0x00000000      0x178
+ .text.param_set_internal
+                0x00000000      0x178 param/param.c.o
+
+.text.param_set
+                0x00000000       0x30
+ .text.param_set
+                0x00000000       0x30 param/param.c.o
+                0x00000000                param_set
+
+.text.param_reset_all
+                0x00000000       0x74
+ .text.param_reset_all
+                0x00000000       0x74 param/param.c.o
+                0x00000000                param_reset_all
+
+.text.param_load
+                0x00000000       0x30
+ .text.param_load
+                0x00000000       0x30 param/param.c.o
+                0x00000000                param_load
+
+.text.param_export
+                0x00000000      0x138
+ .text.param_export
+                0x00000000      0x138 param/param.c.o
+                0x00000000                param_export
+
+.text.param_load_default
+                0x00000000       0x74
+ .text.param_load_default
+                0x00000000       0x74 param/param.c.o
+                0x00000000                param_load_default
+
+.text.param_save_default
+                0x00000000       0x60
+ .text.param_save_default
+                0x00000000       0x60 param/param.c.o
+                0x00000000                param_save_default
+
+.text.param_set_default_file
+                0x00000000       0x3c
+ .text.param_set_default_file
+                0x00000000       0x3c param/param.c.o
+                0x00000000                param_set_default_file
+
+.text.param_reset
+                0x00000000       0xa4
+ .text.param_reset
+                0x00000000       0xa4 param/param.c.o
+                0x00000000                param_reset
+
+.text.param_find
+                0x00000000       0x4c
+ .text.param_find
+                0x00000000       0x4c param/param.c.o
+                0x00000000                param_find
+
+.text.param_import_callback
+                0x00000000       0xd4
+ .text.param_import_callback
+                0x00000000       0xd4 param/param.c.o
+
+.text.bson_encoder_buf_data
+                0x00000000       0x2c
+ .text.bson_encoder_buf_data
+                0x00000000       0x2c bson/tinybson.c.o
+                0x00000000                bson_encoder_buf_data
+
+.text.bson_encoder_buf_size
+                0x00000000       0x30
+ .text.bson_encoder_buf_size
+                0x00000000       0x30 bson/tinybson.c.o
+                0x00000000                bson_encoder_buf_size
+
+.text.bson_decoder_data_pending
+                0x00000000       0x24
+ .text.bson_decoder_data_pending
+                0x00000000       0x24 bson/tinybson.c.o
+                0x00000000                bson_decoder_data_pending
+
+.text.write_x   0x00000000       0x84
+ .text.write_x  0x00000000       0x84 bson/tinybson.c.o
+
+.text.write_name
+                0x00000000       0x40
+ .text.write_name
+                0x00000000       0x40 bson/tinybson.c.o
+
+.text.write_int32
+                0x00000000       0x34
+ .text.write_int32
+                0x00000000       0x34 bson/tinybson.c.o
+
+.text.bson_encoder_init_buf
+                0x00000000       0x54
+ .text.bson_encoder_init_buf
+                0x00000000       0x54 bson/tinybson.c.o
+                0x00000000                bson_encoder_init_buf
+
+.text.bson_encoder_init_file
+                0x00000000       0x3c
+ .text.bson_encoder_init_file
+                0x00000000       0x3c bson/tinybson.c.o
+                0x00000000                bson_encoder_init_file
+
+.text.write_int8
+                0x00000000       0x34
+ .text.write_int8
+                0x00000000       0x34 bson/tinybson.c.o
+
+.text.bson_encoder_append_bool
+                0x00000000       0x50
+ .text.bson_encoder_append_bool
+                0x00000000       0x50 bson/tinybson.c.o
+                0x00000000                bson_encoder_append_bool
+
+.text.bson_encoder_append_binary
+                0x00000000       0x6c
+ .text.bson_encoder_append_binary
+                0x00000000       0x6c bson/tinybson.c.o
+                0x00000000                bson_encoder_append_binary
+
+.text.bson_encoder_append_string
+                0x00000000       0x6c
+ .text.bson_encoder_append_string
+                0x00000000       0x6c bson/tinybson.c.o
+                0x00000000                bson_encoder_append_string
+
+.text.write_double
+                0x00000000       0x34
+ .text.write_double
+                0x00000000       0x34 bson/tinybson.c.o
+
+.text.bson_encoder_append_double
+                0x00000000       0x64
+ .text.bson_encoder_append_double
+                0x00000000       0x64 bson/tinybson.c.o
+                0x00000000                bson_encoder_append_double
+
+.text.write_int64
+                0x00000000       0x34
+ .text.write_int64
+                0x00000000       0x34 bson/tinybson.c.o
+
+.text.bson_encoder_append_int
+                0x00000000       0x90
+ .text.bson_encoder_append_int
+                0x00000000       0x90 bson/tinybson.c.o
+                0x00000000                bson_encoder_append_int
+
+.text.bson_encoder_fini
+                0x00000000       0x58
+ .text.bson_encoder_fini
+                0x00000000       0x58 bson/tinybson.c.o
+                0x00000000                bson_encoder_fini
+
+.text.read_x    0x00000000       0x74
+ .text.read_x   0x00000000       0x74 bson/tinybson.c.o
+
+.text.bson_decoder_copy_data
+                0x00000000       0x40
+ .text.bson_decoder_copy_data
+                0x00000000       0x40 bson/tinybson.c.o
+                0x00000000                bson_decoder_copy_data
+
+.text.read_int64
+                0x00000000       0x30
+ .text.read_int64
+                0x00000000       0x30 bson/tinybson.c.o
+
+.text.read_double
+                0x00000000       0x30
+ .text.read_double
+                0x00000000       0x30 bson/tinybson.c.o
+
+.text.read_int32
+                0x00000000       0x30
+ .text.read_int32
+                0x00000000       0x30 bson/tinybson.c.o
+
+.text.bson_decoder_init_buf
+                0x00000000       0x80
+ .text.bson_decoder_init_buf
+                0x00000000       0x80 bson/tinybson.c.o
+                0x00000000                bson_decoder_init_buf
+
+.text.bson_decoder_init_file
+                0x00000000       0x58
+ .text.bson_decoder_init_file
+                0x00000000       0x58 bson/tinybson.c.o
+                0x00000000                bson_decoder_init_file
+
+.text.read_int8
+                0x00000000       0x30
+ .text.read_int8
+                0x00000000       0x30 bson/tinybson.c.o
+
+.text.bson_decoder_next
+                0x00000000      0x14c
+ .text.bson_decoder_next
+                0x00000000      0x14c bson/tinybson.c.o
+                0x00000000                bson_decoder_next
+
+.text.int16_t_from_bytes
+                0x00000000       0x30
+ .text.int16_t_from_bytes
+                0x00000000       0x30 conversions.c.o
+                0x00000000                int16_t_from_bytes
+
+.text.sched_note_switch
+                0x00000000       0x84
+ .text.sched_note_switch
+                0x00000000       0x84 cpuload.c.o
+                0x00000000                sched_note_switch
+
+.text.sched_note_stop
+                0x00000000       0x68
+ .text.sched_note_stop
+                0x00000000       0x68 cpuload.c.o
+                0x00000000                sched_note_stop
+
+.text.sched_note_start
+                0x00000000       0x6c
+ .text.sched_note_start
+                0x00000000       0x6c cpuload.c.o
+                0x00000000                sched_note_start
+
+.text.cpuload_initialize_once
+                0x00000000       0x98
+ .text.cpuload_initialize_once
+                0x00000000       0x98 cpuload.c.o
+                0x00000000                cpuload_initialize_once
+
+.text.is_option
+                0x00000000       0x38
+ .text.is_option
+                0x00000000       0x38 getopt_long.c.o
+
+.text.reverse_argv_elements
+                0x00000000       0x44
+ .text.reverse_argv_elements
+                0x00000000       0x44 getopt_long.c.o
+
+.text.permute   0x00000000       0x40
+ .text.permute  0x00000000       0x40 getopt_long.c.o
+
+.text.getopt_internal
+                0x00000000      0x438
+ .text.getopt_internal
+                0x00000000      0x438 getopt_long.c.o
+
+.text.getopt_long_only
+                0x00000000       0x40
+ .text.getopt_long_only
+                0x00000000       0x40 getopt_long.c.o
+                0x00000000                getopt_long_only
+
+.text.getopt_long
+                0x00000000       0x40
+ .text.getopt_long
+                0x00000000       0x40 getopt_long.c.o
+                0x00000000                getopt_long
+
+.text.up_cxxinitialize
+                0x00000000       0x48
+ .text.up_cxxinitialize
+                0x00000000       0x48 up_cxxinitialize.c.o
+                0x00000000                up_cxxinitialize
+
+.text.pid_reset_integral
+                0x00000000       0x24
+ .text.pid_reset_integral
+                0x00000000       0x24 pid/pid.c.o
+                0x00000000                pid_reset_integral
+
+.text.pid_init  0x00000000       0x48
+ .text.pid_init
+                0x00000000       0x48 pid/pid.c.o
+                0x00000000                pid_init
+
+.text.pid_set_parameters
+                0x00000000       0xa0
+ .text.pid_set_parameters
+                0x00000000       0xa0 pid/pid.c.o
+                0x00000000                pid_set_parameters
+
+.text.pid_calculate
+                0x00000000      0x1ac
+ .text.pid_calculate
+                0x00000000      0x1ac pid/pid.c.o
+                0x00000000                pid_calculate
+
+.text.task_spawn_cmd
+                0x00000000       0x58
+ .text.task_spawn_cmd
+                0x00000000       0x58 systemlib.c.o
+                0x00000000                task_spawn_cmd
+
+.text.killall   0x00000000       0x2c
+ .text.killall  0x00000000       0x2c systemlib.c.o
+                0x00000000                killall
+
+.text.kill_task
+                0x00000000       0x2c
+ .text.kill_task
+                0x00000000       0x2c systemlib.c.o
+
+.text.systemreset
+                0x00000000       0x38
+ .text.systemreset
+                0x00000000       0x38 systemlib.c.o
+                0x00000000                systemreset
+
+.text.get_air_density
+                0x00000000       0x48
+ .text.get_air_density
+                0x00000000       0x48 airspeed.c.o
+                0x00000000                get_air_density
+
+.text.calc_true_airspeed
+                0x00000000       0xa4
+ .text.calc_true_airspeed
+                0x00000000       0xa4 airspeed.c.o
+                0x00000000                calc_true_airspeed
+
+.text.calc_true_airspeed_from_indicated
+                0x00000000       0x54
+ .text.calc_true_airspeed_from_indicated
+                0x00000000       0x54 airspeed.c.o
+                0x00000000                calc_true_airspeed_from_indicated
+
+.text.calc_indicated_airspeed
+                0x00000000       0x5c
+ .text.calc_indicated_airspeed
+                0x00000000       0x5c airspeed.c.o
+                0x00000000                calc_indicated_airspeed
+
+.text.mavlink_vasprintf
+                0x00000000       0x50
+ .text.mavlink_vasprintf
+                0x00000000       0x50 mavlink_log.c.o
+                0x00000000                mavlink_vasprintf
+
+.text.mavlink_logbuffer_is_empty
+                0x00000000       0x2c
+ .text.mavlink_logbuffer_is_empty
+                0x00000000       0x2c mavlink_log.c.o
+                0x00000000                mavlink_logbuffer_is_empty
+
+.text.mavlink_logbuffer_is_full
+                0x00000000       0x2c
+ .text.mavlink_logbuffer_is_full
+                0x00000000       0x2c mavlink_log.c.o
+                0x00000000                mavlink_logbuffer_is_full
+
+.text.mavlink_logbuffer_vasprintf
+                0x00000000       0x7c
+ .text.mavlink_logbuffer_vasprintf
+                0x00000000       0x7c mavlink_log.c.o
+                0x00000000                mavlink_logbuffer_vasprintf
+
+.text.mavlink_logbuffer_read
+                0x00000000       0x54
+ .text.mavlink_logbuffer_read
+                0x00000000       0x54 mavlink_log.c.o
+                0x00000000                mavlink_logbuffer_read
+
+.text.mavlink_logbuffer_write
+                0x00000000       0x60
+ .text.mavlink_logbuffer_write
+                0x00000000       0x60 mavlink_log.c.o
+                0x00000000                mavlink_logbuffer_write
+
+.text.mavlink_logbuffer_destroy
+                0x00000000       0x30
+ .text.mavlink_logbuffer_destroy
+                0x00000000       0x30 mavlink_log.c.o
+                0x00000000                mavlink_logbuffer_destroy
+
+.text.mavlink_logbuffer_init
+                0x00000000       0x34
+ .text.mavlink_logbuffer_init
+                0x00000000       0x34 mavlink_log.c.o
+                0x00000000                mavlink_logbuffer_init
+
+.text.rc_calibration_check
+                0x00000000      0x1fc
+ .text.rc_calibration_check
+                0x00000000      0x1fc rc_check.c.o
+                0x00000000                rc_calibration_check
+
+.text.F_lock    0x00000000       0x2c
+ .text.F_lock   0x00000000       0x2c otp.c.o
+                0x00000000                F_lock
+
+.text.F_unlock  0x00000000       0x38
+ .text.F_unlock
+                0x00000000       0x38 otp.c.o
+                0x00000000                F_unlock
+
+.text.F_GetStatus
+                0x00000000       0x50
+ .text.F_GetStatus
+                0x00000000       0x50 otp.c.o
+                0x00000000                F_GetStatus
+
+.text.F_write_byte
+                0x00000000       0x98
+ .text.F_write_byte
+                0x00000000       0x98 otp.c.o
+                0x00000000                F_write_byte
+
+.text.F_write_word
+                0x00000000       0x40
+ .text.F_write_word
+                0x00000000       0x40 otp.c.o
+                0x00000000                F_write_word
+
+.text.lock_otp  0x00000000       0x3c
+ .text.lock_otp
+                0x00000000       0x3c otp.c.o
+                0x00000000                lock_otp
+
+.text.val_read  0x00000000       0x40
+ .text.val_read
+                0x00000000       0x40 otp.c.o
+                0x00000000                val_read
+
+.text.write_otp
+                0x00000000       0xd8
+ .text.write_otp
+                0x00000000       0xd8 otp.c.o
+                0x00000000                write_otp
+
+.text.get_board_serial
+                0x00000000       0x78
+ .text.get_board_serial
+                0x00000000       0x78 board_serial.c.o
+                0x00000000                get_board_serial
+
+.text.pwm_limit_calc
+                0x00000000      0x1a8
+ .text.pwm_limit_calc
+                0x00000000      0x1a8 pwm_limit/pwm_limit.c.o
+                0x00000000                pwm_limit_calc
+
+.text.pwm_limit_init
+                0x00000000       0x2c
+ .text.pwm_limit_init
+                0x00000000       0x2c pwm_limit/pwm_limit.c.o
+                0x00000000                pwm_limit_init
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.1  0x00000000      0x32a
+ .rodata.str1.1
+                0x00000000        0xa err.c.o
+ .rodata.str1.1
+                0x0000000a       0x85 perf_counter.c.o
+ .rodata.str1.1
+                0x0000008f       0xa9 param/param.c.o
+ .rodata.str1.1
+                0x00000138       0x8a getopt_long.c.o
+ .rodata.str1.1
+                0x000001c2       0x28 system_params.c.o
+ .rodata.str1.1
+                0x000001ea       0xd5 rc_check.c.o
+ .rodata.str1.1
+                0x000002bf       0x6b otp.c.o
+
+.rodata.param_icd
+                0x00000000       0x10
+ .rodata.param_icd
+                0x00000000       0x10 param/param.c.o
+                0x00000000                param_icd
+
+.rodata.__orb_parameter_update
+                0x00000000        0x8
+ .rodata.__orb_parameter_update
+                0x00000000        0x8 param/param.c.o
+                0x00000000                __orb_parameter_update
+
+__param         0x00000000       0x24
+                0x00000000                . = ALIGN (0x4)
+                0x00000000                PROVIDE (__start___param, ABSOLUTE (.))
+ __param        0x00000000       0x24 system_params.c.o
+                0x00000024                PROVIDE (__stop___param, .)
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 err.c.o
+ .data          0x00000000        0x0 hx_stream.c.o
+ .data          0x00000000        0x0 perf_counter.c.o
+ .data          0x00000000        0x0 param/param.c.o
+ .data          0x00000000        0x0 bson/tinybson.c.o
+ .data          0x00000000        0x0 conversions.c.o
+ .data          0x00000000        0x0 cpuload.c.o
+ .data          0x00000000        0x0 getopt_long.c.o
+ .data          0x00000000        0x0 up_cxxinitialize.c.o
+ .data          0x00000000        0x0 pid/pid.c.o
+ .data          0x00000000        0x0 systemlib.c.o
+ .data          0x00000000        0x0 airspeed.c.o
+ .data          0x00000000        0x0 system_params.c.o
+ .data          0x00000000        0x0 mavlink_log.c.o
+ .data          0x00000000        0x0 rc_check.c.o
+ .data          0x00000000        0x0 otp.c.o
+ .data          0x00000000        0x0 board_serial.c.o
+ .data          0x00000000        0x0 pwm_limit/pwm_limit.c.o
+
+.data.param_topic
+                0x00000000        0x4
+ .data.param_topic
+                0x00000000        0x4 param/param.c.o
+
+.data.optopt    0x00000000        0x4
+ .data.optopt   0x00000000        0x4 getopt_long.c.o
+                0x00000000                optopt
+
+.data.opterr    0x00000000        0x4
+ .data.opterr   0x00000000        0x4 getopt_long.c.o
+                0x00000000                opterr
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 err.c.o
+ .bss           0x00000000        0x0 hx_stream.c.o
+ .bss           0x00000000        0x0 perf_counter.c.o
+ .bss           0x00000000        0x0 param/param.c.o
+ .bss           0x00000000        0x0 bson/tinybson.c.o
+ .bss           0x00000000        0x0 conversions.c.o
+ .bss           0x00000000        0x0 cpuload.c.o
+ .bss           0x00000000        0x0 getopt_long.c.o
+ .bss           0x00000000        0x0 up_cxxinitialize.c.o
+ .bss           0x00000000        0x0 pid/pid.c.o
+ .bss           0x00000000        0x0 systemlib.c.o
+ .bss           0x00000000        0x0 airspeed.c.o
+ .bss           0x00000000        0x0 system_params.c.o
+ .bss           0x00000000        0x0 mavlink_log.c.o
+ .bss           0x00000000        0x0 rc_check.c.o
+ .bss           0x00000000        0x0 otp.c.o
+ .bss           0x00000000        0x0 board_serial.c.o
+ .bss           0x00000000        0x0 pwm_limit/pwm_limit.c.o
+ *(COMMON)
+
+.bss.perf_counters
+                0x00000000        0x8
+ .bss.perf_counters
+                0x00000000        0x8 perf_counter.c.o
+
+.bss.s.4827     0x00000000        0x4
+ .bss.s.4827    0x00000000        0x4 param/param.c.o
+
+.bss.param_values
+                0x00000000        0x4
+ .bss.param_values
+                0x00000000        0x4 param/param.c.o
+                0x00000000                param_values
+
+.bss.param_user_file
+                0x00000000        0x4
+ .bss.param_user_file
+                0x00000000        0x4 param/param.c.o
+
+.bss.system_load
+                0x00000000      0x418
+ .bss.system_load
+                0x00000000      0x418 cpuload.c.o
+                0x00000000                system_load
+
+.bss.optind     0x00000000        0x4
+ .bss.optind    0x00000000        0x4 getopt_long.c.o
+                0x00000000                optind
+
+.bss.optwhere.5321
+                0x00000000        0x4
+ .bss.optwhere.5321
+                0x00000000        0x4 getopt_long.c.o
+
+.bss.optarg     0x00000000        0x4
+ .bss.optarg    0x00000000        0x4 getopt_long.c.o
+                0x00000000                optarg
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x7f2
+ *(.comment)
+ .comment       0x00000000       0x71 err.c.o
+ .comment       0x00000071       0x71 hx_stream.c.o
+ .comment       0x000000e2       0x71 perf_counter.c.o
+ .comment       0x00000153       0x71 param/param.c.o
+ .comment       0x000001c4       0x71 bson/tinybson.c.o
+ .comment       0x00000235       0x71 conversions.c.o
+ .comment       0x000002a6       0x71 cpuload.c.o
+ .comment       0x00000317       0x71 getopt_long.c.o
+ .comment       0x00000388       0x71 up_cxxinitialize.c.o
+ .comment       0x000003f9       0x71 pid/pid.c.o
+ .comment       0x0000046a       0x71 systemlib.c.o
+ .comment       0x000004db       0x71 airspeed.c.o
+ .comment       0x0000054c       0x71 system_params.c.o
+ .comment       0x000005bd       0x71 mavlink_log.c.o
+ .comment       0x0000062e       0x71 rc_check.c.o
+ .comment       0x0000069f       0x71 otp.c.o
+ .comment       0x00000710       0x71 board_serial.c.o
+ .comment       0x00000781       0x71 pwm_limit/pwm_limit.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x5e0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x88 err.c.o
+ .debug_aranges
+                0x00000088       0x68 hx_stream.c.o
+ .debug_aranges
+                0x000000f0       0x70 perf_counter.c.o
+ .debug_aranges
+                0x00000160      0x118 param/param.c.o
+ .debug_aranges
+                0x00000278       0xe8 bson/tinybson.c.o
+ .debug_aranges
+                0x00000360       0x20 conversions.c.o
+ .debug_aranges
+                0x00000380       0x38 cpuload.c.o
+ .debug_aranges
+                0x000003b8       0x48 getopt_long.c.o
+ .debug_aranges
+                0x00000400       0x20 up_cxxinitialize.c.o
+ .debug_aranges
+                0x00000420       0x38 pid/pid.c.o
+ .debug_aranges
+                0x00000458       0x38 systemlib.c.o
+ .debug_aranges
+                0x00000490       0x38 airspeed.c.o
+ .debug_aranges
+                0x000004c8       0x58 mavlink_log.c.o
+ .debug_aranges
+                0x00000520       0x20 rc_check.c.o
+ .debug_aranges
+                0x00000540       0x58 otp.c.o
+ .debug_aranges
+                0x00000598       0x20 board_serial.c.o
+ .debug_aranges
+                0x000005b8       0x28 pwm_limit/pwm_limit.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x7335
+ *(.debug_info)
+ .debug_info    0x00000000     0x120a err.c.o
+ .debug_info    0x0000120a      0x534 hx_stream.c.o
+ .debug_info    0x0000173e      0x5c1 perf_counter.c.o
+ .debug_info    0x00001cff      0xfee param/param.c.o
+ .debug_info    0x00002ced      0xaef bson/tinybson.c.o
+ .debug_info    0x000037dc       0xf1 conversions.c.o
+ .debug_info    0x000038cd     0x1050 cpuload.c.o
+ .debug_info    0x0000491d      0x496 getopt_long.c.o
+ .debug_info    0x00004db3      0x15d up_cxxinitialize.c.o
+ .debug_info    0x00004f10      0x433 pid/pid.c.o
+ .debug_info    0x00005343     0x1003 systemlib.c.o
+ .debug_info    0x00006346      0x1be airspeed.c.o
+ .debug_info    0x00006504      0x16c system_params.c.o
+ .debug_info    0x00006670      0x357 mavlink_log.c.o
+ .debug_info    0x000069c7      0x1ed rc_check.c.o
+ .debug_info    0x00006bb4      0x37b otp.c.o
+ .debug_info    0x00006f2f      0x15a board_serial.c.o
+ .debug_info    0x00007089      0x2ac pwm_limit/pwm_limit.c.o
+
+.debug_abbrev   0x00000000     0x18ae
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1d4 err.c.o
+ .debug_abbrev  0x000001d4      0x20d hx_stream.c.o
+ .debug_abbrev  0x000003e1      0x1c5 perf_counter.c.o
+ .debug_abbrev  0x000005a6      0x33d param/param.c.o
+ .debug_abbrev  0x000008e3      0x213 bson/tinybson.c.o
+ .debug_abbrev  0x00000af6       0xa1 conversions.c.o
+ .debug_abbrev  0x00000b97      0x1a8 cpuload.c.o
+ .debug_abbrev  0x00000d3f      0x16d getopt_long.c.o
+ .debug_abbrev  0x00000eac       0x94 up_cxxinitialize.c.o
+ .debug_abbrev  0x00000f40      0x12a pid/pid.c.o
+ .debug_abbrev  0x0000106a      0x1df systemlib.c.o
+ .debug_abbrev  0x00001249       0x83 airspeed.c.o
+ .debug_abbrev  0x000012cc       0xbc system_params.c.o
+ .debug_abbrev  0x00001388      0x131 mavlink_log.c.o
+ .debug_abbrev  0x000014b9       0xd1 rc_check.c.o
+ .debug_abbrev  0x0000158a      0x155 otp.c.o
+ .debug_abbrev  0x000016df       0xc4 board_serial.c.o
+ .debug_abbrev  0x000017a3      0x10b pwm_limit/pwm_limit.c.o
+
+.debug_line     0x00000000     0x2fdd
+ *(.debug_line)
+ .debug_line    0x00000000      0x42c err.c.o
+ .debug_line    0x0000042c      0x2d2 hx_stream.c.o
+ .debug_line    0x000006fe      0x2ca perf_counter.c.o
+ .debug_line    0x000009c8      0x74f param/param.c.o
+ .debug_line    0x00001117      0x531 bson/tinybson.c.o
+ .debug_line    0x00001648      0x12b conversions.c.o
+ .debug_line    0x00001773      0x3a5 cpuload.c.o
+ .debug_line    0x00001b18      0x333 getopt_long.c.o
+ .debug_line    0x00001e4b      0x14d up_cxxinitialize.c.o
+ .debug_line    0x00001f98      0x1ed pid/pid.c.o
+ .debug_line    0x00002185      0x336 systemlib.c.o
+ .debug_line    0x000024bb       0xd0 airspeed.c.o
+ .debug_line    0x0000258b      0x15b system_params.c.o
+ .debug_line    0x000026e6      0x1b8 mavlink_log.c.o
+ .debug_line    0x0000289e      0x1bb rc_check.c.o
+ .debug_line    0x00002a59      0x244 otp.c.o
+ .debug_line    0x00002c9d      0x134 board_serial.c.o
+ .debug_line    0x00002dd1      0x20c pwm_limit/pwm_limit.c.o
+
+.debug_frame    0x00000000     0x123c
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x1f0 err.c.o
+ .debug_frame   0x000001f0      0x148 hx_stream.c.o
+ .debug_frame   0x00000338      0x154 perf_counter.c.o
+ .debug_frame   0x0000048c      0x3dc param/param.c.o
+ .debug_frame   0x00000868      0x354 bson/tinybson.c.o
+ .debug_frame   0x00000bbc       0x30 conversions.c.o
+ .debug_frame   0x00000bec       0x94 cpuload.c.o
+ .debug_frame   0x00000c80       0xe4 getopt_long.c.o
+ .debug_frame   0x00000d64       0x30 up_cxxinitialize.c.o
+ .debug_frame   0x00000d94       0xa4 pid/pid.c.o
+ .debug_frame   0x00000e38       0x88 systemlib.c.o
+ .debug_frame   0x00000ec0       0x98 airspeed.c.o
+ .debug_frame   0x00000f58      0x118 mavlink_log.c.o
+ .debug_frame   0x00001070       0x3c rc_check.c.o
+ .debug_frame   0x000010ac      0x108 otp.c.o
+ .debug_frame   0x000011b4       0x34 board_serial.c.o
+ .debug_frame   0x000011e8       0x54 pwm_limit/pwm_limit.c.o
+
+.debug_str      0x00000000     0x4826
+ *(.debug_str)
+ .debug_str     0x00000000      0x82e err.c.o
+ .debug_str     0x0000082e      0x3b5 hx_stream.c.o
+ .debug_str     0x00000be3      0x387 perf_counter.c.o
+ .debug_str     0x00000f6a      0x85b param/param.c.o
+ .debug_str     0x000017c5      0x58c bson/tinybson.c.o
+ .debug_str     0x00001d51      0x12e conversions.c.o
+ .debug_str     0x00001e7f      0x8c4 cpuload.c.o
+ .debug_str     0x00002743      0x31e getopt_long.c.o
+ .debug_str     0x00002a61      0x1f4 up_cxxinitialize.c.o
+ .debug_str     0x00002c55      0x234 pid/pid.c.o
+ .debug_str     0x00002e89      0x86f systemlib.c.o
+ .debug_str     0x000036f8      0x274 airspeed.c.o
+ .debug_str     0x0000396c      0x1f7 system_params.c.o
+ .debug_str     0x00003b63      0x2c7 mavlink_log.c.o
+ .debug_str     0x00003e2a      0x2a3 rc_check.c.o
+ .debug_str     0x000040cd      0x282 otp.c.o
+ .debug_str     0x0000434f      0x1e8 board_serial.c.o
+ .debug_str     0x00004537      0x2ef pwm_limit/pwm_limit.c.o
+
+.debug_loc      0x00000000     0x4303
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x52a err.c.o
+ .debug_loc     0x0000052a      0x4c0 hx_stream.c.o
+ .debug_loc     0x000009ea      0x3fd perf_counter.c.o
+ .debug_loc     0x00000de7      0xd92 param/param.c.o
+ .debug_loc     0x00001b79      0xd0f bson/tinybson.c.o
+ .debug_loc     0x00002888       0x51 conversions.c.o
+ .debug_loc     0x000028d9      0x1d0 cpuload.c.o
+ .debug_loc     0x00002aa9      0x721 getopt_long.c.o
+ .debug_loc     0x000031ca       0x34 up_cxxinitialize.c.o
+ .debug_loc     0x000031fe      0x420 pid/pid.c.o
+ .debug_loc     0x0000361e      0x15a systemlib.c.o
+ .debug_loc     0x00003778      0x253 airspeed.c.o
+ .debug_loc     0x000039cb      0x2e7 mavlink_log.c.o
+ .debug_loc     0x00003cb2      0x157 rc_check.c.o
+ .debug_loc     0x00003e09      0x32c otp.c.o
+ .debug_loc     0x00004135       0x3e board_serial.c.o
+ .debug_loc     0x00004173      0x190 pwm_limit/pwm_limit.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x740
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x78 err.c.o
+ .debug_ranges  0x00000078       0x88 hx_stream.c.o
+ .debug_ranges  0x00000100       0xf0 perf_counter.c.o
+ .debug_ranges  0x000001f0      0x188 param/param.c.o
+ .debug_ranges  0x00000378       0xd8 bson/tinybson.c.o
+ .debug_ranges  0x00000450       0x10 conversions.c.o
+ .debug_ranges  0x00000460       0x40 cpuload.c.o
+ .debug_ranges  0x000004a0       0x38 getopt_long.c.o
+ .debug_ranges  0x000004d8       0x28 up_cxxinitialize.c.o
+ .debug_ranges  0x00000500       0x70 pid/pid.c.o
+ .debug_ranges  0x00000570       0x28 systemlib.c.o
+ .debug_ranges  0x00000598       0x28 airspeed.c.o
+ .debug_ranges  0x000005c0       0x48 mavlink_log.c.o
+ .debug_ranges  0x00000608       0x58 rc_check.c.o
+ .debug_ranges  0x00000660       0x60 otp.c.o
+ .debug_ranges  0x000006c0       0x10 board_serial.c.o
+ .debug_ranges  0x000006d0       0x70 pwm_limit/pwm_limit.c.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 err.c.o
+ .ARM.attributes
+                0x00000037       0x37 hx_stream.c.o
+ .ARM.attributes
+                0x0000006e       0x37 perf_counter.c.o
+ .ARM.attributes
+                0x000000a5       0x37 param/param.c.o
+ .ARM.attributes
+                0x000000dc       0x37 bson/tinybson.c.o
+ .ARM.attributes
+                0x00000113       0x37 conversions.c.o
+ .ARM.attributes
+                0x0000014a       0x37 cpuload.c.o
+ .ARM.attributes
+                0x00000181       0x37 getopt_long.c.o
+ .ARM.attributes
+                0x000001b8       0x37 up_cxxinitialize.c.o
+ .ARM.attributes
+                0x000001ef       0x37 pid/pid.c.o
+ .ARM.attributes
+                0x00000226       0x37 systemlib.c.o
+ .ARM.attributes
+                0x0000025d       0x37 airspeed.c.o
+ .ARM.attributes
+                0x00000294       0x37 system_params.c.o
+ .ARM.attributes
+                0x000002cb       0x37 mavlink_log.c.o
+ .ARM.attributes
+                0x00000302       0x37 rc_check.c.o
+ .ARM.attributes
+                0x00000339       0x37 otp.c.o
+ .ARM.attributes
+                0x00000370       0x37 board_serial.c.o
+ .ARM.attributes
+                0x000003a7       0x37 pwm_limit/pwm_limit.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/c/px4/workspace/PX4Firmware/src/modules/systemlib/module.pre.o elf32-littlearm)

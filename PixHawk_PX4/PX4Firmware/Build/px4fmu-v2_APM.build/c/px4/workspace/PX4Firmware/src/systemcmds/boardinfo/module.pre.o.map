@@ -1,0 +1,373 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD boardinfo.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 boardinfo.c.o
+ *(.gnu.warning)
+
+.text.eeprom_write
+                0x00000000       0xe0
+ .text.eeprom_write
+                0x00000000       0xe0 boardinfo.c.o
+
+.text.boardinfo_set
+                0x00000000      0x154
+ .text.boardinfo_set
+                0x00000000      0x154 boardinfo.c.o
+
+.text.eeprom_read
+                0x00000000       0xc8
+ .text.eeprom_read
+                0x00000000       0xc8 boardinfo.c.o
+
+.text.idrom_read
+                0x00000000       0x94
+ .text.idrom_read
+                0x00000000       0x94 boardinfo.c.o
+
+.text.boardinfo_show
+                0x00000000       0x60
+ .text.boardinfo_show
+                0x00000000       0x60 boardinfo.c.o
+
+.text.boardinfo_test
+                0x00000000       0x8c
+ .text.boardinfo_test
+                0x00000000       0x8c boardinfo.c.o
+
+.text.boardinfo_main
+                0x00000000       0x64
+ .text.boardinfo_main
+                0x00000000       0x64 boardinfo.c.o
+                0x00000000                boardinfo_main
+
+.text.boardinfo_print
+                0x00000000       0x84
+ .text.boardinfo_print
+                0x00000000       0x84 boardinfo.c.o
+
+.text.boardinfo_test_callback
+                0x00000000       0xa8
+ .text.boardinfo_test_callback
+                0x00000000       0xa8 boardinfo.c.o
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.eeprom_info
+                0x00000000       0x14
+ .rodata.eeprom_info
+                0x00000000       0x14 boardinfo.c.o
+                0x00000000                eeprom_info
+
+.rodata.str1.1  0x00000000      0x259
+ .rodata.str1.1
+                0x00000000      0x259 boardinfo.c.o
+
+.rodata.board_parameters
+                0x00000000       0x20
+ .rodata.board_parameters
+                0x00000000       0x20 boardinfo.c.o
+                0x00000000                board_parameters
+
+.rodata.num_parameters
+                0x00000000        0x4
+ .rodata.num_parameters
+                0x00000000        0x4 boardinfo.c.o
+                0x00000000                num_parameters
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 boardinfo.c.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 boardinfo.c.o
+ *(COMMON)
+
+.bss.test_args  0x00000000        0x8
+ .bss.test_args
+                0x00000000        0x8 boardinfo.c.o
+                0x00000000                test_args
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x71
+ *(.comment)
+ .comment       0x00000000       0x71 boardinfo.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x60
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x60 boardinfo.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000      0xb37
+ *(.debug_info)
+ .debug_info    0x00000000      0xb37 boardinfo.c.o
+
+.debug_abbrev   0x00000000      0x2b5
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x2b5 boardinfo.c.o
+
+.debug_line     0x00000000      0x42a
+ *(.debug_line)
+ .debug_line    0x00000000      0x42a boardinfo.c.o
+
+.debug_frame    0x00000000      0x158
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x158 boardinfo.c.o
+
+.debug_str      0x00000000      0x599
+ *(.debug_str)
+ .debug_str     0x00000000      0x599 boardinfo.c.o
+
+.debug_loc      0x00000000      0x7ae
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x7ae boardinfo.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0xe0
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0xe0 boardinfo.c.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 boardinfo.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/c/px4/workspace/PX4Firmware/src/systemcmds/boardinfo/module.pre.o elf32-littlearm)

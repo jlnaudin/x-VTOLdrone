@@ -1,0 +1,1804 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD addsub/fp_add_d.c.o
+LOAD addsub/fp_add.c.o
+LOAD addsub/fp_addmod.c.o
+LOAD addsub/fp_cmp_d.c.o
+LOAD addsub/fp_cmp_mag.c.o
+LOAD addsub/fp_cmp.c.o
+LOAD addsub/fp_sub_d.c.o
+LOAD addsub/fp_sub.c.o
+LOAD addsub/fp_submod.c.o
+LOAD addsub/s_fp_add.c.o
+LOAD addsub/s_fp_sub.c.o
+LOAD bin/fp_radix_size.c.o
+LOAD bin/fp_read_radix.c.o
+LOAD bin/fp_read_signed_bin.c.o
+LOAD bin/fp_read_unsigned_bin.c.o
+LOAD bin/fp_reverse.c.o
+LOAD bin/fp_s_rmap.c.o
+LOAD bin/fp_signed_bin_size.c.o
+LOAD bin/fp_to_signed_bin.c.o
+LOAD bin/fp_to_unsigned_bin.c.o
+LOAD bin/fp_toradix.c.o
+LOAD bin/fp_unsigned_bin_size.c.o
+LOAD bit/fp_cnt_lsb.c.o
+LOAD bit/fp_count_bits.c.o
+LOAD bit/fp_div_2.c.o
+LOAD bit/fp_div_2d.c.o
+LOAD bit/fp_lshd.c.o
+LOAD bit/fp_mod_2d.c.o
+LOAD bit/fp_rshd.c.o
+LOAD divide/fp_div.c.o
+LOAD divide/fp_div_d.c.o
+LOAD divide/fp_mod.c.o
+LOAD divide/fp_mod_d.c.o
+LOAD exptmod/fp_2expt.c.o
+LOAD exptmod/fp_exptmod.c.o
+LOAD misc/fp_set.c.o
+LOAD mont/fp_montgomery_calc_normalization.c.o
+LOAD mont/fp_montgomery_reduce.c.o
+LOAD mont/fp_montgomery_setup.c.o
+LOAD mul/fp_mul_2.c.o
+LOAD mul/fp_mul_2d.c.o
+LOAD mul/fp_mul_comba_3.c.o
+LOAD mul/fp_mul_comba_4.c.o
+LOAD mul/fp_mul_comba_6.c.o
+LOAD mul/fp_mul_comba_7.c.o
+LOAD mul/fp_mul_comba_8.c.o
+LOAD mul/fp_mul_comba_9.c.o
+LOAD mul/fp_mul_comba_12.c.o
+LOAD mul/fp_mul_comba_17.c.o
+LOAD mul/fp_mul_comba_20.c.o
+LOAD mul/fp_mul_comba_24.c.o
+LOAD mul/fp_mul_comba_28.c.o
+LOAD mul/fp_mul_comba_32.c.o
+LOAD mul/fp_mul_comba_48.c.o
+LOAD mul/fp_mul_comba_64.c.o
+LOAD mul/fp_mul_comba_small_set.c.o
+LOAD mul/fp_mul_comba.c.o
+LOAD mul/fp_mul_d.c.o
+LOAD mul/fp_mul.c.o
+LOAD mul/fp_mulmod.c.o
+LOAD numtheory/fp_gcd.c.o
+LOAD numtheory/fp_isprime.c.o
+LOAD numtheory/fp_invmod.c.o
+LOAD numtheory/fp_lcm.c.o
+LOAD numtheory/fp_prime_miller_rabin.c.o
+LOAD sqr/fp_sqr_comba_3.c.o
+LOAD sqr/fp_sqr_comba_4.c.o
+LOAD sqr/fp_sqr_comba_6.c.o
+LOAD sqr/fp_sqr_comba_7.c.o
+LOAD sqr/fp_sqr_comba_8.c.o
+LOAD sqr/fp_sqr_comba_9.c.o
+LOAD sqr/fp_sqr_comba_12.c.o
+LOAD sqr/fp_sqr_comba_17.c.o
+LOAD sqr/fp_sqr_comba_20.c.o
+LOAD sqr/fp_sqr_comba_24.c.o
+LOAD sqr/fp_sqr_comba_28.c.o
+LOAD sqr/fp_sqr_comba_32.c.o
+LOAD sqr/fp_sqr_comba_48.c.o
+LOAD sqr/fp_sqr_comba_64.c.o
+LOAD sqr/fp_sqr_comba_generic.c.o
+LOAD sqr/fp_sqr_comba_small_set.c.o
+LOAD sqr/fp_sqr_comba.c.o
+LOAD sqr/fp_sqr.c.o
+LOAD sqr/fp_sqrmod.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 addsub/fp_add_d.c.o
+ .text          0x00000000        0x0 addsub/fp_add.c.o
+ .text          0x00000000        0x0 addsub/fp_addmod.c.o
+ .text          0x00000000        0x0 addsub/fp_cmp_d.c.o
+ .text          0x00000000        0x0 addsub/fp_cmp_mag.c.o
+ .text          0x00000000        0x0 addsub/fp_cmp.c.o
+ .text          0x00000000        0x0 addsub/fp_sub_d.c.o
+ .text          0x00000000        0x0 addsub/fp_sub.c.o
+ .text          0x00000000        0x0 addsub/fp_submod.c.o
+ .text          0x00000000        0x0 addsub/s_fp_add.c.o
+ .text          0x00000000        0x0 addsub/s_fp_sub.c.o
+ .text          0x00000000        0x0 bin/fp_radix_size.c.o
+ .text          0x00000000        0x0 bin/fp_read_radix.c.o
+ .text          0x00000000        0x0 bin/fp_read_signed_bin.c.o
+ .text          0x00000000        0x0 bin/fp_read_unsigned_bin.c.o
+ .text          0x00000000        0x0 bin/fp_reverse.c.o
+ .text          0x00000000        0x0 bin/fp_s_rmap.c.o
+ .text          0x00000000        0x0 bin/fp_signed_bin_size.c.o
+ .text          0x00000000        0x0 bin/fp_to_signed_bin.c.o
+ .text          0x00000000        0x0 bin/fp_to_unsigned_bin.c.o
+ .text          0x00000000        0x0 bin/fp_toradix.c.o
+ .text          0x00000000        0x0 bin/fp_unsigned_bin_size.c.o
+ .text          0x00000000        0x0 bit/fp_cnt_lsb.c.o
+ .text          0x00000000        0x0 bit/fp_count_bits.c.o
+ .text          0x00000000        0x0 bit/fp_div_2.c.o
+ .text          0x00000000        0x0 bit/fp_div_2d.c.o
+ .text          0x00000000        0x0 bit/fp_lshd.c.o
+ .text          0x00000000        0x0 bit/fp_mod_2d.c.o
+ .text          0x00000000        0x0 bit/fp_rshd.c.o
+ .text          0x00000000        0x0 divide/fp_div.c.o
+ .text          0x00000000        0x0 divide/fp_div_d.c.o
+ .text          0x00000000        0x0 divide/fp_mod.c.o
+ .text          0x00000000        0x0 divide/fp_mod_d.c.o
+ .text          0x00000000        0x0 exptmod/fp_2expt.c.o
+ .text          0x00000000        0x0 exptmod/fp_exptmod.c.o
+ .text          0x00000000        0x0 misc/fp_set.c.o
+ .text          0x00000000        0x0 mont/fp_montgomery_calc_normalization.c.o
+ .text          0x00000000        0x0 mont/fp_montgomery_reduce.c.o
+ .text          0x00000000        0x0 mont/fp_montgomery_setup.c.o
+ .text          0x00000000        0x0 mul/fp_mul_2.c.o
+ .text          0x00000000        0x0 mul/fp_mul_2d.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_3.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_4.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_6.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_7.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_8.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_9.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_12.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_17.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_20.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_24.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_28.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_32.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_48.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_64.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba_small_set.c.o
+ .text          0x00000000        0x0 mul/fp_mul_comba.c.o
+ .text          0x00000000        0x0 mul/fp_mul_d.c.o
+ .text          0x00000000        0x0 mul/fp_mul.c.o
+ .text          0x00000000        0x0 mul/fp_mulmod.c.o
+ .text          0x00000000        0x0 numtheory/fp_gcd.c.o
+ .text          0x00000000        0x0 numtheory/fp_isprime.c.o
+ .text          0x00000000        0x0 numtheory/fp_invmod.c.o
+ .text          0x00000000        0x0 numtheory/fp_lcm.c.o
+ .text          0x00000000        0x0 numtheory/fp_prime_miller_rabin.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_3.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_4.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_6.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_7.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_8.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_9.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_12.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_17.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_20.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_24.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_28.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_32.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_48.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_64.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_generic.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba_small_set.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr_comba.c.o
+ .text          0x00000000        0x0 sqr/fp_sqr.c.o
+ .text          0x00000000        0x0 sqr/fp_sqrmod.c.o
+ *(.gnu.warning)
+
+.text.fp_add_d  0x00000000       0x40
+ .text.fp_add_d
+                0x00000000       0x40 addsub/fp_add_d.c.o
+                0x00000000                fp_add_d
+
+.text.fp_add    0x00000000       0x64
+ .text.fp_add   0x00000000       0x64 addsub/fp_add.c.o
+                0x00000000                fp_add
+
+.text.fp_addmod
+                0x00000000       0x54
+ .text.fp_addmod
+                0x00000000       0x54 addsub/fp_addmod.c.o
+                0x00000000                fp_addmod
+
+.text.fp_cmp_d  0x00000000       0x4c
+ .text.fp_cmp_d
+                0x00000000       0x4c addsub/fp_cmp_d.c.o
+                0x00000000                fp_cmp_d
+
+.text.fp_cmp_mag
+                0x00000000       0x64
+ .text.fp_cmp_mag
+                0x00000000       0x64 addsub/fp_cmp_mag.c.o
+                0x00000000                fp_cmp_mag
+
+.text.fp_cmp    0x00000000       0x54
+ .text.fp_cmp   0x00000000       0x54 addsub/fp_cmp.c.o
+                0x00000000                fp_cmp
+
+.text.fp_sub_d  0x00000000       0x40
+ .text.fp_sub_d
+                0x00000000       0x40 addsub/fp_sub_d.c.o
+                0x00000000                fp_sub_d
+
+.text.fp_sub    0x00000000       0x6c
+ .text.fp_sub   0x00000000       0x6c addsub/fp_sub.c.o
+                0x00000000                fp_sub
+
+.text.fp_submod
+                0x00000000       0x54
+ .text.fp_submod
+                0x00000000       0x54 addsub/fp_submod.c.o
+                0x00000000                fp_submod
+
+.text.s_fp_add  0x00000000       0xd0
+ .text.s_fp_add
+                0x00000000       0xd0 addsub/s_fp_add.c.o
+                0x00000000                s_fp_add
+
+.text.s_fp_sub  0x00000000      0x118
+ .text.s_fp_sub
+                0x00000000      0x118 addsub/s_fp_sub.c.o
+                0x00000000                s_fp_sub
+
+.text.fp_radix_size
+                0x00000000       0x80
+ .text.fp_radix_size
+                0x00000000       0x80 bin/fp_radix_size.c.o
+                0x00000000                fp_radix_size
+
+.text.fp_read_radix
+                0x00000000       0xb0
+ .text.fp_read_radix
+                0x00000000       0xb0 bin/fp_read_radix.c.o
+                0x00000000                fp_read_radix
+
+.text.fp_read_signed_bin
+                0x00000000       0x40
+ .text.fp_read_signed_bin
+                0x00000000       0x40 bin/fp_read_signed_bin.c.o
+                0x00000000                fp_read_signed_bin
+
+.text.fp_read_unsigned_bin
+                0x00000000       0x74
+ .text.fp_read_unsigned_bin
+                0x00000000       0x74 bin/fp_read_unsigned_bin.c.o
+                0x00000000                fp_read_unsigned_bin
+
+.text.fp_reverse
+                0x00000000       0x38
+ .text.fp_reverse
+                0x00000000       0x38 bin/fp_reverse.c.o
+                0x00000000                fp_reverse
+
+.text.fp_signed_bin_size
+                0x00000000       0x28
+ .text.fp_signed_bin_size
+                0x00000000       0x28 bin/fp_signed_bin_size.c.o
+                0x00000000                fp_signed_bin_size
+
+.text.fp_to_signed_bin
+                0x00000000       0x38
+ .text.fp_to_signed_bin
+                0x00000000       0x38 bin/fp_to_signed_bin.c.o
+                0x00000000                fp_to_signed_bin
+
+.text.fp_to_unsigned_bin
+                0x00000000       0x5c
+ .text.fp_to_unsigned_bin
+                0x00000000       0x5c bin/fp_to_unsigned_bin.c.o
+                0x00000000                fp_to_unsigned_bin
+
+.text.fp_toradix
+                0x00000000       0xa4
+ .text.fp_toradix
+                0x00000000       0xa4 bin/fp_toradix.c.o
+                0x00000000                fp_toradix
+
+.text.fp_unsigned_bin_size
+                0x00000000       0x38
+ .text.fp_unsigned_bin_size
+                0x00000000       0x38 bin/fp_unsigned_bin_size.c.o
+                0x00000000                fp_unsigned_bin_size
+
+.text.fp_cnt_lsb
+                0x00000000       0x58
+ .text.fp_cnt_lsb
+                0x00000000       0x58 bit/fp_cnt_lsb.c.o
+                0x00000000                fp_cnt_lsb
+
+.text.fp_count_bits
+                0x00000000       0x38
+ .text.fp_count_bits
+                0x00000000       0x38 bit/fp_count_bits.c.o
+                0x00000000                fp_count_bits
+
+.text.fp_div_2  0x00000000       0x8c
+ .text.fp_div_2
+                0x00000000       0x8c bit/fp_div_2.c.o
+                0x00000000                fp_div_2
+
+.text.fp_div_2d.part.0
+                0x00000000       0xdc
+ .text.fp_div_2d.part.0
+                0x00000000       0xdc bit/fp_div_2d.c.o
+
+.text.fp_div_2d
+                0x00000000       0x5c
+ .text.fp_div_2d
+                0x00000000       0x5c bit/fp_div_2d.c.o
+                0x00000000                fp_div_2d
+
+.text.fp_lshd   0x00000000       0x84
+ .text.fp_lshd  0x00000000       0x84 bit/fp_lshd.c.o
+                0x00000000                fp_lshd
+
+.text.fp_mod_2d
+                0x00000000       0xac
+ .text.fp_mod_2d
+                0x00000000       0xac bit/fp_mod_2d.c.o
+                0x00000000                fp_mod_2d
+
+.text.fp_rshd   0x00000000       0x88
+ .text.fp_rshd  0x00000000       0x88 bit/fp_rshd.c.o
+                0x00000000                fp_rshd
+
+.text.fp_div    0x00000000      0x38c
+ .text.fp_div   0x00000000      0x38c divide/fp_div.c.o
+                0x00000000                fp_div
+
+.text.s_is_power_of_two
+                0x00000000       0x40
+ .text.s_is_power_of_two
+                0x00000000       0x40 divide/fp_div_d.c.o
+
+.text.fp_div_d  0x00000000      0x174
+ .text.fp_div_d
+                0x00000000      0x174 divide/fp_div_d.c.o
+                0x00000000                fp_div_d
+
+.text.fp_mod    0x00000000       0x68
+ .text.fp_mod   0x00000000       0x68 divide/fp_mod.c.o
+                0x00000000                fp_mod
+
+.text.fp_mod_d  0x00000000       0x38
+ .text.fp_mod_d
+                0x00000000       0x38 divide/fp_mod_d.c.o
+                0x00000000                fp_mod_d
+
+.text.fp_2expt  0x00000000       0x4c
+ .text.fp_2expt
+                0x00000000       0x4c exptmod/fp_2expt.c.o
+                0x00000000                fp_2expt
+
+.text._fp_exptmod
+                0x00000000      0x2b0
+ .text._fp_exptmod
+                0x00000000      0x2b0 exptmod/fp_exptmod.c.o
+
+.text.fp_exptmod
+                0x00000000       0x8c
+ .text.fp_exptmod
+                0x00000000       0x8c exptmod/fp_exptmod.c.o
+                0x00000000                fp_exptmod
+
+.text.fp_set    0x00000000       0x3c
+ .text.fp_set   0x00000000       0x3c misc/fp_set.c.o
+                0x00000000                fp_set
+
+.text.fp_montgomery_calc_normalization
+                0x00000000       0x88
+ .text.fp_montgomery_calc_normalization
+                0x00000000       0x88 mont/fp_montgomery_calc_normalization.c.o
+                0x00000000                fp_montgomery_calc_normalization
+
+.text.fp_montgomery_reduce
+                0x00000000      0x140
+ .text.fp_montgomery_reduce
+                0x00000000      0x140 mont/fp_montgomery_reduce.c.o
+                0x00000000                fp_montgomery_reduce
+
+.text.fp_montgomery_setup
+                0x00000000       0x54
+ .text.fp_montgomery_setup
+                0x00000000       0x54 mont/fp_montgomery_setup.c.o
+                0x00000000                fp_montgomery_setup
+
+.text.fp_mul_2  0x00000000       0x84
+ .text.fp_mul_2
+                0x00000000       0x84 mul/fp_mul_2.c.o
+                0x00000000                fp_mul_2
+
+.text.fp_mul_2d
+                0x00000000       0xac
+ .text.fp_mul_2d
+                0x00000000       0xac mul/fp_mul_2d.c.o
+                0x00000000                fp_mul_2d
+
+.text.fp_mul_comba_small
+                0x00000000     0xa588
+ .text.fp_mul_comba_small
+                0x00000000     0xa588 mul/fp_mul_comba_small_set.c.o
+                0x00000000                fp_mul_comba_small
+
+.text.fp_mul_comba
+                0x00000000      0x144
+ .text.fp_mul_comba
+                0x00000000      0x144 mul/fp_mul_comba.c.o
+                0x00000000                fp_mul_comba
+
+.text.fp_mul_d  0x00000000       0xbc
+ .text.fp_mul_d
+                0x00000000       0xbc mul/fp_mul_d.c.o
+                0x00000000                fp_mul_d
+
+.text.fp_mul    0x00000000       0x54
+ .text.fp_mul   0x00000000       0x54 mul/fp_mul.c.o
+                0x00000000                fp_mul
+
+.text.fp_mulmod
+                0x00000000       0x54
+ .text.fp_mulmod
+                0x00000000       0x54 mul/fp_mulmod.c.o
+                0x00000000                fp_mulmod
+
+.text.fp_gcd    0x00000000       0xe8
+ .text.fp_gcd   0x00000000       0xe8 numtheory/fp_gcd.c.o
+                0x00000000                fp_gcd
+
+.text.fp_isprime
+                0x00000000       0x78
+ .text.fp_isprime
+                0x00000000       0x78 numtheory/fp_isprime.c.o
+                0x00000000                fp_isprime
+
+.text.fp_invmod_slow
+                0x00000000      0x2bc
+ .text.fp_invmod_slow
+                0x00000000      0x2bc numtheory/fp_invmod.c.o
+
+.text.fp_invmod
+                0x00000000      0x1e4
+ .text.fp_invmod
+                0x00000000      0x1e4 numtheory/fp_invmod.c.o
+                0x00000000                fp_invmod
+
+.text.fp_lcm    0x00000000       0x80
+ .text.fp_lcm   0x00000000       0x80 numtheory/fp_lcm.c.o
+                0x00000000                fp_lcm
+
+.text.fp_prime_miller_rabin
+                0x00000000       0xe8
+ .text.fp_prime_miller_rabin
+                0x00000000       0xe8 numtheory/fp_prime_miller_rabin.c.o
+                0x00000000                fp_prime_miller_rabin
+
+.text.fp_sqr_comba
+                0x00000000      0x190
+ .text.fp_sqr_comba
+                0x00000000      0x190 sqr/fp_sqr_comba_generic.c.o
+                0x00000000                fp_sqr_comba
+
+.text.fp_sqr_comba_small
+                0x00000000     0x7508
+ .text.fp_sqr_comba_small
+                0x00000000     0x7508 sqr/fp_sqr_comba_small_set.c.o
+                0x00000000                fp_sqr_comba_small
+
+.text.fp_sqr    0x00000000       0x3c
+ .text.fp_sqr   0x00000000       0x3c sqr/fp_sqr.c.o
+                0x00000000                fp_sqr
+
+.text.fp_sqrmod
+                0x00000000       0x50
+ .text.fp_sqrmod
+                0x00000000       0x50 sqr/fp_sqrmod.c.o
+                0x00000000                fp_sqrmod
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.1  0x00000000       0x41
+ .rodata.str1.1
+                0x00000000       0x41 bin/fp_s_rmap.c.o
+
+.rodata.lnz     0x00000000       0x40
+ .rodata.lnz    0x00000000       0x40 bit/fp_cnt_lsb.c.o
+
+.rodata.primes  0x00000000      0x400
+ .rodata.primes
+                0x00000000      0x400 numtheory/fp_isprime.c.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 addsub/fp_add_d.c.o
+ .data          0x00000000        0x0 addsub/fp_add.c.o
+ .data          0x00000000        0x0 addsub/fp_addmod.c.o
+ .data          0x00000000        0x0 addsub/fp_cmp_d.c.o
+ .data          0x00000000        0x0 addsub/fp_cmp_mag.c.o
+ .data          0x00000000        0x0 addsub/fp_cmp.c.o
+ .data          0x00000000        0x0 addsub/fp_sub_d.c.o
+ .data          0x00000000        0x0 addsub/fp_sub.c.o
+ .data          0x00000000        0x0 addsub/fp_submod.c.o
+ .data          0x00000000        0x0 addsub/s_fp_add.c.o
+ .data          0x00000000        0x0 addsub/s_fp_sub.c.o
+ .data          0x00000000        0x0 bin/fp_radix_size.c.o
+ .data          0x00000000        0x0 bin/fp_read_radix.c.o
+ .data          0x00000000        0x0 bin/fp_read_signed_bin.c.o
+ .data          0x00000000        0x0 bin/fp_read_unsigned_bin.c.o
+ .data          0x00000000        0x0 bin/fp_reverse.c.o
+ .data          0x00000000        0x0 bin/fp_s_rmap.c.o
+ .data          0x00000000        0x0 bin/fp_signed_bin_size.c.o
+ .data          0x00000000        0x0 bin/fp_to_signed_bin.c.o
+ .data          0x00000000        0x0 bin/fp_to_unsigned_bin.c.o
+ .data          0x00000000        0x0 bin/fp_toradix.c.o
+ .data          0x00000000        0x0 bin/fp_unsigned_bin_size.c.o
+ .data          0x00000000        0x0 bit/fp_cnt_lsb.c.o
+ .data          0x00000000        0x0 bit/fp_count_bits.c.o
+ .data          0x00000000        0x0 bit/fp_div_2.c.o
+ .data          0x00000000        0x0 bit/fp_div_2d.c.o
+ .data          0x00000000        0x0 bit/fp_lshd.c.o
+ .data          0x00000000        0x0 bit/fp_mod_2d.c.o
+ .data          0x00000000        0x0 bit/fp_rshd.c.o
+ .data          0x00000000        0x0 divide/fp_div.c.o
+ .data          0x00000000        0x0 divide/fp_div_d.c.o
+ .data          0x00000000        0x0 divide/fp_mod.c.o
+ .data          0x00000000        0x0 divide/fp_mod_d.c.o
+ .data          0x00000000        0x0 exptmod/fp_2expt.c.o
+ .data          0x00000000        0x0 exptmod/fp_exptmod.c.o
+ .data          0x00000000        0x0 misc/fp_set.c.o
+ .data          0x00000000        0x0 mont/fp_montgomery_calc_normalization.c.o
+ .data          0x00000000        0x0 mont/fp_montgomery_reduce.c.o
+ .data          0x00000000        0x0 mont/fp_montgomery_setup.c.o
+ .data          0x00000000        0x0 mul/fp_mul_2.c.o
+ .data          0x00000000        0x0 mul/fp_mul_2d.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_3.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_4.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_6.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_7.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_8.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_9.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_12.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_17.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_20.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_24.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_28.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_32.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_48.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_64.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba_small_set.c.o
+ .data          0x00000000        0x0 mul/fp_mul_comba.c.o
+ .data          0x00000000        0x0 mul/fp_mul_d.c.o
+ .data          0x00000000        0x0 mul/fp_mul.c.o
+ .data          0x00000000        0x0 mul/fp_mulmod.c.o
+ .data          0x00000000        0x0 numtheory/fp_gcd.c.o
+ .data          0x00000000        0x0 numtheory/fp_isprime.c.o
+ .data          0x00000000        0x0 numtheory/fp_invmod.c.o
+ .data          0x00000000        0x0 numtheory/fp_lcm.c.o
+ .data          0x00000000        0x0 numtheory/fp_prime_miller_rabin.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_3.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_4.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_6.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_7.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_8.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_9.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_12.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_17.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_20.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_24.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_28.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_32.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_48.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_64.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_generic.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba_small_set.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr_comba.c.o
+ .data          0x00000000        0x0 sqr/fp_sqr.c.o
+ .data          0x00000000        0x0 sqr/fp_sqrmod.c.o
+
+.data.fp_s_rmap
+                0x00000000        0x4
+ .data.fp_s_rmap
+                0x00000000        0x4 bin/fp_s_rmap.c.o
+                0x00000000                fp_s_rmap
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 addsub/fp_add_d.c.o
+ .bss           0x00000000        0x0 addsub/fp_add.c.o
+ .bss           0x00000000        0x0 addsub/fp_addmod.c.o
+ .bss           0x00000000        0x0 addsub/fp_cmp_d.c.o
+ .bss           0x00000000        0x0 addsub/fp_cmp_mag.c.o
+ .bss           0x00000000        0x0 addsub/fp_cmp.c.o
+ .bss           0x00000000        0x0 addsub/fp_sub_d.c.o
+ .bss           0x00000000        0x0 addsub/fp_sub.c.o
+ .bss           0x00000000        0x0 addsub/fp_submod.c.o
+ .bss           0x00000000        0x0 addsub/s_fp_add.c.o
+ .bss           0x00000000        0x0 addsub/s_fp_sub.c.o
+ .bss           0x00000000        0x0 bin/fp_radix_size.c.o
+ .bss           0x00000000        0x0 bin/fp_read_radix.c.o
+ .bss           0x00000000        0x0 bin/fp_read_signed_bin.c.o
+ .bss           0x00000000        0x0 bin/fp_read_unsigned_bin.c.o
+ .bss           0x00000000        0x0 bin/fp_reverse.c.o
+ .bss           0x00000000        0x0 bin/fp_s_rmap.c.o
+ .bss           0x00000000        0x0 bin/fp_signed_bin_size.c.o
+ .bss           0x00000000        0x0 bin/fp_to_signed_bin.c.o
+ .bss           0x00000000        0x0 bin/fp_to_unsigned_bin.c.o
+ .bss           0x00000000        0x0 bin/fp_toradix.c.o
+ .bss           0x00000000        0x0 bin/fp_unsigned_bin_size.c.o
+ .bss           0x00000000        0x0 bit/fp_cnt_lsb.c.o
+ .bss           0x00000000        0x0 bit/fp_count_bits.c.o
+ .bss           0x00000000        0x0 bit/fp_div_2.c.o
+ .bss           0x00000000        0x0 bit/fp_div_2d.c.o
+ .bss           0x00000000        0x0 bit/fp_lshd.c.o
+ .bss           0x00000000        0x0 bit/fp_mod_2d.c.o
+ .bss           0x00000000        0x0 bit/fp_rshd.c.o
+ .bss           0x00000000        0x0 divide/fp_div.c.o
+ .bss           0x00000000        0x0 divide/fp_div_d.c.o
+ .bss           0x00000000        0x0 divide/fp_mod.c.o
+ .bss           0x00000000        0x0 divide/fp_mod_d.c.o
+ .bss           0x00000000        0x0 exptmod/fp_2expt.c.o
+ .bss           0x00000000        0x0 exptmod/fp_exptmod.c.o
+ .bss           0x00000000        0x0 misc/fp_set.c.o
+ .bss           0x00000000        0x0 mont/fp_montgomery_calc_normalization.c.o
+ .bss           0x00000000        0x0 mont/fp_montgomery_reduce.c.o
+ .bss           0x00000000        0x0 mont/fp_montgomery_setup.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_2.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_2d.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_3.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_4.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_6.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_7.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_8.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_9.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_12.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_17.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_20.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_24.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_28.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_32.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_48.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_64.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba_small_set.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_comba.c.o
+ .bss           0x00000000        0x0 mul/fp_mul_d.c.o
+ .bss           0x00000000        0x0 mul/fp_mul.c.o
+ .bss           0x00000000        0x0 mul/fp_mulmod.c.o
+ .bss           0x00000000        0x0 numtheory/fp_gcd.c.o
+ .bss           0x00000000        0x0 numtheory/fp_isprime.c.o
+ .bss           0x00000000        0x0 numtheory/fp_invmod.c.o
+ .bss           0x00000000        0x0 numtheory/fp_lcm.c.o
+ .bss           0x00000000        0x0 numtheory/fp_prime_miller_rabin.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_3.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_4.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_6.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_7.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_8.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_9.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_12.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_17.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_20.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_24.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_28.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_32.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_48.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_64.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_generic.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba_small_set.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr_comba.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqr.c.o
+ .bss           0x00000000        0x0 sqr/fp_sqrmod.c.o
+ *(COMMON)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000     0x2514
+ *(.comment)
+ .comment       0x00000000       0x71 addsub/fp_add_d.c.o
+ .comment       0x00000071       0x71 addsub/fp_add.c.o
+ .comment       0x000000e2       0x71 addsub/fp_addmod.c.o
+ .comment       0x00000153       0x71 addsub/fp_cmp_d.c.o
+ .comment       0x000001c4       0x71 addsub/fp_cmp_mag.c.o
+ .comment       0x00000235       0x71 addsub/fp_cmp.c.o
+ .comment       0x000002a6       0x71 addsub/fp_sub_d.c.o
+ .comment       0x00000317       0x71 addsub/fp_sub.c.o
+ .comment       0x00000388       0x71 addsub/fp_submod.c.o
+ .comment       0x000003f9       0x71 addsub/s_fp_add.c.o
+ .comment       0x0000046a       0x71 addsub/s_fp_sub.c.o
+ .comment       0x000004db       0x71 bin/fp_radix_size.c.o
+ .comment       0x0000054c       0x71 bin/fp_read_radix.c.o
+ .comment       0x000005bd       0x71 bin/fp_read_signed_bin.c.o
+ .comment       0x0000062e       0x71 bin/fp_read_unsigned_bin.c.o
+ .comment       0x0000069f       0x71 bin/fp_reverse.c.o
+ .comment       0x00000710       0x71 bin/fp_s_rmap.c.o
+ .comment       0x00000781       0x71 bin/fp_signed_bin_size.c.o
+ .comment       0x000007f2       0x71 bin/fp_to_signed_bin.c.o
+ .comment       0x00000863       0x71 bin/fp_to_unsigned_bin.c.o
+ .comment       0x000008d4       0x71 bin/fp_toradix.c.o
+ .comment       0x00000945       0x71 bin/fp_unsigned_bin_size.c.o
+ .comment       0x000009b6       0x71 bit/fp_cnt_lsb.c.o
+ .comment       0x00000a27       0x71 bit/fp_count_bits.c.o
+ .comment       0x00000a98       0x71 bit/fp_div_2.c.o
+ .comment       0x00000b09       0x71 bit/fp_div_2d.c.o
+ .comment       0x00000b7a       0x71 bit/fp_lshd.c.o
+ .comment       0x00000beb       0x71 bit/fp_mod_2d.c.o
+ .comment       0x00000c5c       0x71 bit/fp_rshd.c.o
+ .comment       0x00000ccd       0x71 divide/fp_div.c.o
+ .comment       0x00000d3e       0x71 divide/fp_div_d.c.o
+ .comment       0x00000daf       0x71 divide/fp_mod.c.o
+ .comment       0x00000e20       0x71 divide/fp_mod_d.c.o
+ .comment       0x00000e91       0x71 exptmod/fp_2expt.c.o
+ .comment       0x00000f02       0x71 exptmod/fp_exptmod.c.o
+ .comment       0x00000f73       0x71 misc/fp_set.c.o
+ .comment       0x00000fe4       0x71 mont/fp_montgomery_calc_normalization.c.o
+ .comment       0x00001055       0x71 mont/fp_montgomery_reduce.c.o
+ .comment       0x000010c6       0x71 mont/fp_montgomery_setup.c.o
+ .comment       0x00001137       0x71 mul/fp_mul_2.c.o
+ .comment       0x000011a8       0x71 mul/fp_mul_2d.c.o
+ .comment       0x00001219       0x71 mul/fp_mul_comba_3.c.o
+ .comment       0x0000128a       0x71 mul/fp_mul_comba_4.c.o
+ .comment       0x000012fb       0x71 mul/fp_mul_comba_6.c.o
+ .comment       0x0000136c       0x71 mul/fp_mul_comba_7.c.o
+ .comment       0x000013dd       0x71 mul/fp_mul_comba_8.c.o
+ .comment       0x0000144e       0x71 mul/fp_mul_comba_9.c.o
+ .comment       0x000014bf       0x71 mul/fp_mul_comba_12.c.o
+ .comment       0x00001530       0x71 mul/fp_mul_comba_17.c.o
+ .comment       0x000015a1       0x71 mul/fp_mul_comba_20.c.o
+ .comment       0x00001612       0x71 mul/fp_mul_comba_24.c.o
+ .comment       0x00001683       0x71 mul/fp_mul_comba_28.c.o
+ .comment       0x000016f4       0x71 mul/fp_mul_comba_32.c.o
+ .comment       0x00001765       0x71 mul/fp_mul_comba_48.c.o
+ .comment       0x000017d6       0x71 mul/fp_mul_comba_64.c.o
+ .comment       0x00001847       0x71 mul/fp_mul_comba_small_set.c.o
+ .comment       0x000018b8       0x71 mul/fp_mul_comba.c.o
+ .comment       0x00001929       0x71 mul/fp_mul_d.c.o
+ .comment       0x0000199a       0x71 mul/fp_mul.c.o
+ .comment       0x00001a0b       0x71 mul/fp_mulmod.c.o
+ .comment       0x00001a7c       0x71 numtheory/fp_gcd.c.o
+ .comment       0x00001aed       0x71 numtheory/fp_isprime.c.o
+ .comment       0x00001b5e       0x71 numtheory/fp_invmod.c.o
+ .comment       0x00001bcf       0x71 numtheory/fp_lcm.c.o
+ .comment       0x00001c40       0x71 numtheory/fp_prime_miller_rabin.c.o
+ .comment       0x00001cb1       0x71 sqr/fp_sqr_comba_3.c.o
+ .comment       0x00001d22       0x71 sqr/fp_sqr_comba_4.c.o
+ .comment       0x00001d93       0x71 sqr/fp_sqr_comba_6.c.o
+ .comment       0x00001e04       0x71 sqr/fp_sqr_comba_7.c.o
+ .comment       0x00001e75       0x71 sqr/fp_sqr_comba_8.c.o
+ .comment       0x00001ee6       0x71 sqr/fp_sqr_comba_9.c.o
+ .comment       0x00001f57       0x71 sqr/fp_sqr_comba_12.c.o
+ .comment       0x00001fc8       0x71 sqr/fp_sqr_comba_17.c.o
+ .comment       0x00002039       0x71 sqr/fp_sqr_comba_20.c.o
+ .comment       0x000020aa       0x71 sqr/fp_sqr_comba_24.c.o
+ .comment       0x0000211b       0x71 sqr/fp_sqr_comba_28.c.o
+ .comment       0x0000218c       0x71 sqr/fp_sqr_comba_32.c.o
+ .comment       0x000021fd       0x71 sqr/fp_sqr_comba_48.c.o
+ .comment       0x0000226e       0x71 sqr/fp_sqr_comba_64.c.o
+ .comment       0x000022df       0x71 sqr/fp_sqr_comba_generic.c.o
+ .comment       0x00002350       0x71 sqr/fp_sqr_comba_small_set.c.o
+ .comment       0x000023c1       0x71 sqr/fp_sqr_comba.c.o
+ .comment       0x00002432       0x71 sqr/fp_sqr.c.o
+ .comment       0x000024a3       0x71 sqr/fp_sqrmod.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x6e0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 addsub/fp_add_d.c.o
+ .debug_aranges
+                0x00000020       0x20 addsub/fp_add.c.o
+ .debug_aranges
+                0x00000040       0x20 addsub/fp_addmod.c.o
+ .debug_aranges
+                0x00000060       0x20 addsub/fp_cmp_d.c.o
+ .debug_aranges
+                0x00000080       0x20 addsub/fp_cmp_mag.c.o
+ .debug_aranges
+                0x000000a0       0x20 addsub/fp_cmp.c.o
+ .debug_aranges
+                0x000000c0       0x20 addsub/fp_sub_d.c.o
+ .debug_aranges
+                0x000000e0       0x20 addsub/fp_sub.c.o
+ .debug_aranges
+                0x00000100       0x20 addsub/fp_submod.c.o
+ .debug_aranges
+                0x00000120       0x20 addsub/s_fp_add.c.o
+ .debug_aranges
+                0x00000140       0x20 addsub/s_fp_sub.c.o
+ .debug_aranges
+                0x00000160       0x20 bin/fp_radix_size.c.o
+ .debug_aranges
+                0x00000180       0x20 bin/fp_read_radix.c.o
+ .debug_aranges
+                0x000001a0       0x20 bin/fp_read_signed_bin.c.o
+ .debug_aranges
+                0x000001c0       0x20 bin/fp_read_unsigned_bin.c.o
+ .debug_aranges
+                0x000001e0       0x20 bin/fp_reverse.c.o
+ .debug_aranges
+                0x00000200       0x20 bin/fp_signed_bin_size.c.o
+ .debug_aranges
+                0x00000220       0x20 bin/fp_to_signed_bin.c.o
+ .debug_aranges
+                0x00000240       0x20 bin/fp_to_unsigned_bin.c.o
+ .debug_aranges
+                0x00000260       0x20 bin/fp_toradix.c.o
+ .debug_aranges
+                0x00000280       0x20 bin/fp_unsigned_bin_size.c.o
+ .debug_aranges
+                0x000002a0       0x20 bit/fp_cnt_lsb.c.o
+ .debug_aranges
+                0x000002c0       0x20 bit/fp_count_bits.c.o
+ .debug_aranges
+                0x000002e0       0x20 bit/fp_div_2.c.o
+ .debug_aranges
+                0x00000300       0x28 bit/fp_div_2d.c.o
+ .debug_aranges
+                0x00000328       0x20 bit/fp_lshd.c.o
+ .debug_aranges
+                0x00000348       0x20 bit/fp_mod_2d.c.o
+ .debug_aranges
+                0x00000368       0x20 bit/fp_rshd.c.o
+ .debug_aranges
+                0x00000388       0x20 divide/fp_div.c.o
+ .debug_aranges
+                0x000003a8       0x28 divide/fp_div_d.c.o
+ .debug_aranges
+                0x000003d0       0x20 divide/fp_mod.c.o
+ .debug_aranges
+                0x000003f0       0x20 divide/fp_mod_d.c.o
+ .debug_aranges
+                0x00000410       0x20 exptmod/fp_2expt.c.o
+ .debug_aranges
+                0x00000430       0x28 exptmod/fp_exptmod.c.o
+ .debug_aranges
+                0x00000458       0x20 misc/fp_set.c.o
+ .debug_aranges
+                0x00000478       0x20 mont/fp_montgomery_calc_normalization.c.o
+ .debug_aranges
+                0x00000498       0x20 mont/fp_montgomery_reduce.c.o
+ .debug_aranges
+                0x000004b8       0x20 mont/fp_montgomery_setup.c.o
+ .debug_aranges
+                0x000004d8       0x20 mul/fp_mul_2.c.o
+ .debug_aranges
+                0x000004f8       0x20 mul/fp_mul_2d.c.o
+ .debug_aranges
+                0x00000518       0x20 mul/fp_mul_comba_small_set.c.o
+ .debug_aranges
+                0x00000538       0x20 mul/fp_mul_comba.c.o
+ .debug_aranges
+                0x00000558       0x20 mul/fp_mul_d.c.o
+ .debug_aranges
+                0x00000578       0x20 mul/fp_mul.c.o
+ .debug_aranges
+                0x00000598       0x20 mul/fp_mulmod.c.o
+ .debug_aranges
+                0x000005b8       0x20 numtheory/fp_gcd.c.o
+ .debug_aranges
+                0x000005d8       0x20 numtheory/fp_isprime.c.o
+ .debug_aranges
+                0x000005f8       0x28 numtheory/fp_invmod.c.o
+ .debug_aranges
+                0x00000620       0x20 numtheory/fp_lcm.c.o
+ .debug_aranges
+                0x00000640       0x20 numtheory/fp_prime_miller_rabin.c.o
+ .debug_aranges
+                0x00000660       0x20 sqr/fp_sqr_comba_generic.c.o
+ .debug_aranges
+                0x00000680       0x20 sqr/fp_sqr_comba_small_set.c.o
+ .debug_aranges
+                0x000006a0       0x20 sqr/fp_sqr.c.o
+ .debug_aranges
+                0x000006c0       0x20 sqr/fp_sqrmod.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000    0x140a1
+ *(.debug_info)
+ .debug_info    0x00000000      0x143 addsub/fp_add_d.c.o
+ .debug_info    0x00000143      0x150 addsub/fp_add.c.o
+ .debug_info    0x00000293      0x154 addsub/fp_addmod.c.o
+ .debug_info    0x000003e7      0x12b addsub/fp_cmp_d.c.o
+ .debug_info    0x00000512      0x138 addsub/fp_cmp_mag.c.o
+ .debug_info    0x0000064a      0x12b addsub/fp_cmp.c.o
+ .debug_info    0x00000775      0x143 addsub/fp_sub_d.c.o
+ .debug_info    0x000008b8      0x150 addsub/fp_sub.c.o
+ .debug_info    0x00000a08      0x154 addsub/fp_submod.c.o
+ .debug_info    0x00000b5c      0x182 addsub/s_fp_add.c.o
+ .debug_info    0x00000cde      0x184 addsub/s_fp_sub.c.o
+ .debug_info    0x00000e62      0x166 bin/fp_radix_size.c.o
+ .debug_info    0x00000fc8      0x193 bin/fp_read_radix.c.o
+ .debug_info    0x0000115b      0x13a bin/fp_read_signed_bin.c.o
+ .debug_info    0x00001295      0x13a bin/fp_read_unsigned_bin.c.o
+ .debug_info    0x000013cf       0xeb bin/fp_reverse.c.o
+ .debug_info    0x000014ba       0xa5 bin/fp_s_rmap.c.o
+ .debug_info    0x0000155f      0x11e bin/fp_signed_bin_size.c.o
+ .debug_info    0x0000167d      0x12d bin/fp_to_signed_bin.c.o
+ .debug_info    0x000017aa      0x145 bin/fp_to_unsigned_bin.c.o
+ .debug_info    0x000018ef      0x1a0 bin/fp_toradix.c.o
+ .debug_info    0x00001a8f      0x12d bin/fp_unsigned_bin_size.c.o
+ .debug_info    0x00001bbc      0x16c bit/fp_cnt_lsb.c.o
+ .debug_info    0x00001d28      0x138 bit/fp_count_bits.c.o
+ .debug_info    0x00001e60      0x18c bit/fp_div_2.c.o
+ .debug_info    0x00001fec      0x258 bit/fp_div_2d.c.o
+ .debug_info    0x00002244      0x134 bit/fp_lshd.c.o
+ .debug_info    0x00002378      0x18e bit/fp_mod_2d.c.o
+ .debug_info    0x00002506      0x134 bit/fp_rshd.c.o
+ .debug_info    0x0000263a      0x1fa divide/fp_div.c.o
+ .debug_info    0x00002834      0x1e2 divide/fp_div_d.c.o
+ .debug_info    0x00002a16      0x154 divide/fp_mod.c.o
+ .debug_info    0x00002b6a      0x13e divide/fp_mod_d.c.o
+ .debug_info    0x00002ca8      0x134 exptmod/fp_2expt.c.o
+ .debug_info    0x00002ddc      0x27c exptmod/fp_exptmod.c.o
+ .debug_info    0x00003058      0x127 misc/fp_set.c.o
+ .debug_info    0x0000317f      0x141 mont/fp_montgomery_calc_normalization.c.o
+ .debug_info    0x000032c0      0x217 mont/fp_montgomery_reduce.c.o
+ .debug_info    0x000034d7      0x165 mont/fp_montgomery_setup.c.o
+ .debug_info    0x0000363c      0x188 mul/fp_mul_2.c.o
+ .debug_info    0x000037c4      0x16e mul/fp_mul_2d.c.o
+ .debug_info    0x00003932       0x88 mul/fp_mul_comba_3.c.o
+ .debug_info    0x000039ba       0x88 mul/fp_mul_comba_4.c.o
+ .debug_info    0x00003a42       0x88 mul/fp_mul_comba_6.c.o
+ .debug_info    0x00003aca       0x88 mul/fp_mul_comba_7.c.o
+ .debug_info    0x00003b52       0x88 mul/fp_mul_comba_8.c.o
+ .debug_info    0x00003bda       0x88 mul/fp_mul_comba_9.c.o
+ .debug_info    0x00003c62       0x88 mul/fp_mul_comba_12.c.o
+ .debug_info    0x00003cea       0x88 mul/fp_mul_comba_17.c.o
+ .debug_info    0x00003d72       0x88 mul/fp_mul_comba_20.c.o
+ .debug_info    0x00003dfa       0x88 mul/fp_mul_comba_24.c.o
+ .debug_info    0x00003e82       0x88 mul/fp_mul_comba_28.c.o
+ .debug_info    0x00003f0a       0x88 mul/fp_mul_comba_32.c.o
+ .debug_info    0x00003f92       0x88 mul/fp_mul_comba_48.c.o
+ .debug_info    0x0000401a       0x88 mul/fp_mul_comba_64.c.o
+ .debug_info    0x000040a2     0x8d60 mul/fp_mul_comba_small_set.c.o
+ .debug_info    0x0000ce02      0x235 mul/fp_mul_comba.c.o
+ .debug_info    0x0000d037      0x175 mul/fp_mul_d.c.o
+ .debug_info    0x0000d1ac      0x1aa mul/fp_mul.c.o
+ .debug_info    0x0000d356      0x154 mul/fp_mulmod.c.o
+ .debug_info    0x0000d4aa      0x15b numtheory/fp_gcd.c.o
+ .debug_info    0x0000d605      0x17a numtheory/fp_isprime.c.o
+ .debug_info    0x0000d77f      0x25a numtheory/fp_invmod.c.o
+ .debug_info    0x0000d9d9      0x150 numtheory/fp_lcm.c.o
+ .debug_info    0x0000db29      0x17e numtheory/fp_prime_miller_rabin.c.o
+ .debug_info    0x0000dca7       0x88 sqr/fp_sqr_comba_3.c.o
+ .debug_info    0x0000dd2f       0x88 sqr/fp_sqr_comba_4.c.o
+ .debug_info    0x0000ddb7       0x88 sqr/fp_sqr_comba_6.c.o
+ .debug_info    0x0000de3f       0x88 sqr/fp_sqr_comba_7.c.o
+ .debug_info    0x0000dec7       0x88 sqr/fp_sqr_comba_8.c.o
+ .debug_info    0x0000df4f       0x88 sqr/fp_sqr_comba_9.c.o
+ .debug_info    0x0000dfd7       0x88 sqr/fp_sqr_comba_12.c.o
+ .debug_info    0x0000e05f       0x88 sqr/fp_sqr_comba_17.c.o
+ .debug_info    0x0000e0e7       0x88 sqr/fp_sqr_comba_20.c.o
+ .debug_info    0x0000e16f       0x88 sqr/fp_sqr_comba_24.c.o
+ .debug_info    0x0000e1f7       0x88 sqr/fp_sqr_comba_28.c.o
+ .debug_info    0x0000e27f       0x88 sqr/fp_sqr_comba_32.c.o
+ .debug_info    0x0000e307       0x88 sqr/fp_sqr_comba_48.c.o
+ .debug_info    0x0000e38f       0x88 sqr/fp_sqr_comba_64.c.o
+ .debug_info    0x0000e417      0x241 sqr/fp_sqr_comba_generic.c.o
+ .debug_info    0x0000e658     0x5703 sqr/fp_sqr_comba_small_set.c.o
+ .debug_info    0x00013d5b       0x88 sqr/fp_sqr_comba.c.o
+ .debug_info    0x00013de3      0x177 sqr/fp_sqr.c.o
+ .debug_info    0x00013f5a      0x147 sqr/fp_sqrmod.c.o
+
+.debug_abbrev   0x00000000     0x2ee6
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0xb4 addsub/fp_add_d.c.o
+ .debug_abbrev  0x000000b4       0xb4 addsub/fp_add.c.o
+ .debug_abbrev  0x00000168       0xb6 addsub/fp_addmod.c.o
+ .debug_abbrev  0x0000021e       0xa7 addsub/fp_cmp_d.c.o
+ .debug_abbrev  0x000002c5       0xb6 addsub/fp_cmp_mag.c.o
+ .debug_abbrev  0x0000037b       0xa7 addsub/fp_cmp.c.o
+ .debug_abbrev  0x00000422       0xb4 addsub/fp_sub_d.c.o
+ .debug_abbrev  0x000004d6       0xb4 addsub/fp_sub.c.o
+ .debug_abbrev  0x0000058a       0xb6 addsub/fp_submod.c.o
+ .debug_abbrev  0x00000640       0xc3 addsub/s_fp_add.c.o
+ .debug_abbrev  0x00000703       0xc3 addsub/s_fp_sub.c.o
+ .debug_abbrev  0x000007c6       0xd2 bin/fp_radix_size.c.o
+ .debug_abbrev  0x00000898       0xdd bin/fp_read_radix.c.o
+ .debug_abbrev  0x00000975       0xa5 bin/fp_read_signed_bin.c.o
+ .debug_abbrev  0x00000a1a       0xa5 bin/fp_read_unsigned_bin.c.o
+ .debug_abbrev  0x00000abf       0x77 bin/fp_reverse.c.o
+ .debug_abbrev  0x00000b36       0x4b bin/fp_s_rmap.c.o
+ .debug_abbrev  0x00000b81       0xa7 bin/fp_signed_bin_size.c.o
+ .debug_abbrev  0x00000c28       0xa5 bin/fp_to_signed_bin.c.o
+ .debug_abbrev  0x00000ccd       0xb4 bin/fp_to_unsigned_bin.c.o
+ .debug_abbrev  0x00000d81       0xfb bin/fp_toradix.c.o
+ .debug_abbrev  0x00000e7c       0xb6 bin/fp_unsigned_bin_size.c.o
+ .debug_abbrev  0x00000f32       0xcc bit/fp_cnt_lsb.c.o
+ .debug_abbrev  0x00000ffe       0xb6 bit/fp_count_bits.c.o
+ .debug_abbrev  0x000010b4       0xcc bit/fp_div_2.c.o
+ .debug_abbrev  0x00001180      0x105 bit/fp_div_2d.c.o
+ .debug_abbrev  0x00001285       0xb4 bit/fp_lshd.c.o
+ .debug_abbrev  0x00001339       0xef bit/fp_mod_2d.c.o
+ .debug_abbrev  0x00001428       0xb4 bit/fp_rshd.c.o
+ .debug_abbrev  0x000014dc       0xdb divide/fp_div.c.o
+ .debug_abbrev  0x000015b7       0xdc divide/fp_div_d.c.o
+ .debug_abbrev  0x00001693       0xc5 divide/fp_mod.c.o
+ .debug_abbrev  0x00001758       0xa7 divide/fp_mod_d.c.o
+ .debug_abbrev  0x000017ff       0xb4 exptmod/fp_2expt.c.o
+ .debug_abbrev  0x000018b3       0xe9 exptmod/fp_exptmod.c.o
+ .debug_abbrev  0x0000199c       0xa5 misc/fp_set.c.o
+ .debug_abbrev  0x00001a41       0xc3 mont/fp_montgomery_calc_normalization.c.o
+ .debug_abbrev  0x00001b04       0xe4 mont/fp_montgomery_reduce.c.o
+ .debug_abbrev  0x00001be8       0xb6 mont/fp_montgomery_setup.c.o
+ .debug_abbrev  0x00001c9e       0xca mul/fp_mul_2.c.o
+ .debug_abbrev  0x00001d68       0xc3 mul/fp_mul_2d.c.o
+ .debug_abbrev  0x00001e2b       0x2a mul/fp_mul_comba_3.c.o
+ .debug_abbrev  0x00001e55       0x2a mul/fp_mul_comba_4.c.o
+ .debug_abbrev  0x00001e7f       0x2a mul/fp_mul_comba_6.c.o
+ .debug_abbrev  0x00001ea9       0x2a mul/fp_mul_comba_7.c.o
+ .debug_abbrev  0x00001ed3       0x2a mul/fp_mul_comba_8.c.o
+ .debug_abbrev  0x00001efd       0x2a mul/fp_mul_comba_9.c.o
+ .debug_abbrev  0x00001f27       0x2a mul/fp_mul_comba_12.c.o
+ .debug_abbrev  0x00001f51       0x2a mul/fp_mul_comba_17.c.o
+ .debug_abbrev  0x00001f7b       0x2a mul/fp_mul_comba_20.c.o
+ .debug_abbrev  0x00001fa5       0x2a mul/fp_mul_comba_24.c.o
+ .debug_abbrev  0x00001fcf       0x2a mul/fp_mul_comba_28.c.o
+ .debug_abbrev  0x00001ff9       0x2a mul/fp_mul_comba_32.c.o
+ .debug_abbrev  0x00002023       0x2a mul/fp_mul_comba_48.c.o
+ .debug_abbrev  0x0000204d       0x2a mul/fp_mul_comba_64.c.o
+ .debug_abbrev  0x00002077      0x10e mul/fp_mul_comba_small_set.c.o
+ .debug_abbrev  0x00002185       0xdb mul/fp_mul_comba.c.o
+ .debug_abbrev  0x00002260       0xc3 mul/fp_mul_d.c.o
+ .debug_abbrev  0x00002323       0xe8 mul/fp_mul.c.o
+ .debug_abbrev  0x0000240b       0xb6 mul/fp_mulmod.c.o
+ .debug_abbrev  0x000024c1       0xb4 numtheory/fp_gcd.c.o
+ .debug_abbrev  0x00002575       0xdb numtheory/fp_isprime.c.o
+ .debug_abbrev  0x00002650       0xe5 numtheory/fp_invmod.c.o
+ .debug_abbrev  0x00002735       0xb4 numtheory/fp_lcm.c.o
+ .debug_abbrev  0x000027e9       0xd2 numtheory/fp_prime_miller_rabin.c.o
+ .debug_abbrev  0x000028bb       0x2a sqr/fp_sqr_comba_3.c.o
+ .debug_abbrev  0x000028e5       0x2a sqr/fp_sqr_comba_4.c.o
+ .debug_abbrev  0x0000290f       0x2a sqr/fp_sqr_comba_6.c.o
+ .debug_abbrev  0x00002939       0x2a sqr/fp_sqr_comba_7.c.o
+ .debug_abbrev  0x00002963       0x2a sqr/fp_sqr_comba_8.c.o
+ .debug_abbrev  0x0000298d       0x2a sqr/fp_sqr_comba_9.c.o
+ .debug_abbrev  0x000029b7       0x2a sqr/fp_sqr_comba_12.c.o
+ .debug_abbrev  0x000029e1       0x2a sqr/fp_sqr_comba_17.c.o
+ .debug_abbrev  0x00002a0b       0x2a sqr/fp_sqr_comba_20.c.o
+ .debug_abbrev  0x00002a35       0x2a sqr/fp_sqr_comba_24.c.o
+ .debug_abbrev  0x00002a5f       0x2a sqr/fp_sqr_comba_28.c.o
+ .debug_abbrev  0x00002a89       0x2a sqr/fp_sqr_comba_32.c.o
+ .debug_abbrev  0x00002ab3       0x2a sqr/fp_sqr_comba_48.c.o
+ .debug_abbrev  0x00002add       0x2a sqr/fp_sqr_comba_64.c.o
+ .debug_abbrev  0x00002b07       0xfa sqr/fp_sqr_comba_generic.c.o
+ .debug_abbrev  0x00002c01      0x11d sqr/fp_sqr_comba_small_set.c.o
+ .debug_abbrev  0x00002d1e       0x2a sqr/fp_sqr_comba.c.o
+ .debug_abbrev  0x00002d48       0xe8 sqr/fp_sqr.c.o
+ .debug_abbrev  0x00002e30       0xb6 sqr/fp_sqrmod.c.o
+
+.debug_line     0x00000000     0x4c3c
+ *(.debug_line)
+ .debug_line    0x00000000       0xbe addsub/fp_add_d.c.o
+ .debug_line    0x000000be       0xc5 addsub/fp_add.c.o
+ .debug_line    0x00000183       0xc0 addsub/fp_addmod.c.o
+ .debug_line    0x00000243       0xd5 addsub/fp_cmp_d.c.o
+ .debug_line    0x00000318       0xef addsub/fp_cmp_mag.c.o
+ .debug_line    0x00000407       0xd3 addsub/fp_cmp.c.o
+ .debug_line    0x000004da       0xbe addsub/fp_sub_d.c.o
+ .debug_line    0x00000598       0xc4 addsub/fp_sub.c.o
+ .debug_line    0x0000065c       0xc0 addsub/fp_submod.c.o
+ .debug_line    0x0000071c      0x130 addsub/s_fp_add.c.o
+ .debug_line    0x0000084c      0x146 addsub/s_fp_sub.c.o
+ .debug_line    0x00000992       0xe3 bin/fp_radix_size.c.o
+ .debug_line    0x00000a75      0x100 bin/fp_read_radix.c.o
+ .debug_line    0x00000b75       0xc9 bin/fp_read_signed_bin.c.o
+ .debug_line    0x00000c3e      0x10f bin/fp_read_unsigned_bin.c.o
+ .debug_line    0x00000d4d       0x8e bin/fp_reverse.c.o
+ .debug_line    0x00000ddb       0x68 bin/fp_s_rmap.c.o
+ .debug_line    0x00000e43       0xc4 bin/fp_signed_bin_size.c.o
+ .debug_line    0x00000f07       0xc4 bin/fp_to_signed_bin.c.o
+ .debug_line    0x00000fcb       0xd2 bin/fp_to_unsigned_bin.c.o
+ .debug_line    0x0000109d       0xe1 bin/fp_toradix.c.o
+ .debug_line    0x0000117e       0xc7 bin/fp_unsigned_bin_size.c.o
+ .debug_line    0x00001245       0xe8 bit/fp_cnt_lsb.c.o
+ .debug_line    0x0000132d       0xcd bit/fp_count_bits.c.o
+ .debug_line    0x000013fa      0x115 bit/fp_div_2.c.o
+ .debug_line    0x0000150f      0x108 bit/fp_div_2d.c.o
+ .debug_line    0x00001617      0x148 bit/fp_lshd.c.o
+ .debug_line    0x0000175f       0xd7 bit/fp_mod_2d.c.o
+ .debug_line    0x00001836      0x111 bit/fp_rshd.c.o
+ .debug_line    0x00001947      0x264 divide/fp_div.c.o
+ .debug_line    0x00001bab      0x160 divide/fp_div_d.c.o
+ .debug_line    0x00001d0b       0xbf divide/fp_mod.c.o
+ .debug_line    0x00001dca       0xbd divide/fp_mod_d.c.o
+ .debug_line    0x00001e87       0xc4 exptmod/fp_2expt.c.o
+ .debug_line    0x00001f4b      0x1c2 exptmod/fp_exptmod.c.o
+ .debug_line    0x0000210d       0xbc misc/fp_set.c.o
+ .debug_line    0x000021c9       0xea mont/fp_montgomery_calc_normalization.c.o
+ .debug_line    0x000022b3      0x19f mont/fp_montgomery_reduce.c.o
+ .debug_line    0x00002452       0xd8 mont/fp_montgomery_setup.c.o
+ .debug_line    0x0000252a      0x104 mul/fp_mul_2.c.o
+ .debug_line    0x0000262e      0x10c mul/fp_mul_2d.c.o
+ .debug_line    0x0000273a       0x1d mul/fp_mul_comba_3.c.o
+ .debug_line    0x00002757       0x1d mul/fp_mul_comba_4.c.o
+ .debug_line    0x00002774       0x1d mul/fp_mul_comba_6.c.o
+ .debug_line    0x00002791       0x1d mul/fp_mul_comba_7.c.o
+ .debug_line    0x000027ae       0x1d mul/fp_mul_comba_8.c.o
+ .debug_line    0x000027cb       0x1d mul/fp_mul_comba_9.c.o
+ .debug_line    0x000027e8       0x1d mul/fp_mul_comba_12.c.o
+ .debug_line    0x00002805       0x1d mul/fp_mul_comba_17.c.o
+ .debug_line    0x00002822       0x1d mul/fp_mul_comba_20.c.o
+ .debug_line    0x0000283f       0x1d mul/fp_mul_comba_24.c.o
+ .debug_line    0x0000285c       0x1d mul/fp_mul_comba_28.c.o
+ .debug_line    0x00002879       0x1d mul/fp_mul_comba_32.c.o
+ .debug_line    0x00002896       0x1d mul/fp_mul_comba_48.c.o
+ .debug_line    0x000028b3       0x1d mul/fp_mul_comba_64.c.o
+ .debug_line    0x000028d0      0x982 mul/fp_mul_comba_small_set.c.o
+ .debug_line    0x00003252      0x143 mul/fp_mul_comba.c.o
+ .debug_line    0x00003395      0x13b mul/fp_mul_d.c.o
+ .debug_line    0x000034d0       0xc4 mul/fp_mul.c.o
+ .debug_line    0x00003594       0xbd mul/fp_mulmod.c.o
+ .debug_line    0x00003651       0xdf numtheory/fp_gcd.c.o
+ .debug_line    0x00003730       0xdf numtheory/fp_isprime.c.o
+ .debug_line    0x0000380f      0x1e0 numtheory/fp_invmod.c.o
+ .debug_line    0x000039ef       0xc5 numtheory/fp_lcm.c.o
+ .debug_line    0x00003ab4      0x101 numtheory/fp_prime_miller_rabin.c.o
+ .debug_line    0x00003bb5       0x1d sqr/fp_sqr_comba_3.c.o
+ .debug_line    0x00003bd2       0x1d sqr/fp_sqr_comba_4.c.o
+ .debug_line    0x00003bef       0x1d sqr/fp_sqr_comba_6.c.o
+ .debug_line    0x00003c0c       0x1d sqr/fp_sqr_comba_7.c.o
+ .debug_line    0x00003c29       0x1d sqr/fp_sqr_comba_8.c.o
+ .debug_line    0x00003c46       0x1d sqr/fp_sqr_comba_9.c.o
+ .debug_line    0x00003c63       0x1d sqr/fp_sqr_comba_12.c.o
+ .debug_line    0x00003c80       0x1d sqr/fp_sqr_comba_17.c.o
+ .debug_line    0x00003c9d       0x1d sqr/fp_sqr_comba_20.c.o
+ .debug_line    0x00003cba       0x1d sqr/fp_sqr_comba_24.c.o
+ .debug_line    0x00003cd7       0x1d sqr/fp_sqr_comba_28.c.o
+ .debug_line    0x00003cf4       0x1d sqr/fp_sqr_comba_32.c.o
+ .debug_line    0x00003d11       0x1d sqr/fp_sqr_comba_48.c.o
+ .debug_line    0x00003d2e       0x1d sqr/fp_sqr_comba_64.c.o
+ .debug_line    0x00003d4b      0x166 sqr/fp_sqr_comba_generic.c.o
+ .debug_line    0x00003eb1      0xbef sqr/fp_sqr_comba_small_set.c.o
+ .debug_line    0x00004aa0       0x1d sqr/fp_sqr_comba.c.o
+ .debug_line    0x00004abd       0xc2 sqr/fp_sqr.c.o
+ .debug_line    0x00004b7f       0xbd sqr/fp_sqrmod.c.o
+
+.debug_frame    0x00000000      0xb58
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x34 addsub/fp_add_d.c.o
+ .debug_frame   0x00000034       0x34 addsub/fp_add.c.o
+ .debug_frame   0x00000068       0x38 addsub/fp_addmod.c.o
+ .debug_frame   0x000000a0       0x2c addsub/fp_cmp_d.c.o
+ .debug_frame   0x000000cc       0x2c addsub/fp_cmp_mag.c.o
+ .debug_frame   0x000000f8       0x30 addsub/fp_cmp.c.o
+ .debug_frame   0x00000128       0x34 addsub/fp_sub_d.c.o
+ .debug_frame   0x0000015c       0x30 addsub/fp_sub.c.o
+ .debug_frame   0x0000018c       0x38 addsub/fp_submod.c.o
+ .debug_frame   0x000001c4       0x3c addsub/s_fp_add.c.o
+ .debug_frame   0x00000200       0x38 addsub/s_fp_sub.c.o
+ .debug_frame   0x00000238       0x34 bin/fp_radix_size.c.o
+ .debug_frame   0x0000026c       0x34 bin/fp_read_radix.c.o
+ .debug_frame   0x000002a0       0x30 bin/fp_read_signed_bin.c.o
+ .debug_frame   0x000002d0       0x30 bin/fp_read_unsigned_bin.c.o
+ .debug_frame   0x00000300       0x2c bin/fp_reverse.c.o
+ .debug_frame   0x0000032c       0x2c bin/fp_signed_bin_size.c.o
+ .debug_frame   0x00000358       0x30 bin/fp_to_signed_bin.c.o
+ .debug_frame   0x00000388       0x34 bin/fp_to_unsigned_bin.c.o
+ .debug_frame   0x000003bc       0x38 bin/fp_toradix.c.o
+ .debug_frame   0x000003f4       0x2c bin/fp_unsigned_bin_size.c.o
+ .debug_frame   0x00000420       0x2c bit/fp_cnt_lsb.c.o
+ .debug_frame   0x0000044c       0x2c bit/fp_count_bits.c.o
+ .debug_frame   0x00000478       0x30 bit/fp_div_2.c.o
+ .debug_frame   0x000004a8       0x54 bit/fp_div_2d.c.o
+ .debug_frame   0x000004fc       0x30 bit/fp_lshd.c.o
+ .debug_frame   0x0000052c       0x30 bit/fp_mod_2d.c.o
+ .debug_frame   0x0000055c       0x30 bit/fp_rshd.c.o
+ .debug_frame   0x0000058c       0x38 divide/fp_div.c.o
+ .debug_frame   0x000005c4       0x54 divide/fp_div_d.c.o
+ .debug_frame   0x00000618       0x34 divide/fp_mod.c.o
+ .debug_frame   0x0000064c       0x30 divide/fp_mod_d.c.o
+ .debug_frame   0x0000067c       0x2c exptmod/fp_2expt.c.o
+ .debug_frame   0x000006a8       0x68 exptmod/fp_exptmod.c.o
+ .debug_frame   0x00000710       0x30 misc/fp_set.c.o
+ .debug_frame   0x00000740       0x30 mont/fp_montgomery_calc_normalization.c.o
+ .debug_frame   0x00000770       0x38 mont/fp_montgomery_reduce.c.o
+ .debug_frame   0x000007a8       0x2c mont/fp_montgomery_setup.c.o
+ .debug_frame   0x000007d4       0x30 mul/fp_mul_2.c.o
+ .debug_frame   0x00000804       0x30 mul/fp_mul_2d.c.o
+ .debug_frame   0x00000834       0x38 mul/fp_mul_comba_small_set.c.o
+ .debug_frame   0x0000086c       0x38 mul/fp_mul_comba.c.o
+ .debug_frame   0x000008a4       0x3c mul/fp_mul_d.c.o
+ .debug_frame   0x000008e0       0x30 mul/fp_mul.c.o
+ .debug_frame   0x00000910       0x38 mul/fp_mulmod.c.o
+ .debug_frame   0x00000948       0x38 numtheory/fp_gcd.c.o
+ .debug_frame   0x00000980       0x34 numtheory/fp_isprime.c.o
+ .debug_frame   0x000009b4       0x64 numtheory/fp_invmod.c.o
+ .debug_frame   0x00000a18       0x38 numtheory/fp_lcm.c.o
+ .debug_frame   0x00000a50       0x38 numtheory/fp_prime_miller_rabin.c.o
+ .debug_frame   0x00000a88       0x38 sqr/fp_sqr_comba_generic.c.o
+ .debug_frame   0x00000ac0       0x38 sqr/fp_sqr_comba_small_set.c.o
+ .debug_frame   0x00000af8       0x2c sqr/fp_sqr.c.o
+ .debug_frame   0x00000b24       0x34 sqr/fp_sqrmod.c.o
+
+.debug_str      0x00000000     0x9227
+ *(.debug_str)
+ .debug_str     0x00000000      0x1c0 addsub/fp_add_d.c.o
+ .debug_str     0x000001c0      0x1bc addsub/fp_add.c.o
+ .debug_str     0x0000037c      0x1c2 addsub/fp_addmod.c.o
+ .debug_str     0x0000053e      0x1c0 addsub/fp_cmp_d.c.o
+ .debug_str     0x000006fe      0x1c4 addsub/fp_cmp_mag.c.o
+ .debug_str     0x000008c2      0x1bc addsub/fp_cmp.c.o
+ .debug_str     0x00000a7e      0x1c0 addsub/fp_sub_d.c.o
+ .debug_str     0x00000c3e      0x1bc addsub/fp_sub.c.o
+ .debug_str     0x00000dfa      0x1c2 addsub/fp_submod.c.o
+ .debug_str     0x00000fbc      0x1d8 addsub/s_fp_add.c.o
+ .debug_str     0x00001194      0x1e1 addsub/s_fp_sub.c.o
+ .debug_str     0x00001375      0x1d7 bin/fp_radix_size.c.o
+ .debug_str     0x0000154c      0x1d7 bin/fp_read_radix.c.o
+ .debug_str     0x00001723      0x1d1 bin/fp_read_signed_bin.c.o
+ .debug_str     0x000018f4      0x1d5 bin/fp_read_unsigned_bin.c.o
+ .debug_str     0x00001ac9      0x1a7 bin/fp_reverse.c.o
+ .debug_str     0x00001c70      0x1a5 bin/fp_s_rmap.c.o
+ .debug_str     0x00001e15      0x1d1 bin/fp_signed_bin_size.c.o
+ .debug_str     0x00001fe6      0x1cd bin/fp_to_signed_bin.c.o
+ .debug_str     0x000021b3      0x1d1 bin/fp_to_unsigned_bin.c.o
+ .debug_str     0x00002384      0x1d6 bin/fp_toradix.c.o
+ .debug_str     0x0000255a      0x1da bin/fp_unsigned_bin_size.c.o
+ .debug_str     0x00002734      0x1c1 bit/fp_cnt_lsb.c.o
+ .debug_str     0x000028f5      0x1c7 bit/fp_count_bits.c.o
+ .debug_str     0x00002abc      0x1cf bit/fp_div_2.c.o
+ .debug_str     0x00002c8b      0x1cf bit/fp_div_2d.c.o
+ .debug_str     0x00002e5a      0x1bb bit/fp_lshd.c.o
+ .debug_str     0x00003015      0x1bf bit/fp_mod_2d.c.o
+ .debug_str     0x000031d4      0x1bb bit/fp_rshd.c.o
+ .debug_str     0x0000338f      0x1d1 divide/fp_div.c.o
+ .debug_str     0x00003560      0x1e2 divide/fp_div_d.c.o
+ .debug_str     0x00003742      0x1bc divide/fp_mod.c.o
+ .debug_str     0x000038fe      0x1c0 divide/fp_mod_d.c.o
+ .debug_str     0x00003abe      0x1c1 exptmod/fp_2expt.c.o
+ .debug_str     0x00003c7f      0x1fa exptmod/fp_exptmod.c.o
+ .debug_str     0x00003e79      0x1ba misc/fp_set.c.o
+ .debug_str     0x00004033      0x1f3 mont/fp_montgomery_calc_normalization.c.o
+ .debug_str     0x00004226      0x1f3 mont/fp_montgomery_reduce.c.o
+ .debug_str     0x00004419      0x1e4 mont/fp_montgomery_setup.c.o
+ .debug_str     0x000045fd      0x1cf mul/fp_mul_2.c.o
+ .debug_str     0x000047cc      0x1d4 mul/fp_mul_2d.c.o
+ .debug_str     0x000049a0      0x1a0 mul/fp_mul_comba_3.c.o
+ .debug_str     0x00004b40      0x1a0 mul/fp_mul_comba_4.c.o
+ .debug_str     0x00004ce0      0x1a0 mul/fp_mul_comba_6.c.o
+ .debug_str     0x00004e80      0x1a0 mul/fp_mul_comba_7.c.o
+ .debug_str     0x00005020      0x1a0 mul/fp_mul_comba_8.c.o
+ .debug_str     0x000051c0      0x1a0 mul/fp_mul_comba_9.c.o
+ .debug_str     0x00005360      0x1a1 mul/fp_mul_comba_12.c.o
+ .debug_str     0x00005501      0x1a1 mul/fp_mul_comba_17.c.o
+ .debug_str     0x000056a2      0x1a1 mul/fp_mul_comba_20.c.o
+ .debug_str     0x00005843      0x1a1 mul/fp_mul_comba_24.c.o
+ .debug_str     0x000059e4      0x1a1 mul/fp_mul_comba_28.c.o
+ .debug_str     0x00005b85      0x1a1 mul/fp_mul_comba_32.c.o
+ .debug_str     0x00005d26      0x1a1 mul/fp_mul_comba_48.c.o
+ .debug_str     0x00005ec7      0x1a1 mul/fp_mul_comba_64.c.o
+ .debug_str     0x00006068      0x1e5 mul/fp_mul_comba_small_set.c.o
+ .debug_str     0x0000624d      0x1df mul/fp_mul_comba.c.o
+ .debug_str     0x0000642c      0x1d5 mul/fp_mul_d.c.o
+ .debug_str     0x00006601      0x1b9 mul/fp_mul.c.o
+ .debug_str     0x000067ba      0x1bf mul/fp_mulmod.c.o
+ .debug_str     0x00006979      0x1bf numtheory/fp_gcd.c.o
+ .debug_str     0x00006b38      0x1ce numtheory/fp_isprime.c.o
+ .debug_str     0x00006d06      0x1d4 numtheory/fp_invmod.c.o
+ .debug_str     0x00006eda      0x1bf numtheory/fp_lcm.c.o
+ .debug_str     0x00007099      0x1e4 numtheory/fp_prime_miller_rabin.c.o
+ .debug_str     0x0000727d      0x1a0 sqr/fp_sqr_comba_3.c.o
+ .debug_str     0x0000741d      0x1a0 sqr/fp_sqr_comba_4.c.o
+ .debug_str     0x000075bd      0x1a0 sqr/fp_sqr_comba_6.c.o
+ .debug_str     0x0000775d      0x1a0 sqr/fp_sqr_comba_7.c.o
+ .debug_str     0x000078fd      0x1a0 sqr/fp_sqr_comba_8.c.o
+ .debug_str     0x00007a9d      0x1a0 sqr/fp_sqr_comba_9.c.o
+ .debug_str     0x00007c3d      0x1a1 sqr/fp_sqr_comba_12.c.o
+ .debug_str     0x00007dde      0x1a1 sqr/fp_sqr_comba_17.c.o
+ .debug_str     0x00007f7f      0x1a1 sqr/fp_sqr_comba_20.c.o
+ .debug_str     0x00008120      0x1a1 sqr/fp_sqr_comba_24.c.o
+ .debug_str     0x000082c1      0x1a1 sqr/fp_sqr_comba_28.c.o
+ .debug_str     0x00008462      0x1a1 sqr/fp_sqr_comba_32.c.o
+ .debug_str     0x00008603      0x1a1 sqr/fp_sqr_comba_48.c.o
+ .debug_str     0x000087a4      0x1a1 sqr/fp_sqr_comba_64.c.o
+ .debug_str     0x00008945      0x1e7 sqr/fp_sqr_comba_generic.c.o
+ .debug_str     0x00008b2c      0x1e5 sqr/fp_sqr_comba_small_set.c.o
+ .debug_str     0x00008d11      0x19e sqr/fp_sqr_comba.c.o
+ .debug_str     0x00008eaf      0x1b9 sqr/fp_sqr.c.o
+ .debug_str     0x00009068      0x1bf sqr/fp_sqrmod.c.o
+
+.debug_loc      0x00000000    0x323ac
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x87 addsub/fp_add_d.c.o
+ .debug_loc     0x00000087       0xba addsub/fp_add.c.o
+ .debug_loc     0x00000141       0xa5 addsub/fp_addmod.c.o
+ .debug_loc     0x000001e6       0x72 addsub/fp_cmp_d.c.o
+ .debug_loc     0x00000258       0x6f addsub/fp_cmp_mag.c.o
+ .debug_loc     0x000002c7       0x5c addsub/fp_cmp.c.o
+ .debug_loc     0x00000323       0x87 addsub/fp_sub_d.c.o
+ .debug_loc     0x000003aa       0xba addsub/fp_sub.c.o
+ .debug_loc     0x00000464       0xa5 addsub/fp_submod.c.o
+ .debug_loc     0x00000509      0x11d addsub/s_fp_add.c.o
+ .debug_loc     0x00000626      0x184 addsub/s_fp_sub.c.o
+ .debug_loc     0x000007aa       0x92 bin/fp_radix_size.c.o
+ .debug_loc     0x0000083c       0xf7 bin/fp_read_radix.c.o
+ .debug_loc     0x00000933       0x7a bin/fp_read_signed_bin.c.o
+ .debug_loc     0x000009ad       0x92 bin/fp_read_unsigned_bin.c.o
+ .debug_loc     0x00000a3f       0x9b bin/fp_reverse.c.o
+ .debug_loc     0x00000ada       0x3e bin/fp_signed_bin_size.c.o
+ .debug_loc     0x00000b18       0x5c bin/fp_to_signed_bin.c.o
+ .debug_loc     0x00000b74       0x69 bin/fp_to_unsigned_bin.c.o
+ .debug_loc     0x00000bdd      0x158 bin/fp_toradix.c.o
+ .debug_loc     0x00000d35       0x5c bin/fp_unsigned_bin_size.c.o
+ .debug_loc     0x00000d91       0x9e bit/fp_cnt_lsb.c.o
+ .debug_loc     0x00000e2f       0x64 bit/fp_count_bits.c.o
+ .debug_loc     0x00000e93      0x126 bit/fp_div_2.c.o
+ .debug_loc     0x00000fb9      0x212 bit/fp_div_2d.c.o
+ .debug_loc     0x000011cb       0x6f bit/fp_lshd.c.o
+ .debug_loc     0x0000123a       0xc3 bit/fp_mod_2d.c.o
+ .debug_loc     0x000012fd       0x85 bit/fp_rshd.c.o
+ .debug_loc     0x00001382      0x204 divide/fp_div.c.o
+ .debug_loc     0x00001586      0x20e divide/fp_div_d.c.o
+ .debug_loc     0x00001794       0xa5 divide/fp_mod.c.o
+ .debug_loc     0x00001839       0x7a divide/fp_mod_d.c.o
+ .debug_loc     0x000018b3       0x6f exptmod/fp_2expt.c.o
+ .debug_loc     0x00001922      0x38c exptmod/fp_exptmod.c.o
+ .debug_loc     0x00001cae       0x68 misc/fp_set.c.o
+ .debug_loc     0x00001d16       0x86 mont/fp_montgomery_calc_normalization.c.o
+ .debug_loc     0x00001d9c      0x266 mont/fp_montgomery_reduce.c.o
+ .debug_loc     0x00002002       0xc7 mont/fp_montgomery_setup.c.o
+ .debug_loc     0x000020c9      0x12b mul/fp_mul_2.c.o
+ .debug_loc     0x000021f4      0x11c mul/fp_mul_2d.c.o
+ .debug_loc     0x00002310    0x1bf28 mul/fp_mul_comba_small_set.c.o
+ .debug_loc     0x0001e238      0x2ab mul/fp_mul_comba.c.o
+ .debug_loc     0x0001e4e3      0x106 mul/fp_mul_d.c.o
+ .debug_loc     0x0001e5e9       0xfb mul/fp_mul.c.o
+ .debug_loc     0x0001e6e4       0xa5 mul/fp_mulmod.c.o
+ .debug_loc     0x0001e789       0x94 numtheory/fp_gcd.c.o
+ .debug_loc     0x0001e81d       0xa9 numtheory/fp_isprime.c.o
+ .debug_loc     0x0001e8c6      0x171 numtheory/fp_invmod.c.o
+ .debug_loc     0x0001ea37       0x94 numtheory/fp_lcm.c.o
+ .debug_loc     0x0001eacb       0xbb numtheory/fp_prime_miller_rabin.c.o
+ .debug_loc     0x0001eb86      0x353 sqr/fp_sqr_comba_generic.c.o
+ .debug_loc     0x0001eed9    0x133b5 sqr/fp_sqr_comba_small_set.c.o
+ .debug_loc     0x0003228e       0x97 sqr/fp_sqr.c.o
+ .debug_loc     0x00032325       0x87 sqr/fp_sqrmod.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000    0x17b08
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x10 addsub/fp_add_d.c.o
+ .debug_ranges  0x00000010       0x10 addsub/fp_add.c.o
+ .debug_ranges  0x00000020       0x10 addsub/fp_addmod.c.o
+ .debug_ranges  0x00000030       0x10 addsub/fp_cmp_d.c.o
+ .debug_ranges  0x00000040       0x10 addsub/fp_cmp_mag.c.o
+ .debug_ranges  0x00000050       0x10 addsub/fp_cmp.c.o
+ .debug_ranges  0x00000060       0x10 addsub/fp_sub_d.c.o
+ .debug_ranges  0x00000070       0x10 addsub/fp_sub.c.o
+ .debug_ranges  0x00000080       0x10 addsub/fp_submod.c.o
+ .debug_ranges  0x00000090       0x10 addsub/s_fp_add.c.o
+ .debug_ranges  0x000000a0       0x10 addsub/s_fp_sub.c.o
+ .debug_ranges  0x000000b0       0x10 bin/fp_radix_size.c.o
+ .debug_ranges  0x000000c0       0x10 bin/fp_read_radix.c.o
+ .debug_ranges  0x000000d0       0x10 bin/fp_read_signed_bin.c.o
+ .debug_ranges  0x000000e0       0x10 bin/fp_read_unsigned_bin.c.o
+ .debug_ranges  0x000000f0       0x10 bin/fp_reverse.c.o
+ .debug_ranges  0x00000100       0x10 bin/fp_signed_bin_size.c.o
+ .debug_ranges  0x00000110       0x10 bin/fp_to_signed_bin.c.o
+ .debug_ranges  0x00000120       0x10 bin/fp_to_unsigned_bin.c.o
+ .debug_ranges  0x00000130       0x10 bin/fp_toradix.c.o
+ .debug_ranges  0x00000140       0x10 bin/fp_unsigned_bin_size.c.o
+ .debug_ranges  0x00000150       0x10 bit/fp_cnt_lsb.c.o
+ .debug_ranges  0x00000160       0x10 bit/fp_count_bits.c.o
+ .debug_ranges  0x00000170       0x10 bit/fp_div_2.c.o
+ .debug_ranges  0x00000180       0x18 bit/fp_div_2d.c.o
+ .debug_ranges  0x00000198       0x10 bit/fp_lshd.c.o
+ .debug_ranges  0x000001a8       0x60 bit/fp_mod_2d.c.o
+ .debug_ranges  0x00000208       0x10 bit/fp_rshd.c.o
+ .debug_ranges  0x00000218       0x30 divide/fp_div.c.o
+ .debug_ranges  0x00000248       0x18 divide/fp_div_d.c.o
+ .debug_ranges  0x00000260       0x10 divide/fp_mod.c.o
+ .debug_ranges  0x00000270       0x10 divide/fp_mod_d.c.o
+ .debug_ranges  0x00000280       0x10 exptmod/fp_2expt.c.o
+ .debug_ranges  0x00000290       0x18 exptmod/fp_exptmod.c.o
+ .debug_ranges  0x000002a8       0x10 misc/fp_set.c.o
+ .debug_ranges  0x000002b8       0x10 mont/fp_montgomery_calc_normalization.c.o
+ .debug_ranges  0x000002c8       0x30 mont/fp_montgomery_reduce.c.o
+ .debug_ranges  0x000002f8       0x10 mont/fp_montgomery_setup.c.o
+ .debug_ranges  0x00000308       0x28 mul/fp_mul_2.c.o
+ .debug_ranges  0x00000330       0x10 mul/fp_mul_2d.c.o
+ .debug_ranges  0x00000340     0xcff0 mul/fp_mul_comba_small_set.c.o
+ .debug_ranges  0x0000d330       0x10 mul/fp_mul_comba.c.o
+ .debug_ranges  0x0000d340       0x10 mul/fp_mul_d.c.o
+ .debug_ranges  0x0000d350       0x40 mul/fp_mul.c.o
+ .debug_ranges  0x0000d390       0x10 mul/fp_mulmod.c.o
+ .debug_ranges  0x0000d3a0       0x10 numtheory/fp_gcd.c.o
+ .debug_ranges  0x0000d3b0       0x10 numtheory/fp_isprime.c.o
+ .debug_ranges  0x0000d3c0       0x18 numtheory/fp_invmod.c.o
+ .debug_ranges  0x0000d3d8       0x10 numtheory/fp_lcm.c.o
+ .debug_ranges  0x0000d3e8       0x10 numtheory/fp_prime_miller_rabin.c.o
+ .debug_ranges  0x0000d3f8       0x28 sqr/fp_sqr_comba_generic.c.o
+ .debug_ranges  0x0000d420     0xa698 sqr/fp_sqr_comba_small_set.c.o
+ .debug_ranges  0x00017ab8       0x40 sqr/fp_sqr.c.o
+ .debug_ranges  0x00017af8       0x10 sqr/fp_sqrmod.c.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 addsub/fp_add_d.c.o
+ .ARM.attributes
+                0x00000037       0x37 addsub/fp_add.c.o
+ .ARM.attributes
+                0x0000006e       0x37 addsub/fp_addmod.c.o
+ .ARM.attributes
+                0x000000a5       0x37 addsub/fp_cmp_d.c.o
+ .ARM.attributes
+                0x000000dc       0x37 addsub/fp_cmp_mag.c.o
+ .ARM.attributes
+                0x00000113       0x37 addsub/fp_cmp.c.o
+ .ARM.attributes
+                0x0000014a       0x37 addsub/fp_sub_d.c.o
+ .ARM.attributes
+                0x00000181       0x37 addsub/fp_sub.c.o
+ .ARM.attributes
+                0x000001b8       0x37 addsub/fp_submod.c.o
+ .ARM.attributes
+                0x000001ef       0x37 addsub/s_fp_add.c.o
+ .ARM.attributes
+                0x00000226       0x37 addsub/s_fp_sub.c.o
+ .ARM.attributes
+                0x0000025d       0x37 bin/fp_radix_size.c.o
+ .ARM.attributes
+                0x00000294       0x37 bin/fp_read_radix.c.o
+ .ARM.attributes
+                0x000002cb       0x37 bin/fp_read_signed_bin.c.o
+ .ARM.attributes
+                0x00000302       0x37 bin/fp_read_unsigned_bin.c.o
+ .ARM.attributes
+                0x00000339       0x37 bin/fp_reverse.c.o
+ .ARM.attributes
+                0x00000370       0x37 bin/fp_s_rmap.c.o
+ .ARM.attributes
+                0x000003a7       0x37 bin/fp_signed_bin_size.c.o
+ .ARM.attributes
+                0x000003de       0x37 bin/fp_to_signed_bin.c.o
+ .ARM.attributes
+                0x00000415       0x37 bin/fp_to_unsigned_bin.c.o
+ .ARM.attributes
+                0x0000044c       0x37 bin/fp_toradix.c.o
+ .ARM.attributes
+                0x00000483       0x37 bin/fp_unsigned_bin_size.c.o
+ .ARM.attributes
+                0x000004ba       0x37 bit/fp_cnt_lsb.c.o
+ .ARM.attributes
+                0x000004f1       0x37 bit/fp_count_bits.c.o
+ .ARM.attributes
+                0x00000528       0x37 bit/fp_div_2.c.o
+ .ARM.attributes
+                0x0000055f       0x37 bit/fp_div_2d.c.o
+ .ARM.attributes
+                0x00000596       0x37 bit/fp_lshd.c.o
+ .ARM.attributes
+                0x000005cd       0x37 bit/fp_mod_2d.c.o
+ .ARM.attributes
+                0x00000604       0x37 bit/fp_rshd.c.o
+ .ARM.attributes
+                0x0000063b       0x37 divide/fp_div.c.o
+ .ARM.attributes
+                0x00000672       0x37 divide/fp_div_d.c.o
+ .ARM.attributes
+                0x000006a9       0x37 divide/fp_mod.c.o
+ .ARM.attributes
+                0x000006e0       0x37 divide/fp_mod_d.c.o
+ .ARM.attributes
+                0x00000717       0x37 exptmod/fp_2expt.c.o
+ .ARM.attributes
+                0x0000074e       0x37 exptmod/fp_exptmod.c.o
+ .ARM.attributes
+                0x00000785       0x37 misc/fp_set.c.o
+ .ARM.attributes
+                0x000007bc       0x37 mont/fp_montgomery_calc_normalization.c.o
+ .ARM.attributes
+                0x000007f3       0x37 mont/fp_montgomery_reduce.c.o
+ .ARM.attributes
+                0x0000082a       0x37 mont/fp_montgomery_setup.c.o
+ .ARM.attributes
+                0x00000861       0x37 mul/fp_mul_2.c.o
+ .ARM.attributes
+                0x00000898       0x37 mul/fp_mul_2d.c.o
+ .ARM.attributes
+                0x000008cf       0x37 mul/fp_mul_comba_3.c.o
+ .ARM.attributes
+                0x00000906       0x37 mul/fp_mul_comba_4.c.o
+ .ARM.attributes
+                0x0000093d       0x37 mul/fp_mul_comba_6.c.o
+ .ARM.attributes
+                0x00000974       0x37 mul/fp_mul_comba_7.c.o
+ .ARM.attributes
+                0x000009ab       0x37 mul/fp_mul_comba_8.c.o
+ .ARM.attributes
+                0x000009e2       0x37 mul/fp_mul_comba_9.c.o
+ .ARM.attributes
+                0x00000a19       0x37 mul/fp_mul_comba_12.c.o
+ .ARM.attributes
+                0x00000a50       0x37 mul/fp_mul_comba_17.c.o
+ .ARM.attributes
+                0x00000a87       0x37 mul/fp_mul_comba_20.c.o
+ .ARM.attributes
+                0x00000abe       0x37 mul/fp_mul_comba_24.c.o
+ .ARM.attributes
+                0x00000af5       0x37 mul/fp_mul_comba_28.c.o
+ .ARM.attributes
+                0x00000b2c       0x37 mul/fp_mul_comba_32.c.o
+ .ARM.attributes
+                0x00000b63       0x37 mul/fp_mul_comba_48.c.o
+ .ARM.attributes
+                0x00000b9a       0x37 mul/fp_mul_comba_64.c.o
+ .ARM.attributes
+                0x00000bd1       0x37 mul/fp_mul_comba_small_set.c.o
+ .ARM.attributes
+                0x00000c08       0x37 mul/fp_mul_comba.c.o
+ .ARM.attributes
+                0x00000c3f       0x37 mul/fp_mul_d.c.o
+ .ARM.attributes
+                0x00000c76       0x37 mul/fp_mul.c.o
+ .ARM.attributes
+                0x00000cad       0x37 mul/fp_mulmod.c.o
+ .ARM.attributes
+                0x00000ce4       0x37 numtheory/fp_gcd.c.o
+ .ARM.attributes
+                0x00000d1b       0x37 numtheory/fp_isprime.c.o
+ .ARM.attributes
+                0x00000d52       0x37 numtheory/fp_invmod.c.o
+ .ARM.attributes
+                0x00000d89       0x37 numtheory/fp_lcm.c.o
+ .ARM.attributes
+                0x00000dc0       0x37 numtheory/fp_prime_miller_rabin.c.o
+ .ARM.attributes
+                0x00000df7       0x37 sqr/fp_sqr_comba_3.c.o
+ .ARM.attributes
+                0x00000e2e       0x37 sqr/fp_sqr_comba_4.c.o
+ .ARM.attributes
+                0x00000e65       0x37 sqr/fp_sqr_comba_6.c.o
+ .ARM.attributes
+                0x00000e9c       0x37 sqr/fp_sqr_comba_7.c.o
+ .ARM.attributes
+                0x00000ed3       0x37 sqr/fp_sqr_comba_8.c.o
+ .ARM.attributes
+                0x00000f0a       0x37 sqr/fp_sqr_comba_9.c.o
+ .ARM.attributes
+                0x00000f41       0x37 sqr/fp_sqr_comba_12.c.o
+ .ARM.attributes
+                0x00000f78       0x37 sqr/fp_sqr_comba_17.c.o
+ .ARM.attributes
+                0x00000faf       0x37 sqr/fp_sqr_comba_20.c.o
+ .ARM.attributes
+                0x00000fe6       0x37 sqr/fp_sqr_comba_24.c.o
+ .ARM.attributes
+                0x0000101d       0x37 sqr/fp_sqr_comba_28.c.o
+ .ARM.attributes
+                0x00001054       0x37 sqr/fp_sqr_comba_32.c.o
+ .ARM.attributes
+                0x0000108b       0x37 sqr/fp_sqr_comba_48.c.o
+ .ARM.attributes
+                0x000010c2       0x37 sqr/fp_sqr_comba_64.c.o
+ .ARM.attributes
+                0x000010f9       0x37 sqr/fp_sqr_comba_generic.c.o
+ .ARM.attributes
+                0x00001130       0x37 sqr/fp_sqr_comba_small_set.c.o
+ .ARM.attributes
+                0x00001167       0x37 sqr/fp_sqr_comba.c.o
+ .ARM.attributes
+                0x0000119e       0x37 sqr/fp_sqr.c.o
+ .ARM.attributes
+                0x000011d5       0x37 sqr/fp_sqrmod.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/modules/libtomfastmath/module.pre.o elf32-littlearm)

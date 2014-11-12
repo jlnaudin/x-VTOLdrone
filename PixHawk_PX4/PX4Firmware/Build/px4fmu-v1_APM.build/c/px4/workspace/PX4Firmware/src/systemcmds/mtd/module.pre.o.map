@@ -1,0 +1,442 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD mtd.c.o
+LOAD 24xxxx_mtd.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 mtd.c.o
+ .text          0x00000000        0x0 24xxxx_mtd.c.o
+ *(.gnu.warning)
+
+.text.mtd_test  0x00000000       0x20
+ .text.mtd_test
+                0x00000000       0x20 mtd.c.o
+
+.text.mtd_get_geometry
+                0x00000000       0x78
+ .text.mtd_get_geometry
+                0x00000000       0x78 mtd.c.o
+
+.text.mtd_print_info
+                0x00000000       0xac
+ .text.mtd_print_info
+                0x00000000       0xac mtd.c.o
+
+.text.mtd_status
+                0x00000000       0x30
+ .text.mtd_status
+                0x00000000       0x30 mtd.c.o
+                0x00000000                mtd_status
+
+.text.at24xxx_attach
+                0x00000000       0x74
+ .text.at24xxx_attach
+                0x00000000       0x74 mtd.c.o
+
+.text.mtd_start
+                0x00000000      0x130
+ .text.mtd_start
+                0x00000000      0x130 mtd.c.o
+
+.text.mtd_erase
+                0x00000000       0x84
+ .text.mtd_erase
+                0x00000000       0x84 mtd.c.o
+
+.text.mtd_get_partition_size
+                0x00000000       0x54
+ .text.mtd_get_partition_size
+                0x00000000       0x54 mtd.c.o
+
+.text.mtd_readtest
+                0x00000000       0x94
+ .text.mtd_readtest
+                0x00000000       0x94 mtd.c.o
+
+.text.mtd_rwtest
+                0x00000000      0x108
+ .text.mtd_rwtest
+                0x00000000      0x108 mtd.c.o
+
+.text.mtd_main  0x00000000       0xd4
+ .text.mtd_main
+                0x00000000       0xd4 mtd.c.o
+                0x00000000                mtd_main
+
+.text.at24c_erase
+                0x00000000       0x20
+ .text.at24c_erase
+                0x00000000       0x20 24xxxx_mtd.c.o
+
+.text.at24c_eraseall
+                0x00000000       0x7c
+ .text.at24c_eraseall
+                0x00000000       0x7c 24xxxx_mtd.c.o
+
+.text.at24c_nuke
+                0x00000000       0x2c
+ .text.at24c_nuke
+                0x00000000       0x2c 24xxxx_mtd.c.o
+                0x00000000                at24c_nuke
+
+.text.at24c_ioctl
+                0x00000000       0x58
+ .text.at24c_ioctl
+                0x00000000       0x58 24xxxx_mtd.c.o
+
+.text.at24c_initialize
+                0x00000000       0xf8
+ .text.at24c_initialize
+                0x00000000       0xf8 24xxxx_mtd.c.o
+                0x00000000                at24c_initialize
+
+.text.at24c_bwrite
+                0x00000000       0xc0
+ .text.at24c_bwrite
+                0x00000000       0xc0 24xxxx_mtd.c.o
+
+.text.at24c_bread
+                0x00000000       0xcc
+ .text.at24c_bread
+                0x00000000       0xcc 24xxxx_mtd.c.o
+
+.text.at24c_test
+                0x00000000       0x44
+ .text.at24c_test
+                0x00000000       0x44 24xxxx_mtd.c.o
+                0x00000000                at24c_test
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.1  0x00000000      0x42a
+ .rodata.str1.1
+                0x00000000      0x3c9 mtd.c.o
+ .rodata.str1.1
+                0x000003c9       0x61 24xxxx_mtd.c.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 mtd.c.o
+ .data          0x00000000        0x0 24xxxx_mtd.c.o
+
+.data.partition_names_default
+                0x00000000        0x8
+ .data.partition_names_default
+                0x00000000        0x8 mtd.c.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 mtd.c.o
+ .bss           0x00000000        0x0 24xxxx_mtd.c.o
+ *(COMMON)
+
+.bss.n_partitions_current
+                0x00000000        0x4
+ .bss.n_partitions_current
+                0x00000000        0x4 mtd.c.o
+
+.bss.started    0x00000000        0x1
+ .bss.started   0x00000000        0x1 mtd.c.o
+
+.bss.attached   0x00000000        0x1
+ .bss.attached  0x00000000        0x1 mtd.c.o
+
+.bss.mtd_dev    0x00000000        0x4
+ .bss.mtd_dev   0x00000000        0x4 mtd.c.o
+
+.bss.g_at24c    0x00000000       0x3c
+ .bss.g_at24c   0x00000000       0x3c 24xxxx_mtd.c.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0xe2
+ *(.comment)
+ .comment       0x00000000       0x71 mtd.c.o
+ .comment       0x00000071       0x71 24xxxx_mtd.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xc8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x70 mtd.c.o
+ .debug_aranges
+                0x00000070       0x58 24xxxx_mtd.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x1343
+ *(.debug_info)
+ .debug_info    0x00000000      0xa35 mtd.c.o
+ .debug_info    0x00000a35      0x90e 24xxxx_mtd.c.o
+
+.debug_abbrev   0x00000000      0x505
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x2aa mtd.c.o
+ .debug_abbrev  0x000002aa      0x25b 24xxxx_mtd.c.o
+
+.debug_line     0x00000000      0x782
+ *(.debug_line)
+ .debug_line    0x00000000      0x3d5 mtd.c.o
+ .debug_line    0x000003d5      0x3ad 24xxxx_mtd.c.o
+
+.debug_frame    0x00000000      0x294
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x17c mtd.c.o
+ .debug_frame   0x0000017c      0x118 24xxxx_mtd.c.o
+
+.debug_str      0x00000000      0x87b
+ *(.debug_str)
+ .debug_str     0x00000000      0x446 mtd.c.o
+ .debug_str     0x00000446      0x435 24xxxx_mtd.c.o
+
+.debug_loc      0x00000000      0xc64
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x6f5 mtd.c.o
+ .debug_loc     0x000006f5      0x56f 24xxxx_mtd.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x1a8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0xf8 mtd.c.o
+ .debug_ranges  0x000000f8       0xb0 24xxxx_mtd.c.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 mtd.c.o
+ .ARM.attributes
+                0x00000037       0x37 24xxxx_mtd.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/systemcmds/mtd/module.pre.o elf32-littlearm)

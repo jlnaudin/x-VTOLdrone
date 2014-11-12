@@ -1,0 +1,806 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD hmc5883.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 hmc5883.cpp.o
+ *(.gnu.warning)
+
+.text._Z13hmc5883_usagev
+                0x00000000       0x5c
+ .text._Z13hmc5883_usagev
+                0x00000000       0x5c hmc5883.cpp.o
+                0x00000000                hmc5883_usage()
+
+.text._ZN7HMC588313meas_to_floatEPh
+                0x00000000       0x44
+ .text._ZN7HMC588313meas_to_floatEPh
+                0x00000000       0x44 hmc5883.cpp.o
+                0x00000000                HMC5883::meas_to_float(unsigned char*)
+
+.text._ZN7HMC588312check_offsetEv
+                0x00000000       0x80
+ .text._ZN7HMC588312check_offsetEv
+                0x00000000       0x80 hmc5883.cpp.o
+                0x00000000                HMC5883::check_offset()
+
+.text._ZN7HMC588311check_scaleEv
+                0x00000000       0x80
+ .text._ZN7HMC588311check_scaleEv
+                0x00000000       0x80 hmc5883.cpp.o
+                0x00000000                HMC5883::check_scale()
+
+.text._ZN10RingBuffer5spaceEv
+                0x00000000       0x38
+ .text._ZN10RingBuffer5spaceEv
+                0x00000000       0x38 hmc5883.cpp.o
+                0x00000000                RingBuffer::space()
+
+.text._ZN10RingBuffer5countEv
+                0x00000000       0x2c
+ .text._ZN10RingBuffer5countEv
+                0x00000000       0x2c hmc5883.cpp.o
+                0x00000000                RingBuffer::count()
+
+.text._ZN10RingBuffer4sizeEv
+                0x00000000       0x24
+ .text._ZN10RingBuffer4sizeEv
+                0x00000000       0x24 hmc5883.cpp.o
+                0x00000000                RingBuffer::size()
+
+.text._ZN10RingBuffer5emptyEv
+                0x00000000       0x2c
+ .text._ZN10RingBuffer5emptyEv
+                0x00000000       0x2c hmc5883.cpp.o
+                0x00000000                RingBuffer::empty()
+
+.text._ZN10RingBuffer5_nextEj
+                0x00000000       0x28
+ .text._ZN10RingBuffer5_nextEj
+                0x00000000       0x28 hmc5883.cpp.o
+                0x00000000                RingBuffer::_next(unsigned int)
+
+.text._ZN10RingBuffer4fullEv
+                0x00000000       0x34
+ .text._ZN10RingBuffer4fullEv
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::full()
+
+.text._ZN10RingBuffer10print_infoEPKc
+                0x00000000       0x44
+ .text._ZN10RingBuffer10print_infoEPKc
+                0x00000000       0x44 hmc5883.cpp.o
+                0x00000000                RingBuffer::print_info(char const*)
+
+.text._ZN7hmc58835resetEi
+                0x00000000       0x78
+ .text._ZN7hmc58835resetEi
+                0x00000000       0x78 hmc5883.cpp.o
+                0x00000000                hmc5883::reset(int)
+
+.text._ZN7hmc58839calibrateEi
+                0x00000000       0x74
+ .text._ZN7hmc58839calibrateEi
+                0x00000000       0x74 hmc5883.cpp.o
+                0x00000000                hmc5883::calibrate(int)
+
+.text._ZN7hmc58834testEi
+                0x00000000      0x18c
+ .text._ZN7hmc58834testEi
+                0x00000000      0x18c hmc5883.cpp.o
+                0x00000000                hmc5883::test(int)
+
+.text._ZN7HMC588310print_infoEv
+                0x00000000      0x118
+ .text._ZN7HMC588310print_infoEv
+                0x00000000      0x118 hmc5883.cpp.o
+                0x00000000                HMC5883::print_info()
+
+.text._ZN7hmc58834infoEi
+                0x00000000       0x48
+ .text._ZN7hmc58834infoEi
+                0x00000000       0x48 hmc5883.cpp.o
+                0x00000000                hmc5883::info(int)
+
+.text._ZN7HMC58838read_regEhRh
+                0x00000000       0x40
+ .text._ZN7HMC58838read_regEhRh
+                0x00000000       0x40 hmc5883.cpp.o
+                0x00000000                HMC5883::read_reg(unsigned char, unsigned char&)
+
+.text._ZN7HMC58839write_regEhh
+                0x00000000       0x44
+ .text._ZN7HMC58839write_regEhh
+                0x00000000       0x44 hmc5883.cpp.o
+                0x00000000                HMC5883::write_reg(unsigned char, unsigned char)
+
+.text._ZN7HMC588314set_excitementEj
+                0x00000000       0x84
+ .text._ZN7HMC588314set_excitementEj
+                0x00000000       0x84 hmc5883.cpp.o
+                0x00000000                HMC5883::set_excitement(unsigned int)
+
+.text._ZN7HMC58837measureEv
+                0x00000000       0x34
+ .text._ZN7HMC58837measureEv
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                HMC5883::measure()
+
+.text._ZN7HMC58839set_rangeEj
+                0x00000000      0x14c
+ .text._ZN7HMC58839set_rangeEj
+                0x00000000      0x14c hmc5883.cpp.o
+                0x00000000                HMC5883::set_range(unsigned int)
+
+.text._ZN7HMC58835resetEv
+                0x00000000       0x34
+ .text._ZN7HMC58835resetEv
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                HMC5883::reset()
+
+.text._ZN7HMC588317check_calibrationEv
+                0x00000000       0xc4
+ .text._ZN7HMC588317check_calibrationEv
+                0x00000000       0xc4 hmc5883.cpp.o
+                0x00000000                HMC5883::check_calibration()
+
+.text._ZN7HMC58839calibrateEP4filej
+                0x00000000      0x2f8
+ .text._ZN7HMC58839calibrateEP4filej
+                0x00000000      0x2f8 hmc5883.cpp.o
+                0x00000000                HMC5883::calibrate(file*, unsigned int)
+
+.text._ZN7HMC58835probeEv
+                0x00000000       0x9c
+ .text._ZN7HMC58835probeEv
+                0x00000000       0x9c hmc5883.cpp.o
+                0x00000000                HMC5883::probe()
+
+.text._ZN7HMC58834stopEv
+                0x00000000       0x2c
+ .text._ZN7HMC58834stopEv
+                0x00000000       0x2c hmc5883.cpp.o
+                0x00000000                HMC5883::stop()
+
+.text._ZN10RingBuffer3putEPKvj
+                0x00000000       0x60
+ .text._ZN10RingBuffer3putEPKvj
+                0x00000000       0x60 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(void const*, unsigned int)
+
+.text._ZN10RingBuffer3putEd
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEd
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(double)
+
+.text._ZN10RingBuffer3putEf
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEf
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(float)
+
+.text._ZN10RingBuffer3putEy
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEy
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(unsigned long long)
+
+.text._ZN10RingBuffer3putEx
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEx
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(long long)
+
+.text._ZN10RingBuffer3putEj
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEj
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(unsigned int)
+
+.text._ZN10RingBuffer3putEi
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEi
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(int)
+
+.text._ZN10RingBuffer3putEt
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEt
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(unsigned short)
+
+.text._ZN10RingBuffer3putEs
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEs
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(short)
+
+.text._ZN10RingBuffer3putEh
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEh
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(unsigned char)
+
+.text._ZN10RingBuffer3putEa
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEa
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::put(signed char)
+
+.text._ZN7HMC5883D2Ev
+                0x00000000       0x7c
+ .text._ZN7HMC5883D2Ev
+                0x00000000       0x7c hmc5883.cpp.o
+                0x00000000                HMC5883::~HMC5883()
+                0x00000000                HMC5883::~HMC5883()
+
+.text._ZN7HMC5883D0Ev
+                0x00000000       0x2c
+ .text._ZN7HMC5883D0Ev
+                0x00000000       0x2c hmc5883.cpp.o
+                0x00000000                HMC5883::~HMC5883()
+
+.text._ZN7HMC5883C2EiPKc8Rotation
+                0x00000000      0x110
+ .text._ZN7HMC5883C2EiPKc8Rotation
+                0x00000000      0x110 hmc5883.cpp.o
+                0x00000000                HMC5883::HMC5883(int, char const*, Rotation)
+                0x00000000                HMC5883::HMC5883(int, char const*, Rotation)
+
+.text._ZN7hmc58835startEi8Rotation
+                0x00000000      0x168
+ .text._ZN7hmc58835startEi8Rotation
+                0x00000000      0x168 hmc5883.cpp.o
+                0x00000000                hmc5883::start(int, Rotation)
+
+.text.hmc5883_main
+                0x00000000       0xf4
+ .text.hmc5883_main
+                0x00000000       0xf4 hmc5883.cpp.o
+                0x00000000                hmc5883_main
+
+.text._ZN10RingBufferC2Ejj
+                0x00000000       0x44
+ .text._ZN10RingBufferC2Ejj
+                0x00000000       0x44 hmc5883.cpp.o
+                0x00000000                RingBuffer::RingBuffer(unsigned int, unsigned int)
+                0x00000000                RingBuffer::RingBuffer(unsigned int, unsigned int)
+
+.text._ZN7HMC58834initEv
+                0x00000000       0x64
+ .text._ZN7HMC58834initEv
+                0x00000000       0x64 hmc5883.cpp.o
+                0x00000000                HMC5883::init()
+
+.text._ZN10RingBuffer6resizeEj
+                0x00000000       0x48
+ .text._ZN10RingBuffer6resizeEj
+                0x00000000       0x48 hmc5883.cpp.o
+                0x00000000                RingBuffer::resize(unsigned int)
+
+.text._ZN10RingBufferD2Ev
+                0x00000000       0x30
+ .text._ZN10RingBufferD2Ev
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::~RingBuffer()
+                0x00000000                RingBuffer::~RingBuffer()
+
+.text._ZN10RingBufferD0Ev
+                0x00000000       0x2c
+ .text._ZN10RingBufferD0Ev
+                0x00000000       0x2c hmc5883.cpp.o
+                0x00000000                RingBuffer::~RingBuffer()
+
+.text._ZN10RingBuffer3getEPvj
+                0x00000000       0x84
+ .text._ZN10RingBuffer3getEPvj
+                0x00000000       0x84 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(void*, unsigned int)
+
+.text._ZN10RingBuffer3getERd
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERd
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(double&)
+
+.text._ZN10RingBuffer3getERf
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERf
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(float&)
+
+.text._ZN10RingBuffer3getERy
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERy
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(unsigned long long&)
+
+.text._ZN10RingBuffer3getERx
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERx
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(long long&)
+
+.text._ZN10RingBuffer3getERj
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERj
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(unsigned int&)
+
+.text._ZN10RingBuffer3getERi
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERi
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(int&)
+
+.text._ZN10RingBuffer3getERt
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERt
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(unsigned short&)
+
+.text._ZN10RingBuffer3getERs
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERs
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(short&)
+
+.text._ZN10RingBuffer3getERh
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERh
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(unsigned char&)
+
+.text._ZN10RingBuffer3getERa
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERa
+                0x00000000       0x30 hmc5883.cpp.o
+                0x00000000                RingBuffer::get(signed char&)
+
+.text._ZN10RingBuffer5forceEPKvj
+                0x00000000       0x44
+ .text._ZN10RingBuffer5forceEPKvj
+                0x00000000       0x44 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(void const*, unsigned int)
+
+.text._ZN10RingBuffer5forceEd
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEd
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(double)
+
+.text._ZN10RingBuffer5forceEf
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEf
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(float)
+
+.text._ZN10RingBuffer5forceEy
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEy
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(unsigned long long)
+
+.text._ZN10RingBuffer5forceEx
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEx
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(long long)
+
+.text._ZN10RingBuffer5forceEj
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEj
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(unsigned int)
+
+.text._ZN10RingBuffer5forceEi
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEi
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(int)
+
+.text._ZN10RingBuffer5forceEt
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEt
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(unsigned short)
+
+.text._ZN10RingBuffer5forceEs
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEs
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(short)
+
+.text._ZN10RingBuffer5forceEh
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEh
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(unsigned char)
+
+.text._ZN10RingBuffer5forceEa
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEa
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::force(signed char)
+
+.text._ZN10RingBuffer5flushEv
+                0x00000000       0x34
+ .text._ZN10RingBuffer5flushEv
+                0x00000000       0x34 hmc5883.cpp.o
+                0x00000000                RingBuffer::flush()
+
+.text._ZN7HMC58835startEv
+                0x00000000       0x48
+ .text._ZN7HMC58835startEv
+                0x00000000       0x48 hmc5883.cpp.o
+                0x00000000                HMC5883::start()
+
+.text._ZN7HMC58835ioctlEP4fileim
+                0x00000000      0x218
+ .text._ZN7HMC58835ioctlEP4fileim
+                0x00000000      0x218 hmc5883.cpp.o
+                0x00000000                HMC5883::ioctl(file*, int, unsigned long)
+
+.text._ZN7HMC588310check_confEv
+                0x00000000       0x58
+ .text._ZN7HMC588310check_confEv
+                0x00000000       0x58 hmc5883.cpp.o
+                0x00000000                HMC5883::check_conf()
+
+.text._ZN7HMC588311check_rangeEv
+                0x00000000       0x5c
+ .text._ZN7HMC588311check_rangeEv
+                0x00000000       0x5c hmc5883.cpp.o
+                0x00000000                HMC5883::check_range()
+
+.text._ZN7HMC58837collectEv
+                0x00000000      0x210
+ .text._ZN7HMC58837collectEv
+                0x00000000      0x210 hmc5883.cpp.o
+                0x00000000                HMC5883::collect()
+
+.text._ZN7HMC58835cycleEv
+                0x00000000       0x88
+ .text._ZN7HMC58835cycleEv
+                0x00000000       0x88 hmc5883.cpp.o
+                0x00000000                HMC5883::cycle()
+
+.text._ZN7HMC588316cycle_trampolineEPv
+                0x00000000       0x28
+ .text._ZN7HMC588316cycle_trampolineEPv
+                0x00000000       0x28 hmc5883.cpp.o
+                0x00000000                HMC5883::cycle_trampoline(void*)
+
+.text._ZN7HMC58834readEP4filePcj
+                0x00000000       0x98
+ .text._ZN7HMC58834readEP4filePcj
+                0x00000000       0x98 hmc5883.cpp.o
+                0x00000000                HMC5883::read(file*, char*, unsigned int)
+
+.fini
+ *(.fini)
+
+.rodata         0x00000000       0x18
+ *(.rodata)
+ .rodata        0x00000000       0x18 hmc5883.cpp.o
+
+.rodata._ZTV7HMC5883
+                0x00000000       0x60
+ .rodata._ZTV7HMC5883
+                0x00000000       0x60 hmc5883.cpp.o
+                0x00000000                vtable for HMC5883
+
+.rodata.str1.1  0x00000000      0x729
+ .rodata.str1.1
+                0x00000000      0x729 hmc5883.cpp.o
+
+.rodata._ZTV10RingBuffer
+                0x00000000       0x10
+ .rodata._ZTV10RingBuffer
+                0x00000000       0x10 hmc5883.cpp.o
+                0x00000000                vtable for RingBuffer
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 hmc5883.cpp.o
+
+.data._ZZN7HMC588317check_calibrationEvE3pub
+                0x00000000        0x4
+ .data._ZZN7HMC588317check_calibrationEvE3pub
+                0x00000000        0x4 hmc5883.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 hmc5883.cpp.o
+ *(COMMON)
+
+.bss._ZN7hmc58839g_dev_extE
+                0x00000000        0x4
+ .bss._ZN7hmc58839g_dev_extE
+                0x00000000        0x4 hmc5883.cpp.o
+                0x00000000                hmc5883::g_dev_ext
+
+.bss._ZN7hmc58839g_dev_intE
+                0x00000000        0x4
+ .bss._ZN7hmc58839g_dev_intE
+                0x00000000        0x4 hmc5883.cpp.o
+                0x00000000                hmc5883::g_dev_int
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x71
+ *(.comment)
+ .comment       0x00000000       0x71 hmc5883.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x288
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x288 hmc5883.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x3959
+ *(.debug_info)
+ .debug_info    0x00000000     0x3959 hmc5883.cpp.o
+
+.debug_abbrev   0x00000000      0x6ae
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x6ae hmc5883.cpp.o
+
+.debug_line     0x00000000     0x1016
+ *(.debug_line)
+ .debug_line    0x00000000     0x1016 hmc5883.cpp.o
+
+.debug_frame    0x00000000      0xa10
+ *(.debug_frame)
+ .debug_frame   0x00000000      0xa10 hmc5883.cpp.o
+
+.debug_str      0x00000000     0x1910
+ *(.debug_str)
+ .debug_str     0x00000000     0x1910 hmc5883.cpp.o
+
+.debug_loc      0x00000000     0x2537
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x2537 hmc5883.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x490
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x490 hmc5883.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 hmc5883.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/c/px4/workspace/PX4Firmware/src/drivers/hmc5883/module.pre.o elf32-littlearm)

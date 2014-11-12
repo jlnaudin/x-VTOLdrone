@@ -1,0 +1,2 @@
+ARCHCFLAGS = -std=gnu99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+ARCHCXXFLAGS = -fno-exceptions -fno-rtti -std=gnu++0x -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfpu=fpv4-sp-d16 -mfloat-abi=hard

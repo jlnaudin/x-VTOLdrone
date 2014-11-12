@@ -1,0 +1,14 @@
+#!nsh
+#
+# HILStar / X-Plane
+#
+# Lorenz Meier <lm@inf.ethz.ch>
+#
+
+sh /etc/init.d/rc.fw_defaults
+
+echo "HIL Rascal 110 starting.."
+
+set HIL yes
+
+set MIXER FMU_AERT

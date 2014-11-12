@@ -1,0 +1,361 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD auth.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 auth.c.o
+ *(.gnu.warning)
+
+.text.usage     0x00000000       0x2c
+ .text.usage    0x00000000       0x2c auth.c.o
+
+.text.load_key  0x00000000       0x84
+ .text.load_key
+                0x00000000       0x84 auth.c.o
+                0x00000000                load_key
+
+.text.make_public_key_from_private
+                0x00000000       0x8c
+ .text.make_public_key_from_private
+                0x00000000       0x8c auth.c.o
+                0x00000000                make_public_key_from_private
+
+.text.human_readable_serial
+                0x00000000       0x60
+ .text.human_readable_serial
+                0x00000000       0x60 auth.c.o
+                0x00000000                human_readable_serial
+
+.text.write_whole_file_to_sd
+                0x00000000       0x60
+ .text.write_whole_file_to_sd
+                0x00000000       0x60 auth.c.o
+                0x00000000                write_whole_file_to_sd
+
+.text.append_serial_data_to_sd_log
+                0x00000000       0x6c
+ .text.append_serial_data_to_sd_log
+                0x00000000       0x6c auth.c.o
+                0x00000000                append_serial_data_to_sd_log
+
+.text.read_key_from_sd
+                0x00000000       0x74
+ .text.read_key_from_sd
+                0x00000000       0x74 auth.c.o
+                0x00000000                read_key_from_sd
+
+.text.verify_cert_and_return
+                0x00000000       0xa8
+ .text.verify_cert_and_return
+                0x00000000       0xa8 auth.c.o
+                0x00000000                verify_cert_and_return
+
+.text.sign_serial_and_return_cert
+                0x00000000       0x98
+ .text.sign_serial_and_return_cert
+                0x00000000       0x98 auth.c.o
+                0x00000000                sign_serial_and_return_cert
+
+.text.auth_main
+                0x00000000      0x998
+ .text.auth_main
+                0x00000000      0x998 auth.c.o
+                0x00000000                auth_main
+
+.fini
+ *(.fini)
+
+.rodata         0x00000000       0x14
+ *(.rodata)
+ .rodata        0x00000000       0x14 auth.c.o
+
+.rodata.str1.1  0x00000000     0x18ae
+ .rodata.str1.1
+                0x00000000     0x18ae auth.c.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 auth.c.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 auth.c.o
+ *(COMMON)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x71
+ *(.comment)
+ .comment       0x00000000       0x71 auth.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x68
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x68 auth.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x2599
+ *(.debug_info)
+ .debug_info    0x00000000     0x2599 auth.c.o
+
+.debug_abbrev   0x00000000      0x322
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x322 auth.c.o
+
+.debug_line     0x00000000      0x69a
+ *(.debug_line)
+ .debug_line    0x00000000      0x69a auth.c.o
+
+.debug_frame    0x00000000      0x164
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x164 auth.c.o
+
+.debug_str      0x00000000     0x10ef
+ *(.debug_str)
+ .debug_str     0x00000000     0x10ef auth.c.o
+
+.debug_loc      0x00000000     0x10bb
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x10bb auth.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0x58
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x58 auth.c.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 auth.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/systemcmds/auth/module.pre.o elf32-littlearm)

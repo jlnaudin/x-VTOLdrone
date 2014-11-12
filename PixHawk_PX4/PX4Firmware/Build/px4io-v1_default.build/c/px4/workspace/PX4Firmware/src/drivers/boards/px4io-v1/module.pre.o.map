@@ -1,0 +1,329 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD px4io_init.c.o
+LOAD px4io_pwm_servo.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 px4io_init.c.o
+ .text          0x00000000        0x0 px4io_pwm_servo.c.o
+ *(.gnu.warning)
+
+.text.stm32_boardinitialize
+                0x00000000       0x8c
+ .text.stm32_boardinitialize
+                0x00000000       0x8c px4io_init.c.o
+                0x00000000                stm32_boardinitialize
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.pwm_channels
+                0x00000000       0x40
+ .rodata.pwm_channels
+                0x00000000       0x40 px4io_pwm_servo.c.o
+                0x00000000                pwm_channels
+
+.rodata.pwm_timers
+                0x00000000       0x40
+ .rodata.pwm_timers
+                0x00000000       0x40 px4io_pwm_servo.c.o
+                0x00000000                pwm_timers
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 px4io_init.c.o
+ .data          0x00000000        0x0 px4io_pwm_servo.c.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 px4io_init.c.o
+ .bss           0x00000000        0x0 px4io_pwm_servo.c.o
+ *(COMMON)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0xe2
+ *(.comment)
+ .comment       0x00000000       0x71 px4io_init.c.o
+ .comment       0x00000071       0x71 px4io_pwm_servo.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x20
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 px4io_init.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000      0x256
+ *(.debug_info)
+ .debug_info    0x00000000       0xbb px4io_init.c.o
+ .debug_info    0x000000bb      0x19b px4io_pwm_servo.c.o
+
+.debug_abbrev   0x00000000       0xcb
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x4e px4io_init.c.o
+ .debug_abbrev  0x0000004e       0x7d px4io_pwm_servo.c.o
+
+.debug_line     0x00000000      0x2f3
+ *(.debug_line)
+ .debug_line    0x00000000      0x14f px4io_init.c.o
+ .debug_line    0x0000014f      0x1a4 px4io_pwm_servo.c.o
+
+.debug_frame    0x00000000       0x28
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x28 px4io_init.c.o
+
+.debug_str      0x00000000      0x3be
+ *(.debug_str)
+ .debug_str     0x00000000      0x1c5 px4io_init.c.o
+ .debug_str     0x000001c5      0x1f9 px4io_pwm_servo.c.o
+
+.debug_loc      0x00000000       0x20
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x20 px4io_init.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0x10
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x10 px4io_init.c.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x2f
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x2f px4io_init.c.o
+ .ARM.attributes
+                0x0000002f       0x2f px4io_pwm_servo.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4io-v1_default.build/c/px4/workspace/PX4Firmware/src/drivers/boards/px4io-v1/module.pre.o elf32-littlearm)

@@ -1,0 +1,3998 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD encauth/gcm/gcm_add_aad.c.o
+LOAD encauth/gcm/gcm_add_iv.c.o
+LOAD encauth/gcm/gcm_done.c.o
+LOAD encauth/gcm/gcm_gf_mult.c.o
+LOAD encauth/gcm/gcm_init.c.o
+LOAD encauth/gcm/gcm_memory.c.o
+LOAD encauth/gcm/gcm_mult_h.c.o
+LOAD encauth/gcm/gcm_process.c.o
+LOAD encauth/gcm/gcm_reset.c.o
+LOAD encauth/gcm/gcm_test.c.o
+LOAD hashes/sha1.c.o
+LOAD pk/ecc/ecc_ansi_x963_export.c.o
+LOAD pk/ecc/ecc_ansi_x963_import.c.o
+LOAD pk/ecc/ecc_decrypt_key.c.o
+LOAD pk/ecc/ecc_encrypt_key.c.o
+LOAD pk/ecc/ecc_export.c.o
+LOAD pk/ecc/ecc_free.c.o
+LOAD pk/ecc/ecc_get_size.c.o
+LOAD pk/ecc/ecc_import.c.o
+LOAD pk/ecc/ecc_make_key.c.o
+LOAD pk/ecc/ecc_shared_secret.c.o
+LOAD pk/ecc/ecc_sign_hash.c.o
+LOAD pk/ecc/ecc_sizes.c.o
+LOAD pk/ecc/ecc_test.c.o
+LOAD pk/ecc/ecc_verify_hash.c.o
+LOAD pk/ecc/ecc.c.o
+LOAD pk/ecc/ltc_ecc_is_valid_idx.c.o
+LOAD pk/ecc/ltc_ecc_map.c.o
+LOAD pk/ecc/ltc_ecc_mul2add.c.o
+LOAD pk/ecc/ltc_ecc_mulmod_timing.c.o
+LOAD pk/ecc/ltc_ecc_mulmod.c.o
+LOAD pk/ecc/ltc_ecc_points.c.o
+LOAD pk/ecc/ltc_ecc_projective_add_point.c.o
+LOAD pk/ecc/ltc_ecc_projective_dbl_point.c.o
+LOAD pk/pkcs1/pkcs_1_i2osp.c.o
+LOAD pk/pkcs1/pkcs_1_mgf1.c.o
+LOAD pk/pkcs1/pkcs_1_oaep_decode.c.o
+LOAD pk/pkcs1/pkcs_1_oaep_encode.c.o
+LOAD pk/pkcs1/pkcs_1_os2ip.c.o
+LOAD pk/pkcs1/pkcs_1_pss_decode.c.o
+LOAD pk/pkcs1/pkcs_1_pss_encode.c.o
+LOAD pk/pkcs1/pkcs_1_v1_5_decode.c.o
+LOAD pk/pkcs1/pkcs_1_v1_5_encode.c.o
+LOAD pk/rsa/rsa_decrypt_key.c.o
+LOAD pk/rsa/rsa_encrypt_key.c.o
+LOAD pk/rsa/rsa_export.c.o
+LOAD pk/rsa/rsa_exptmod.c.o
+LOAD pk/rsa/rsa_free.c.o
+LOAD pk/rsa/rsa_import.c.o
+LOAD pk/rsa/rsa_make_key.c.o
+LOAD pk/rsa/rsa_sign_hash.c.o
+LOAD pk/rsa/rsa_verify_hash.c.o
+LOAD pk/asn1/der/bit/der_decode_bit_string.c.o
+LOAD pk/asn1/der/bit/der_encode_bit_string.c.o
+LOAD pk/asn1/der/bit/der_length_bit_string.c.o
+LOAD pk/asn1/der/boolean/der_decode_boolean.c.o
+LOAD pk/asn1/der/boolean/der_encode_boolean.c.o
+LOAD pk/asn1/der/boolean/der_length_boolean.c.o
+LOAD pk/asn1/der/choice/der_decode_choice.c.o
+LOAD pk/asn1/der/ia5/der_decode_ia5_string.c.o
+LOAD pk/asn1/der/ia5/der_encode_ia5_string.c.o
+LOAD pk/asn1/der/ia5/der_length_ia5_string.c.o
+LOAD pk/asn1/der/integer/der_decode_integer.c.o
+LOAD pk/asn1/der/integer/der_encode_integer.c.o
+LOAD pk/asn1/der/integer/der_length_integer.c.o
+LOAD pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+LOAD pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+LOAD pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+LOAD pk/asn1/der/octet/der_decode_octet_string.c.o
+LOAD pk/asn1/der/octet/der_encode_octet_string.c.o
+LOAD pk/asn1/der/octet/der_length_octet_string.c.o
+LOAD pk/asn1/der/printable_string/der_decode_printable_string.c.o
+LOAD pk/asn1/der/printable_string/der_encode_printable_string.c.o
+LOAD pk/asn1/der/printable_string/der_length_printable_string.c.o
+LOAD pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+LOAD pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+LOAD pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+LOAD pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+LOAD pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+LOAD pk/asn1/der/sequence/der_length_sequence.c.o
+LOAD pk/asn1/der/sequence/der_sequence_free.c.o
+LOAD pk/asn1/der/set/der_encode_set.c.o
+LOAD pk/asn1/der/set/der_encode_setof.c.o
+LOAD pk/asn1/der/short_integer/der_decode_short_integer.c.o
+LOAD pk/asn1/der/short_integer/der_encode_short_integer.c.o
+LOAD pk/asn1/der/short_integer/der_length_short_integer.c.o
+LOAD pk/asn1/der/utctime/der_decode_utctime.c.o
+LOAD pk/asn1/der/utctime/der_encode_utctime.c.o
+LOAD pk/asn1/der/utctime/der_length_utctime.c.o
+LOAD pk/asn1/der/utf8/der_decode_utf8_string.c.o
+LOAD pk/asn1/der/utf8/der_encode_utf8_string.c.o
+LOAD pk/asn1/der/utf8/der_length_utf8_string.c.o
+LOAD ciphers/aes/aes_tab.c.o
+LOAD ciphers/aes/aes.c.o
+LOAD hashes/sha2/sha256.c.o
+LOAD hashes/helper/hash_memory.c.o
+LOAD prngs/yarrow.c.o
+LOAD prngs/rng_get_bytes.c.o
+LOAD prngs/rng_make_prng.c.o
+LOAD misc/base64/base64_decode.c.o
+LOAD misc/base64/base64_encode.c.o
+LOAD misc/crypt/crypt_argchk.c.o
+LOAD misc/crypt/crypt_cipher_descriptor.c.o
+LOAD misc/crypt/crypt_cipher_is_valid.c.o
+LOAD misc/crypt/crypt_find_cipher_any.c.o
+LOAD misc/crypt/crypt_find_cipher_id.c.o
+LOAD misc/crypt/crypt_find_cipher.c.o
+LOAD misc/crypt/crypt_find_hash_any.c.o
+LOAD misc/crypt/crypt_find_hash_id.c.o
+LOAD misc/crypt/crypt_find_hash_oid.c.o
+LOAD misc/crypt/crypt_find_hash.c.o
+LOAD misc/crypt/crypt_find_prng.c.o
+LOAD misc/crypt/crypt_fsa.c.o
+LOAD misc/crypt/crypt_hash_descriptor.c.o
+LOAD misc/crypt/crypt_hash_is_valid.c.o
+LOAD misc/crypt/crypt_ltc_mp_descriptor.c.o
+LOAD misc/crypt/crypt_prng_descriptor.c.o
+LOAD misc/crypt/crypt_prng_is_valid.c.o
+LOAD misc/crypt/crypt_register_cipher.c.o
+LOAD misc/crypt/crypt_register_hash.c.o
+LOAD misc/crypt/crypt_register_prng.c.o
+LOAD misc/crypt/crypt_unregister_cipher.c.o
+LOAD misc/crypt/crypt_unregister_hash.c.o
+LOAD misc/crypt/crypt_unregister_prng.c.o
+LOAD misc/crypt/crypt.c.o
+LOAD misc/error_to_string.c.o
+LOAD misc/zeromem.c.o
+LOAD math/fp/ltc_ecc_fp_mulmod.c.o
+LOAD math/gmp_desc.c.o
+LOAD math/ltm_desc.c.o
+LOAD math/multi.c.o
+LOAD math/rand_prime.c.o
+LOAD math/tfm_desc.c.o
+LOAD modes/ctr/ctr_decrypt.c.o
+LOAD modes/ctr/ctr_done.c.o
+LOAD modes/ctr/ctr_encrypt.c.o
+LOAD modes/ctr/ctr_getiv.c.o
+LOAD modes/ctr/ctr_setiv.c.o
+LOAD modes/ctr/ctr_start.c.o
+LOAD modes/ctr/ctr_test.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 encauth/gcm/gcm_add_aad.c.o
+ .text          0x00000000        0x0 encauth/gcm/gcm_add_iv.c.o
+ .text          0x00000000        0x0 encauth/gcm/gcm_done.c.o
+ .text          0x00000000        0x0 encauth/gcm/gcm_gf_mult.c.o
+ .text          0x00000000        0x0 encauth/gcm/gcm_init.c.o
+ .text          0x00000000        0x0 encauth/gcm/gcm_memory.c.o
+ .text          0x00000000        0x0 encauth/gcm/gcm_mult_h.c.o
+ .text          0x00000000        0x0 encauth/gcm/gcm_process.c.o
+ .text          0x00000000        0x0 encauth/gcm/gcm_reset.c.o
+ .text          0x00000000        0x0 encauth/gcm/gcm_test.c.o
+ .text          0x00000000        0x0 hashes/sha1.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_ansi_x963_export.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_ansi_x963_import.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_decrypt_key.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_encrypt_key.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_export.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_free.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_get_size.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_import.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_make_key.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_shared_secret.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_sign_hash.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_sizes.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_test.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc_verify_hash.c.o
+ .text          0x00000000        0x0 pk/ecc/ecc.c.o
+ .text          0x00000000        0x0 pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .text          0x00000000        0x0 pk/ecc/ltc_ecc_map.c.o
+ .text          0x00000000        0x0 pk/ecc/ltc_ecc_mul2add.c.o
+ .text          0x00000000        0x0 pk/ecc/ltc_ecc_mulmod_timing.c.o
+ .text          0x00000000        0x0 pk/ecc/ltc_ecc_mulmod.c.o
+ .text          0x00000000        0x0 pk/ecc/ltc_ecc_points.c.o
+ .text          0x00000000        0x0 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .text          0x00000000        0x0 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .text          0x00000000        0x0 pk/pkcs1/pkcs_1_i2osp.c.o
+ .text          0x00000000        0x0 pk/pkcs1/pkcs_1_mgf1.c.o
+ .text          0x00000000        0x0 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .text          0x00000000        0x0 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .text          0x00000000        0x0 pk/pkcs1/pkcs_1_os2ip.c.o
+ .text          0x00000000        0x0 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .text          0x00000000        0x0 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .text          0x00000000        0x0 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .text          0x00000000        0x0 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .text          0x00000000        0x0 pk/rsa/rsa_decrypt_key.c.o
+ .text          0x00000000        0x0 pk/rsa/rsa_encrypt_key.c.o
+ .text          0x00000000        0x0 pk/rsa/rsa_export.c.o
+ .text          0x00000000        0x0 pk/rsa/rsa_exptmod.c.o
+ .text          0x00000000        0x0 pk/rsa/rsa_free.c.o
+ .text          0x00000000        0x0 pk/rsa/rsa_import.c.o
+ .text          0x00000000        0x0 pk/rsa/rsa_make_key.c.o
+ .text          0x00000000        0x0 pk/rsa/rsa_sign_hash.c.o
+ .text          0x00000000        0x0 pk/rsa/rsa_verify_hash.c.o
+ .text          0x00000000        0x0 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/bit/der_length_bit_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .text          0x00000000        0x0 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .text          0x00000000        0x0 pk/asn1/der/boolean/der_length_boolean.c.o
+ .text          0x00000000        0x0 pk/asn1/der/choice/der_decode_choice.c.o
+ .text          0x00000000        0x0 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/integer/der_decode_integer.c.o
+ .text          0x00000000        0x0 pk/asn1/der/integer/der_encode_integer.c.o
+ .text          0x00000000        0x0 pk/asn1/der/integer/der_length_integer.c.o
+ .text          0x00000000        0x0 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .text          0x00000000        0x0 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .text          0x00000000        0x0 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .text          0x00000000        0x0 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/octet/der_length_octet_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .text          0x00000000        0x0 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .text          0x00000000        0x0 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .text          0x00000000        0x0 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .text          0x00000000        0x0 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .text          0x00000000        0x0 pk/asn1/der/sequence/der_length_sequence.c.o
+ .text          0x00000000        0x0 pk/asn1/der/sequence/der_sequence_free.c.o
+ .text          0x00000000        0x0 pk/asn1/der/set/der_encode_set.c.o
+ .text          0x00000000        0x0 pk/asn1/der/set/der_encode_setof.c.o
+ .text          0x00000000        0x0 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .text          0x00000000        0x0 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .text          0x00000000        0x0 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .text          0x00000000        0x0 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .text          0x00000000        0x0 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .text          0x00000000        0x0 pk/asn1/der/utctime/der_length_utctime.c.o
+ .text          0x00000000        0x0 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .text          0x00000000        0x0 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .text          0x00000000        0x0 ciphers/aes/aes_tab.c.o
+ .text          0x00000000        0x0 ciphers/aes/aes.c.o
+ .text          0x00000000        0x0 hashes/sha2/sha256.c.o
+ .text          0x00000000        0x0 hashes/helper/hash_memory.c.o
+ .text          0x00000000        0x0 prngs/yarrow.c.o
+ .text          0x00000000        0x0 prngs/rng_get_bytes.c.o
+ .text          0x00000000        0x0 prngs/rng_make_prng.c.o
+ .text          0x00000000        0x0 misc/base64/base64_decode.c.o
+ .text          0x00000000        0x0 misc/base64/base64_encode.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_argchk.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_cipher_descriptor.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_cipher_is_valid.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_find_cipher_any.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_find_cipher_id.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_find_cipher.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_find_hash_any.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_find_hash_id.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_find_hash_oid.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_find_hash.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_find_prng.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_fsa.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_hash_descriptor.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_hash_is_valid.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_ltc_mp_descriptor.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_prng_descriptor.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_prng_is_valid.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_register_cipher.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_register_hash.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_register_prng.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_unregister_cipher.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_unregister_hash.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt_unregister_prng.c.o
+ .text          0x00000000        0x0 misc/crypt/crypt.c.o
+ .text          0x00000000        0x0 misc/error_to_string.c.o
+ .text          0x00000000        0x0 misc/zeromem.c.o
+ .text          0x00000000        0x0 math/fp/ltc_ecc_fp_mulmod.c.o
+ .text          0x00000000        0x0 math/gmp_desc.c.o
+ .text          0x00000000        0x0 math/ltm_desc.c.o
+ .text          0x00000000        0x0 math/multi.c.o
+ .text          0x00000000        0x0 math/rand_prime.c.o
+ .text          0x00000000        0x0 math/tfm_desc.c.o
+ .text          0x00000000        0x0 modes/ctr/ctr_decrypt.c.o
+ .text          0x00000000        0x0 modes/ctr/ctr_done.c.o
+ .text          0x00000000        0x0 modes/ctr/ctr_encrypt.c.o
+ .text          0x00000000        0x0 modes/ctr/ctr_getiv.c.o
+ .text          0x00000000        0x0 modes/ctr/ctr_setiv.c.o
+ .text          0x00000000        0x0 modes/ctr/ctr_start.c.o
+ .text          0x00000000        0x0 modes/ctr/ctr_test.c.o
+ *(.gnu.warning)
+
+.text.gcm_add_aad
+                0x00000000      0x214
+ .text.gcm_add_aad
+                0x00000000      0x214 encauth/gcm/gcm_add_aad.c.o
+                0x00000000                gcm_add_aad
+
+.text.gcm_add_iv
+                0x00000000       0xfc
+ .text.gcm_add_iv
+                0x00000000       0xfc encauth/gcm/gcm_add_iv.c.o
+                0x00000000                gcm_add_iv
+
+.text.gcm_done  0x00000000      0x170
+ .text.gcm_done
+                0x00000000      0x170 encauth/gcm/gcm_done.c.o
+                0x00000000                gcm_done
+
+.text.gcm_rightshift
+                0x00000000       0x38
+ .text.gcm_rightshift
+                0x00000000       0x38 encauth/gcm/gcm_gf_mult.c.o
+
+.text.gcm_gf_mult
+                0x00000000       0xa0
+ .text.gcm_gf_mult
+                0x00000000       0xa0 encauth/gcm/gcm_gf_mult.c.o
+                0x00000000                gcm_gf_mult
+
+.text.gcm_init  0x00000000       0xe8
+ .text.gcm_init
+                0x00000000       0xe8 encauth/gcm/gcm_init.c.o
+                0x00000000                gcm_init
+
+.text.gcm_memory
+                0x00000000       0xd8
+ .text.gcm_memory
+                0x00000000       0xd8 encauth/gcm/gcm_memory.c.o
+                0x00000000                gcm_memory
+
+.text.gcm_mult_h
+                0x00000000       0x40
+ .text.gcm_mult_h
+                0x00000000       0x40 encauth/gcm/gcm_mult_h.c.o
+                0x00000000                gcm_mult_h
+
+.text.gcm_process
+                0x00000000      0x1d0
+ .text.gcm_process
+                0x00000000      0x1d0 encauth/gcm/gcm_process.c.o
+                0x00000000                gcm_process
+
+.text.gcm_reset
+                0x00000000       0x6c
+ .text.gcm_reset
+                0x00000000       0x6c encauth/gcm/gcm_reset.c.o
+                0x00000000                gcm_reset
+
+.text.gcm_test  0x00000000       0x20
+ .text.gcm_test
+                0x00000000       0x20 encauth/gcm/gcm_test.c.o
+                0x00000000                gcm_test
+
+.text.sha1_test
+                0x00000000       0x20
+ .text.sha1_test
+                0x00000000       0x20 hashes/sha1.c.o
+                0x00000000                sha1_test
+
+.text.sha1_compress
+                0x00000000      0x36c
+ .text.sha1_compress
+                0x00000000      0x36c hashes/sha1.c.o
+
+.text.sha1_done
+                0x00000000      0x108
+ .text.sha1_done
+                0x00000000      0x108 hashes/sha1.c.o
+                0x00000000                sha1_done
+
+.text.sha1_init
+                0x00000000       0x68
+ .text.sha1_init
+                0x00000000       0x68 hashes/sha1.c.o
+                0x00000000                sha1_init
+
+.text.sha1_process
+                0x00000000       0xe4
+ .text.sha1_process
+                0x00000000       0xe4 hashes/sha1.c.o
+                0x00000000                sha1_process
+
+.text.ecc_ansi_x963_export
+                0x00000000      0x108
+ .text.ecc_ansi_x963_export
+                0x00000000      0x108 pk/ecc/ecc_ansi_x963_export.c.o
+                0x00000000                ecc_ansi_x963_export
+
+.text.ecc_ansi_x963_import_ex
+                0x00000000      0x124
+ .text.ecc_ansi_x963_import_ex
+                0x00000000      0x124 pk/ecc/ecc_ansi_x963_import.c.o
+                0x00000000                ecc_ansi_x963_import_ex
+
+.text.ecc_ansi_x963_import
+                0x00000000       0x38
+ .text.ecc_ansi_x963_import
+                0x00000000       0x38 pk/ecc/ecc_ansi_x963_import.c.o
+                0x00000000                ecc_ansi_x963_import
+
+.text.ecc_decrypt_key
+                0x00000000      0x1e4
+ .text.ecc_decrypt_key
+                0x00000000      0x1e4 pk/ecc/ecc_decrypt_key.c.o
+                0x00000000                ecc_decrypt_key
+
+.text.ecc_encrypt_key
+                0x00000000      0x1d4
+ .text.ecc_encrypt_key
+                0x00000000      0x1d4 pk/ecc/ecc_encrypt_key.c.o
+                0x00000000                ecc_encrypt_key
+
+.text.ecc_export
+                0x00000000      0x10c
+ .text.ecc_export
+                0x00000000      0x10c pk/ecc/ecc_export.c.o
+                0x00000000                ecc_export
+
+.text.ecc_free  0x00000000       0x48
+ .text.ecc_free
+                0x00000000       0x48 pk/ecc/ecc_free.c.o
+                0x00000000                ecc_free
+
+.text.ecc_get_size
+                0x00000000       0x4c
+ .text.ecc_get_size
+                0x00000000       0x4c pk/ecc/ecc_get_size.c.o
+                0x00000000                ecc_get_size
+
+.text.is_point  0x00000000      0x154
+ .text.is_point
+                0x00000000      0x154 pk/ecc/ecc_import.c.o
+
+.text.ecc_import_ex
+                0x00000000      0x188
+ .text.ecc_import_ex
+                0x00000000      0x188 pk/ecc/ecc_import.c.o
+                0x00000000                ecc_import_ex
+
+.text.ecc_import
+                0x00000000       0x38
+ .text.ecc_import
+                0x00000000       0x38 pk/ecc/ecc_import.c.o
+                0x00000000                ecc_import
+
+.text.ecc_make_key_ex
+                0x00000000      0x1b0
+ .text.ecc_make_key_ex
+                0x00000000      0x1b0 pk/ecc/ecc_make_key.c.o
+                0x00000000                ecc_make_key_ex
+
+.text.ecc_make_key
+                0x00000000       0x64
+ .text.ecc_make_key
+                0x00000000       0x64 pk/ecc/ecc_make_key.c.o
+                0x00000000                ecc_make_key
+
+.text.ecc_shared_secret
+                0x00000000      0x154
+ .text.ecc_shared_secret
+                0x00000000      0x154 pk/ecc/ecc_shared_secret.c.o
+                0x00000000                ecc_shared_secret
+
+.text.ecc_sign_hash
+                0x00000000      0x1c8
+ .text.ecc_sign_hash
+                0x00000000      0x1c8 pk/ecc/ecc_sign_hash.c.o
+                0x00000000                ecc_sign_hash
+
+.text.ecc_sizes
+                0x00000000       0x80
+ .text.ecc_sizes
+                0x00000000       0x80 pk/ecc/ecc_sizes.c.o
+                0x00000000                ecc_sizes
+
+.text.ecc_test  0x00000000      0x140
+ .text.ecc_test
+                0x00000000      0x140 pk/ecc/ecc_test.c.o
+                0x00000000                ecc_test
+
+.text.ecc_verify_hash
+                0x00000000      0x314
+ .text.ecc_verify_hash
+                0x00000000      0x314 pk/ecc/ecc_verify_hash.c.o
+                0x00000000                ecc_verify_hash
+
+.text.ltc_ecc_is_valid_idx
+                0x00000000       0x44
+ .text.ltc_ecc_is_valid_idx
+                0x00000000       0x44 pk/ecc/ltc_ecc_is_valid_idx.c.o
+                0x00000000                ltc_ecc_is_valid_idx
+
+.text.ltc_ecc_map
+                0x00000000      0x138
+ .text.ltc_ecc_map
+                0x00000000      0x138 pk/ecc/ltc_ecc_map.c.o
+                0x00000000                ltc_ecc_map
+
+.text.ltc_ecc_mulmod
+                0x00000000      0x400
+ .text.ltc_ecc_mulmod
+                0x00000000      0x400 pk/ecc/ltc_ecc_mulmod.c.o
+                0x00000000                ltc_ecc_mulmod
+
+.text.ltc_ecc_del_point
+                0x00000000       0x30
+ .text.ltc_ecc_del_point
+                0x00000000       0x30 pk/ecc/ltc_ecc_points.c.o
+                0x00000000                ltc_ecc_del_point
+
+.text.ltc_ecc_new_point
+                0x00000000       0x40
+ .text.ltc_ecc_new_point
+                0x00000000       0x40 pk/ecc/ltc_ecc_points.c.o
+                0x00000000                ltc_ecc_new_point
+
+.text.ltc_ecc_projective_add_point
+                0x00000000      0x66c
+ .text.ltc_ecc_projective_add_point
+                0x00000000      0x66c pk/ecc/ltc_ecc_projective_add_point.c.o
+                0x00000000                ltc_ecc_projective_add_point
+
+.text.ltc_ecc_projective_dbl_point
+                0x00000000      0x428
+ .text.ltc_ecc_projective_dbl_point
+                0x00000000      0x428 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+                0x00000000                ltc_ecc_projective_dbl_point
+
+.text.pkcs_1_i2osp
+                0x00000000       0x54
+ .text.pkcs_1_i2osp
+                0x00000000       0x54 pk/pkcs1/pkcs_1_i2osp.c.o
+                0x00000000                pkcs_1_i2osp
+
+.text.pkcs_1_mgf1
+                0x00000000      0x124
+ .text.pkcs_1_mgf1
+                0x00000000      0x124 pk/pkcs1/pkcs_1_mgf1.c.o
+                0x00000000                pkcs_1_mgf1
+
+.text.pkcs_1_oaep_decode
+                0x00000000      0x220
+ .text.pkcs_1_oaep_decode
+                0x00000000      0x220 pk/pkcs1/pkcs_1_oaep_decode.c.o
+                0x00000000                pkcs_1_oaep_decode
+
+.text.pkcs_1_oaep_encode
+                0x00000000      0x23c
+ .text.pkcs_1_oaep_encode
+                0x00000000      0x23c pk/pkcs1/pkcs_1_oaep_encode.c.o
+                0x00000000                pkcs_1_oaep_encode
+
+.text.pkcs_1_os2ip
+                0x00000000       0x3c
+ .text.pkcs_1_os2ip
+                0x00000000       0x3c pk/pkcs1/pkcs_1_os2ip.c.o
+                0x00000000                pkcs_1_os2ip
+
+.text.pkcs_1_pss_decode
+                0x00000000      0x250
+ .text.pkcs_1_pss_decode
+                0x00000000      0x250 pk/pkcs1/pkcs_1_pss_decode.c.o
+                0x00000000                pkcs_1_pss_decode
+
+.text.pkcs_1_pss_encode
+                0x00000000      0x26c
+ .text.pkcs_1_pss_encode
+                0x00000000      0x26c pk/pkcs1/pkcs_1_pss_encode.c.o
+                0x00000000                pkcs_1_pss_encode
+
+.text.pkcs_1_v1_5_decode
+                0x00000000       0xc0
+ .text.pkcs_1_v1_5_decode
+                0x00000000       0xc0 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+                0x00000000                pkcs_1_v1_5_decode
+
+.text.pkcs_1_v1_5_encode
+                0x00000000      0x110
+ .text.pkcs_1_v1_5_encode
+                0x00000000      0x110 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+                0x00000000                pkcs_1_v1_5_encode
+
+.text.rsa_decrypt_key_ex
+                0x00000000      0x140
+ .text.rsa_decrypt_key_ex
+                0x00000000      0x140 pk/rsa/rsa_decrypt_key.c.o
+                0x00000000                rsa_decrypt_key_ex
+
+.text.rsa_encrypt_key_ex
+                0x00000000      0x138
+ .text.rsa_encrypt_key_ex
+                0x00000000      0x138 pk/rsa/rsa_encrypt_key.c.o
+                0x00000000                rsa_encrypt_key_ex
+
+.text.rsa_export
+                0x00000000      0x100
+ .text.rsa_export
+                0x00000000      0x100 pk/rsa/rsa_export.c.o
+                0x00000000                rsa_export
+
+.text.rsa_exptmod
+                0x00000000      0x1ac
+ .text.rsa_exptmod
+                0x00000000      0x1ac pk/rsa/rsa_exptmod.c.o
+                0x00000000                rsa_exptmod
+
+.text.rsa_free  0x00000000       0x5c
+ .text.rsa_free
+                0x00000000       0x5c pk/rsa/rsa_free.c.o
+                0x00000000                rsa_free
+
+.text.rsa_import
+                0x00000000      0x264
+ .text.rsa_import
+                0x00000000      0x264 pk/rsa/rsa_import.c.o
+                0x00000000                rsa_import
+
+.text.rsa_make_key
+                0x00000000      0x280
+ .text.rsa_make_key
+                0x00000000      0x280 pk/rsa/rsa_make_key.c.o
+                0x00000000                rsa_make_key
+
+.text.rsa_sign_hash_ex
+                0x00000000      0x1dc
+ .text.rsa_sign_hash_ex
+                0x00000000      0x1dc pk/rsa/rsa_sign_hash.c.o
+                0x00000000                rsa_sign_hash_ex
+
+.text.rsa_verify_hash_ex
+                0x00000000      0x218
+ .text.rsa_verify_hash_ex
+                0x00000000      0x218 pk/rsa/rsa_verify_hash.c.o
+                0x00000000                rsa_verify_hash_ex
+
+.text.der_decode_bit_string
+                0x00000000       0xf4
+ .text.der_decode_bit_string
+                0x00000000       0xf4 pk/asn1/der/bit/der_decode_bit_string.c.o
+                0x00000000                der_decode_bit_string
+
+.text.der_encode_bit_string
+                0x00000000      0x110
+ .text.der_encode_bit_string
+                0x00000000      0x110 pk/asn1/der/bit/der_encode_bit_string.c.o
+                0x00000000                der_encode_bit_string
+
+.text.der_length_bit_string
+                0x00000000       0x68
+ .text.der_length_bit_string
+                0x00000000       0x68 pk/asn1/der/bit/der_length_bit_string.c.o
+                0x00000000                der_length_bit_string
+
+.text.der_decode_boolean
+                0x00000000       0x7c
+ .text.der_decode_boolean
+                0x00000000       0x7c pk/asn1/der/boolean/der_decode_boolean.c.o
+                0x00000000                der_decode_boolean
+
+.text.der_encode_boolean
+                0x00000000       0x70
+ .text.der_encode_boolean
+                0x00000000       0x70 pk/asn1/der/boolean/der_encode_boolean.c.o
+                0x00000000                der_encode_boolean
+
+.text.der_length_boolean
+                0x00000000       0x3c
+ .text.der_length_boolean
+                0x00000000       0x3c pk/asn1/der/boolean/der_length_boolean.c.o
+                0x00000000                der_length_boolean
+
+.text.der_decode_choice
+                0x00000000      0x214
+ .text.der_decode_choice
+                0x00000000      0x214 pk/asn1/der/choice/der_decode_choice.c.o
+                0x00000000                der_decode_choice
+
+.text.der_decode_ia5_string
+                0x00000000       0xe4
+ .text.der_decode_ia5_string
+                0x00000000       0xe4 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+                0x00000000                der_decode_ia5_string
+
+.text.der_encode_ia5_string
+                0x00000000       0xf8
+ .text.der_encode_ia5_string
+                0x00000000       0xf8 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+                0x00000000                der_encode_ia5_string
+
+.text.der_ia5_value_decode
+                0x00000000       0x44
+ .text.der_ia5_value_decode
+                0x00000000       0x44 pk/asn1/der/ia5/der_length_ia5_string.c.o
+                0x00000000                der_ia5_value_decode
+
+.text.der_ia5_char_encode
+                0x00000000       0x44
+ .text.der_ia5_char_encode
+                0x00000000       0x44 pk/asn1/der/ia5/der_length_ia5_string.c.o
+                0x00000000                der_ia5_char_encode
+
+.text.der_length_ia5_string
+                0x00000000       0xa4
+ .text.der_length_ia5_string
+                0x00000000       0xa4 pk/asn1/der/ia5/der_length_ia5_string.c.o
+                0x00000000                der_length_ia5_string
+
+.text.der_decode_integer
+                0x00000000      0x108
+ .text.der_decode_integer
+                0x00000000      0x108 pk/asn1/der/integer/der_decode_integer.c.o
+                0x00000000                der_decode_integer
+
+.text.der_encode_integer
+                0x00000000      0x214
+ .text.der_encode_integer
+                0x00000000      0x214 pk/asn1/der/integer/der_encode_integer.c.o
+                0x00000000                der_encode_integer
+
+.text.der_length_integer
+                0x00000000       0xd8
+ .text.der_length_integer
+                0x00000000       0xd8 pk/asn1/der/integer/der_length_integer.c.o
+                0x00000000                der_length_integer
+
+.text.der_decode_object_identifier
+                0x00000000      0x108
+ .text.der_decode_object_identifier
+                0x00000000      0x108 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+                0x00000000                der_decode_object_identifier
+
+.text.der_encode_object_identifier
+                0x00000000      0x1c0
+ .text.der_encode_object_identifier
+                0x00000000      0x1c0 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+                0x00000000                der_encode_object_identifier
+
+.text.der_object_identifier_bits
+                0x00000000       0x2c
+ .text.der_object_identifier_bits
+                0x00000000       0x2c pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+                0x00000000                der_object_identifier_bits
+
+.text.der_length_object_identifier
+                0x00000000       0xe4
+ .text.der_length_object_identifier
+                0x00000000       0xe4 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+                0x00000000                der_length_object_identifier
+
+.text.der_decode_octet_string
+                0x00000000       0xd0
+ .text.der_decode_octet_string
+                0x00000000       0xd0 pk/asn1/der/octet/der_decode_octet_string.c.o
+                0x00000000                der_decode_octet_string
+
+.text.der_encode_octet_string
+                0x00000000       0xe4
+ .text.der_encode_octet_string
+                0x00000000       0xe4 pk/asn1/der/octet/der_encode_octet_string.c.o
+                0x00000000                der_encode_octet_string
+
+.text.der_length_octet_string
+                0x00000000       0x64
+ .text.der_length_octet_string
+                0x00000000       0x64 pk/asn1/der/octet/der_length_octet_string.c.o
+                0x00000000                der_length_octet_string
+
+.text.der_decode_printable_string
+                0x00000000       0xe4
+ .text.der_decode_printable_string
+                0x00000000       0xe4 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+                0x00000000                der_decode_printable_string
+
+.text.der_encode_printable_string
+                0x00000000       0xf8
+ .text.der_encode_printable_string
+                0x00000000       0xf8 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+                0x00000000                der_encode_printable_string
+
+.text.der_printable_value_decode
+                0x00000000       0x44
+ .text.der_printable_value_decode
+                0x00000000       0x44 pk/asn1/der/printable_string/der_length_printable_string.c.o
+                0x00000000                der_printable_value_decode
+
+.text.der_printable_char_encode
+                0x00000000       0x44
+ .text.der_printable_char_encode
+                0x00000000       0x44 pk/asn1/der/printable_string/der_length_printable_string.c.o
+                0x00000000                der_printable_char_encode
+
+.text.der_length_printable_string
+                0x00000000       0xa4
+ .text.der_length_printable_string
+                0x00000000       0xa4 pk/asn1/der/printable_string/der_length_printable_string.c.o
+                0x00000000                der_length_printable_string
+
+.text.der_decode_sequence_ex
+                0x00000000      0x320
+ .text.der_decode_sequence_ex
+                0x00000000      0x320 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+                0x00000000                der_decode_sequence_ex
+
+.text.fetch_length
+                0x00000000       0x5c
+ .text.fetch_length
+                0x00000000       0x5c pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+
+.text.der_decode_sequence_flexi
+                0x00000000      0x3dc
+ .text.der_decode_sequence_flexi
+                0x00000000      0x3dc pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+                0x00000000                der_decode_sequence_flexi
+
+.text.der_decode_sequence_multi
+                0x00000000       0xc4
+ .text.der_decode_sequence_multi
+                0x00000000       0xc4 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+                0x00000000                der_decode_sequence_multi
+
+.text.der_encode_sequence_ex
+                0x00000000      0x300
+ .text.der_encode_sequence_ex
+                0x00000000      0x300 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+                0x00000000                der_encode_sequence_ex
+
+.text.der_encode_sequence_multi
+                0x00000000      0x108
+ .text.der_encode_sequence_multi
+                0x00000000      0x108 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+                0x00000000                der_encode_sequence_multi
+
+.text.der_length_sequence
+                0x00000000      0x128
+ .text.der_length_sequence
+                0x00000000      0x128 pk/asn1/der/sequence/der_length_sequence.c.o
+                0x00000000                der_length_sequence
+
+.text.der_sequence_free
+                0x00000000       0x80
+ .text.der_sequence_free
+                0x00000000       0x80 pk/asn1/der/sequence/der_sequence_free.c.o
+                0x00000000                der_sequence_free
+
+.text.der_encode_set
+                0x00000000       0x94
+ .text.der_encode_set
+                0x00000000       0x94 pk/asn1/der/set/der_encode_set.c.o
+                0x00000000                der_encode_set
+
+.text.ltc_to_asn1
+                0x00000000       0x34
+ .text.ltc_to_asn1
+                0x00000000       0x34 pk/asn1/der/set/der_encode_set.c.o
+
+.text.qsort_helper
+                0x00000000       0xa4
+ .text.qsort_helper
+                0x00000000       0x38 pk/asn1/der/set/der_encode_set.c.o
+ .text.qsort_helper
+                0x00000038       0x6c pk/asn1/der/set/der_encode_setof.c.o
+
+.text.der_encode_setof
+                0x00000000      0x138
+ .text.der_encode_setof
+                0x00000000      0x138 pk/asn1/der/set/der_encode_setof.c.o
+                0x00000000                der_encode_setof
+
+.text.der_decode_short_integer
+                0x00000000       0x7c
+ .text.der_decode_short_integer
+                0x00000000       0x7c pk/asn1/der/short_integer/der_decode_short_integer.c.o
+                0x00000000                der_decode_short_integer
+
+.text.der_encode_short_integer
+                0x00000000       0xd4
+ .text.der_encode_short_integer
+                0x00000000       0xd4 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+                0x00000000                der_encode_short_integer
+
+.text.der_length_short_integer
+                0x00000000       0x60
+ .text.der_length_short_integer
+                0x00000000       0x60 pk/asn1/der/short_integer/der_length_short_integer.c.o
+                0x00000000                der_length_short_integer
+
+.text.char_to_int
+                0x00000000       0x34
+ .text.char_to_int
+                0x00000000       0x34 pk/asn1/der/utctime/der_decode_utctime.c.o
+
+.text.der_decode_utctime
+                0x00000000      0x208
+ .text.der_decode_utctime
+                0x00000000      0x208 pk/asn1/der/utctime/der_decode_utctime.c.o
+                0x00000000                der_decode_utctime
+
+.text.der_encode_utctime
+                0x00000000      0x22c
+ .text.der_encode_utctime
+                0x00000000      0x22c pk/asn1/der/utctime/der_encode_utctime.c.o
+                0x00000000                der_encode_utctime
+
+.text.der_length_utctime
+                0x00000000       0x60
+ .text.der_length_utctime
+                0x00000000       0x60 pk/asn1/der/utctime/der_length_utctime.c.o
+                0x00000000                der_length_utctime
+
+.text.der_decode_utf8_string
+                0x00000000      0x124
+ .text.der_decode_utf8_string
+                0x00000000      0x124 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+                0x00000000                der_decode_utf8_string
+
+.text.der_encode_utf8_string
+                0x00000000      0x1b8
+ .text.der_encode_utf8_string
+                0x00000000      0x1b8 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+                0x00000000                der_encode_utf8_string
+
+.text.der_utf8_charsize
+                0x00000000       0x30
+ .text.der_utf8_charsize
+                0x00000000       0x30 pk/asn1/der/utf8/der_length_utf8_string.c.o
+                0x00000000                der_utf8_charsize
+
+.text.der_length_utf8_string
+                0x00000000       0xa4
+ .text.der_length_utf8_string
+                0x00000000       0xa4 pk/asn1/der/utf8/der_length_utf8_string.c.o
+                0x00000000                der_length_utf8_string
+
+.text.rijndael_keysize
+                0x00000000       0x5c
+ .text.rijndael_keysize
+                0x00000000       0x5c ciphers/aes/aes.c.o
+                0x00000000                rijndael_keysize
+
+.text.rijndael_done
+                0x00000000       0x20
+ .text.rijndael_done
+                0x00000000       0x20 ciphers/aes/aes.c.o
+                0x00000000                rijndael_done
+
+.text.rijndael_test
+                0x00000000       0x20
+ .text.rijndael_test
+                0x00000000       0x20 ciphers/aes/aes.c.o
+                0x00000000                rijndael_test
+
+.text.rijndael_ecb_decrypt
+                0x00000000      0x400
+ .text.rijndael_ecb_decrypt
+                0x00000000      0x400 ciphers/aes/aes.c.o
+                0x00000000                rijndael_ecb_decrypt
+
+.text.rijndael_ecb_encrypt
+                0x00000000      0x3e4
+ .text.rijndael_ecb_encrypt
+                0x00000000      0x3e4 ciphers/aes/aes.c.o
+                0x00000000                rijndael_ecb_encrypt
+
+.text.setup_mix
+                0x00000000       0x5c
+ .text.setup_mix
+                0x00000000       0x5c ciphers/aes/aes.c.o
+
+.text.rijndael_setup
+                0x00000000      0x394
+ .text.rijndael_setup
+                0x00000000      0x394 ciphers/aes/aes.c.o
+                0x00000000                rijndael_setup
+
+.text.sha224_test
+                0x00000000       0x20
+ .text.sha224_test
+                0x00000000       0x20 hashes/sha2/sha256.c.o
+                0x00000000                sha224_test
+
+.text.sha256_test
+                0x00000000       0x20
+ .text.sha256_test
+                0x00000000       0x20 hashes/sha2/sha256.c.o
+                0x00000000                sha256_test
+
+.text.sha256_compress
+                0x00000000     0x1424
+ .text.sha256_compress
+                0x00000000     0x1424 hashes/sha2/sha256.c.o
+
+.text.sha224_init
+                0x00000000       0x84
+ .text.sha224_init
+                0x00000000       0x84 hashes/sha2/sha256.c.o
+                0x00000000                sha224_init
+
+.text.sha256_done
+                0x00000000      0x108
+ .text.sha256_done
+                0x00000000      0x108 hashes/sha2/sha256.c.o
+                0x00000000                sha256_done
+
+.text.sha256_init
+                0x00000000       0x84
+ .text.sha256_init
+                0x00000000       0x84 hashes/sha2/sha256.c.o
+                0x00000000                sha256_init
+
+.text.sha224_done
+                0x00000000       0x64
+ .text.sha224_done
+                0x00000000       0x64 hashes/sha2/sha256.c.o
+                0x00000000                sha224_done
+
+.text.sha256_process
+                0x00000000       0xe4
+ .text.sha256_process
+                0x00000000       0xe4 hashes/sha2/sha256.c.o
+                0x00000000                sha256_process
+
+.text.hash_memory
+                0x00000000       0xd0
+ .text.hash_memory
+                0x00000000       0xd0 hashes/helper/hash_memory.c.o
+                0x00000000                hash_memory
+
+.text.yarrow_test
+                0x00000000       0x20
+ .text.yarrow_test
+                0x00000000       0x20 prngs/yarrow.c.o
+                0x00000000                yarrow_test
+
+.text.yarrow_done
+                0x00000000       0x44
+ .text.yarrow_done
+                0x00000000       0x44 prngs/yarrow.c.o
+                0x00000000                yarrow_done
+
+.text.yarrow_read
+                0x00000000       0x6c
+ .text.yarrow_read
+                0x00000000       0x6c prngs/yarrow.c.o
+                0x00000000                yarrow_read
+
+.text.yarrow_export
+                0x00000000       0x8c
+ .text.yarrow_export
+                0x00000000       0x8c prngs/yarrow.c.o
+                0x00000000                yarrow_export
+
+.text.yarrow_add_entropy
+                0x00000000       0xbc
+ .text.yarrow_add_entropy
+                0x00000000       0xbc prngs/yarrow.c.o
+                0x00000000                yarrow_add_entropy
+
+.text.yarrow_ready
+                0x00000000       0x98
+ .text.yarrow_ready
+                0x00000000       0x98 prngs/yarrow.c.o
+                0x00000000                yarrow_ready
+
+.text.yarrow_start
+                0x00000000       0x6c
+ .text.yarrow_start
+                0x00000000       0x6c prngs/yarrow.c.o
+                0x00000000                yarrow_start
+
+.text.yarrow_import
+                0x00000000       0x78
+ .text.yarrow_import
+                0x00000000       0x78 prngs/yarrow.c.o
+                0x00000000                yarrow_import
+
+.text.rng_ansic
+                0x00000000       0x94
+ .text.rng_ansic
+                0x00000000       0x94 prngs/rng_get_bytes.c.o
+
+.text.rng_get_bytes
+                0x00000000       0x48
+ .text.rng_get_bytes
+                0x00000000       0x48 prngs/rng_get_bytes.c.o
+                0x00000000                rng_get_bytes
+
+.text.rng_make_prng
+                0x00000000       0xb0
+ .text.rng_make_prng
+                0x00000000       0xb0 prngs/rng_make_prng.c.o
+                0x00000000                rng_make_prng
+
+.text.base64_decode
+                0x00000000       0xf4
+ .text.base64_decode
+                0x00000000       0xf4 misc/base64/base64_decode.c.o
+                0x00000000                base64_decode
+
+.text.base64_encode
+                0x00000000      0x154
+ .text.base64_encode
+                0x00000000      0x154 misc/base64/base64_encode.c.o
+                0x00000000                base64_encode
+
+.text.cipher_is_valid
+                0x00000000       0x3c
+ .text.cipher_is_valid
+                0x00000000       0x3c misc/crypt/crypt_cipher_is_valid.c.o
+                0x00000000                cipher_is_valid
+
+.text.find_cipher_any
+                0x00000000       0x6c
+ .text.find_cipher_any
+                0x00000000       0x6c misc/crypt/crypt_find_cipher_any.c.o
+                0x00000000                find_cipher_any
+
+.text.find_cipher_id
+                0x00000000       0x50
+ .text.find_cipher_id
+                0x00000000       0x50 misc/crypt/crypt_find_cipher_id.c.o
+                0x00000000                find_cipher_id
+
+.text.find_cipher
+                0x00000000       0x64
+ .text.find_cipher
+                0x00000000       0x64 misc/crypt/crypt_find_cipher.c.o
+                0x00000000                find_cipher
+
+.text.find_hash_any
+                0x00000000       0x6c
+ .text.find_hash_any
+                0x00000000       0x6c misc/crypt/crypt_find_hash_any.c.o
+                0x00000000                find_hash_any
+
+.text.find_hash_id
+                0x00000000       0x50
+ .text.find_hash_id
+                0x00000000       0x50 misc/crypt/crypt_find_hash_id.c.o
+                0x00000000                find_hash_id
+
+.text.find_hash_oid
+                0x00000000       0x84
+ .text.find_hash_oid
+                0x00000000       0x84 misc/crypt/crypt_find_hash_oid.c.o
+                0x00000000                find_hash_oid
+
+.text.find_hash
+                0x00000000       0x64
+ .text.find_hash
+                0x00000000       0x64 misc/crypt/crypt_find_hash.c.o
+                0x00000000                find_hash
+
+.text.find_prng
+                0x00000000       0x64
+ .text.find_prng
+                0x00000000       0x64 misc/crypt/crypt_find_prng.c.o
+                0x00000000                find_prng
+
+.text.crypt_fsa
+                0x00000000       0x80
+ .text.crypt_fsa
+                0x00000000       0x80 misc/crypt/crypt_fsa.c.o
+                0x00000000                crypt_fsa
+
+.text.hash_is_valid
+                0x00000000       0x3c
+ .text.hash_is_valid
+                0x00000000       0x3c misc/crypt/crypt_hash_is_valid.c.o
+                0x00000000                hash_is_valid
+
+.text.prng_is_valid
+                0x00000000       0x3c
+ .text.prng_is_valid
+                0x00000000       0x3c misc/crypt/crypt_prng_is_valid.c.o
+                0x00000000                prng_is_valid
+
+.text.register_cipher
+                0x00000000       0x80
+ .text.register_cipher
+                0x00000000       0x80 misc/crypt/crypt_register_cipher.c.o
+                0x00000000                register_cipher
+
+.text.register_hash
+                0x00000000       0x84
+ .text.register_hash
+                0x00000000       0x84 misc/crypt/crypt_register_hash.c.o
+                0x00000000                register_hash
+
+.text.register_prng
+                0x00000000       0x84
+ .text.register_prng
+                0x00000000       0x84 misc/crypt/crypt_register_prng.c.o
+                0x00000000                register_prng
+
+.text.unregister_cipher
+                0x00000000       0x6c
+ .text.unregister_cipher
+                0x00000000       0x6c misc/crypt/crypt_unregister_cipher.c.o
+                0x00000000                unregister_cipher
+
+.text.unregister_hash
+                0x00000000       0x68
+ .text.unregister_hash
+                0x00000000       0x68 misc/crypt/crypt_unregister_hash.c.o
+                0x00000000                unregister_hash
+
+.text.unregister_prng
+                0x00000000       0x68
+ .text.unregister_prng
+                0x00000000       0x68 misc/crypt/crypt_unregister_prng.c.o
+                0x00000000                unregister_prng
+
+.text.error_to_string
+                0x00000000       0x34
+ .text.error_to_string
+                0x00000000       0x34 misc/error_to_string.c.o
+                0x00000000                error_to_string
+
+.text.zeromem   0x00000000       0x48
+ .text.zeromem  0x00000000       0x48 misc/zeromem.c.o
+                0x00000000                zeromem
+
+.text.ltc_deinit_multi
+                0x00000000       0x44
+ .text.ltc_deinit_multi
+                0x00000000       0x44 math/multi.c.o
+                0x00000000                ltc_deinit_multi
+
+.text.ltc_init_multi
+                0x00000000       0x70
+ .text.ltc_init_multi
+                0x00000000       0x70 math/multi.c.o
+                0x00000000                ltc_init_multi
+
+.text.rand_prime
+                0x00000000       0xfc
+ .text.rand_prime
+                0x00000000       0xfc math/rand_prime.c.o
+                0x00000000                rand_prime
+
+.text.isprime   0x00000000       0x64
+ .text.isprime  0x00000000       0x64 math/tfm_desc.c.o
+
+.text.tfm_to_ltc_error
+                0x00000000       0x40
+ .text.tfm_to_ltc_error
+                0x00000000       0x40 math/tfm_desc.c.o
+
+.text.get_digit_count
+                0x00000000       0x3c
+ .text.get_digit_count
+                0x00000000       0x3c math/tfm_desc.c.o
+
+.text.get_digit
+                0x00000000       0x50
+ .text.get_digit
+                0x00000000       0x50 math/tfm_desc.c.o
+
+.text.get_int   0x00000000       0x48
+ .text.get_int  0x00000000       0x48 math/tfm_desc.c.o
+
+.text.exptmod   0x00000000       0x94
+ .text.exptmod  0x00000000       0x94 math/tfm_desc.c.o
+
+.text.montgomery_deinit
+                0x00000000       0x28
+ .text.montgomery_deinit
+                0x00000000       0x28 math/tfm_desc.c.o
+
+.text.deinit    0x00000000       0x40
+ .text.deinit   0x00000000       0x40 math/tfm_desc.c.o
+
+.text.montgomery_reduce
+                0x00000000       0x70
+ .text.montgomery_reduce
+                0x00000000       0x70 math/tfm_desc.c.o
+
+.text.montgomery_normalization
+                0x00000000       0x58
+ .text.montgomery_normalization
+                0x00000000       0x58 math/tfm_desc.c.o
+
+.text.montgomery_setup
+                0x00000000       0x78
+ .text.montgomery_setup
+                0x00000000       0x78 math/tfm_desc.c.o
+
+.text.invmod    0x00000000       0x78
+ .text.invmod   0x00000000       0x78 math/tfm_desc.c.o
+
+.text.sqrmod    0x00000000       0x78
+ .text.sqrmod   0x00000000       0x78 math/tfm_desc.c.o
+
+.text.mulmod    0x00000000       0x94
+ .text.mulmod   0x00000000       0x94 math/tfm_desc.c.o
+
+.text.lcm       0x00000000       0x70
+ .text.lcm      0x00000000       0x70 math/tfm_desc.c.o
+
+.text.gcd       0x00000000       0x70
+ .text.gcd      0x00000000       0x70 math/tfm_desc.c.o
+
+.text.modi      0x00000000       0x68
+ .text.modi     0x00000000       0x68 math/tfm_desc.c.o
+
+.text.div_2     0x00000000       0x58
+ .text.div_2    0x00000000       0x58 math/tfm_desc.c.o
+
+.text.divide    0x00000000       0x6c
+ .text.divide   0x00000000       0x6c math/tfm_desc.c.o
+
+.text.sqr       0x00000000       0x58
+ .text.sqr      0x00000000       0x58 math/tfm_desc.c.o
+
+.text.muli      0x00000000       0x5c
+ .text.muli     0x00000000       0x5c math/tfm_desc.c.o
+
+.text.mul       0x00000000       0x6c
+ .text.mul      0x00000000       0x6c math/tfm_desc.c.o
+
+.text.subi      0x00000000       0x58
+ .text.subi     0x00000000       0x58 math/tfm_desc.c.o
+
+.text.sub       0x00000000       0x6c
+ .text.sub      0x00000000       0x6c math/tfm_desc.c.o
+
+.text.addi      0x00000000       0x58
+ .text.addi     0x00000000       0x58 math/tfm_desc.c.o
+
+.text.add       0x00000000       0x6c
+ .text.add      0x00000000       0x6c math/tfm_desc.c.o
+
+.text.unsigned_read
+                0x00000000       0x58
+ .text.unsigned_read
+                0x00000000       0x58 math/tfm_desc.c.o
+
+.text.unsigned_write
+                0x00000000       0x54
+ .text.unsigned_write
+                0x00000000       0x54 math/tfm_desc.c.o
+
+.text.unsigned_size
+                0x00000000       0x40
+ .text.unsigned_size
+                0x00000000       0x40 math/tfm_desc.c.o
+
+.text.write_radix
+                0x00000000       0x60
+ .text.write_radix
+                0x00000000       0x60 math/tfm_desc.c.o
+
+.text.read_radix
+                0x00000000       0x60
+ .text.read_radix
+                0x00000000       0x60 math/tfm_desc.c.o
+
+.text.twoexpt   0x00000000       0x44
+ .text.twoexpt  0x00000000       0x44 math/tfm_desc.c.o
+
+.text.count_lsb_bits
+                0x00000000       0x40
+ .text.count_lsb_bits
+                0x00000000       0x40 math/tfm_desc.c.o
+
+.text.count_bits
+                0x00000000       0x40
+ .text.count_bits
+                0x00000000       0x40 math/tfm_desc.c.o
+
+.text.compare_d
+                0x00000000       0x54
+ .text.compare_d
+                0x00000000       0x54 math/tfm_desc.c.o
+
+.text.compare   0x00000000       0x68
+ .text.compare  0x00000000       0x68 math/tfm_desc.c.o
+
+.text.set_int   0x00000000       0x44
+ .text.set_int  0x00000000       0x44 math/tfm_desc.c.o
+
+.text.copy      0x00000000       0x5c
+ .text.copy     0x00000000       0x5c math/tfm_desc.c.o
+
+.text.neg       0x00000000       0x88
+ .text.neg      0x00000000       0x88 math/tfm_desc.c.o
+
+.text.init      0x00000000       0x58
+ .text.init     0x00000000       0x58 math/tfm_desc.c.o
+
+.text.init_copy
+                0x00000000       0x38
+ .text.init_copy
+                0x00000000       0x38 math/tfm_desc.c.o
+
+.text.ctr_decrypt
+                0x00000000       0x74
+ .text.ctr_decrypt
+                0x00000000       0x74 modes/ctr/ctr_decrypt.c.o
+                0x00000000                ctr_decrypt
+
+.text.ctr_done  0x00000000       0x58
+ .text.ctr_done
+                0x00000000       0x58 modes/ctr/ctr_done.c.o
+                0x00000000                ctr_done
+
+.text.ctr_encrypt
+                0x00000000      0x158
+ .text.ctr_encrypt
+                0x00000000      0x158 modes/ctr/ctr_encrypt.c.o
+                0x00000000                ctr_encrypt
+
+.text.ctr_getiv
+                0x00000000       0x80
+ .text.ctr_getiv
+                0x00000000       0x80 modes/ctr/ctr_getiv.c.o
+                0x00000000                ctr_getiv
+
+.text.ctr_setiv
+                0x00000000       0x98
+ .text.ctr_setiv
+                0x00000000       0x98 modes/ctr/ctr_setiv.c.o
+                0x00000000                ctr_setiv
+
+.text.ctr_start
+                0x00000000      0x148
+ .text.ctr_start
+                0x00000000      0x148 modes/ctr/ctr_start.c.o
+                0x00000000                ctr_start
+
+.text.ctr_test  0x00000000       0x20
+ .text.ctr_test
+                0x00000000       0x20 modes/ctr/ctr_test.c.o
+                0x00000000                ctr_test
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.1  0x00000000     0x4098
+ .rodata.str1.1
+                0x00000000       0x71 encauth/gcm/gcm_add_aad.c.o
+ .rodata.str1.1
+                0x00000071       0x70 encauth/gcm/gcm_add_iv.c.o
+ .rodata.str1.1
+                0x000000e1       0x6e encauth/gcm/gcm_done.c.o
+ .rodata.str1.1
+                0x0000014f       0x6e encauth/gcm/gcm_init.c.o
+ .rodata.str1.1
+                0x000001bd       0x71 encauth/gcm/gcm_process.c.o
+ .rodata.str1.1
+                0x0000022e       0x6f encauth/gcm/gcm_reset.c.o
+ .rodata.str1.1
+                0x0000029d       0x6a hashes/sha1.c.o
+ .rodata.str1.1
+                0x00000307       0x75 pk/ecc/ecc_ansi_x963_export.c.o
+ .rodata.str1.1
+                0x0000037c       0x75 pk/ecc/ecc_ansi_x963_import.c.o
+ .rodata.str1.1
+                0x000003f1       0x70 pk/ecc/ecc_decrypt_key.c.o
+ .rodata.str1.1
+                0x00000461       0x70 pk/ecc/ecc_encrypt_key.c.o
+ .rodata.str1.1
+                0x000004d1       0x6b pk/ecc/ecc_export.c.o
+ .rodata.str1.1
+                0x0000053c       0x69 pk/ecc/ecc_free.c.o
+ .rodata.str1.1
+                0x000005a5       0x6d pk/ecc/ecc_get_size.c.o
+ .rodata.str1.1
+                0x00000612       0x6b pk/ecc/ecc_import.c.o
+ .rodata.str1.1
+                0x0000067d       0x6d pk/ecc/ecc_make_key.c.o
+ .rodata.str1.1
+                0x000006ea       0x72 pk/ecc/ecc_shared_secret.c.o
+ .rodata.str1.1
+                0x0000075c       0x6e pk/ecc/ecc_sign_hash.c.o
+ .rodata.str1.1
+                0x000007ca       0x6a pk/ecc/ecc_sizes.c.o
+ .rodata.str1.1
+                0x00000834       0x70 pk/ecc/ecc_verify_hash.c.o
+ .rodata.str1.1
+                0x000008a4      0xa18 pk/ecc/ecc.c.o
+ .rodata.str1.1
+                0x000012bc       0x6c pk/ecc/ltc_ecc_map.c.o
+ .rodata.str1.1
+                0x00001328       0x6f pk/ecc/ltc_ecc_mulmod.c.o
+ .rodata.str1.1
+                0x00001397       0x7d pk/ecc/ltc_ecc_projective_add_point.c.o
+ .rodata.str1.1
+                0x00001414       0x7d pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .rodata.str1.1
+                0x00001491       0x6e pk/pkcs1/pkcs_1_mgf1.c.o
+ .rodata.str1.1
+                0x000014ff       0x75 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .rodata.str1.1
+                0x00001574       0x75 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .rodata.str1.1
+                0x000015e9       0x74 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .rodata.str1.1
+                0x0000165d       0x74 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .rodata.str1.1
+                0x000016d1       0x70 pk/rsa/rsa_decrypt_key.c.o
+ .rodata.str1.1
+                0x00001741       0x70 pk/rsa/rsa_encrypt_key.c.o
+ .rodata.str1.1
+                0x000017b1       0x6b pk/rsa/rsa_export.c.o
+ .rodata.str1.1
+                0x0000181c       0x6c pk/rsa/rsa_exptmod.c.o
+ .rodata.str1.1
+                0x00001888       0x69 pk/rsa/rsa_free.c.o
+ .rodata.str1.1
+                0x000018f1       0x6b pk/rsa/rsa_import.c.o
+ .rodata.str1.1
+                0x0000195c       0x6d pk/rsa/rsa_make_key.c.o
+ .rodata.str1.1
+                0x000019c9       0x6e pk/rsa/rsa_sign_hash.c.o
+ .rodata.str1.1
+                0x00001a37       0x70 pk/rsa/rsa_verify_hash.c.o
+ .rodata.str1.1
+                0x00001aa7       0x7f pk/asn1/der/bit/der_decode_bit_string.c.o
+ .rodata.str1.1
+                0x00001b26       0x7f pk/asn1/der/bit/der_encode_bit_string.c.o
+ .rodata.str1.1
+                0x00001ba5       0x7f pk/asn1/der/bit/der_length_bit_string.c.o
+ .rodata.str1.1
+                0x00001c24       0x80 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .rodata.str1.1
+                0x00001ca4       0x80 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .rodata.str1.1
+                0x00001d24       0x80 pk/asn1/der/boolean/der_length_boolean.c.o
+ .rodata.str1.1
+                0x00001da4       0x7e pk/asn1/der/choice/der_decode_choice.c.o
+ .rodata.str1.1
+                0x00001e22       0x7f pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .rodata.str1.1
+                0x00001ea1       0x7f pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .rodata.str1.1
+                0x00001f20       0x7f pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .rodata.str1.1
+                0x00001f9f       0x80 pk/asn1/der/integer/der_decode_integer.c.o
+ .rodata.str1.1
+                0x0000201f       0x80 pk/asn1/der/integer/der_encode_integer.c.o
+ .rodata.str1.1
+                0x0000209f       0x80 pk/asn1/der/integer/der_length_integer.c.o
+ .rodata.str1.1
+                0x0000211f       0x94 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .rodata.str1.1
+                0x000021b3       0x94 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .rodata.str1.1
+                0x00002247       0x94 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .rodata.str1.1
+                0x000022db       0x83 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .rodata.str1.1
+                0x0000235e       0x83 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .rodata.str1.1
+                0x000023e1       0x83 pk/asn1/der/octet/der_length_octet_string.c.o
+ .rodata.str1.1
+                0x00002464       0x92 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .rodata.str1.1
+                0x000024f6       0x92 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .rodata.str1.1
+                0x00002588       0x92 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .rodata.str1.1
+                0x0000261a       0x85 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .rodata.str1.1
+                0x0000269f       0x88 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .rodata.str1.1
+                0x00002727       0x88 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .rodata.str1.1
+                0x000027af       0x85 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .rodata.str1.1
+                0x00002834       0x88 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .rodata.str1.1
+                0x000028bc       0x82 pk/asn1/der/sequence/der_length_sequence.c.o
+ .rodata.str1.1
+                0x0000293e       0x8c pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .rodata.str1.1
+                0x000029ca       0x8c pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .rodata.str1.1
+                0x00002a56       0x8c pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .rodata.str1.1
+                0x00002ae2       0x80 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .rodata.str1.1
+                0x00002b62       0x8b pk/asn1/der/utctime/der_encode_utctime.c.o
+ .rodata.str1.1
+                0x00002bed       0x80 pk/asn1/der/utctime/der_length_utctime.c.o
+ .rodata.str1.1
+                0x00002c6d       0x81 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .rodata.str1.1
+                0x00002cee       0x81 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .rodata.str1.1
+                0x00002d6f       0x81 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .rodata.str1.1
+                0x00002df0       0x76 ciphers/aes/aes.c.o
+ .rodata.str1.1
+                0x00002e66       0xc4 hashes/sha2/sha256.c.o
+ .rodata.str1.1
+                0x00002f2a       0x73 hashes/helper/hash_memory.c.o
+ .rodata.str1.1
+                0x00002f9d       0x6d prngs/yarrow.c.o
+ .rodata.str1.1
+                0x0000300a       0x6d prngs/rng_get_bytes.c.o
+ .rodata.str1.1
+                0x00003077       0x6d prngs/rng_make_prng.c.o
+ .rodata.str1.1
+                0x000030e4       0x73 misc/base64/base64_decode.c.o
+ .rodata.str1.1
+                0x00003157       0xb4 misc/base64/base64_encode.c.o
+ .rodata.str1.1
+                0x0000320b       0x7a misc/crypt/crypt_find_cipher_any.c.o
+ .rodata.str1.1
+                0x00003285       0x76 misc/crypt/crypt_find_cipher.c.o
+ .rodata.str1.1
+                0x000032fb       0x78 misc/crypt/crypt_find_hash_any.c.o
+ .rodata.str1.1
+                0x00003373       0x78 misc/crypt/crypt_find_hash_oid.c.o
+ .rodata.str1.1
+                0x000033eb       0x74 misc/crypt/crypt_find_hash.c.o
+ .rodata.str1.1
+                0x0000345f       0x74 misc/crypt/crypt_find_prng.c.o
+ .rodata.str1.1
+                0x000034d3       0x7a misc/crypt/crypt_register_cipher.c.o
+ .rodata.str1.1
+                0x0000354d       0x78 misc/crypt/crypt_register_hash.c.o
+ .rodata.str1.1
+                0x000035c5       0x78 misc/crypt/crypt_register_prng.c.o
+ .rodata.str1.1
+                0x0000363d       0x7c misc/crypt/crypt_unregister_cipher.c.o
+ .rodata.str1.1
+                0x000036b9       0x7a misc/crypt/crypt_unregister_hash.c.o
+ .rodata.str1.1
+                0x00003733       0x7a misc/crypt/crypt_unregister_prng.c.o
+ .rodata.str1.1
+                0x000037ad      0x296 misc/crypt/crypt.c.o
+ .rodata.str1.1
+                0x00003a43      0x281 misc/error_to_string.c.o
+ .rodata.str1.1
+                0x00003cc4       0x66 misc/zeromem.c.o
+ .rodata.str1.1
+                0x00003d2a       0x69 math/rand_prime.c.o
+ .rodata.str1.1
+                0x00003d93       0x74 math/tfm_desc.c.o
+ .rodata.str1.1
+                0x00003e07       0x6f modes/ctr/ctr_decrypt.c.o
+ .rodata.str1.1
+                0x00003e76       0x6c modes/ctr/ctr_done.c.o
+ .rodata.str1.1
+                0x00003ee2       0x6f modes/ctr/ctr_encrypt.c.o
+ .rodata.str1.1
+                0x00003f51       0x6d modes/ctr/ctr_getiv.c.o
+ .rodata.str1.1
+                0x00003fbe       0x6d modes/ctr/ctr_setiv.c.o
+ .rodata.str1.1
+                0x0000402b       0x6d modes/ctr/ctr_start.c.o
+
+.rodata.poly    0x00000000        0x2
+ .rodata.poly   0x00000000        0x2 encauth/gcm/gcm_gf_mult.c.o
+
+.rodata.mask    0x00000000        0x8
+ .rodata.mask   0x00000000        0x8 encauth/gcm/gcm_gf_mult.c.o
+
+.rodata.sha1_desc
+                0x00000000       0x68
+ .rodata.sha1_desc
+                0x00000000       0x68 hashes/sha1.c.o
+                0x00000000                sha1_desc
+
+.rodata.ltc_ecc_sets
+                0x00000000       0xfc
+ .rodata.ltc_ecc_sets
+                0x00000000       0xfc pk/ecc/ecc.c.o
+                0x00000000                ltc_ecc_sets
+
+.rodata.ia5_table
+                0x00000000      0x330
+ .rodata.ia5_table
+                0x00000000      0x330 pk/asn1/der/ia5/der_length_ia5_string.c.o
+
+.rodata.printable_table
+                0x00000000      0x250
+ .rodata.printable_table
+                0x00000000      0x250 pk/asn1/der/printable_string/der_length_printable_string.c.o
+
+.rodata.CSWTCH.9
+                0x00000000        0xf
+ .rodata.CSWTCH.9
+                0x00000000        0xf pk/asn1/der/set/der_encode_set.c.o
+
+.rodata.CSWTCH.5
+                0x00000000        0xa
+ .rodata.CSWTCH.5
+                0x00000000        0xa pk/asn1/der/utctime/der_decode_utctime.c.o
+
+.rodata.rijndael_desc
+                0x00000000       0x60
+ .rodata.rijndael_desc
+                0x00000000       0x60 ciphers/aes/aes.c.o
+                0x00000000                rijndael_desc
+
+.rodata.Te4_0   0x00000000      0x400
+ .rodata.Te4_0  0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.Te4_1   0x00000000      0x400
+ .rodata.Te4_1  0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.Te4_2   0x00000000      0x400
+ .rodata.Te4_2  0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.Te4_3   0x00000000      0x400
+ .rodata.Te4_3  0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.Tks2    0x00000000      0x400
+ .rodata.Tks2   0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.TD0     0x00000000      0x400
+ .rodata.TD0    0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.TD1     0x00000000      0x400
+ .rodata.TD1    0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.TD2     0x00000000      0x400
+ .rodata.TD2    0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.TD3     0x00000000      0x400
+ .rodata.TD3    0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.aes_desc
+                0x00000000       0x60
+ .rodata.aes_desc
+                0x00000000       0x60 ciphers/aes/aes.c.o
+                0x00000000                aes_desc
+
+.rodata.TE0     0x00000000      0x400
+ .rodata.TE0    0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.TE1     0x00000000      0x400
+ .rodata.TE1    0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.TE2     0x00000000      0x400
+ .rodata.TE2    0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.TE3     0x00000000      0x400
+ .rodata.TE3    0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.Td4     0x00000000      0x400
+ .rodata.Td4    0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.Tks0    0x00000000      0x400
+ .rodata.Tks0   0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.Tks1    0x00000000      0x400
+ .rodata.Tks1   0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.rcon    0x00000000       0x28
+ .rodata.rcon   0x00000000       0x28 ciphers/aes/aes.c.o
+
+.rodata.Tks3    0x00000000      0x400
+ .rodata.Tks3   0x00000000      0x400 ciphers/aes/aes.c.o
+
+.rodata.sha256_desc
+                0x00000000       0x68
+ .rodata.sha256_desc
+                0x00000000       0x68 hashes/sha2/sha256.c.o
+                0x00000000                sha256_desc
+
+.rodata.sha224_desc
+                0x00000000       0x68
+ .rodata.sha224_desc
+                0x00000000       0x68 hashes/sha2/sha256.c.o
+                0x00000000                sha224_desc
+
+.rodata.yarrow_desc
+                0x00000000       0x28
+ .rodata.yarrow_desc
+                0x00000000       0x28 prngs/yarrow.c.o
+                0x00000000                yarrow_desc
+
+.rodata.map     0x00000000      0x100
+ .rodata.map    0x00000000      0x100 misc/base64/base64_decode.c.o
+
+.rodata.err_2_str
+                0x00000000       0x60
+ .rodata.err_2_str
+                0x00000000       0x60 misc/error_to_string.c.o
+
+.rodata.tfm_desc
+                0x00000000       0xc4
+ .rodata.tfm_desc
+                0x00000000       0xc4 math/tfm_desc.c.o
+                0x00000000                tfm_desc
+
+.rodata.CSWTCH.91
+                0x00000000        0x3
+ .rodata.CSWTCH.91
+                0x00000000        0x3 math/tfm_desc.c.o
+
+.rodata.tfm_to_ltc_codes
+                0x00000000       0x18
+ .rodata.tfm_to_ltc_codes
+                0x00000000       0x18 math/tfm_desc.c.o
+
+.rodata.CSWTCH.93
+                0x00000000        0x3
+ .rodata.CSWTCH.93
+                0x00000000        0x3 math/tfm_desc.c.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 encauth/gcm/gcm_add_aad.c.o
+ .data          0x00000000        0x0 encauth/gcm/gcm_add_iv.c.o
+ .data          0x00000000        0x0 encauth/gcm/gcm_done.c.o
+ .data          0x00000000        0x0 encauth/gcm/gcm_gf_mult.c.o
+ .data          0x00000000        0x0 encauth/gcm/gcm_init.c.o
+ .data          0x00000000        0x0 encauth/gcm/gcm_memory.c.o
+ .data          0x00000000        0x0 encauth/gcm/gcm_mult_h.c.o
+ .data          0x00000000        0x0 encauth/gcm/gcm_process.c.o
+ .data          0x00000000        0x0 encauth/gcm/gcm_reset.c.o
+ .data          0x00000000        0x0 encauth/gcm/gcm_test.c.o
+ .data          0x00000000        0x0 hashes/sha1.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_ansi_x963_export.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_ansi_x963_import.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_decrypt_key.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_encrypt_key.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_export.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_free.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_get_size.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_import.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_make_key.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_shared_secret.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_sign_hash.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_sizes.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_test.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc_verify_hash.c.o
+ .data          0x00000000        0x0 pk/ecc/ecc.c.o
+ .data          0x00000000        0x0 pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .data          0x00000000        0x0 pk/ecc/ltc_ecc_map.c.o
+ .data          0x00000000        0x0 pk/ecc/ltc_ecc_mul2add.c.o
+ .data          0x00000000        0x0 pk/ecc/ltc_ecc_mulmod_timing.c.o
+ .data          0x00000000        0x0 pk/ecc/ltc_ecc_mulmod.c.o
+ .data          0x00000000        0x0 pk/ecc/ltc_ecc_points.c.o
+ .data          0x00000000        0x0 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .data          0x00000000        0x0 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .data          0x00000000        0x0 pk/pkcs1/pkcs_1_i2osp.c.o
+ .data          0x00000000        0x0 pk/pkcs1/pkcs_1_mgf1.c.o
+ .data          0x00000000        0x0 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .data          0x00000000        0x0 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .data          0x00000000        0x0 pk/pkcs1/pkcs_1_os2ip.c.o
+ .data          0x00000000        0x0 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .data          0x00000000        0x0 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .data          0x00000000        0x0 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .data          0x00000000        0x0 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .data          0x00000000        0x0 pk/rsa/rsa_decrypt_key.c.o
+ .data          0x00000000        0x0 pk/rsa/rsa_encrypt_key.c.o
+ .data          0x00000000        0x0 pk/rsa/rsa_export.c.o
+ .data          0x00000000        0x0 pk/rsa/rsa_exptmod.c.o
+ .data          0x00000000        0x0 pk/rsa/rsa_free.c.o
+ .data          0x00000000        0x0 pk/rsa/rsa_import.c.o
+ .data          0x00000000        0x0 pk/rsa/rsa_make_key.c.o
+ .data          0x00000000        0x0 pk/rsa/rsa_sign_hash.c.o
+ .data          0x00000000        0x0 pk/rsa/rsa_verify_hash.c.o
+ .data          0x00000000        0x0 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/bit/der_length_bit_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .data          0x00000000        0x0 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .data          0x00000000        0x0 pk/asn1/der/boolean/der_length_boolean.c.o
+ .data          0x00000000        0x0 pk/asn1/der/choice/der_decode_choice.c.o
+ .data          0x00000000        0x0 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/integer/der_decode_integer.c.o
+ .data          0x00000000        0x0 pk/asn1/der/integer/der_encode_integer.c.o
+ .data          0x00000000        0x0 pk/asn1/der/integer/der_length_integer.c.o
+ .data          0x00000000        0x0 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .data          0x00000000        0x0 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .data          0x00000000        0x0 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .data          0x00000000        0x0 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/octet/der_length_octet_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .data          0x00000000        0x0 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .data          0x00000000        0x0 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .data          0x00000000        0x0 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .data          0x00000000        0x0 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .data          0x00000000        0x0 pk/asn1/der/sequence/der_length_sequence.c.o
+ .data          0x00000000        0x0 pk/asn1/der/sequence/der_sequence_free.c.o
+ .data          0x00000000        0x0 pk/asn1/der/set/der_encode_set.c.o
+ .data          0x00000000        0x0 pk/asn1/der/set/der_encode_setof.c.o
+ .data          0x00000000        0x0 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .data          0x00000000        0x0 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .data          0x00000000        0x0 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .data          0x00000000        0x0 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .data          0x00000000        0x0 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .data          0x00000000        0x0 pk/asn1/der/utctime/der_length_utctime.c.o
+ .data          0x00000000        0x0 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .data          0x00000000        0x0 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .data          0x00000000        0x0 ciphers/aes/aes_tab.c.o
+ .data          0x00000000        0x0 ciphers/aes/aes.c.o
+ .data          0x00000000        0x0 hashes/sha2/sha256.c.o
+ .data          0x00000000        0x0 hashes/helper/hash_memory.c.o
+ .data          0x00000000        0x0 prngs/yarrow.c.o
+ .data          0x00000000        0x0 prngs/rng_get_bytes.c.o
+ .data          0x00000000        0x0 prngs/rng_make_prng.c.o
+ .data          0x00000000        0x0 misc/base64/base64_decode.c.o
+ .data          0x00000000        0x0 misc/base64/base64_encode.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_argchk.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_cipher_descriptor.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_cipher_is_valid.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_find_cipher_any.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_find_cipher_id.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_find_cipher.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_find_hash_any.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_find_hash_id.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_find_hash_oid.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_find_hash.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_find_prng.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_fsa.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_hash_descriptor.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_hash_is_valid.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_ltc_mp_descriptor.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_prng_descriptor.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_prng_is_valid.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_register_cipher.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_register_hash.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_register_prng.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_unregister_cipher.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_unregister_hash.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt_unregister_prng.c.o
+ .data          0x00000000        0x0 misc/crypt/crypt.c.o
+ .data          0x00000000        0x0 misc/error_to_string.c.o
+ .data          0x00000000        0x0 misc/zeromem.c.o
+ .data          0x00000000        0x0 math/fp/ltc_ecc_fp_mulmod.c.o
+ .data          0x00000000        0x0 math/gmp_desc.c.o
+ .data          0x00000000        0x0 math/ltm_desc.c.o
+ .data          0x00000000        0x0 math/multi.c.o
+ .data          0x00000000        0x0 math/rand_prime.c.o
+ .data          0x00000000        0x0 math/tfm_desc.c.o
+ .data          0x00000000        0x0 modes/ctr/ctr_decrypt.c.o
+ .data          0x00000000        0x0 modes/ctr/ctr_done.c.o
+ .data          0x00000000        0x0 modes/ctr/ctr_encrypt.c.o
+ .data          0x00000000        0x0 modes/ctr/ctr_getiv.c.o
+ .data          0x00000000        0x0 modes/ctr/ctr_setiv.c.o
+ .data          0x00000000        0x0 modes/ctr/ctr_start.c.o
+ .data          0x00000000        0x0 modes/ctr/ctr_test.c.o
+
+.data.crypt_build_settings
+                0x00000000        0x4
+ .data.crypt_build_settings
+                0x00000000        0x4 misc/crypt/crypt.c.o
+                0x00000000                crypt_build_settings
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 encauth/gcm/gcm_add_aad.c.o
+ .bss           0x00000000        0x0 encauth/gcm/gcm_add_iv.c.o
+ .bss           0x00000000        0x0 encauth/gcm/gcm_done.c.o
+ .bss           0x00000000        0x0 encauth/gcm/gcm_gf_mult.c.o
+ .bss           0x00000000        0x0 encauth/gcm/gcm_init.c.o
+ .bss           0x00000000        0x0 encauth/gcm/gcm_memory.c.o
+ .bss           0x00000000        0x0 encauth/gcm/gcm_mult_h.c.o
+ .bss           0x00000000        0x0 encauth/gcm/gcm_process.c.o
+ .bss           0x00000000        0x0 encauth/gcm/gcm_reset.c.o
+ .bss           0x00000000        0x0 encauth/gcm/gcm_test.c.o
+ .bss           0x00000000        0x0 hashes/sha1.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_ansi_x963_export.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_ansi_x963_import.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_decrypt_key.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_encrypt_key.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_export.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_free.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_get_size.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_import.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_make_key.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_shared_secret.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_sign_hash.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_sizes.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_test.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc_verify_hash.c.o
+ .bss           0x00000000        0x0 pk/ecc/ecc.c.o
+ .bss           0x00000000        0x0 pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .bss           0x00000000        0x0 pk/ecc/ltc_ecc_map.c.o
+ .bss           0x00000000        0x0 pk/ecc/ltc_ecc_mul2add.c.o
+ .bss           0x00000000        0x0 pk/ecc/ltc_ecc_mulmod_timing.c.o
+ .bss           0x00000000        0x0 pk/ecc/ltc_ecc_mulmod.c.o
+ .bss           0x00000000        0x0 pk/ecc/ltc_ecc_points.c.o
+ .bss           0x00000000        0x0 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .bss           0x00000000        0x0 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .bss           0x00000000        0x0 pk/pkcs1/pkcs_1_i2osp.c.o
+ .bss           0x00000000        0x0 pk/pkcs1/pkcs_1_mgf1.c.o
+ .bss           0x00000000        0x0 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .bss           0x00000000        0x0 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .bss           0x00000000        0x0 pk/pkcs1/pkcs_1_os2ip.c.o
+ .bss           0x00000000        0x0 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .bss           0x00000000        0x0 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .bss           0x00000000        0x0 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .bss           0x00000000        0x0 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .bss           0x00000000        0x0 pk/rsa/rsa_decrypt_key.c.o
+ .bss           0x00000000        0x0 pk/rsa/rsa_encrypt_key.c.o
+ .bss           0x00000000        0x0 pk/rsa/rsa_export.c.o
+ .bss           0x00000000        0x0 pk/rsa/rsa_exptmod.c.o
+ .bss           0x00000000        0x0 pk/rsa/rsa_free.c.o
+ .bss           0x00000000        0x0 pk/rsa/rsa_import.c.o
+ .bss           0x00000000        0x0 pk/rsa/rsa_make_key.c.o
+ .bss           0x00000000        0x0 pk/rsa/rsa_sign_hash.c.o
+ .bss           0x00000000        0x0 pk/rsa/rsa_verify_hash.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/bit/der_length_bit_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/boolean/der_length_boolean.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/choice/der_decode_choice.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/integer/der_decode_integer.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/integer/der_encode_integer.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/integer/der_length_integer.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/octet/der_length_octet_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/sequence/der_length_sequence.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/sequence/der_sequence_free.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/set/der_encode_set.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/set/der_encode_setof.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/utctime/der_length_utctime.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .bss           0x00000000        0x0 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .bss           0x00000000        0x0 ciphers/aes/aes_tab.c.o
+ .bss           0x00000000        0x0 ciphers/aes/aes.c.o
+ .bss           0x00000000        0x0 hashes/sha2/sha256.c.o
+ .bss           0x00000000        0x0 hashes/helper/hash_memory.c.o
+ .bss           0x00000000        0x0 prngs/yarrow.c.o
+ .bss           0x00000000        0x0 prngs/rng_get_bytes.c.o
+ .bss           0x00000000        0x0 prngs/rng_make_prng.c.o
+ .bss           0x00000000        0x0 misc/base64/base64_decode.c.o
+ .bss           0x00000000        0x0 misc/base64/base64_encode.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_argchk.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_cipher_descriptor.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_cipher_is_valid.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_find_cipher_any.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_find_cipher_id.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_find_cipher.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_find_hash_any.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_find_hash_id.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_find_hash_oid.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_find_hash.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_find_prng.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_fsa.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_hash_descriptor.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_hash_is_valid.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_ltc_mp_descriptor.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_prng_descriptor.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_prng_is_valid.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_register_cipher.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_register_hash.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_register_prng.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_unregister_cipher.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_unregister_hash.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt_unregister_prng.c.o
+ .bss           0x00000000        0x0 misc/crypt/crypt.c.o
+ .bss           0x00000000        0x0 misc/error_to_string.c.o
+ .bss           0x00000000        0x0 misc/zeromem.c.o
+ .bss           0x00000000        0x0 math/fp/ltc_ecc_fp_mulmod.c.o
+ .bss           0x00000000        0x0 math/gmp_desc.c.o
+ .bss           0x00000000        0x0 math/ltm_desc.c.o
+ .bss           0x00000000        0x0 math/multi.c.o
+ .bss           0x00000000        0x0 math/rand_prime.c.o
+ .bss           0x00000000        0x0 math/tfm_desc.c.o
+ .bss           0x00000000        0x0 modes/ctr/ctr_decrypt.c.o
+ .bss           0x00000000        0x0 modes/ctr/ctr_done.c.o
+ .bss           0x00000000        0x0 modes/ctr/ctr_encrypt.c.o
+ .bss           0x00000000        0x0 modes/ctr/ctr_getiv.c.o
+ .bss           0x00000000        0x0 modes/ctr/ctr_setiv.c.o
+ .bss           0x00000000        0x0 modes/ctr/ctr_start.c.o
+ .bss           0x00000000        0x0 modes/ctr/ctr_test.c.o
+ *(COMMON)
+
+.bss.cipher_descriptor
+                0x00000000      0xc00
+ .bss.cipher_descriptor
+                0x00000000      0xc00 misc/crypt/crypt_cipher_descriptor.c.o
+                0x00000000                cipher_descriptor
+
+.bss.hash_descriptor
+                0x00000000      0xd00
+ .bss.hash_descriptor
+                0x00000000      0xd00 misc/crypt/crypt_hash_descriptor.c.o
+                0x00000000                hash_descriptor
+
+.bss.ltc_mp     0x00000000       0xc4
+ .bss.ltc_mp    0x00000000       0xc4 misc/crypt/crypt_ltc_mp_descriptor.c.o
+                0x00000000                ltc_mp
+
+.bss.prng_descriptor
+                0x00000000      0x500
+ .bss.prng_descriptor
+                0x00000000      0x500 misc/crypt/crypt_prng_descriptor.c.o
+                0x00000000                prng_descriptor
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000     0x3dcc
+ *(.comment)
+ .comment       0x00000000       0x71 encauth/gcm/gcm_add_aad.c.o
+ .comment       0x00000071       0x71 encauth/gcm/gcm_add_iv.c.o
+ .comment       0x000000e2       0x71 encauth/gcm/gcm_done.c.o
+ .comment       0x00000153       0x71 encauth/gcm/gcm_gf_mult.c.o
+ .comment       0x000001c4       0x71 encauth/gcm/gcm_init.c.o
+ .comment       0x00000235       0x71 encauth/gcm/gcm_memory.c.o
+ .comment       0x000002a6       0x71 encauth/gcm/gcm_mult_h.c.o
+ .comment       0x00000317       0x71 encauth/gcm/gcm_process.c.o
+ .comment       0x00000388       0x71 encauth/gcm/gcm_reset.c.o
+ .comment       0x000003f9       0x71 encauth/gcm/gcm_test.c.o
+ .comment       0x0000046a       0x71 hashes/sha1.c.o
+ .comment       0x000004db       0x71 pk/ecc/ecc_ansi_x963_export.c.o
+ .comment       0x0000054c       0x71 pk/ecc/ecc_ansi_x963_import.c.o
+ .comment       0x000005bd       0x71 pk/ecc/ecc_decrypt_key.c.o
+ .comment       0x0000062e       0x71 pk/ecc/ecc_encrypt_key.c.o
+ .comment       0x0000069f       0x71 pk/ecc/ecc_export.c.o
+ .comment       0x00000710       0x71 pk/ecc/ecc_free.c.o
+ .comment       0x00000781       0x71 pk/ecc/ecc_get_size.c.o
+ .comment       0x000007f2       0x71 pk/ecc/ecc_import.c.o
+ .comment       0x00000863       0x71 pk/ecc/ecc_make_key.c.o
+ .comment       0x000008d4       0x71 pk/ecc/ecc_shared_secret.c.o
+ .comment       0x00000945       0x71 pk/ecc/ecc_sign_hash.c.o
+ .comment       0x000009b6       0x71 pk/ecc/ecc_sizes.c.o
+ .comment       0x00000a27       0x71 pk/ecc/ecc_test.c.o
+ .comment       0x00000a98       0x71 pk/ecc/ecc_verify_hash.c.o
+ .comment       0x00000b09       0x71 pk/ecc/ecc.c.o
+ .comment       0x00000b7a       0x71 pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .comment       0x00000beb       0x71 pk/ecc/ltc_ecc_map.c.o
+ .comment       0x00000c5c       0x71 pk/ecc/ltc_ecc_mul2add.c.o
+ .comment       0x00000ccd       0x71 pk/ecc/ltc_ecc_mulmod_timing.c.o
+ .comment       0x00000d3e       0x71 pk/ecc/ltc_ecc_mulmod.c.o
+ .comment       0x00000daf       0x71 pk/ecc/ltc_ecc_points.c.o
+ .comment       0x00000e20       0x71 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .comment       0x00000e91       0x71 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .comment       0x00000f02       0x71 pk/pkcs1/pkcs_1_i2osp.c.o
+ .comment       0x00000f73       0x71 pk/pkcs1/pkcs_1_mgf1.c.o
+ .comment       0x00000fe4       0x71 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .comment       0x00001055       0x71 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .comment       0x000010c6       0x71 pk/pkcs1/pkcs_1_os2ip.c.o
+ .comment       0x00001137       0x71 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .comment       0x000011a8       0x71 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .comment       0x00001219       0x71 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .comment       0x0000128a       0x71 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .comment       0x000012fb       0x71 pk/rsa/rsa_decrypt_key.c.o
+ .comment       0x0000136c       0x71 pk/rsa/rsa_encrypt_key.c.o
+ .comment       0x000013dd       0x71 pk/rsa/rsa_export.c.o
+ .comment       0x0000144e       0x71 pk/rsa/rsa_exptmod.c.o
+ .comment       0x000014bf       0x71 pk/rsa/rsa_free.c.o
+ .comment       0x00001530       0x71 pk/rsa/rsa_import.c.o
+ .comment       0x000015a1       0x71 pk/rsa/rsa_make_key.c.o
+ .comment       0x00001612       0x71 pk/rsa/rsa_sign_hash.c.o
+ .comment       0x00001683       0x71 pk/rsa/rsa_verify_hash.c.o
+ .comment       0x000016f4       0x71 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .comment       0x00001765       0x71 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .comment       0x000017d6       0x71 pk/asn1/der/bit/der_length_bit_string.c.o
+ .comment       0x00001847       0x71 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .comment       0x000018b8       0x71 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .comment       0x00001929       0x71 pk/asn1/der/boolean/der_length_boolean.c.o
+ .comment       0x0000199a       0x71 pk/asn1/der/choice/der_decode_choice.c.o
+ .comment       0x00001a0b       0x71 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .comment       0x00001a7c       0x71 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .comment       0x00001aed       0x71 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .comment       0x00001b5e       0x71 pk/asn1/der/integer/der_decode_integer.c.o
+ .comment       0x00001bcf       0x71 pk/asn1/der/integer/der_encode_integer.c.o
+ .comment       0x00001c40       0x71 pk/asn1/der/integer/der_length_integer.c.o
+ .comment       0x00001cb1       0x71 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .comment       0x00001d22       0x71 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .comment       0x00001d93       0x71 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .comment       0x00001e04       0x71 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .comment       0x00001e75       0x71 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .comment       0x00001ee6       0x71 pk/asn1/der/octet/der_length_octet_string.c.o
+ .comment       0x00001f57       0x71 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .comment       0x00001fc8       0x71 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .comment       0x00002039       0x71 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .comment       0x000020aa       0x71 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .comment       0x0000211b       0x71 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .comment       0x0000218c       0x71 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .comment       0x000021fd       0x71 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .comment       0x0000226e       0x71 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .comment       0x000022df       0x71 pk/asn1/der/sequence/der_length_sequence.c.o
+ .comment       0x00002350       0x71 pk/asn1/der/sequence/der_sequence_free.c.o
+ .comment       0x000023c1       0x71 pk/asn1/der/set/der_encode_set.c.o
+ .comment       0x00002432       0x71 pk/asn1/der/set/der_encode_setof.c.o
+ .comment       0x000024a3       0x71 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .comment       0x00002514       0x71 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .comment       0x00002585       0x71 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .comment       0x000025f6       0x71 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .comment       0x00002667       0x71 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .comment       0x000026d8       0x71 pk/asn1/der/utctime/der_length_utctime.c.o
+ .comment       0x00002749       0x71 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .comment       0x000027ba       0x71 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .comment       0x0000282b       0x71 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .comment       0x0000289c       0x71 ciphers/aes/aes_tab.c.o
+ .comment       0x0000290d       0x71 ciphers/aes/aes.c.o
+ .comment       0x0000297e       0x71 hashes/sha2/sha256.c.o
+ .comment       0x000029ef       0x71 hashes/helper/hash_memory.c.o
+ .comment       0x00002a60       0x71 prngs/yarrow.c.o
+ .comment       0x00002ad1       0x71 prngs/rng_get_bytes.c.o
+ .comment       0x00002b42       0x71 prngs/rng_make_prng.c.o
+ .comment       0x00002bb3       0x71 misc/base64/base64_decode.c.o
+ .comment       0x00002c24       0x71 misc/base64/base64_encode.c.o
+ .comment       0x00002c95       0x71 misc/crypt/crypt_argchk.c.o
+ .comment       0x00002d06       0x71 misc/crypt/crypt_cipher_descriptor.c.o
+ .comment       0x00002d77       0x71 misc/crypt/crypt_cipher_is_valid.c.o
+ .comment       0x00002de8       0x71 misc/crypt/crypt_find_cipher_any.c.o
+ .comment       0x00002e59       0x71 misc/crypt/crypt_find_cipher_id.c.o
+ .comment       0x00002eca       0x71 misc/crypt/crypt_find_cipher.c.o
+ .comment       0x00002f3b       0x71 misc/crypt/crypt_find_hash_any.c.o
+ .comment       0x00002fac       0x71 misc/crypt/crypt_find_hash_id.c.o
+ .comment       0x0000301d       0x71 misc/crypt/crypt_find_hash_oid.c.o
+ .comment       0x0000308e       0x71 misc/crypt/crypt_find_hash.c.o
+ .comment       0x000030ff       0x71 misc/crypt/crypt_find_prng.c.o
+ .comment       0x00003170       0x71 misc/crypt/crypt_fsa.c.o
+ .comment       0x000031e1       0x71 misc/crypt/crypt_hash_descriptor.c.o
+ .comment       0x00003252       0x71 misc/crypt/crypt_hash_is_valid.c.o
+ .comment       0x000032c3       0x71 misc/crypt/crypt_ltc_mp_descriptor.c.o
+ .comment       0x00003334       0x71 misc/crypt/crypt_prng_descriptor.c.o
+ .comment       0x000033a5       0x71 misc/crypt/crypt_prng_is_valid.c.o
+ .comment       0x00003416       0x71 misc/crypt/crypt_register_cipher.c.o
+ .comment       0x00003487       0x71 misc/crypt/crypt_register_hash.c.o
+ .comment       0x000034f8       0x71 misc/crypt/crypt_register_prng.c.o
+ .comment       0x00003569       0x71 misc/crypt/crypt_unregister_cipher.c.o
+ .comment       0x000035da       0x71 misc/crypt/crypt_unregister_hash.c.o
+ .comment       0x0000364b       0x71 misc/crypt/crypt_unregister_prng.c.o
+ .comment       0x000036bc       0x71 misc/crypt/crypt.c.o
+ .comment       0x0000372d       0x71 misc/error_to_string.c.o
+ .comment       0x0000379e       0x71 misc/zeromem.c.o
+ .comment       0x0000380f       0x71 math/fp/ltc_ecc_fp_mulmod.c.o
+ .comment       0x00003880       0x71 math/gmp_desc.c.o
+ .comment       0x000038f1       0x71 math/ltm_desc.c.o
+ .comment       0x00003962       0x71 math/multi.c.o
+ .comment       0x000039d3       0x71 math/rand_prime.c.o
+ .comment       0x00003a44       0x71 math/tfm_desc.c.o
+ .comment       0x00003ab5       0x71 modes/ctr/ctr_decrypt.c.o
+ .comment       0x00003b26       0x71 modes/ctr/ctr_done.c.o
+ .comment       0x00003b97       0x71 modes/ctr/ctr_encrypt.c.o
+ .comment       0x00003c08       0x71 modes/ctr/ctr_getiv.c.o
+ .comment       0x00003c79       0x71 modes/ctr/ctr_setiv.c.o
+ .comment       0x00003cea       0x71 modes/ctr/ctr_start.c.o
+ .comment       0x00003d5b       0x71 modes/ctr/ctr_test.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000     0x1278
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 encauth/gcm/gcm_add_aad.c.o
+ .debug_aranges
+                0x00000020       0x20 encauth/gcm/gcm_add_iv.c.o
+ .debug_aranges
+                0x00000040       0x20 encauth/gcm/gcm_done.c.o
+ .debug_aranges
+                0x00000060       0x28 encauth/gcm/gcm_gf_mult.c.o
+ .debug_aranges
+                0x00000088       0x20 encauth/gcm/gcm_init.c.o
+ .debug_aranges
+                0x000000a8       0x20 encauth/gcm/gcm_memory.c.o
+ .debug_aranges
+                0x000000c8       0x20 encauth/gcm/gcm_mult_h.c.o
+ .debug_aranges
+                0x000000e8       0x20 encauth/gcm/gcm_process.c.o
+ .debug_aranges
+                0x00000108       0x20 encauth/gcm/gcm_reset.c.o
+ .debug_aranges
+                0x00000128       0x20 encauth/gcm/gcm_test.c.o
+ .debug_aranges
+                0x00000148       0x40 hashes/sha1.c.o
+ .debug_aranges
+                0x00000188       0x20 pk/ecc/ecc_ansi_x963_export.c.o
+ .debug_aranges
+                0x000001a8       0x28 pk/ecc/ecc_ansi_x963_import.c.o
+ .debug_aranges
+                0x000001d0       0x20 pk/ecc/ecc_decrypt_key.c.o
+ .debug_aranges
+                0x000001f0       0x20 pk/ecc/ecc_encrypt_key.c.o
+ .debug_aranges
+                0x00000210       0x20 pk/ecc/ecc_export.c.o
+ .debug_aranges
+                0x00000230       0x20 pk/ecc/ecc_free.c.o
+ .debug_aranges
+                0x00000250       0x20 pk/ecc/ecc_get_size.c.o
+ .debug_aranges
+                0x00000270       0x30 pk/ecc/ecc_import.c.o
+ .debug_aranges
+                0x000002a0       0x28 pk/ecc/ecc_make_key.c.o
+ .debug_aranges
+                0x000002c8       0x20 pk/ecc/ecc_shared_secret.c.o
+ .debug_aranges
+                0x000002e8       0x20 pk/ecc/ecc_sign_hash.c.o
+ .debug_aranges
+                0x00000308       0x20 pk/ecc/ecc_sizes.c.o
+ .debug_aranges
+                0x00000328       0x20 pk/ecc/ecc_test.c.o
+ .debug_aranges
+                0x00000348       0x20 pk/ecc/ecc_verify_hash.c.o
+ .debug_aranges
+                0x00000368       0x20 pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .debug_aranges
+                0x00000388       0x20 pk/ecc/ltc_ecc_map.c.o
+ .debug_aranges
+                0x000003a8       0x20 pk/ecc/ltc_ecc_mulmod.c.o
+ .debug_aranges
+                0x000003c8       0x28 pk/ecc/ltc_ecc_points.c.o
+ .debug_aranges
+                0x000003f0       0x20 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .debug_aranges
+                0x00000410       0x20 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .debug_aranges
+                0x00000430       0x20 pk/pkcs1/pkcs_1_i2osp.c.o
+ .debug_aranges
+                0x00000450       0x20 pk/pkcs1/pkcs_1_mgf1.c.o
+ .debug_aranges
+                0x00000470       0x20 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .debug_aranges
+                0x00000490       0x20 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .debug_aranges
+                0x000004b0       0x20 pk/pkcs1/pkcs_1_os2ip.c.o
+ .debug_aranges
+                0x000004d0       0x20 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .debug_aranges
+                0x000004f0       0x20 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .debug_aranges
+                0x00000510       0x20 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .debug_aranges
+                0x00000530       0x20 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .debug_aranges
+                0x00000550       0x20 pk/rsa/rsa_decrypt_key.c.o
+ .debug_aranges
+                0x00000570       0x20 pk/rsa/rsa_encrypt_key.c.o
+ .debug_aranges
+                0x00000590       0x20 pk/rsa/rsa_export.c.o
+ .debug_aranges
+                0x000005b0       0x20 pk/rsa/rsa_exptmod.c.o
+ .debug_aranges
+                0x000005d0       0x20 pk/rsa/rsa_free.c.o
+ .debug_aranges
+                0x000005f0       0x20 pk/rsa/rsa_import.c.o
+ .debug_aranges
+                0x00000610       0x20 pk/rsa/rsa_make_key.c.o
+ .debug_aranges
+                0x00000630       0x20 pk/rsa/rsa_sign_hash.c.o
+ .debug_aranges
+                0x00000650       0x20 pk/rsa/rsa_verify_hash.c.o
+ .debug_aranges
+                0x00000670       0x20 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .debug_aranges
+                0x00000690       0x20 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .debug_aranges
+                0x000006b0       0x20 pk/asn1/der/bit/der_length_bit_string.c.o
+ .debug_aranges
+                0x000006d0       0x20 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .debug_aranges
+                0x000006f0       0x20 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .debug_aranges
+                0x00000710       0x20 pk/asn1/der/boolean/der_length_boolean.c.o
+ .debug_aranges
+                0x00000730       0x20 pk/asn1/der/choice/der_decode_choice.c.o
+ .debug_aranges
+                0x00000750       0x20 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .debug_aranges
+                0x00000770       0x20 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .debug_aranges
+                0x00000790       0x30 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .debug_aranges
+                0x000007c0       0x20 pk/asn1/der/integer/der_decode_integer.c.o
+ .debug_aranges
+                0x000007e0       0x20 pk/asn1/der/integer/der_encode_integer.c.o
+ .debug_aranges
+                0x00000800       0x20 pk/asn1/der/integer/der_length_integer.c.o
+ .debug_aranges
+                0x00000820       0x20 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .debug_aranges
+                0x00000840       0x20 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .debug_aranges
+                0x00000860       0x28 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .debug_aranges
+                0x00000888       0x20 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .debug_aranges
+                0x000008a8       0x20 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .debug_aranges
+                0x000008c8       0x20 pk/asn1/der/octet/der_length_octet_string.c.o
+ .debug_aranges
+                0x000008e8       0x20 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .debug_aranges
+                0x00000908       0x20 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .debug_aranges
+                0x00000928       0x30 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .debug_aranges
+                0x00000958       0x20 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .debug_aranges
+                0x00000978       0x28 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .debug_aranges
+                0x000009a0       0x20 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .debug_aranges
+                0x000009c0       0x20 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .debug_aranges
+                0x000009e0       0x20 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .debug_aranges
+                0x00000a00       0x20 pk/asn1/der/sequence/der_length_sequence.c.o
+ .debug_aranges
+                0x00000a20       0x20 pk/asn1/der/sequence/der_sequence_free.c.o
+ .debug_aranges
+                0x00000a40       0x30 pk/asn1/der/set/der_encode_set.c.o
+ .debug_aranges
+                0x00000a70       0x28 pk/asn1/der/set/der_encode_setof.c.o
+ .debug_aranges
+                0x00000a98       0x20 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .debug_aranges
+                0x00000ab8       0x20 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .debug_aranges
+                0x00000ad8       0x20 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .debug_aranges
+                0x00000af8       0x28 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .debug_aranges
+                0x00000b20       0x20 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .debug_aranges
+                0x00000b40       0x20 pk/asn1/der/utctime/der_length_utctime.c.o
+ .debug_aranges
+                0x00000b60       0x20 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .debug_aranges
+                0x00000b80       0x20 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .debug_aranges
+                0x00000ba0       0x28 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .debug_aranges
+                0x00000bc8       0x50 ciphers/aes/aes.c.o
+ .debug_aranges
+                0x00000c18       0x58 hashes/sha2/sha256.c.o
+ .debug_aranges
+                0x00000c70       0x20 hashes/helper/hash_memory.c.o
+ .debug_aranges
+                0x00000c90       0x58 prngs/yarrow.c.o
+ .debug_aranges
+                0x00000ce8       0x28 prngs/rng_get_bytes.c.o
+ .debug_aranges
+                0x00000d10       0x20 prngs/rng_make_prng.c.o
+ .debug_aranges
+                0x00000d30       0x20 misc/base64/base64_decode.c.o
+ .debug_aranges
+                0x00000d50       0x20 misc/base64/base64_encode.c.o
+ .debug_aranges
+                0x00000d70       0x20 misc/crypt/crypt_cipher_is_valid.c.o
+ .debug_aranges
+                0x00000d90       0x20 misc/crypt/crypt_find_cipher_any.c.o
+ .debug_aranges
+                0x00000db0       0x20 misc/crypt/crypt_find_cipher_id.c.o
+ .debug_aranges
+                0x00000dd0       0x20 misc/crypt/crypt_find_cipher.c.o
+ .debug_aranges
+                0x00000df0       0x20 misc/crypt/crypt_find_hash_any.c.o
+ .debug_aranges
+                0x00000e10       0x20 misc/crypt/crypt_find_hash_id.c.o
+ .debug_aranges
+                0x00000e30       0x20 misc/crypt/crypt_find_hash_oid.c.o
+ .debug_aranges
+                0x00000e50       0x20 misc/crypt/crypt_find_hash.c.o
+ .debug_aranges
+                0x00000e70       0x20 misc/crypt/crypt_find_prng.c.o
+ .debug_aranges
+                0x00000e90       0x20 misc/crypt/crypt_fsa.c.o
+ .debug_aranges
+                0x00000eb0       0x20 misc/crypt/crypt_hash_is_valid.c.o
+ .debug_aranges
+                0x00000ed0       0x20 misc/crypt/crypt_prng_is_valid.c.o
+ .debug_aranges
+                0x00000ef0       0x20 misc/crypt/crypt_register_cipher.c.o
+ .debug_aranges
+                0x00000f10       0x20 misc/crypt/crypt_register_hash.c.o
+ .debug_aranges
+                0x00000f30       0x20 misc/crypt/crypt_register_prng.c.o
+ .debug_aranges
+                0x00000f50       0x20 misc/crypt/crypt_unregister_cipher.c.o
+ .debug_aranges
+                0x00000f70       0x20 misc/crypt/crypt_unregister_hash.c.o
+ .debug_aranges
+                0x00000f90       0x20 misc/crypt/crypt_unregister_prng.c.o
+ .debug_aranges
+                0x00000fb0       0x20 misc/error_to_string.c.o
+ .debug_aranges
+                0x00000fd0       0x20 misc/zeromem.c.o
+ .debug_aranges
+                0x00000ff0       0x28 math/multi.c.o
+ .debug_aranges
+                0x00001018       0x20 math/rand_prime.c.o
+ .debug_aranges
+                0x00001038      0x160 math/tfm_desc.c.o
+ .debug_aranges
+                0x00001198       0x20 modes/ctr/ctr_decrypt.c.o
+ .debug_aranges
+                0x000011b8       0x20 modes/ctr/ctr_done.c.o
+ .debug_aranges
+                0x000011d8       0x20 modes/ctr/ctr_encrypt.c.o
+ .debug_aranges
+                0x000011f8       0x20 modes/ctr/ctr_getiv.c.o
+ .debug_aranges
+                0x00001218       0x20 modes/ctr/ctr_setiv.c.o
+ .debug_aranges
+                0x00001238       0x20 modes/ctr/ctr_start.c.o
+ .debug_aranges
+                0x00001258       0x20 modes/ctr/ctr_test.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000    0x32427
+ *(.debug_info)
+ .debug_info    0x00000000      0x410 encauth/gcm/gcm_add_aad.c.o
+ .debug_info    0x00000410      0x41c encauth/gcm/gcm_add_iv.c.o
+ .debug_info    0x0000082c      0x7be encauth/gcm/gcm_done.c.o
+ .debug_info    0x00000fea      0x1aa encauth/gcm/gcm_gf_mult.c.o
+ .debug_info    0x00001194      0x7cc encauth/gcm/gcm_init.c.o
+ .debug_info    0x00001960      0x864 encauth/gcm/gcm_memory.c.o
+ .debug_info    0x000021c4      0x347 encauth/gcm/gcm_mult_h.c.o
+ .debug_info    0x0000250b      0x7f3 encauth/gcm/gcm_process.c.o
+ .debug_info    0x00002cfe      0x3cb encauth/gcm/gcm_reset.c.o
+ .debug_info    0x000030c9      0x144 encauth/gcm/gcm_test.c.o
+ .debug_info    0x0000320d      0x5ea hashes/sha1.c.o
+ .debug_info    0x000037f7      0xc7b pk/ecc/ecc_ansi_x963_export.c.o
+ .debug_info    0x00004472      0xd15 pk/ecc/ecc_ansi_x963_import.c.o
+ .debug_info    0x00005187      0x511 pk/ecc/ecc_decrypt_key.c.o
+ .debug_info    0x00005698      0x97d pk/ecc/ecc_encrypt_key.c.o
+ .debug_info    0x00006015      0x362 pk/ecc/ecc_export.c.o
+ .debug_info    0x00006377      0x1cf pk/ecc/ecc_free.c.o
+ .debug_info    0x00006546      0x1d3 pk/ecc/ecc_get_size.c.o
+ .debug_info    0x00006719      0xe13 pk/ecc/ecc_import.c.o
+ .debug_info    0x0000752c      0xed0 pk/ecc/ecc_make_key.c.o
+ .debug_info    0x000083fc      0xcb6 pk/ecc/ecc_shared_secret.c.o
+ .debug_info    0x000090b2      0xd6c pk/ecc/ecc_sign_hash.c.o
+ .debug_info    0x00009e1e      0x17e pk/ecc/ecc_sizes.c.o
+ .debug_info    0x00009f9c      0xc4f pk/ecc/ecc_test.c.o
+ .debug_info    0x0000abeb      0xd9c pk/ecc/ecc_verify_hash.c.o
+ .debug_info    0x0000b987      0x127 pk/ecc/ecc.c.o
+ .debug_info    0x0000baae      0x16b pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .debug_info    0x0000bc19      0xba6 pk/ecc/ltc_ecc_map.c.o
+ .debug_info    0x0000c7bf       0x88 pk/ecc/ltc_ecc_mul2add.c.o
+ .debug_info    0x0000c847       0x88 pk/ecc/ltc_ecc_mulmod_timing.c.o
+ .debug_info    0x0000c8cf      0xc6d pk/ecc/ltc_ecc_mulmod.c.o
+ .debug_info    0x0000d53c      0x1b9 pk/ecc/ltc_ecc_points.c.o
+ .debug_info    0x0000d6f5      0xbe5 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .debug_info    0x0000e2da      0xbb1 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .debug_info    0x0000ee8b      0xb80 pk/pkcs1/pkcs_1_i2osp.c.o
+ .debug_info    0x0000fa0b      0x50b pk/pkcs1/pkcs_1_mgf1.c.o
+ .debug_info    0x0000ff16      0x564 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .debug_info    0x0001047a      0x93c pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .debug_info    0x00010db6      0xad1 pk/pkcs1/pkcs_1_os2ip.c.o
+ .debug_info    0x00011887      0x573 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .debug_info    0x00011dfa      0x94b pk/pkcs1/pkcs_1_pss_encode.c.o
+ .debug_info    0x00012745      0x222 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .debug_info    0x00012967      0x64b pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .debug_info    0x00012fb2      0xc6b pk/rsa/rsa_decrypt_key.c.o
+ .debug_info    0x00013c1d      0xc6a pk/rsa/rsa_encrypt_key.c.o
+ .debug_info    0x00014887      0x2ab pk/rsa/rsa_export.c.o
+ .debug_info    0x00014b32      0xc06 pk/rsa/rsa_exptmod.c.o
+ .debug_info    0x00015738      0x142 pk/rsa/rsa_free.c.o
+ .debug_info    0x0001587a      0xde4 pk/rsa/rsa_import.c.o
+ .debug_info    0x0001665e      0xc0f pk/rsa/rsa_make_key.c.o
+ .debug_info    0x0001726d     0x111b pk/rsa/rsa_sign_hash.c.o
+ .debug_info    0x00018388     0x114b pk/rsa/rsa_verify_hash.c.o
+ .debug_info    0x000194d3      0x1cf pk/asn1/der/bit/der_decode_bit_string.c.o
+ .debug_info    0x000196a2      0x1dd pk/asn1/der/bit/der_encode_bit_string.c.o
+ .debug_info    0x0001987f      0x178 pk/asn1/der/bit/der_length_bit_string.c.o
+ .debug_info    0x000199f7      0x182 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .debug_info    0x00019b79      0x17d pk/asn1/der/boolean/der_encode_boolean.c.o
+ .debug_info    0x00019cf6      0x15a pk/asn1/der/boolean/der_length_boolean.c.o
+ .debug_info    0x00019e50      0x2d4 pk/asn1/der/choice/der_decode_choice.c.o
+ .debug_info    0x0001a124      0x1cd pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .debug_info    0x0001a2f1      0x1ce pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .debug_info    0x0001a4bf      0x24d pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .debug_info    0x0001a70c      0xbbd pk/asn1/der/integer/der_decode_integer.c.o
+ .debug_info    0x0001b2c9      0xbc1 pk/asn1/der/integer/der_encode_integer.c.o
+ .debug_info    0x0001be8a      0xb8f pk/asn1/der/integer/der_length_integer.c.o
+ .debug_info    0x0001ca19      0x1c7 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .debug_info    0x0001cbe0      0x1fa pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .debug_info    0x0001cdda      0x1e6 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .debug_info    0x0001cfc0      0x1c0 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .debug_info    0x0001d180      0x1ce pk/asn1/der/octet/der_encode_octet_string.c.o
+ .debug_info    0x0001d34e      0x169 pk/asn1/der/octet/der_length_octet_string.c.o
+ .debug_info    0x0001d4b7      0x1cd pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .debug_info    0x0001d684      0x1ce pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .debug_info    0x0001d852      0x24d pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .debug_info    0x0001da9f      0x32d pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .debug_info    0x0001ddcc      0xd64 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .debug_info    0x0001eb30      0x31c pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .debug_info    0x0001ee4c      0x324 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .debug_info    0x0001f170      0x31e pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .debug_info    0x0001f48e      0x2fd pk/asn1/der/sequence/der_length_sequence.c.o
+ .debug_info    0x0001f78b      0xbc6 pk/asn1/der/sequence/der_sequence_free.c.o
+ .debug_info    0x00020351      0x34d pk/asn1/der/set/der_encode_set.c.o
+ .debug_info    0x0002069e      0x3aa pk/asn1/der/set/der_encode_setof.c.o
+ .debug_info    0x00020a48      0x1ab pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .debug_info    0x00020bf3      0x1c2 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .debug_info    0x00020db5      0x192 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .debug_info    0x00020f47      0x281 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .debug_info    0x000211c8      0x264 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .debug_info    0x0002142c      0x20a pk/asn1/der/utctime/der_length_utctime.c.o
+ .debug_info    0x00021636      0x201 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .debug_info    0x00021837      0x1e5 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .debug_info    0x00021a1c      0x1ec pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .debug_info    0x00021c08      0x1a1 ciphers/aes/aes_tab.c.o
+ .debug_info    0x00021da9      0xb6f ciphers/aes/aes.c.o
+ .debug_info    0x00022918      0x691 hashes/sha2/sha256.c.o
+ .debug_info    0x00022fa9      0x4cf hashes/helper/hash_memory.c.o
+ .debug_info    0x00023478      0xddd prngs/yarrow.c.o
+ .debug_info    0x00024255      0x1aa prngs/rng_get_bytes.c.o
+ .debug_info    0x000243ff      0x5e1 prngs/rng_make_prng.c.o
+ .debug_info    0x000249e0      0x20f misc/base64/base64_decode.c.o
+ .debug_info    0x00024bef      0x20e misc/base64/base64_encode.c.o
+ .debug_info    0x00024dfd       0x88 misc/crypt/crypt_argchk.c.o
+ .debug_info    0x00024e85      0x5d8 misc/crypt/crypt_cipher_descriptor.c.o
+ .debug_info    0x0002545d      0x6ad misc/crypt/crypt_cipher_is_valid.c.o
+ .debug_info    0x00025b0a      0x644 misc/crypt/crypt_find_cipher_any.c.o
+ .debug_info    0x0002614e      0x61a misc/crypt/crypt_find_cipher_id.c.o
+ .debug_info    0x00026768      0x626 misc/crypt/crypt_find_cipher.c.o
+ .debug_info    0x00026d8e      0x40f misc/crypt/crypt_find_hash_any.c.o
+ .debug_info    0x0002719d      0x3da misc/crypt/crypt_find_hash_id.c.o
+ .debug_info    0x00027577      0x3f4 misc/crypt/crypt_find_hash_oid.c.o
+ .debug_info    0x0002796b      0x3e6 misc/crypt/crypt_find_hash.c.o
+ .debug_info    0x00027d51      0x4f7 misc/crypt/crypt_find_prng.c.o
+ .debug_info    0x00028248      0xbae misc/crypt/crypt_fsa.c.o
+ .debug_info    0x00028df6      0x39a misc/crypt/crypt_hash_descriptor.c.o
+ .debug_info    0x00029190      0x46d misc/crypt/crypt_hash_is_valid.c.o
+ .debug_info    0x000295fd      0xa7b misc/crypt/crypt_ltc_mp_descriptor.c.o
+ .debug_info    0x0002a078      0x4ab misc/crypt/crypt_prng_descriptor.c.o
+ .debug_info    0x0002a523      0x57e misc/crypt/crypt_prng_is_valid.c.o
+ .debug_info    0x0002aaa1      0x626 misc/crypt/crypt_register_cipher.c.o
+ .debug_info    0x0002b0c7      0x3e6 misc/crypt/crypt_register_hash.c.o
+ .debug_info    0x0002b4ad      0x4f7 misc/crypt/crypt_register_prng.c.o
+ .debug_info    0x0002b9a4      0x6c5 misc/crypt/crypt_unregister_cipher.c.o
+ .debug_info    0x0002c069      0x485 misc/crypt/crypt_unregister_hash.c.o
+ .debug_info    0x0002c4ee      0x596 misc/crypt/crypt_unregister_prng.c.o
+ .debug_info    0x0002ca84       0xa5 misc/crypt/crypt.c.o
+ .debug_info    0x0002cb29       0xea misc/error_to_string.c.o
+ .debug_info    0x0002cc13       0xf8 misc/zeromem.c.o
+ .debug_info    0x0002cd0b       0x88 math/fp/ltc_ecc_fp_mulmod.c.o
+ .debug_info    0x0002cd93       0x88 math/gmp_desc.c.o
+ .debug_info    0x0002ce1b       0x88 math/ltm_desc.c.o
+ .debug_info    0x0002cea3      0xc0a math/multi.c.o
+ .debug_info    0x0002daad      0xcfc math/rand_prime.c.o
+ .debug_info    0x0002e7a9     0x15fa math/tfm_desc.c.o
+ .debug_info    0x0002fda3      0x338 modes/ctr/ctr_decrypt.c.o
+ .debug_info    0x000300db      0x763 modes/ctr/ctr_done.c.o
+ .debug_info    0x0003083e      0x79b modes/ctr/ctr_encrypt.c.o
+ .debug_info    0x00030fd9      0x3c4 modes/ctr/ctr_getiv.c.o
+ .debug_info    0x0003139d      0x780 modes/ctr/ctr_setiv.c.o
+ .debug_info    0x00031b1d      0x7c6 modes/ctr/ctr_start.c.o
+ .debug_info    0x000322e3      0x144 modes/ctr/ctr_test.c.o
+
+.debug_abbrev   0x00000000     0xa42e
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x13d encauth/gcm/gcm_add_aad.c.o
+ .debug_abbrev  0x0000013d      0x13d encauth/gcm/gcm_add_iv.c.o
+ .debug_abbrev  0x0000027a      0x1a4 encauth/gcm/gcm_done.c.o
+ .debug_abbrev  0x0000041e       0xb6 encauth/gcm/gcm_gf_mult.c.o
+ .debug_abbrev  0x000004d4      0x1b3 encauth/gcm/gcm_init.c.o
+ .debug_abbrev  0x00000687      0x1de encauth/gcm/gcm_memory.c.o
+ .debug_abbrev  0x00000865      0x10f encauth/gcm/gcm_mult_h.c.o
+ .debug_abbrev  0x00000974      0x1b3 encauth/gcm/gcm_process.c.o
+ .debug_abbrev  0x00000b27      0x118 encauth/gcm/gcm_reset.c.o
+ .debug_abbrev  0x00000c3f       0x59 encauth/gcm/gcm_test.c.o
+ .debug_abbrev  0x00000c98      0x170 hashes/sha1.c.o
+ .debug_abbrev  0x00000e08      0x1a3 pk/ecc/ecc_ansi_x963_export.c.o
+ .debug_abbrev  0x00000fab      0x1b7 pk/ecc/ecc_ansi_x963_import.c.o
+ .debug_abbrev  0x00001162      0x16b pk/ecc/ecc_decrypt_key.c.o
+ .debug_abbrev  0x000012cd      0x1fe pk/ecc/ecc_encrypt_key.c.o
+ .debug_abbrev  0x000014cb      0x112 pk/ecc/ecc_export.c.o
+ .debug_abbrev  0x000015dd       0xa1 pk/ecc/ecc_free.c.o
+ .debug_abbrev  0x0000167e       0xa3 pk/ecc/ecc_get_size.c.o
+ .debug_abbrev  0x00001721      0x208 pk/ecc/ecc_import.c.o
+ .debug_abbrev  0x00001929      0x1cf pk/ecc/ecc_make_key.c.o
+ .debug_abbrev  0x00001af8      0x1b0 pk/ecc/ecc_shared_secret.c.o
+ .debug_abbrev  0x00001ca8      0x1db pk/ecc/ecc_sign_hash.c.o
+ .debug_abbrev  0x00001e83       0xd7 pk/ecc/ecc_sizes.c.o
+ .debug_abbrev  0x00001f5a      0x1b5 pk/ecc/ecc_test.c.o
+ .debug_abbrev  0x0000210f      0x1db pk/ecc/ecc_verify_hash.c.o
+ .debug_abbrev  0x000022ea       0x95 pk/ecc/ecc.c.o
+ .debug_abbrev  0x0000237f       0xca pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .debug_abbrev  0x00002449      0x1a1 pk/ecc/ltc_ecc_map.c.o
+ .debug_abbrev  0x000025ea       0x2a pk/ecc/ltc_ecc_mul2add.c.o
+ .debug_abbrev  0x00002614       0x2a pk/ecc/ltc_ecc_mulmod_timing.c.o
+ .debug_abbrev  0x0000263e      0x1ce pk/ecc/ltc_ecc_mulmod.c.o
+ .debug_abbrev  0x0000280c       0xc7 pk/ecc/ltc_ecc_points.c.o
+ .debug_abbrev  0x000028d3      0x1bf pk/ecc/ltc_ecc_projective_add_point.c.o
+ .debug_abbrev  0x00002a92      0x1b0 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .debug_abbrev  0x00002c42      0x194 pk/pkcs1/pkcs_1_i2osp.c.o
+ .debug_abbrev  0x00002dd6      0x145 pk/pkcs1/pkcs_1_mgf1.c.o
+ .debug_abbrev  0x00002f1b      0x172 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .debug_abbrev  0x0000308d      0x1d5 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .debug_abbrev  0x00003262      0x16f pk/pkcs1/pkcs_1_os2ip.c.o
+ .debug_abbrev  0x000033d1      0x181 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .debug_abbrev  0x00003552      0x1d5 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .debug_abbrev  0x00003727       0xdd pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .debug_abbrev  0x00003804      0x1d3 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .debug_abbrev  0x000039d7      0x1d0 pk/rsa/rsa_decrypt_key.c.o
+ .debug_abbrev  0x00003ba7      0x1d0 pk/rsa/rsa_encrypt_key.c.o
+ .debug_abbrev  0x00003d77       0xdd pk/rsa/rsa_export.c.o
+ .debug_abbrev  0x00003e54      0x1ce pk/rsa/rsa_exptmod.c.o
+ .debug_abbrev  0x00004022       0x9a pk/rsa/rsa_free.c.o
+ .debug_abbrev  0x000040bc      0x1eb pk/rsa/rsa_import.c.o
+ .debug_abbrev  0x000042a7      0x1bf pk/rsa/rsa_make_key.c.o
+ .debug_abbrev  0x00004466      0x239 pk/rsa/rsa_sign_hash.c.o
+ .debug_abbrev  0x0000469f      0x24f pk/rsa/rsa_verify_hash.c.o
+ .debug_abbrev  0x000048ee       0xa5 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .debug_abbrev  0x00004993       0xa5 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .debug_abbrev  0x00004a38       0x80 pk/asn1/der/bit/der_length_bit_string.c.o
+ .debug_abbrev  0x00004ab8       0x87 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .debug_abbrev  0x00004b3f       0x80 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .debug_abbrev  0x00004bbf       0x71 pk/asn1/der/boolean/der_length_boolean.c.o
+ .debug_abbrev  0x00004c30      0x104 pk/asn1/der/choice/der_decode_choice.c.o
+ .debug_abbrev  0x00004d34       0x96 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .debug_abbrev  0x00004dca       0xa5 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .debug_abbrev  0x00004e6f       0xe4 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .debug_abbrev  0x00004f53      0x19b pk/asn1/der/integer/der_decode_integer.c.o
+ .debug_abbrev  0x000050ee      0x1b9 pk/asn1/der/integer/der_encode_integer.c.o
+ .debug_abbrev  0x000052a7      0x1a3 pk/asn1/der/integer/der_length_integer.c.o
+ .debug_abbrev  0x0000544a       0x96 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .debug_abbrev  0x000054e0       0xad pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .debug_abbrev  0x0000558d       0xb7 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .debug_abbrev  0x00005644       0x96 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .debug_abbrev  0x000056da       0xa5 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .debug_abbrev  0x0000577f       0x71 pk/asn1/der/octet/der_length_octet_string.c.o
+ .debug_abbrev  0x000057f0       0x96 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .debug_abbrev  0x00005886       0xa5 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .debug_abbrev  0x0000592b       0xe4 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .debug_abbrev  0x00005a0f      0x10f pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .debug_abbrev  0x00005b1e      0x20c pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .debug_abbrev  0x00005d2a      0x130 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .debug_abbrev  0x00005e5a      0x10a pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .debug_abbrev  0x00005f64      0x129 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .debug_abbrev  0x0000608d       0xec pk/asn1/der/sequence/der_length_sequence.c.o
+ .debug_abbrev  0x00006179      0x192 pk/asn1/der/sequence/der_sequence_free.c.o
+ .debug_abbrev  0x0000630b      0x11f pk/asn1/der/set/der_encode_set.c.o
+ .debug_abbrev  0x0000642a      0x117 pk/asn1/der/set/der_encode_setof.c.o
+ .debug_abbrev  0x00006541       0x96 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .debug_abbrev  0x000065d7       0x9e pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .debug_abbrev  0x00006675       0x8f pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .debug_abbrev  0x00006704      0x106 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .debug_abbrev  0x0000680a       0xec pk/asn1/der/utctime/der_encode_utctime.c.o
+ .debug_abbrev  0x000068f6       0xab pk/asn1/der/utctime/der_length_utctime.c.o
+ .debug_abbrev  0x000069a1       0xa5 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .debug_abbrev  0x00006a46       0xa5 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .debug_abbrev  0x00006aeb       0xb4 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .debug_abbrev  0x00006b9f       0x6a ciphers/aes/aes_tab.c.o
+ .debug_abbrev  0x00006c09      0x259 ciphers/aes/aes.c.o
+ .debug_abbrev  0x00006e62      0x187 hashes/sha2/sha256.c.o
+ .debug_abbrev  0x00006fe9      0x154 hashes/helper/hash_memory.c.o
+ .debug_abbrev  0x0000713d      0x241 prngs/yarrow.c.o
+ .debug_abbrev  0x0000737e       0xc2 prngs/rng_get_bytes.c.o
+ .debug_abbrev  0x00007440      0x193 prngs/rng_make_prng.c.o
+ .debug_abbrev  0x000075d3       0xb9 misc/base64/base64_decode.c.o
+ .debug_abbrev  0x0000768c       0xbd misc/base64/base64_encode.c.o
+ .debug_abbrev  0x00007749       0x2a misc/crypt/crypt_argchk.c.o
+ .debug_abbrev  0x00007773      0x127 misc/crypt/crypt_cipher_descriptor.c.o
+ .debug_abbrev  0x0000789a      0x16c misc/crypt/crypt_cipher_is_valid.c.o
+ .debug_abbrev  0x00007a06      0x165 misc/crypt/crypt_find_cipher_any.c.o
+ .debug_abbrev  0x00007b6b      0x165 misc/crypt/crypt_find_cipher_id.c.o
+ .debug_abbrev  0x00007cd0      0x165 misc/crypt/crypt_find_cipher.c.o
+ .debug_abbrev  0x00007e35      0x113 misc/crypt/crypt_find_hash_any.c.o
+ .debug_abbrev  0x00007f48      0x113 misc/crypt/crypt_find_hash_id.c.o
+ .debug_abbrev  0x0000805b      0x122 misc/crypt/crypt_find_hash_oid.c.o
+ .debug_abbrev  0x0000817d      0x113 misc/crypt/crypt_find_hash.c.o
+ .debug_abbrev  0x00008290      0x167 misc/crypt/crypt_find_prng.c.o
+ .debug_abbrev  0x000083f7      0x1a6 misc/crypt/crypt_fsa.c.o
+ .debug_abbrev  0x0000859d       0xd5 misc/crypt/crypt_hash_descriptor.c.o
+ .debug_abbrev  0x00008672      0x11a misc/crypt/crypt_hash_is_valid.c.o
+ .debug_abbrev  0x0000878c      0x136 misc/crypt/crypt_ltc_mp_descriptor.c.o
+ .debug_abbrev  0x000088c2      0x129 misc/crypt/crypt_prng_descriptor.c.o
+ .debug_abbrev  0x000089eb      0x16e misc/crypt/crypt_prng_is_valid.c.o
+ .debug_abbrev  0x00008b59      0x165 misc/crypt/crypt_register_cipher.c.o
+ .debug_abbrev  0x00008cbe      0x113 misc/crypt/crypt_register_hash.c.o
+ .debug_abbrev  0x00008dd1      0x167 misc/crypt/crypt_register_prng.c.o
+ .debug_abbrev  0x00008f38      0x17b misc/crypt/crypt_unregister_cipher.c.o
+ .debug_abbrev  0x000090b3      0x129 misc/crypt/crypt_unregister_hash.c.o
+ .debug_abbrev  0x000091dc      0x17d misc/crypt/crypt_unregister_prng.c.o
+ .debug_abbrev  0x00009359       0x4b misc/crypt/crypt.c.o
+ .debug_abbrev  0x000093a4       0x85 misc/error_to_string.c.o
+ .debug_abbrev  0x00009429       0x8b misc/zeromem.c.o
+ .debug_abbrev  0x000094b4       0x2a math/fp/ltc_ecc_fp_mulmod.c.o
+ .debug_abbrev  0x000094de       0x2a math/gmp_desc.c.o
+ .debug_abbrev  0x00009508       0x2a math/ltm_desc.c.o
+ .debug_abbrev  0x00009532      0x1c6 math/multi.c.o
+ .debug_abbrev  0x000096f8      0x1c2 math/rand_prime.c.o
+ .debug_abbrev  0x000098ba      0x23d math/tfm_desc.c.o
+ .debug_abbrev  0x00009af7      0x127 modes/ctr/ctr_decrypt.c.o
+ .debug_abbrev  0x00009c1e      0x195 modes/ctr/ctr_done.c.o
+ .debug_abbrev  0x00009db3      0x195 modes/ctr/ctr_encrypt.c.o
+ .debug_abbrev  0x00009f48      0x136 modes/ctr/ctr_getiv.c.o
+ .debug_abbrev  0x0000a07e      0x195 modes/ctr/ctr_setiv.c.o
+ .debug_abbrev  0x0000a213      0x1c2 modes/ctr/ctr_start.c.o
+ .debug_abbrev  0x0000a3d5       0x59 modes/ctr/ctr_test.c.o
+
+.debug_line     0x00000000     0xbadc
+ *(.debug_line)
+ .debug_line    0x00000000      0x1b2 encauth/gcm/gcm_add_aad.c.o
+ .debug_line    0x000001b2      0x179 encauth/gcm/gcm_add_iv.c.o
+ .debug_line    0x0000032b      0x176 encauth/gcm/gcm_done.c.o
+ .debug_line    0x000004a1       0xd1 encauth/gcm/gcm_gf_mult.c.o
+ .debug_line    0x00000572      0x132 encauth/gcm/gcm_init.c.o
+ .debug_line    0x000006a4      0x124 encauth/gcm/gcm_memory.c.o
+ .debug_line    0x000007c8       0xfa encauth/gcm/gcm_mult_h.c.o
+ .debug_line    0x000008c2      0x17a encauth/gcm/gcm_process.c.o
+ .debug_line    0x00000a3c      0x111 encauth/gcm/gcm_reset.c.o
+ .debug_line    0x00000b4d       0xc3 encauth/gcm/gcm_test.c.o
+ .debug_line    0x00000c10      0x38a hashes/sha1.c.o
+ .debug_line    0x00000f9a      0x161 pk/ecc/ecc_ansi_x963_export.c.o
+ .debug_line    0x000010fb      0x188 pk/ecc/ecc_ansi_x963_import.c.o
+ .debug_line    0x00001283      0x15a pk/ecc/ecc_decrypt_key.c.o
+ .debug_line    0x000013dd      0x197 pk/ecc/ecc_encrypt_key.c.o
+ .debug_line    0x00001574      0x10f pk/ecc/ecc_export.c.o
+ .debug_line    0x00001683       0xc8 pk/ecc/ecc_free.c.o
+ .debug_line    0x0000174b       0xd0 pk/ecc/ecc_get_size.c.o
+ .debug_line    0x0000181b      0x1bb pk/ecc/ecc_import.c.o
+ .debug_line    0x000019d6      0x19d pk/ecc/ecc_make_key.c.o
+ .debug_line    0x00001b73      0x174 pk/ecc/ecc_shared_secret.c.o
+ .debug_line    0x00001ce7      0x16e pk/ecc/ecc_sign_hash.c.o
+ .debug_line    0x00001e55       0xef pk/ecc/ecc_sizes.c.o
+ .debug_line    0x00001f44      0x15c pk/ecc/ecc_test.c.o
+ .debug_line    0x000020a0      0x199 pk/ecc/ecc_verify_hash.c.o
+ .debug_line    0x00002239       0xa8 pk/ecc/ecc.c.o
+ .debug_line    0x000022e1       0xf0 pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .debug_line    0x000023d1      0x153 pk/ecc/ltc_ecc_map.c.o
+ .debug_line    0x00002524       0x1d pk/ecc/ltc_ecc_mul2add.c.o
+ .debug_line    0x00002541       0x1d pk/ecc/ltc_ecc_mulmod_timing.c.o
+ .debug_line    0x0000255e      0x200 pk/ecc/ltc_ecc_mulmod.c.o
+ .debug_line    0x0000275e       0xef pk/ecc/ltc_ecc_points.c.o
+ .debug_line    0x0000284d      0x1c5 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .debug_line    0x00002a12      0x18f pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .debug_line    0x00002ba1      0x132 pk/pkcs1/pkcs_1_i2osp.c.o
+ .debug_line    0x00002cd3      0x14b pk/pkcs1/pkcs_1_mgf1.c.o
+ .debug_line    0x00002e1e      0x1b5 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .debug_line    0x00002fd3      0x1ad pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .debug_line    0x00003180      0x115 pk/pkcs1/pkcs_1_os2ip.c.o
+ .debug_line    0x00003295      0x178 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .debug_line    0x0000340d      0x19b pk/pkcs1/pkcs_1_pss_encode.c.o
+ .debug_line    0x000035a8      0x12a pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .debug_line    0x000036d2      0x163 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .debug_line    0x00003835      0x17f pk/rsa/rsa_decrypt_key.c.o
+ .debug_line    0x000039b4      0x179 pk/rsa/rsa_encrypt_key.c.o
+ .debug_line    0x00003b2d      0x104 pk/rsa/rsa_export.c.o
+ .debug_line    0x00003c31      0x182 pk/rsa/rsa_exptmod.c.o
+ .debug_line    0x00003db3       0xc9 pk/rsa/rsa_free.c.o
+ .debug_line    0x00003e7c      0x193 pk/rsa/rsa_import.c.o
+ .debug_line    0x0000400f      0x16a pk/rsa/rsa_make_key.c.o
+ .debug_line    0x00004179      0x1b4 pk/rsa/rsa_sign_hash.c.o
+ .debug_line    0x0000432d      0x1d0 pk/rsa/rsa_verify_hash.c.o
+ .debug_line    0x000044fd      0x12d pk/asn1/der/bit/der_decode_bit_string.c.o
+ .debug_line    0x0000462a      0x12a pk/asn1/der/bit/der_encode_bit_string.c.o
+ .debug_line    0x00004754       0xea pk/asn1/der/bit/der_length_bit_string.c.o
+ .debug_line    0x0000483e       0xf1 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .debug_line    0x0000492f       0xf2 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .debug_line    0x00004a21       0xdb pk/asn1/der/boolean/der_length_boolean.c.o
+ .debug_line    0x00004afc      0x182 pk/asn1/der/choice/der_decode_choice.c.o
+ .debug_line    0x00004c7e      0x125 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .debug_line    0x00004da3      0x131 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .debug_line    0x00004ed4      0x13f pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .debug_line    0x00005013      0x17b pk/asn1/der/integer/der_decode_integer.c.o
+ .debug_line    0x0000518e      0x1bd pk/asn1/der/integer/der_encode_integer.c.o
+ .debug_line    0x0000534b      0x16d pk/asn1/der/integer/der_length_integer.c.o
+ .debug_line    0x000054b8      0x158 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .debug_line    0x00005610      0x160 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .debug_line    0x00005770      0x141 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .debug_line    0x000058b1      0x12e pk/asn1/der/octet/der_decode_octet_string.c.o
+ .debug_line    0x000059df      0x135 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .debug_line    0x00005b14       0xef pk/asn1/der/octet/der_length_octet_string.c.o
+ .debug_line    0x00005c03      0x138 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .debug_line    0x00005d3b      0x144 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .debug_line    0x00005e7f      0x152 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .debug_line    0x00005fd1      0x1c7 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .debug_line    0x00006198      0x25c pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .debug_line    0x000063f4      0x172 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .debug_line    0x00006566      0x1bb pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .debug_line    0x00006721      0x18d pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .debug_line    0x000068ae      0x13d pk/asn1/der/sequence/der_length_sequence.c.o
+ .debug_line    0x000069eb      0x162 pk/asn1/der/sequence/der_sequence_free.c.o
+ .debug_line    0x00006b4d      0x136 pk/asn1/der/set/der_encode_set.c.o
+ .debug_line    0x00006c83      0x180 pk/asn1/der/set/der_encode_setof.c.o
+ .debug_line    0x00006e03      0x103 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .debug_line    0x00006f06      0x141 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .debug_line    0x00007047       0xfb pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .debug_line    0x00007142      0x194 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .debug_line    0x000072d6      0x129 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .debug_line    0x000073ff      0x10b pk/asn1/der/utctime/der_length_utctime.c.o
+ .debug_line    0x0000750a      0x255 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .debug_line    0x0000775f      0x263 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .debug_line    0x000079c2      0x232 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .debug_line    0x00007bf4       0xb5 ciphers/aes/aes_tab.c.o
+ .debug_line    0x00007ca9      0x504 ciphers/aes/aes.c.o
+ .debug_line    0x000081ad      0x46d hashes/sha2/sha256.c.o
+ .debug_line    0x0000861a      0x123 hashes/helper/hash_memory.c.o
+ .debug_line    0x0000873d      0x237 prngs/yarrow.c.o
+ .debug_line    0x00008974      0x1ed prngs/rng_get_bytes.c.o
+ .debug_line    0x00008b61      0x11c prngs/rng_make_prng.c.o
+ .debug_line    0x00008c7d      0x139 misc/base64/base64_decode.c.o
+ .debug_line    0x00008db6      0x13b misc/base64/base64_encode.c.o
+ .debug_line    0x00008ef1       0x1d misc/crypt/crypt_argchk.c.o
+ .debug_line    0x00008f0e       0xd9 misc/crypt/crypt_cipher_descriptor.c.o
+ .debug_line    0x00008fe7      0x109 misc/crypt/crypt_cipher_is_valid.c.o
+ .debug_line    0x000090f0      0x10d misc/crypt/crypt_find_cipher_any.c.o
+ .debug_line    0x000091fd       0xfd misc/crypt/crypt_find_cipher_id.c.o
+ .debug_line    0x000092fa      0x106 misc/crypt/crypt_find_cipher.c.o
+ .debug_line    0x00009400      0x101 misc/crypt/crypt_find_hash_any.c.o
+ .debug_line    0x00009501       0xf9 misc/crypt/crypt_find_hash_id.c.o
+ .debug_line    0x000095fa      0x100 misc/crypt/crypt_find_hash_oid.c.o
+ .debug_line    0x000096fa      0x102 misc/crypt/crypt_find_hash.c.o
+ .debug_line    0x000097fc      0x117 misc/crypt/crypt_find_prng.c.o
+ .debug_line    0x00009913      0x199 misc/crypt/crypt_fsa.c.o
+ .debug_line    0x00009aac       0xd5 misc/crypt/crypt_hash_descriptor.c.o
+ .debug_line    0x00009b81      0x105 misc/crypt/crypt_hash_is_valid.c.o
+ .debug_line    0x00009c86      0x110 misc/crypt/crypt_ltc_mp_descriptor.c.o
+ .debug_line    0x00009d96       0xea misc/crypt/crypt_prng_descriptor.c.o
+ .debug_line    0x00009e80      0x11a misc/crypt/crypt_prng_is_valid.c.o
+ .debug_line    0x00009f9a      0x119 misc/crypt/crypt_register_cipher.c.o
+ .debug_line    0x0000a0b3      0x10d misc/crypt/crypt_register_hash.c.o
+ .debug_line    0x0000a1c0      0x122 misc/crypt/crypt_register_prng.c.o
+ .debug_line    0x0000a2e2      0x11a misc/crypt/crypt_unregister_cipher.c.o
+ .debug_line    0x0000a3fc      0x112 misc/crypt/crypt_unregister_hash.c.o
+ .debug_line    0x0000a50e      0x126 misc/crypt/crypt_unregister_prng.c.o
+ .debug_line    0x0000a634       0x68 misc/crypt/crypt.c.o
+ .debug_line    0x0000a69c       0x83 misc/error_to_string.c.o
+ .debug_line    0x0000a71f      0x19d misc/zeromem.c.o
+ .debug_line    0x0000a8bc       0x1d math/fp/ltc_ecc_fp_mulmod.c.o
+ .debug_line    0x0000a8d9       0x1d math/gmp_desc.c.o
+ .debug_line    0x0000a8f6       0x1d math/ltm_desc.c.o
+ .debug_line    0x0000a913      0x1b6 math/multi.c.o
+ .debug_line    0x0000aac9      0x151 math/rand_prime.c.o
+ .debug_line    0x0000ac1a      0x730 math/tfm_desc.c.o
+ .debug_line    0x0000b34a       0xf6 modes/ctr/ctr_decrypt.c.o
+ .debug_line    0x0000b440       0xf2 modes/ctr/ctr_done.c.o
+ .debug_line    0x0000b532      0x160 modes/ctr/ctr_encrypt.c.o
+ .debug_line    0x0000b692      0x113 modes/ctr/ctr_getiv.c.o
+ .debug_line    0x0000b7a5      0x10e modes/ctr/ctr_setiv.c.o
+ .debug_line    0x0000b8b3      0x169 modes/ctr/ctr_start.c.o
+ .debug_line    0x0000ba1c       0xc0 modes/ctr/ctr_test.c.o
+
+.debug_frame    0x00000000     0x23d4
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x38 encauth/gcm/gcm_add_aad.c.o
+ .debug_frame   0x00000038       0x38 encauth/gcm/gcm_add_iv.c.o
+ .debug_frame   0x00000070       0x34 encauth/gcm/gcm_done.c.o
+ .debug_frame   0x000000a4       0x54 encauth/gcm/gcm_gf_mult.c.o
+ .debug_frame   0x000000f8       0x38 encauth/gcm/gcm_init.c.o
+ .debug_frame   0x00000130       0x38 encauth/gcm/gcm_memory.c.o
+ .debug_frame   0x00000168       0x30 encauth/gcm/gcm_mult_h.c.o
+ .debug_frame   0x00000198       0x3c encauth/gcm/gcm_process.c.o
+ .debug_frame   0x000001d4       0x30 encauth/gcm/gcm_reset.c.o
+ .debug_frame   0x00000204       0x2c encauth/gcm/gcm_test.c.o
+ .debug_frame   0x00000230       0xb0 hashes/sha1.c.o
+ .debug_frame   0x000002e0       0x38 pk/ecc/ecc_ansi_x963_export.c.o
+ .debug_frame   0x00000318       0x58 pk/ecc/ecc_ansi_x963_import.c.o
+ .debug_frame   0x00000370       0x38 pk/ecc/ecc_decrypt_key.c.o
+ .debug_frame   0x000003a8       0x38 pk/ecc/ecc_encrypt_key.c.o
+ .debug_frame   0x000003e0       0x34 pk/ecc/ecc_export.c.o
+ .debug_frame   0x00000414       0x30 pk/ecc/ecc_free.c.o
+ .debug_frame   0x00000444       0x2c pk/ecc/ecc_get_size.c.o
+ .debug_frame   0x00000470       0x7c pk/ecc/ecc_import.c.o
+ .debug_frame   0x000004ec       0x5c pk/ecc/ecc_make_key.c.o
+ .debug_frame   0x00000548       0x38 pk/ecc/ecc_shared_secret.c.o
+ .debug_frame   0x00000580       0x38 pk/ecc/ecc_sign_hash.c.o
+ .debug_frame   0x000005b8       0x2c pk/ecc/ecc_sizes.c.o
+ .debug_frame   0x000005e4       0x38 pk/ecc/ecc_test.c.o
+ .debug_frame   0x0000061c       0x38 pk/ecc/ecc_verify_hash.c.o
+ .debug_frame   0x00000654       0x2c pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .debug_frame   0x00000680       0x38 pk/ecc/ltc_ecc_map.c.o
+ .debug_frame   0x000006b8       0x38 pk/ecc/ltc_ecc_mulmod.c.o
+ .debug_frame   0x000006f0       0x48 pk/ecc/ltc_ecc_points.c.o
+ .debug_frame   0x00000738       0x38 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .debug_frame   0x00000770       0x34 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .debug_frame   0x000007a4       0x34 pk/pkcs1/pkcs_1_i2osp.c.o
+ .debug_frame   0x000007d8       0x3c pk/pkcs1/pkcs_1_mgf1.c.o
+ .debug_frame   0x00000814       0x38 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .debug_frame   0x0000084c       0x38 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .debug_frame   0x00000884       0x30 pk/pkcs1/pkcs_1_os2ip.c.o
+ .debug_frame   0x000008b4       0x38 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .debug_frame   0x000008ec       0x38 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .debug_frame   0x00000924       0x34 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .debug_frame   0x00000958       0x38 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .debug_frame   0x00000990       0x38 pk/rsa/rsa_decrypt_key.c.o
+ .debug_frame   0x000009c8       0x38 pk/rsa/rsa_encrypt_key.c.o
+ .debug_frame   0x00000a00       0x34 pk/rsa/rsa_export.c.o
+ .debug_frame   0x00000a34       0x38 pk/rsa/rsa_exptmod.c.o
+ .debug_frame   0x00000a6c       0x2c pk/rsa/rsa_free.c.o
+ .debug_frame   0x00000a98       0x38 pk/rsa/rsa_import.c.o
+ .debug_frame   0x00000ad0       0x38 pk/rsa/rsa_make_key.c.o
+ .debug_frame   0x00000b08       0x38 pk/rsa/rsa_sign_hash.c.o
+ .debug_frame   0x00000b40       0x38 pk/rsa/rsa_verify_hash.c.o
+ .debug_frame   0x00000b78       0x30 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .debug_frame   0x00000ba8       0x38 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .debug_frame   0x00000be0       0x2c pk/asn1/der/bit/der_length_bit_string.c.o
+ .debug_frame   0x00000c0c       0x30 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .debug_frame   0x00000c3c       0x30 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .debug_frame   0x00000c6c       0x2c pk/asn1/der/boolean/der_length_boolean.c.o
+ .debug_frame   0x00000c98       0x38 pk/asn1/der/choice/der_decode_choice.c.o
+ .debug_frame   0x00000cd0       0x34 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .debug_frame   0x00000d04       0x3c pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .debug_frame   0x00000d40       0x68 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .debug_frame   0x00000da8       0x34 pk/asn1/der/integer/der_decode_integer.c.o
+ .debug_frame   0x00000ddc       0x3c pk/asn1/der/integer/der_encode_integer.c.o
+ .debug_frame   0x00000e18       0x34 pk/asn1/der/integer/der_length_integer.c.o
+ .debug_frame   0x00000e4c       0x30 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .debug_frame   0x00000e7c       0x38 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .debug_frame   0x00000eb4       0x54 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .debug_frame   0x00000f08       0x30 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .debug_frame   0x00000f38       0x38 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .debug_frame   0x00000f70       0x2c pk/asn1/der/octet/der_length_octet_string.c.o
+ .debug_frame   0x00000f9c       0x34 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .debug_frame   0x00000fd0       0x3c pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .debug_frame   0x0000100c       0x68 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .debug_frame   0x00001074       0x38 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .debug_frame   0x000010ac       0x5c pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .debug_frame   0x00001108       0x40 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .debug_frame   0x00001148       0x38 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .debug_frame   0x00001180       0x44 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .debug_frame   0x000011c4       0x34 pk/asn1/der/sequence/der_length_sequence.c.o
+ .debug_frame   0x000011f8       0x30 pk/asn1/der/sequence/der_sequence_free.c.o
+ .debug_frame   0x00001228       0x78 pk/asn1/der/set/der_encode_set.c.o
+ .debug_frame   0x000012a0       0x60 pk/asn1/der/set/der_encode_setof.c.o
+ .debug_frame   0x00001300       0x30 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .debug_frame   0x00001330       0x34 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .debug_frame   0x00001364       0x30 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .debug_frame   0x00001394       0x50 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .debug_frame   0x000013e4       0x38 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .debug_frame   0x0000141c       0x2c pk/asn1/der/utctime/der_length_utctime.c.o
+ .debug_frame   0x00001448       0x30 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .debug_frame   0x00001478       0x38 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .debug_frame   0x000014b0       0x50 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .debug_frame   0x00001500       0xf4 ciphers/aes/aes.c.o
+ .debug_frame   0x000015f4      0x108 hashes/sha2/sha256.c.o
+ .debug_frame   0x000016fc       0x38 hashes/helper/hash_memory.c.o
+ .debug_frame   0x00001734      0x10c prngs/yarrow.c.o
+ .debug_frame   0x00001840       0x5c prngs/rng_get_bytes.c.o
+ .debug_frame   0x0000189c       0x38 prngs/rng_make_prng.c.o
+ .debug_frame   0x000018d4       0x34 misc/base64/base64_decode.c.o
+ .debug_frame   0x00001908       0x34 misc/base64/base64_encode.c.o
+ .debug_frame   0x0000193c       0x2c misc/crypt/crypt_cipher_is_valid.c.o
+ .debug_frame   0x00001968       0x30 misc/crypt/crypt_find_cipher_any.c.o
+ .debug_frame   0x00001998       0x2c misc/crypt/crypt_find_cipher_id.c.o
+ .debug_frame   0x000019c4       0x30 misc/crypt/crypt_find_cipher.c.o
+ .debug_frame   0x000019f4       0x2c misc/crypt/crypt_find_hash_any.c.o
+ .debug_frame   0x00001a20       0x2c misc/crypt/crypt_find_hash_id.c.o
+ .debug_frame   0x00001a4c       0x38 misc/crypt/crypt_find_hash_oid.c.o
+ .debug_frame   0x00001a84       0x30 misc/crypt/crypt_find_hash.c.o
+ .debug_frame   0x00001ab4       0x30 misc/crypt/crypt_find_prng.c.o
+ .debug_frame   0x00001ae4       0x3c misc/crypt/crypt_fsa.c.o
+ .debug_frame   0x00001b20       0x2c misc/crypt/crypt_hash_is_valid.c.o
+ .debug_frame   0x00001b4c       0x2c misc/crypt/crypt_prng_is_valid.c.o
+ .debug_frame   0x00001b78       0x2c misc/crypt/crypt_register_cipher.c.o
+ .debug_frame   0x00001ba4       0x30 misc/crypt/crypt_register_hash.c.o
+ .debug_frame   0x00001bd4       0x30 misc/crypt/crypt_register_prng.c.o
+ .debug_frame   0x00001c04       0x34 misc/crypt/crypt_unregister_cipher.c.o
+ .debug_frame   0x00001c38       0x34 misc/crypt/crypt_unregister_hash.c.o
+ .debug_frame   0x00001c6c       0x34 misc/crypt/crypt_unregister_prng.c.o
+ .debug_frame   0x00001ca0       0x2c misc/error_to_string.c.o
+ .debug_frame   0x00001ccc       0x2c misc/zeromem.c.o
+ .debug_frame   0x00001cf8       0x6c math/multi.c.o
+ .debug_frame   0x00001d64       0x38 math/rand_prime.c.o
+ .debug_frame   0x00001d9c      0x4d8 math/tfm_desc.c.o
+ .debug_frame   0x00002274       0x30 modes/ctr/ctr_decrypt.c.o
+ .debug_frame   0x000022a4       0x2c modes/ctr/ctr_done.c.o
+ .debug_frame   0x000022d0       0x3c modes/ctr/ctr_encrypt.c.o
+ .debug_frame   0x0000230c       0x30 modes/ctr/ctr_getiv.c.o
+ .debug_frame   0x0000233c       0x30 modes/ctr/ctr_setiv.c.o
+ .debug_frame   0x0000236c       0x3c modes/ctr/ctr_start.c.o
+ .debug_frame   0x000023a8       0x2c modes/ctr/ctr_test.c.o
+
+.debug_str      0x00000000    0x27ec9
+ *(.debug_str)
+ .debug_str     0x00000000      0x454 encauth/gcm/gcm_add_aad.c.o
+ .debug_str     0x00000454      0x449 encauth/gcm/gcm_add_iv.c.o
+ .debug_str     0x0000089d      0x59f encauth/gcm/gcm_done.c.o
+ .debug_str     0x00000e3c      0x1c4 encauth/gcm/gcm_gf_mult.c.o
+ .debug_str     0x00001000      0x598 encauth/gcm/gcm_init.c.o
+ .debug_str     0x00001598      0x5d5 encauth/gcm/gcm_memory.c.o
+ .debug_str     0x00001b6d      0x25f encauth/gcm/gcm_mult_h.c.o
+ .debug_str     0x00001dcc      0x5ae encauth/gcm/gcm_process.c.o
+ .debug_str     0x0000237a      0x441 encauth/gcm/gcm_reset.c.o
+ .debug_str     0x000027bb      0x389 encauth/gcm/gcm_test.c.o
+ .debug_str     0x00002b44      0x4a4 hashes/sha1.c.o
+ .debug_str     0x00002fe8      0x6a7 pk/ecc/ecc_ansi_x963_export.c.o
+ .debug_str     0x0000368f      0x6df pk/ecc/ecc_ansi_x963_import.c.o
+ .debug_str     0x00003d6e      0x5b5 pk/ecc/ecc_decrypt_key.c.o
+ .debug_str     0x00004323      0x709 pk/ecc/ecc_encrypt_key.c.o
+ .debug_str     0x00004a2c      0x523 pk/ecc/ecc_export.c.o
+ .debug_str     0x00004f4f      0x1e5 pk/ecc/ecc_free.c.o
+ .debug_str     0x00005134      0x1ed pk/ecc/ecc_get_size.c.o
+ .debug_str     0x00005321      0x809 pk/ecc/ecc_import.c.o
+ .debug_str     0x00005b2a      0x751 pk/ecc/ecc_make_key.c.o
+ .debug_str     0x0000627b      0x6d2 pk/ecc/ecc_shared_secret.c.o
+ .debug_str     0x0000694d      0x7f2 pk/ecc/ecc_sign_hash.c.o
+ .debug_str     0x0000713f      0x1db pk/ecc/ecc_sizes.c.o
+ .debug_str     0x0000731a      0x696 pk/ecc/ecc_test.c.o
+ .debug_str     0x000079b0      0x7d4 pk/ecc/ecc_verify_hash.c.o
+ .debug_str     0x00008184      0x1c6 pk/ecc/ecc.c.o
+ .debug_str     0x0000834a      0x1ec pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .debug_str     0x00008536      0x663 pk/ecc/ltc_ecc_map.c.o
+ .debug_str     0x00008b99      0x19e pk/ecc/ltc_ecc_mul2add.c.o
+ .debug_str     0x00008d37      0x1a4 pk/ecc/ltc_ecc_mulmod_timing.c.o
+ .debug_str     0x00008edb      0x68b pk/ecc/ltc_ecc_mulmod.c.o
+ .debug_str     0x00009566      0x3af pk/ecc/ltc_ecc_points.c.o
+ .debug_str     0x00009915      0x685 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .debug_str     0x00009f9a      0x685 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .debug_str     0x0000a61f      0x66b pk/pkcs1/pkcs_1_i2osp.c.o
+ .debug_str     0x0000ac8a      0x49e pk/pkcs1/pkcs_1_mgf1.c.o
+ .debug_str     0x0000b128      0x4ce pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .debug_str     0x0000b5f6      0x612 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .debug_str     0x0000bc08      0x47c pk/pkcs1/pkcs_1_os2ip.c.o
+ .debug_str     0x0000c084      0x4d4 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .debug_str     0x0000c558      0x613 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .debug_str     0x0000cb6b      0x428 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .debug_str     0x0000cf93      0x585 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .debug_str     0x0000d518      0x756 pk/rsa/rsa_decrypt_key.c.o
+ .debug_str     0x0000dc6e      0x75f pk/rsa/rsa_encrypt_key.c.o
+ .debug_str     0x0000e3cd      0x4e9 pk/rsa/rsa_export.c.o
+ .debug_str     0x0000e8b6      0x68e pk/rsa/rsa_exptmod.c.o
+ .debug_str     0x0000ef44      0x1b5 pk/rsa/rsa_free.c.o
+ .debug_str     0x0000f0f9      0x82f pk/rsa/rsa_import.c.o
+ .debug_str     0x0000f928      0x69b pk/rsa/rsa_make_key.c.o
+ .debug_str     0x0000ffc3      0x9af pk/rsa/rsa_sign_hash.c.o
+ .debug_str     0x00010972      0x9c8 pk/rsa/rsa_verify_hash.c.o
+ .debug_str     0x0001133a      0x3be pk/asn1/der/bit/der_decode_bit_string.c.o
+ .debug_str     0x000116f8      0x3b4 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .debug_str     0x00011aac      0x3bb pk/asn1/der/bit/der_length_bit_string.c.o
+ .debug_str     0x00011e67      0x3ab pk/asn1/der/boolean/der_decode_boolean.c.o
+ .debug_str     0x00012212      0x3ac pk/asn1/der/boolean/der_encode_boolean.c.o
+ .debug_str     0x000125be      0x3ac pk/asn1/der/boolean/der_length_boolean.c.o
+ .debug_str     0x0001296a      0x527 pk/asn1/der/choice/der_decode_choice.c.o
+ .debug_str     0x00012e91      0x3b4 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .debug_str     0x00013245      0x3b4 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .debug_str     0x000135f9      0x3fb pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .debug_str     0x000139f4      0x677 pk/asn1/der/integer/der_decode_integer.c.o
+ .debug_str     0x0001406b      0x68c pk/asn1/der/integer/der_encode_integer.c.o
+ .debug_str     0x000146f7      0x685 pk/asn1/der/integer/der_length_integer.c.o
+ .debug_str     0x00014d7c      0x3d6 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .debug_str     0x00015152      0x3e4 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .debug_str     0x00015536      0x3fa pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .debug_str     0x00015930      0x3ba pk/asn1/der/octet/der_decode_octet_string.c.o
+ .debug_str     0x00015cea      0x3ba pk/asn1/der/octet/der_encode_octet_string.c.o
+ .debug_str     0x000160a4      0x3bc pk/asn1/der/octet/der_length_octet_string.c.o
+ .debug_str     0x00016460      0x3cd pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .debug_str     0x0001682d      0x3cd pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .debug_str     0x00016bfa      0x426 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .debug_str     0x00017020      0x54b pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .debug_str     0x0001756b      0x81d pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .debug_str     0x00017d88      0x565 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .debug_str     0x000182ed      0x543 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .debug_str     0x00018830      0x566 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .debug_str     0x00018d96      0x535 pk/asn1/der/sequence/der_length_sequence.c.o
+ .debug_str     0x000192cb      0x5f5 pk/asn1/der/sequence/der_sequence_free.c.o
+ .debug_str     0x000198c0      0x53c pk/asn1/der/set/der_encode_set.c.o
+ .debug_str     0x00019dfc      0x547 pk/asn1/der/set/der_encode_setof.c.o
+ .debug_str     0x0001a343      0x3bd pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .debug_str     0x0001a700      0x3be pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .debug_str     0x0001aabe      0x3be pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .debug_str     0x0001ae7c      0x3d9 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .debug_str     0x0001b255      0x3e5 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .debug_str     0x0001b63a      0x3d6 pk/asn1/der/utctime/der_length_utctime.c.o
+ .debug_str     0x0001ba10      0x3d2 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .debug_str     0x0001bde2      0x3d2 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .debug_str     0x0001c1b4      0x3e6 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .debug_str     0x0001c59a      0x103 ciphers/aes/aes_tab.c.o
+ .debug_str     0x0001c69d      0x611 ciphers/aes/aes.c.o
+ .debug_str     0x0001ccae      0x4e7 hashes/sha2/sha256.c.o
+ .debug_str     0x0001d195      0x485 hashes/helper/hash_memory.c.o
+ .debug_str     0x0001d61a      0x767 prngs/yarrow.c.o
+ .debug_str     0x0001dd81      0x1e3 prngs/rng_get_bytes.c.o
+ .debug_str     0x0001df64      0x4fe prngs/rng_make_prng.c.o
+ .debug_str     0x0001e462      0x3a0 misc/base64/base64_decode.c.o
+ .debug_str     0x0001e802      0x3b1 misc/base64/base64_encode.c.o
+ .debug_str     0x0001ebb3      0x19f misc/crypt/crypt_argchk.c.o
+ .debug_str     0x0001ed52      0x385 misc/crypt/crypt_cipher_descriptor.c.o
+ .debug_str     0x0001f0d7      0x577 misc/crypt/crypt_cipher_is_valid.c.o
+ .debug_str     0x0001f64e      0x39c misc/crypt/crypt_find_cipher_any.c.o
+ .debug_str     0x0001f9ea      0x391 misc/crypt/crypt_find_cipher_id.c.o
+ .debug_str     0x0001fd7b      0x38b misc/crypt/crypt_find_cipher.c.o
+ .debug_str     0x00020106      0x298 misc/crypt/crypt_find_hash_any.c.o
+ .debug_str     0x0002039e      0x28c misc/crypt/crypt_find_hash_id.c.o
+ .debug_str     0x0002062a      0x294 misc/crypt/crypt_find_hash_oid.c.o
+ .debug_str     0x000208be      0x286 misc/crypt/crypt_find_hash.c.o
+ .debug_str     0x00020b44      0x304 misc/crypt/crypt_find_prng.c.o
+ .debug_str     0x00020e48      0x681 misc/crypt/crypt_fsa.c.o
+ .debug_str     0x000214c9      0x282 misc/crypt/crypt_hash_descriptor.c.o
+ .debug_str     0x0002174b      0x472 misc/crypt/crypt_hash_is_valid.c.o
+ .debug_str     0x00021bbd      0x476 misc/crypt/crypt_ltc_mp_descriptor.c.o
+ .debug_str     0x00022033      0x300 misc/crypt/crypt_prng_descriptor.c.o
+ .debug_str     0x00022333      0x4f0 misc/crypt/crypt_prng_is_valid.c.o
+ .debug_str     0x00022823      0x39a misc/crypt/crypt_register_cipher.c.o
+ .debug_str     0x00022bbd      0x293 misc/crypt/crypt_register_hash.c.o
+ .debug_str     0x00022e50      0x311 misc/crypt/crypt_register_prng.c.o
+ .debug_str     0x00023161      0x582 misc/crypt/crypt_unregister_cipher.c.o
+ .debug_str     0x000236e3      0x47b misc/crypt/crypt_unregister_hash.c.o
+ .debug_str     0x00023b5e      0x4f9 misc/crypt/crypt_unregister_prng.c.o
+ .debug_str     0x00024057      0x1ad misc/crypt/crypt.c.o
+ .debug_str     0x00024204      0x1b6 misc/error_to_string.c.o
+ .debug_str     0x000243ba      0x1bd misc/zeromem.c.o
+ .debug_str     0x00024577      0x1a1 math/fp/ltc_ecc_fp_mulmod.c.o
+ .debug_str     0x00024718      0x195 math/gmp_desc.c.o
+ .debug_str     0x000248ad      0x195 math/ltm_desc.c.o
+ .debug_str     0x00024a42      0x698 math/multi.c.o
+ .debug_str     0x000250da      0x6c4 math/rand_prime.c.o
+ .debug_str     0x0002579e      0x6a2 math/tfm_desc.c.o
+ .debug_str     0x00025e40      0x25c modes/ctr/ctr_decrypt.c.o
+ .debug_str     0x0002609c      0x593 modes/ctr/ctr_done.c.o
+ .debug_str     0x0002662f      0x599 modes/ctr/ctr_encrypt.c.o
+ .debug_str     0x00026bc8      0x43c modes/ctr/ctr_getiv.c.o
+ .debug_str     0x00027004      0x595 modes/ctr/ctr_setiv.c.o
+ .debug_str     0x00027599      0x5a9 modes/ctr/ctr_start.c.o
+ .debug_str     0x00027b42      0x387 modes/ctr/ctr_test.c.o
+
+.debug_loc      0x00000000     0xda20
+ *(.debug_loc)
+ .debug_loc     0x00000000       0xd8 encauth/gcm/gcm_add_aad.c.o
+ .debug_loc     0x000000d8       0xcb encauth/gcm/gcm_add_iv.c.o
+ .debug_loc     0x000001a3       0xd8 encauth/gcm/gcm_done.c.o
+ .debug_loc     0x0000027b      0x10b encauth/gcm/gcm_gf_mult.c.o
+ .debug_loc     0x00000386      0x11e encauth/gcm/gcm_init.c.o
+ .debug_loc     0x000004a4      0x165 encauth/gcm/gcm_memory.c.o
+ .debug_loc     0x00000609       0x76 encauth/gcm/gcm_mult_h.c.o
+ .debug_loc     0x0000067f      0x13f encauth/gcm/gcm_process.c.o
+ .debug_loc     0x000007be       0x4c encauth/gcm/gcm_reset.c.o
+ .debug_loc     0x0000080a       0x20 encauth/gcm/gcm_test.c.o
+ .debug_loc     0x0000082a      0x513 hashes/sha1.c.o
+ .debug_loc     0x00000d3d       0xbd pk/ecc/ecc_ansi_x963_export.c.o
+ .debug_loc     0x00000dfa      0x1b4 pk/ecc/ecc_ansi_x963_import.c.o
+ .debug_loc     0x00000fae      0x2ef pk/ecc/ecc_decrypt_key.c.o
+ .debug_loc     0x0000129d      0x213 pk/ecc/ecc_encrypt_key.c.o
+ .debug_loc     0x000014b0       0xee pk/ecc/ecc_export.c.o
+ .debug_loc     0x0000159e       0x3e pk/ecc/ecc_free.c.o
+ .debug_loc     0x000015dc       0x49 pk/ecc/ecc_get_size.c.o
+ .debug_loc     0x00001625      0x33c pk/ecc/ecc_import.c.o
+ .debug_loc     0x00001961      0x3a0 pk/ecc/ecc_make_key.c.o
+ .debug_loc     0x00001d01      0x199 pk/ecc/ecc_shared_secret.c.o
+ .debug_loc     0x00001e9a      0x242 pk/ecc/ecc_sign_hash.c.o
+ .debug_loc     0x000020dc       0x70 pk/ecc/ecc_sizes.c.o
+ .debug_loc     0x0000214c       0xf4 pk/ecc/ecc_test.c.o
+ .debug_loc     0x00002240      0x44b pk/ecc/ecc_verify_hash.c.o
+ .debug_loc     0x0000268b       0x5d pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .debug_loc     0x000026e8      0x1ca pk/ecc/ltc_ecc_map.c.o
+ .debug_loc     0x000028b2      0x4c3 pk/ecc/ltc_ecc_mulmod.c.o
+ .debug_loc     0x00002d75       0x7c pk/ecc/ltc_ecc_points.c.o
+ .debug_loc     0x00002df1      0x681 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .debug_loc     0x00003472      0x314 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .debug_loc     0x00003786       0xae pk/pkcs1/pkcs_1_i2osp.c.o
+ .debug_loc     0x00003834      0x1df pk/pkcs1/pkcs_1_mgf1.c.o
+ .debug_loc     0x00003a13      0x29f pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .debug_loc     0x00003cb2      0x2b5 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .debug_loc     0x00003f67       0x7a pk/pkcs1/pkcs_1_os2ip.c.o
+ .debug_loc     0x00003fe1      0x2dc pk/pkcs1/pkcs_1_pss_decode.c.o
+ .debug_loc     0x000042bd      0x309 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .debug_loc     0x000045c6      0x1ad pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .debug_loc     0x00004773      0x1b0 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .debug_loc     0x00004923      0x177 pk/rsa/rsa_decrypt_key.c.o
+ .debug_loc     0x00004a9a      0x16d pk/rsa/rsa_encrypt_key.c.o
+ .debug_loc     0x00004c07       0xb0 pk/rsa/rsa_export.c.o
+ .debug_loc     0x00004cb7      0x264 pk/rsa/rsa_exptmod.c.o
+ .debug_loc     0x00004f1b       0x4a pk/rsa/rsa_free.c.o
+ .debug_loc     0x00004f65      0x31f pk/rsa/rsa_import.c.o
+ .debug_loc     0x00005284      0x36a pk/rsa/rsa_make_key.c.o
+ .debug_loc     0x000055ee      0x285 pk/rsa/rsa_sign_hash.c.o
+ .debug_loc     0x00005873      0x2ce pk/rsa/rsa_verify_hash.c.o
+ .debug_loc     0x00005b41      0x191 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .debug_loc     0x00005cd2      0x1b8 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .debug_loc     0x00005e8a       0x7a pk/asn1/der/bit/der_length_bit_string.c.o
+ .debug_loc     0x00005f04       0x85 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .debug_loc     0x00005f89       0x85 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .debug_loc     0x0000600e       0x3e pk/asn1/der/boolean/der_length_boolean.c.o
+ .debug_loc     0x0000604c      0x119 pk/asn1/der/choice/der_decode_choice.c.o
+ .debug_loc     0x00006165      0x16b pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .debug_loc     0x000062d0      0x1a7 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .debug_loc     0x00006477      0x155 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .debug_loc     0x000065cc      0x140 pk/asn1/der/integer/der_decode_integer.c.o
+ .debug_loc     0x0000670c      0x24a pk/asn1/der/integer/der_encode_integer.c.o
+ .debug_loc     0x00006956       0xe9 pk/asn1/der/integer/der_length_integer.c.o
+ .debug_loc     0x00006a3f      0x179 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .debug_loc     0x00006bb8      0x242 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .debug_loc     0x00006dfa      0x172 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .debug_loc     0x00006f6c      0x12c pk/asn1/der/octet/der_decode_octet_string.c.o
+ .debug_loc     0x00007098      0x19c pk/asn1/der/octet/der_encode_octet_string.c.o
+ .debug_loc     0x00007234       0xaf pk/asn1/der/octet/der_length_octet_string.c.o
+ .debug_loc     0x000072e3      0x16b pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .debug_loc     0x0000744e      0x1a7 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .debug_loc     0x000075f5      0x155 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .debug_loc     0x0000774a      0x414 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .debug_loc     0x00007b5e      0x3b7 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .debug_loc     0x00007f15      0x197 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .debug_loc     0x000080ac      0x598 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .debug_loc     0x00008644      0x19c pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .debug_loc     0x000087e0      0x30b pk/asn1/der/sequence/der_length_sequence.c.o
+ .debug_loc     0x00008aeb       0x73 pk/asn1/der/sequence/der_sequence_free.c.o
+ .debug_loc     0x00008b5e      0x1d3 pk/asn1/der/set/der_encode_set.c.o
+ .debug_loc     0x00008d31      0x2ce pk/asn1/der/set/der_encode_setof.c.o
+ .debug_loc     0x00008fff       0xf6 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .debug_loc     0x000090f5      0x150 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .debug_loc     0x00009245       0xf7 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .debug_loc     0x0000933c      0x1a8 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .debug_loc     0x000094e4      0x18f pk/asn1/der/utctime/der_encode_utctime.c.o
+ .debug_loc     0x00009673       0x5c pk/asn1/der/utctime/der_length_utctime.c.o
+ .debug_loc     0x000096cf      0x1b1 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .debug_loc     0x00009880      0x26a pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .debug_loc     0x00009aea       0xe3 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .debug_loc     0x00009bcd      0x910 ciphers/aes/aes.c.o
+ .debug_loc     0x0000a4dd      0x8b5 hashes/sha2/sha256.c.o
+ .debug_loc     0x0000ad92      0x117 hashes/helper/hash_memory.c.o
+ .debug_loc     0x0000aea9      0x444 prngs/yarrow.c.o
+ .debug_loc     0x0000b2ed      0x1f5 prngs/rng_get_bytes.c.o
+ .debug_loc     0x0000b4e2      0x12a prngs/rng_make_prng.c.o
+ .debug_loc     0x0000b60c      0x1bf misc/base64/base64_decode.c.o
+ .debug_loc     0x0000b7cb      0x1b8 misc/base64/base64_encode.c.o
+ .debug_loc     0x0000b983       0x49 misc/crypt/crypt_cipher_is_valid.c.o
+ .debug_loc     0x0000b9cc       0x98 misc/crypt/crypt_find_cipher_any.c.o
+ .debug_loc     0x0000ba64       0x52 misc/crypt/crypt_find_cipher_id.c.o
+ .debug_loc     0x0000bab6       0x5d misc/crypt/crypt_find_cipher.c.o
+ .debug_loc     0x0000bb13       0xab misc/crypt/crypt_find_hash_any.c.o
+ .debug_loc     0x0000bbbe       0x52 misc/crypt/crypt_find_hash_id.c.o
+ .debug_loc     0x0000bc10       0x7b misc/crypt/crypt_find_hash_oid.c.o
+ .debug_loc     0x0000bc8b       0x5d misc/crypt/crypt_find_hash.c.o
+ .debug_loc     0x0000bce8       0x5d misc/crypt/crypt_find_prng.c.o
+ .debug_loc     0x0000bd45       0xa8 misc/crypt/crypt_fsa.c.o
+ .debug_loc     0x0000bded       0x49 misc/crypt/crypt_hash_is_valid.c.o
+ .debug_loc     0x0000be36       0x49 misc/crypt/crypt_prng_is_valid.c.o
+ .debug_loc     0x0000be7f       0x68 misc/crypt/crypt_register_cipher.c.o
+ .debug_loc     0x0000bee7       0x68 misc/crypt/crypt_register_hash.c.o
+ .debug_loc     0x0000bf4f       0x68 misc/crypt/crypt_register_prng.c.o
+ .debug_loc     0x0000bfb7       0x68 misc/crypt/crypt_unregister_cipher.c.o
+ .debug_loc     0x0000c01f       0x68 misc/crypt/crypt_unregister_hash.c.o
+ .debug_loc     0x0000c087       0x68 misc/crypt/crypt_unregister_prng.c.o
+ .debug_loc     0x0000c0ef       0x3e misc/error_to_string.c.o
+ .debug_loc     0x0000c12d       0x6f misc/zeromem.c.o
+ .debug_loc     0x0000c19c      0x126 math/multi.c.o
+ .debug_loc     0x0000c2c2      0x179 math/rand_prime.c.o
+ .debug_loc     0x0000c43b     0x116a math/tfm_desc.c.o
+ .debug_loc     0x0000d5a5       0x98 modes/ctr/ctr_decrypt.c.o
+ .debug_loc     0x0000d63d       0x5c modes/ctr/ctr_done.c.o
+ .debug_loc     0x0000d699      0x116 modes/ctr/ctr_encrypt.c.o
+ .debug_loc     0x0000d7af       0x85 modes/ctr/ctr_getiv.c.o
+ .debug_loc     0x0000d834       0xa3 modes/ctr/ctr_setiv.c.o
+ .debug_loc     0x0000d8d7      0x129 modes/ctr/ctr_start.c.o
+ .debug_loc     0x0000da00       0x20 modes/ctr/ctr_test.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0xcc8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x10 encauth/gcm/gcm_add_aad.c.o
+ .debug_ranges  0x00000010       0x10 encauth/gcm/gcm_add_iv.c.o
+ .debug_ranges  0x00000020       0x10 encauth/gcm/gcm_done.c.o
+ .debug_ranges  0x00000030       0x18 encauth/gcm/gcm_gf_mult.c.o
+ .debug_ranges  0x00000048       0x10 encauth/gcm/gcm_init.c.o
+ .debug_ranges  0x00000058       0x10 encauth/gcm/gcm_memory.c.o
+ .debug_ranges  0x00000068       0x10 encauth/gcm/gcm_mult_h.c.o
+ .debug_ranges  0x00000078       0x10 encauth/gcm/gcm_process.c.o
+ .debug_ranges  0x00000088       0x10 encauth/gcm/gcm_reset.c.o
+ .debug_ranges  0x00000098       0x10 encauth/gcm/gcm_test.c.o
+ .debug_ranges  0x000000a8       0x30 hashes/sha1.c.o
+ .debug_ranges  0x000000d8       0x10 pk/ecc/ecc_ansi_x963_export.c.o
+ .debug_ranges  0x000000e8       0x18 pk/ecc/ecc_ansi_x963_import.c.o
+ .debug_ranges  0x00000100       0x80 pk/ecc/ecc_decrypt_key.c.o
+ .debug_ranges  0x00000180       0x10 pk/ecc/ecc_encrypt_key.c.o
+ .debug_ranges  0x00000190       0x10 pk/ecc/ecc_export.c.o
+ .debug_ranges  0x000001a0       0x10 pk/ecc/ecc_free.c.o
+ .debug_ranges  0x000001b0       0x10 pk/ecc/ecc_get_size.c.o
+ .debug_ranges  0x000001c0       0x20 pk/ecc/ecc_import.c.o
+ .debug_ranges  0x000001e0       0x18 pk/ecc/ecc_make_key.c.o
+ .debug_ranges  0x000001f8       0x10 pk/ecc/ecc_shared_secret.c.o
+ .debug_ranges  0x00000208       0x10 pk/ecc/ecc_sign_hash.c.o
+ .debug_ranges  0x00000218       0x10 pk/ecc/ecc_sizes.c.o
+ .debug_ranges  0x00000228       0x10 pk/ecc/ecc_test.c.o
+ .debug_ranges  0x00000238       0x10 pk/ecc/ecc_verify_hash.c.o
+ .debug_ranges  0x00000248       0x10 pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .debug_ranges  0x00000258       0x10 pk/ecc/ltc_ecc_map.c.o
+ .debug_ranges  0x00000268       0x10 pk/ecc/ltc_ecc_mulmod.c.o
+ .debug_ranges  0x00000278       0x18 pk/ecc/ltc_ecc_points.c.o
+ .debug_ranges  0x00000290       0x10 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .debug_ranges  0x000002a0       0x10 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .debug_ranges  0x000002b0       0x10 pk/pkcs1/pkcs_1_i2osp.c.o
+ .debug_ranges  0x000002c0       0x10 pk/pkcs1/pkcs_1_mgf1.c.o
+ .debug_ranges  0x000002d0       0x10 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .debug_ranges  0x000002e0       0x10 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .debug_ranges  0x000002f0       0x10 pk/pkcs1/pkcs_1_os2ip.c.o
+ .debug_ranges  0x00000300       0x10 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .debug_ranges  0x00000310       0x10 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .debug_ranges  0x00000320       0x10 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .debug_ranges  0x00000330       0x10 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .debug_ranges  0x00000340       0x10 pk/rsa/rsa_decrypt_key.c.o
+ .debug_ranges  0x00000350       0x10 pk/rsa/rsa_encrypt_key.c.o
+ .debug_ranges  0x00000360       0x10 pk/rsa/rsa_export.c.o
+ .debug_ranges  0x00000370       0x10 pk/rsa/rsa_exptmod.c.o
+ .debug_ranges  0x00000380       0x10 pk/rsa/rsa_free.c.o
+ .debug_ranges  0x00000390       0x80 pk/rsa/rsa_import.c.o
+ .debug_ranges  0x00000410       0x10 pk/rsa/rsa_make_key.c.o
+ .debug_ranges  0x00000420       0xb0 pk/rsa/rsa_sign_hash.c.o
+ .debug_ranges  0x000004d0       0x90 pk/rsa/rsa_verify_hash.c.o
+ .debug_ranges  0x00000560       0x10 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .debug_ranges  0x00000570       0x10 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .debug_ranges  0x00000580       0x10 pk/asn1/der/bit/der_length_bit_string.c.o
+ .debug_ranges  0x00000590       0x10 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .debug_ranges  0x000005a0       0x10 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .debug_ranges  0x000005b0       0x10 pk/asn1/der/boolean/der_length_boolean.c.o
+ .debug_ranges  0x000005c0       0x10 pk/asn1/der/choice/der_decode_choice.c.o
+ .debug_ranges  0x000005d0       0x10 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .debug_ranges  0x000005e0       0x10 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .debug_ranges  0x000005f0       0x20 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .debug_ranges  0x00000610       0x28 pk/asn1/der/integer/der_decode_integer.c.o
+ .debug_ranges  0x00000638       0x38 pk/asn1/der/integer/der_encode_integer.c.o
+ .debug_ranges  0x00000670       0x10 pk/asn1/der/integer/der_length_integer.c.o
+ .debug_ranges  0x00000680       0x10 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .debug_ranges  0x00000690       0x10 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .debug_ranges  0x000006a0       0x18 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .debug_ranges  0x000006b8       0x10 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .debug_ranges  0x000006c8       0x10 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .debug_ranges  0x000006d8       0x10 pk/asn1/der/octet/der_length_octet_string.c.o
+ .debug_ranges  0x000006e8       0x10 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .debug_ranges  0x000006f8       0x10 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .debug_ranges  0x00000708       0x20 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .debug_ranges  0x00000728       0x10 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .debug_ranges  0x00000738       0x18 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .debug_ranges  0x00000750       0x10 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .debug_ranges  0x00000760       0x10 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .debug_ranges  0x00000770       0x10 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .debug_ranges  0x00000780       0x10 pk/asn1/der/sequence/der_length_sequence.c.o
+ .debug_ranges  0x00000790       0x10 pk/asn1/der/sequence/der_sequence_free.c.o
+ .debug_ranges  0x000007a0       0x20 pk/asn1/der/set/der_encode_set.c.o
+ .debug_ranges  0x000007c0       0x18 pk/asn1/der/set/der_encode_setof.c.o
+ .debug_ranges  0x000007d8       0x10 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .debug_ranges  0x000007e8       0x10 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .debug_ranges  0x000007f8       0x10 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .debug_ranges  0x00000808       0x18 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .debug_ranges  0x00000820       0x10 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .debug_ranges  0x00000830       0x10 pk/asn1/der/utctime/der_length_utctime.c.o
+ .debug_ranges  0x00000840       0x10 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .debug_ranges  0x00000850       0x10 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .debug_ranges  0x00000860       0x18 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .debug_ranges  0x00000878       0x40 ciphers/aes/aes.c.o
+ .debug_ranges  0x000008b8       0x48 hashes/sha2/sha256.c.o
+ .debug_ranges  0x00000900       0x10 hashes/helper/hash_memory.c.o
+ .debug_ranges  0x00000910       0x48 prngs/yarrow.c.o
+ .debug_ranges  0x00000958       0x18 prngs/rng_get_bytes.c.o
+ .debug_ranges  0x00000970       0x10 prngs/rng_make_prng.c.o
+ .debug_ranges  0x00000980       0x10 misc/base64/base64_decode.c.o
+ .debug_ranges  0x00000990       0x10 misc/base64/base64_encode.c.o
+ .debug_ranges  0x000009a0       0x10 misc/crypt/crypt_cipher_is_valid.c.o
+ .debug_ranges  0x000009b0       0x10 misc/crypt/crypt_find_cipher_any.c.o
+ .debug_ranges  0x000009c0       0x10 misc/crypt/crypt_find_cipher_id.c.o
+ .debug_ranges  0x000009d0       0x10 misc/crypt/crypt_find_cipher.c.o
+ .debug_ranges  0x000009e0       0x10 misc/crypt/crypt_find_hash_any.c.o
+ .debug_ranges  0x000009f0       0x10 misc/crypt/crypt_find_hash_id.c.o
+ .debug_ranges  0x00000a00       0x10 misc/crypt/crypt_find_hash_oid.c.o
+ .debug_ranges  0x00000a10       0x10 misc/crypt/crypt_find_hash.c.o
+ .debug_ranges  0x00000a20       0x10 misc/crypt/crypt_find_prng.c.o
+ .debug_ranges  0x00000a30       0x10 misc/crypt/crypt_fsa.c.o
+ .debug_ranges  0x00000a40       0x10 misc/crypt/crypt_hash_is_valid.c.o
+ .debug_ranges  0x00000a50       0x10 misc/crypt/crypt_prng_is_valid.c.o
+ .debug_ranges  0x00000a60       0x10 misc/crypt/crypt_register_cipher.c.o
+ .debug_ranges  0x00000a70       0x10 misc/crypt/crypt_register_hash.c.o
+ .debug_ranges  0x00000a80       0x10 misc/crypt/crypt_register_prng.c.o
+ .debug_ranges  0x00000a90       0x10 misc/crypt/crypt_unregister_cipher.c.o
+ .debug_ranges  0x00000aa0       0x10 misc/crypt/crypt_unregister_hash.c.o
+ .debug_ranges  0x00000ab0       0x10 misc/crypt/crypt_unregister_prng.c.o
+ .debug_ranges  0x00000ac0       0x10 misc/error_to_string.c.o
+ .debug_ranges  0x00000ad0       0x10 misc/zeromem.c.o
+ .debug_ranges  0x00000ae0       0x18 math/multi.c.o
+ .debug_ranges  0x00000af8       0x10 math/rand_prime.c.o
+ .debug_ranges  0x00000b08      0x150 math/tfm_desc.c.o
+ .debug_ranges  0x00000c58       0x10 modes/ctr/ctr_decrypt.c.o
+ .debug_ranges  0x00000c68       0x10 modes/ctr/ctr_done.c.o
+ .debug_ranges  0x00000c78       0x10 modes/ctr/ctr_encrypt.c.o
+ .debug_ranges  0x00000c88       0x10 modes/ctr/ctr_getiv.c.o
+ .debug_ranges  0x00000c98       0x10 modes/ctr/ctr_setiv.c.o
+ .debug_ranges  0x00000ca8       0x10 modes/ctr/ctr_start.c.o
+ .debug_ranges  0x00000cb8       0x10 modes/ctr/ctr_test.c.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 encauth/gcm/gcm_add_aad.c.o
+ .ARM.attributes
+                0x00000037       0x37 encauth/gcm/gcm_add_iv.c.o
+ .ARM.attributes
+                0x0000006e       0x37 encauth/gcm/gcm_done.c.o
+ .ARM.attributes
+                0x000000a5       0x37 encauth/gcm/gcm_gf_mult.c.o
+ .ARM.attributes
+                0x000000dc       0x37 encauth/gcm/gcm_init.c.o
+ .ARM.attributes
+                0x00000113       0x37 encauth/gcm/gcm_memory.c.o
+ .ARM.attributes
+                0x0000014a       0x37 encauth/gcm/gcm_mult_h.c.o
+ .ARM.attributes
+                0x00000181       0x37 encauth/gcm/gcm_process.c.o
+ .ARM.attributes
+                0x000001b8       0x37 encauth/gcm/gcm_reset.c.o
+ .ARM.attributes
+                0x000001ef       0x37 encauth/gcm/gcm_test.c.o
+ .ARM.attributes
+                0x00000226       0x37 hashes/sha1.c.o
+ .ARM.attributes
+                0x0000025d       0x37 pk/ecc/ecc_ansi_x963_export.c.o
+ .ARM.attributes
+                0x00000294       0x37 pk/ecc/ecc_ansi_x963_import.c.o
+ .ARM.attributes
+                0x000002cb       0x37 pk/ecc/ecc_decrypt_key.c.o
+ .ARM.attributes
+                0x00000302       0x37 pk/ecc/ecc_encrypt_key.c.o
+ .ARM.attributes
+                0x00000339       0x37 pk/ecc/ecc_export.c.o
+ .ARM.attributes
+                0x00000370       0x37 pk/ecc/ecc_free.c.o
+ .ARM.attributes
+                0x000003a7       0x37 pk/ecc/ecc_get_size.c.o
+ .ARM.attributes
+                0x000003de       0x37 pk/ecc/ecc_import.c.o
+ .ARM.attributes
+                0x00000415       0x37 pk/ecc/ecc_make_key.c.o
+ .ARM.attributes
+                0x0000044c       0x37 pk/ecc/ecc_shared_secret.c.o
+ .ARM.attributes
+                0x00000483       0x37 pk/ecc/ecc_sign_hash.c.o
+ .ARM.attributes
+                0x000004ba       0x37 pk/ecc/ecc_sizes.c.o
+ .ARM.attributes
+                0x000004f1       0x37 pk/ecc/ecc_test.c.o
+ .ARM.attributes
+                0x00000528       0x37 pk/ecc/ecc_verify_hash.c.o
+ .ARM.attributes
+                0x0000055f       0x37 pk/ecc/ecc.c.o
+ .ARM.attributes
+                0x00000596       0x37 pk/ecc/ltc_ecc_is_valid_idx.c.o
+ .ARM.attributes
+                0x000005cd       0x37 pk/ecc/ltc_ecc_map.c.o
+ .ARM.attributes
+                0x00000604       0x37 pk/ecc/ltc_ecc_mul2add.c.o
+ .ARM.attributes
+                0x0000063b       0x37 pk/ecc/ltc_ecc_mulmod_timing.c.o
+ .ARM.attributes
+                0x00000672       0x37 pk/ecc/ltc_ecc_mulmod.c.o
+ .ARM.attributes
+                0x000006a9       0x37 pk/ecc/ltc_ecc_points.c.o
+ .ARM.attributes
+                0x000006e0       0x37 pk/ecc/ltc_ecc_projective_add_point.c.o
+ .ARM.attributes
+                0x00000717       0x37 pk/ecc/ltc_ecc_projective_dbl_point.c.o
+ .ARM.attributes
+                0x0000074e       0x37 pk/pkcs1/pkcs_1_i2osp.c.o
+ .ARM.attributes
+                0x00000785       0x37 pk/pkcs1/pkcs_1_mgf1.c.o
+ .ARM.attributes
+                0x000007bc       0x37 pk/pkcs1/pkcs_1_oaep_decode.c.o
+ .ARM.attributes
+                0x000007f3       0x37 pk/pkcs1/pkcs_1_oaep_encode.c.o
+ .ARM.attributes
+                0x0000082a       0x37 pk/pkcs1/pkcs_1_os2ip.c.o
+ .ARM.attributes
+                0x00000861       0x37 pk/pkcs1/pkcs_1_pss_decode.c.o
+ .ARM.attributes
+                0x00000898       0x37 pk/pkcs1/pkcs_1_pss_encode.c.o
+ .ARM.attributes
+                0x000008cf       0x37 pk/pkcs1/pkcs_1_v1_5_decode.c.o
+ .ARM.attributes
+                0x00000906       0x37 pk/pkcs1/pkcs_1_v1_5_encode.c.o
+ .ARM.attributes
+                0x0000093d       0x37 pk/rsa/rsa_decrypt_key.c.o
+ .ARM.attributes
+                0x00000974       0x37 pk/rsa/rsa_encrypt_key.c.o
+ .ARM.attributes
+                0x000009ab       0x37 pk/rsa/rsa_export.c.o
+ .ARM.attributes
+                0x000009e2       0x37 pk/rsa/rsa_exptmod.c.o
+ .ARM.attributes
+                0x00000a19       0x37 pk/rsa/rsa_free.c.o
+ .ARM.attributes
+                0x00000a50       0x37 pk/rsa/rsa_import.c.o
+ .ARM.attributes
+                0x00000a87       0x37 pk/rsa/rsa_make_key.c.o
+ .ARM.attributes
+                0x00000abe       0x37 pk/rsa/rsa_sign_hash.c.o
+ .ARM.attributes
+                0x00000af5       0x37 pk/rsa/rsa_verify_hash.c.o
+ .ARM.attributes
+                0x00000b2c       0x37 pk/asn1/der/bit/der_decode_bit_string.c.o
+ .ARM.attributes
+                0x00000b63       0x37 pk/asn1/der/bit/der_encode_bit_string.c.o
+ .ARM.attributes
+                0x00000b9a       0x37 pk/asn1/der/bit/der_length_bit_string.c.o
+ .ARM.attributes
+                0x00000bd1       0x37 pk/asn1/der/boolean/der_decode_boolean.c.o
+ .ARM.attributes
+                0x00000c08       0x37 pk/asn1/der/boolean/der_encode_boolean.c.o
+ .ARM.attributes
+                0x00000c3f       0x37 pk/asn1/der/boolean/der_length_boolean.c.o
+ .ARM.attributes
+                0x00000c76       0x37 pk/asn1/der/choice/der_decode_choice.c.o
+ .ARM.attributes
+                0x00000cad       0x37 pk/asn1/der/ia5/der_decode_ia5_string.c.o
+ .ARM.attributes
+                0x00000ce4       0x37 pk/asn1/der/ia5/der_encode_ia5_string.c.o
+ .ARM.attributes
+                0x00000d1b       0x37 pk/asn1/der/ia5/der_length_ia5_string.c.o
+ .ARM.attributes
+                0x00000d52       0x37 pk/asn1/der/integer/der_decode_integer.c.o
+ .ARM.attributes
+                0x00000d89       0x37 pk/asn1/der/integer/der_encode_integer.c.o
+ .ARM.attributes
+                0x00000dc0       0x37 pk/asn1/der/integer/der_length_integer.c.o
+ .ARM.attributes
+                0x00000df7       0x37 pk/asn1/der/object_identifier/der_decode_object_identifier.c.o
+ .ARM.attributes
+                0x00000e2e       0x37 pk/asn1/der/object_identifier/der_encode_object_identifier.c.o
+ .ARM.attributes
+                0x00000e65       0x37 pk/asn1/der/object_identifier/der_length_object_identifier.c.o
+ .ARM.attributes
+                0x00000e9c       0x37 pk/asn1/der/octet/der_decode_octet_string.c.o
+ .ARM.attributes
+                0x00000ed3       0x37 pk/asn1/der/octet/der_encode_octet_string.c.o
+ .ARM.attributes
+                0x00000f0a       0x37 pk/asn1/der/octet/der_length_octet_string.c.o
+ .ARM.attributes
+                0x00000f41       0x37 pk/asn1/der/printable_string/der_decode_printable_string.c.o
+ .ARM.attributes
+                0x00000f78       0x37 pk/asn1/der/printable_string/der_encode_printable_string.c.o
+ .ARM.attributes
+                0x00000faf       0x37 pk/asn1/der/printable_string/der_length_printable_string.c.o
+ .ARM.attributes
+                0x00000fe6       0x37 pk/asn1/der/sequence/der_decode_sequence_ex.c.o
+ .ARM.attributes
+                0x0000101d       0x37 pk/asn1/der/sequence/der_decode_sequence_flexi.c.o
+ .ARM.attributes
+                0x00001054       0x37 pk/asn1/der/sequence/der_decode_sequence_multi.c.o
+ .ARM.attributes
+                0x0000108b       0x37 pk/asn1/der/sequence/der_encode_sequence_ex.c.o
+ .ARM.attributes
+                0x000010c2       0x37 pk/asn1/der/sequence/der_encode_sequence_multi.c.o
+ .ARM.attributes
+                0x000010f9       0x37 pk/asn1/der/sequence/der_length_sequence.c.o
+ .ARM.attributes
+                0x00001130       0x37 pk/asn1/der/sequence/der_sequence_free.c.o
+ .ARM.attributes
+                0x00001167       0x37 pk/asn1/der/set/der_encode_set.c.o
+ .ARM.attributes
+                0x0000119e       0x37 pk/asn1/der/set/der_encode_setof.c.o
+ .ARM.attributes
+                0x000011d5       0x37 pk/asn1/der/short_integer/der_decode_short_integer.c.o
+ .ARM.attributes
+                0x0000120c       0x37 pk/asn1/der/short_integer/der_encode_short_integer.c.o
+ .ARM.attributes
+                0x00001243       0x37 pk/asn1/der/short_integer/der_length_short_integer.c.o
+ .ARM.attributes
+                0x0000127a       0x37 pk/asn1/der/utctime/der_decode_utctime.c.o
+ .ARM.attributes
+                0x000012b1       0x37 pk/asn1/der/utctime/der_encode_utctime.c.o
+ .ARM.attributes
+                0x000012e8       0x37 pk/asn1/der/utctime/der_length_utctime.c.o
+ .ARM.attributes
+                0x0000131f       0x37 pk/asn1/der/utf8/der_decode_utf8_string.c.o
+ .ARM.attributes
+                0x00001356       0x37 pk/asn1/der/utf8/der_encode_utf8_string.c.o
+ .ARM.attributes
+                0x0000138d       0x37 pk/asn1/der/utf8/der_length_utf8_string.c.o
+ .ARM.attributes
+                0x000013c4       0x37 ciphers/aes/aes_tab.c.o
+ .ARM.attributes
+                0x000013fb       0x37 ciphers/aes/aes.c.o
+ .ARM.attributes
+                0x00001432       0x37 hashes/sha2/sha256.c.o
+ .ARM.attributes
+                0x00001469       0x37 hashes/helper/hash_memory.c.o
+ .ARM.attributes
+                0x000014a0       0x37 prngs/yarrow.c.o
+ .ARM.attributes
+                0x000014d7       0x37 prngs/rng_get_bytes.c.o
+ .ARM.attributes
+                0x0000150e       0x37 prngs/rng_make_prng.c.o
+ .ARM.attributes
+                0x00001545       0x37 misc/base64/base64_decode.c.o
+ .ARM.attributes
+                0x0000157c       0x37 misc/base64/base64_encode.c.o
+ .ARM.attributes
+                0x000015b3       0x37 misc/crypt/crypt_argchk.c.o
+ .ARM.attributes
+                0x000015ea       0x37 misc/crypt/crypt_cipher_descriptor.c.o
+ .ARM.attributes
+                0x00001621       0x37 misc/crypt/crypt_cipher_is_valid.c.o
+ .ARM.attributes
+                0x00001658       0x37 misc/crypt/crypt_find_cipher_any.c.o
+ .ARM.attributes
+                0x0000168f       0x37 misc/crypt/crypt_find_cipher_id.c.o
+ .ARM.attributes
+                0x000016c6       0x37 misc/crypt/crypt_find_cipher.c.o
+ .ARM.attributes
+                0x000016fd       0x37 misc/crypt/crypt_find_hash_any.c.o
+ .ARM.attributes
+                0x00001734       0x37 misc/crypt/crypt_find_hash_id.c.o
+ .ARM.attributes
+                0x0000176b       0x37 misc/crypt/crypt_find_hash_oid.c.o
+ .ARM.attributes
+                0x000017a2       0x37 misc/crypt/crypt_find_hash.c.o
+ .ARM.attributes
+                0x000017d9       0x37 misc/crypt/crypt_find_prng.c.o
+ .ARM.attributes
+                0x00001810       0x37 misc/crypt/crypt_fsa.c.o
+ .ARM.attributes
+                0x00001847       0x37 misc/crypt/crypt_hash_descriptor.c.o
+ .ARM.attributes
+                0x0000187e       0x37 misc/crypt/crypt_hash_is_valid.c.o
+ .ARM.attributes
+                0x000018b5       0x37 misc/crypt/crypt_ltc_mp_descriptor.c.o
+ .ARM.attributes
+                0x000018ec       0x37 misc/crypt/crypt_prng_descriptor.c.o
+ .ARM.attributes
+                0x00001923       0x37 misc/crypt/crypt_prng_is_valid.c.o
+ .ARM.attributes
+                0x0000195a       0x37 misc/crypt/crypt_register_cipher.c.o
+ .ARM.attributes
+                0x00001991       0x37 misc/crypt/crypt_register_hash.c.o
+ .ARM.attributes
+                0x000019c8       0x37 misc/crypt/crypt_register_prng.c.o
+ .ARM.attributes
+                0x000019ff       0x37 misc/crypt/crypt_unregister_cipher.c.o
+ .ARM.attributes
+                0x00001a36       0x37 misc/crypt/crypt_unregister_hash.c.o
+ .ARM.attributes
+                0x00001a6d       0x37 misc/crypt/crypt_unregister_prng.c.o
+ .ARM.attributes
+                0x00001aa4       0x37 misc/crypt/crypt.c.o
+ .ARM.attributes
+                0x00001adb       0x37 misc/error_to_string.c.o
+ .ARM.attributes
+                0x00001b12       0x37 misc/zeromem.c.o
+ .ARM.attributes
+                0x00001b49       0x37 math/fp/ltc_ecc_fp_mulmod.c.o
+ .ARM.attributes
+                0x00001b80       0x37 math/gmp_desc.c.o
+ .ARM.attributes
+                0x00001bb7       0x37 math/ltm_desc.c.o
+ .ARM.attributes
+                0x00001bee       0x37 math/multi.c.o
+ .ARM.attributes
+                0x00001c25       0x37 math/rand_prime.c.o
+ .ARM.attributes
+                0x00001c5c       0x37 math/tfm_desc.c.o
+ .ARM.attributes
+                0x00001c93       0x37 modes/ctr/ctr_decrypt.c.o
+ .ARM.attributes
+                0x00001cca       0x37 modes/ctr/ctr_done.c.o
+ .ARM.attributes
+                0x00001d01       0x37 modes/ctr/ctr_encrypt.c.o
+ .ARM.attributes
+                0x00001d38       0x37 modes/ctr/ctr_getiv.c.o
+ .ARM.attributes
+                0x00001d6f       0x37 modes/ctr/ctr_setiv.c.o
+ .ARM.attributes
+                0x00001da6       0x37 modes/ctr/ctr_start.c.o
+ .ARM.attributes
+                0x00001ddd       0x37 modes/ctr/ctr_test.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/c/px4/workspace/PX4Firmware/src/modules/libtomcrypt/module.pre.o elf32-littlearm)

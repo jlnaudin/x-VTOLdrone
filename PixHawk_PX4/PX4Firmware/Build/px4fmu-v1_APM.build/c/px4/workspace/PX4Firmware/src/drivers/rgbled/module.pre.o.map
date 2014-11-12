@@ -1,0 +1,419 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD rgbled.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 rgbled.cpp.o
+ *(.gnu.warning)
+
+.text._Z12rgbled_usagev
+                0x00000000       0x4c
+ .text._Z12rgbled_usagev
+                0x00000000       0x4c rgbled.cpp.o
+                0x00000000                rgbled_usage()
+
+.text._ZN6RGBLED9set_colorE14rgbled_color_t
+                0x00000000       0xd8
+ .text._ZN6RGBLED9set_colorE14rgbled_color_t
+                0x00000000       0xd8 rgbled.cpp.o
+                0x00000000                RGBLED::set_color(rgbled_color_t)
+
+.text._ZN6RGBLED3getERbS0_RhS1_S1_
+                0x00000000       0x6c
+ .text._ZN6RGBLED3getERbS0_RhS1_S1_
+                0x00000000       0x6c rgbled.cpp.o
+                0x00000000                RGBLED::get(bool&, bool&, unsigned char&, unsigned char&, unsigned char&)
+
+.text._ZN6RGBLED12send_led_rgbEv
+                0x00000000       0xa4
+ .text._ZN6RGBLED12send_led_rgbEv
+                0x00000000       0xa4 rgbled.cpp.o
+                0x00000000                RGBLED::send_led_rgb()
+
+.text._ZN6RGBLED15send_led_enableEb
+                0x00000000       0x44
+ .text._ZN6RGBLED15send_led_enableEb
+                0x00000000       0x44 rgbled.cpp.o
+                0x00000000                RGBLED::send_led_enable(bool)
+
+.text._ZN6RGBLED5probeEv
+                0x00000000       0x5c
+ .text._ZN6RGBLED5probeEv
+                0x00000000       0x5c rgbled.cpp.o
+                0x00000000                RGBLED::probe()
+
+.text._ZN6RGBLED11set_patternEP16rgbled_pattern_t
+                0x00000000       0x30
+ .text._ZN6RGBLED11set_patternEP16rgbled_pattern_t
+                0x00000000       0x30 rgbled.cpp.o
+                0x00000000                RGBLED::set_pattern(rgbled_pattern_t*)
+
+.text._ZN6RGBLED8set_modeE13rgbled_mode_t
+                0x00000000      0x100
+ .text._ZN6RGBLED8set_modeE13rgbled_mode_t
+                0x00000000      0x100 rgbled.cpp.o
+                0x00000000                RGBLED::set_mode(rgbled_mode_t)
+
+.text._ZN6RGBLED3ledEv
+                0x00000000       0xf8
+ .text._ZN6RGBLED3ledEv
+                0x00000000       0xf8 rgbled.cpp.o
+                0x00000000                RGBLED::led()
+
+.text._ZN6RGBLED14led_trampolineEPv
+                0x00000000       0x28
+ .text._ZN6RGBLED14led_trampolineEPv
+                0x00000000       0x28 rgbled.cpp.o
+                0x00000000                RGBLED::led_trampoline(void*)
+
+.text._ZN6RGBLED5ioctlEP4fileim
+                0x00000000       0x84
+ .text._ZN6RGBLED5ioctlEP4fileim
+                0x00000000       0x84 rgbled.cpp.o
+                0x00000000                RGBLED::ioctl(file*, int, unsigned long)
+
+.text._ZN6RGBLED4infoEv
+                0x00000000       0x88
+ .text._ZN6RGBLED4infoEv
+                0x00000000       0x88 rgbled.cpp.o
+                0x00000000                RGBLED::info()
+
+.text._ZN6RGBLED4initEv
+                0x00000000       0x38
+ .text._ZN6RGBLED4initEv
+                0x00000000       0x38 rgbled.cpp.o
+                0x00000000                RGBLED::init()
+
+.text._ZN6RGBLEDD2Ev
+                0x00000000       0x30
+ .text._ZN6RGBLEDD2Ev
+                0x00000000       0x30 rgbled.cpp.o
+                0x00000000                RGBLED::~RGBLED()
+                0x00000000                RGBLED::~RGBLED()
+
+.text._ZN6RGBLEDD0Ev
+                0x00000000       0x2c
+ .text._ZN6RGBLEDD0Ev
+                0x00000000       0x2c rgbled.cpp.o
+                0x00000000                RGBLED::~RGBLED()
+
+.text._ZN6RGBLEDC2Eii
+                0x00000000       0x98
+ .text._ZN6RGBLEDC2Eii
+                0x00000000       0x98 rgbled.cpp.o
+                0x00000000                RGBLED::RGBLED(int, int)
+                0x00000000                RGBLED::RGBLED(int, int)
+
+.text.rgbled_main
+                0x00000000      0x290
+ .text.rgbled_main
+                0x00000000      0x290 rgbled.cpp.o
+                0x00000000                rgbled_main
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata._ZTV6RGBLED
+                0x00000000       0x68
+ .rodata._ZTV6RGBLED
+                0x00000000       0x68 rgbled.cpp.o
+                0x00000000                vtable for RGBLED
+
+.rodata.str1.1  0x00000000      0x183
+ .rodata.str1.1
+                0x00000000      0x183 rgbled.cpp.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 rgbled.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 rgbled.cpp.o
+ *(COMMON)
+
+.bss._ZN12_GLOBAL__N_18g_rgbledE
+                0x00000000        0x4
+ .bss._ZN12_GLOBAL__N_18g_rgbledE
+                0x00000000        0x4 rgbled.cpp.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x71
+ *(.comment)
+ .comment       0x00000000       0x71 rgbled.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0xa0 rgbled.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x1a10
+ *(.debug_info)
+ .debug_info    0x00000000     0x1a10 rgbled.cpp.o
+
+.debug_abbrev   0x00000000      0x45b
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x45b rgbled.cpp.o
+
+.debug_line     0x00000000      0x631
+ *(.debug_line)
+ .debug_line    0x00000000      0x631 rgbled.cpp.o
+
+.debug_frame    0x00000000      0x240
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x240 rgbled.cpp.o
+
+.debug_str      0x00000000      0xd4d
+ *(.debug_str)
+ .debug_str     0x00000000      0xd4d rgbled.cpp.o
+
+.debug_loc      0x00000000      0x8a1
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x8a1 rgbled.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0xf0
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0xf0 rgbled.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 rgbled.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/drivers/rgbled/module.pre.o elf32-littlearm)

@@ -1,0 +1,2313 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD uORB.cpp.o
+LOAD objects_common.cpp.o
+LOAD Publication.cpp.o
+LOAD Subscription.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 uORB.cpp.o
+ .text          0x00000000        0x0 objects_common.cpp.o
+ .text          0x00000000        0x0 Publication.cpp.o
+ .text          0x00000000        0x0 Subscription.cpp.o
+ *(.gnu.warning)
+
+.text.orb_set_interval
+                0x00000000       0x34
+ .text.orb_set_interval
+                0x00000000       0x34 uORB.cpp.o
+                0x00000000                orb_set_interval
+
+.text.orb_stat  0x00000000       0x30
+ .text.orb_stat
+                0x00000000       0x30 uORB.cpp.o
+                0x00000000                orb_stat
+
+.text.orb_check
+                0x00000000       0x30
+ .text.orb_check
+                0x00000000       0x30 uORB.cpp.o
+                0x00000000                orb_check
+
+.text._ZN12_GLOBAL__N_14infoEv
+                0x00000000       0x20
+ .text._ZN12_GLOBAL__N_14infoEv
+                0x00000000       0x20 uORB.cpp.o
+
+.text._ZN10ORBDevNode15update_deferredEv
+                0x00000000       0x2c
+ .text._ZN10ORBDevNode15update_deferredEv
+                0x00000000       0x2c uORB.cpp.o
+                0x00000000                ORBDevNode::update_deferred()
+
+.text._ZN10ORBDevNode26update_deferred_trampolineEPv
+                0x00000000       0x28
+ .text._ZN10ORBDevNode26update_deferred_trampolineEPv
+                0x00000000       0x28 uORB.cpp.o
+                0x00000000                ORBDevNode::update_deferred_trampoline(void*)
+
+.text._ZN10ORBDevNode10filp_to_sdEP4file
+                0x00000000       0x24
+ .text._ZN10ORBDevNode10filp_to_sdEP4file
+                0x00000000       0x24 uORB.cpp.o
+                0x00000000                ORBDevNode::filp_to_sd(file*)
+
+.text.orb_copy  0x00000000       0x48
+ .text.orb_copy
+                0x00000000       0x48 uORB.cpp.o
+                0x00000000                orb_copy
+
+.text._ZN10ORBDevNode7publishEPK12orb_metadataiPKv
+                0x00000000       0x5c
+ .text._ZN10ORBDevNode7publishEPK12orb_metadataiPKv
+                0x00000000       0x5c uORB.cpp.o
+                0x00000000                ORBDevNode::publish(orb_metadata const*, int, void const*)
+
+.text.orb_publish
+                0x00000000       0x34
+ .text.orb_publish
+                0x00000000       0x34 uORB.cpp.o
+                0x00000000                orb_publish
+
+.text.orb_unsubscribe
+                0x00000000       0x28
+ .text.orb_unsubscribe
+                0x00000000       0x28 uORB.cpp.o
+                0x00000000                orb_unsubscribe
+
+.text._ZN12_GLOBAL__N_114node_advertiseEPK12orb_metadata
+                0x00000000       0x58
+ .text._ZN12_GLOBAL__N_114node_advertiseEPK12orb_metadata
+                0x00000000       0x58 uORB.cpp.o
+
+.text._ZN12_GLOBAL__N_111node_mkpathEPcNS_6FlavorEPK12orb_metadata
+                0x00000000       0x50
+ .text._ZN12_GLOBAL__N_111node_mkpathEPcNS_6FlavorEPK12orb_metadata
+                0x00000000       0x50 uORB.cpp.o
+
+.text._ZN12_GLOBAL__N_19node_openENS_6FlavorEPK12orb_metadataPKvb
+                0x00000000       0x9c
+ .text._ZN12_GLOBAL__N_19node_openENS_6FlavorEPK12orb_metadataPKvb
+                0x00000000       0x9c uORB.cpp.o
+
+.text.orb_subscribe
+                0x00000000       0x30
+ .text.orb_subscribe
+                0x00000000       0x30 uORB.cpp.o
+                0x00000000                orb_subscribe
+
+.text.orb_advertise
+                0x00000000       0x68
+ .text.orb_advertise
+                0x00000000       0x68 uORB.cpp.o
+                0x00000000                orb_advertise
+
+.text._ZN12_GLOBAL__N_19test_failEPKcz
+                0x00000000       0x68
+ .text._ZN12_GLOBAL__N_19test_failEPKcz
+                0x00000000       0x68 uORB.cpp.o
+
+.text._ZN12_GLOBAL__N_19test_noteEPKcz
+                0x00000000       0x68
+ .text._ZN12_GLOBAL__N_19test_noteEPKcz
+                0x00000000       0x68 uORB.cpp.o
+
+.text._ZN12_GLOBAL__N_14testEv
+                0x00000000      0x164
+ .text._ZN12_GLOBAL__N_14testEv
+                0x00000000      0x164 uORB.cpp.o
+
+.text._ZN12ORBDevMasterD2Ev
+                0x00000000       0x30
+ .text._ZN12ORBDevMasterD2Ev
+                0x00000000       0x30 uORB.cpp.o
+                0x00000000                ORBDevMaster::~ORBDevMaster()
+                0x00000000                ORBDevMaster::~ORBDevMaster()
+
+.text._ZN12ORBDevMasterD0Ev
+                0x00000000       0x2c
+ .text._ZN12ORBDevMasterD0Ev
+                0x00000000       0x2c uORB.cpp.o
+                0x00000000                ORBDevMaster::~ORBDevMaster()
+
+.text._ZN12ORBDevMasterC2EN12_GLOBAL__N_16FlavorE
+                0x00000000       0x5c
+ .text._ZN12ORBDevMasterC2EN12_GLOBAL__N_16FlavorE
+                0x00000000       0x5c uORB.cpp.o
+                0x00000000                ORBDevMaster::ORBDevMaster((anonymous namespace)::Flavor)
+                0x00000000                ORBDevMaster::ORBDevMaster((anonymous namespace)::Flavor)
+
+.text.uorb_main
+                0x00000000       0xfc
+ .text.uorb_main
+                0x00000000       0xfc uORB.cpp.o
+                0x00000000                uorb_main
+
+.text._ZN10ORBDevNodeC2EPK12orb_metadataPKcS4_
+                0x00000000       0x58
+ .text._ZN10ORBDevNodeC2EPK12orb_metadataPKcS4_
+                0x00000000       0x58 uORB.cpp.o
+                0x00000000                ORBDevNode::ORBDevNode(orb_metadata const*, char const*, char const*)
+                0x00000000                ORBDevNode::ORBDevNode(orb_metadata const*, char const*, char const*)
+
+.text._ZN12ORBDevMaster5ioctlEP4fileim
+                0x00000000       0x90
+ .text._ZN12ORBDevMaster5ioctlEP4fileim
+                0x00000000       0x90 uORB.cpp.o
+                0x00000000                ORBDevMaster::ioctl(file*, int, unsigned long)
+
+.text._ZN10ORBDevNode15appears_updatedEPNS_14SubscriberDataE
+                0x00000000       0x88
+ .text._ZN10ORBDevNode15appears_updatedEPNS_14SubscriberDataE
+                0x00000000       0x88 uORB.cpp.o
+                0x00000000                ORBDevNode::appears_updated(ORBDevNode::SubscriberData*)
+
+.text._ZN10ORBDevNode15poll_notify_oneEP6pollfdh
+                0x00000000       0x40
+ .text._ZN10ORBDevNode15poll_notify_oneEP6pollfdh
+                0x00000000       0x40 uORB.cpp.o
+                0x00000000                ORBDevNode::poll_notify_one(pollfd*, unsigned char)
+
+.text._ZN10ORBDevNode10poll_stateEP4file
+                0x00000000       0x34
+ .text._ZN10ORBDevNode10poll_stateEP4file
+                0x00000000       0x34 uORB.cpp.o
+                0x00000000                ORBDevNode::poll_state(file*)
+
+.text._ZN10ORBDevNode5ioctlEP4fileim
+                0x00000000       0x70
+ .text._ZN10ORBDevNode5ioctlEP4fileim
+                0x00000000       0x70 uORB.cpp.o
+                0x00000000                ORBDevNode::ioctl(file*, int, unsigned long)
+
+.text._ZN10ORBDevNode4readEP4filePcj
+                0x00000000       0x78
+ .text._ZN10ORBDevNode4readEP4filePcj
+                0x00000000       0x78 uORB.cpp.o
+                0x00000000                ORBDevNode::read(file*, char*, unsigned int)
+
+.text._ZN6device6Device4lockEv
+                0x00000000       0x2c
+ .text._ZN6device6Device4lockEv
+                0x00000000       0x2c uORB.cpp.o
+                0x00000000                device::Device::lock()
+
+.text._ZN6device6Device6unlockEv
+                0x00000000       0x28
+ .text._ZN6device6Device6unlockEv
+                0x00000000       0x28 uORB.cpp.o
+                0x00000000                device::Device::unlock()
+
+.text._ZN10ORBDevNode5writeEP4filePKcj
+                0x00000000       0x98
+ .text._ZN10ORBDevNode5writeEP4filePKcj
+                0x00000000       0x98 uORB.cpp.o
+                0x00000000                ORBDevNode::write(file*, char const*, unsigned int)
+
+.text._ZN10ORBDevNode5closeEP4file
+                0x00000000       0x58
+ .text._ZN10ORBDevNode5closeEP4file
+                0x00000000       0x58 uORB.cpp.o
+                0x00000000                ORBDevNode::close(file*)
+
+.text._ZN10ORBDevNode4openEP4file
+                0x00000000       0xa0
+ .text._ZN10ORBDevNode4openEP4file
+                0x00000000       0xa0 uORB.cpp.o
+                0x00000000                ORBDevNode::open(file*)
+
+.text._ZN10ORBDevNodeD2Ev
+                0x00000000       0x34
+ .text._ZN10ORBDevNodeD2Ev
+                0x00000000       0x34 uORB.cpp.o
+                0x00000000                ORBDevNode::~ORBDevNode()
+                0x00000000                ORBDevNode::~ORBDevNode()
+
+.text._ZN10ORBDevNodeD0Ev
+                0x00000000       0x2c
+ .text._ZN10ORBDevNodeD0Ev
+                0x00000000       0x2c uORB.cpp.o
+                0x00000000                ORBDevNode::~ORBDevNode()
+
+.text._ZN4uORB11PublicationI10encoders_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI10encoders_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<encoders_s>::getDataVoidPtr()
+
+.text._ZN4uORB15PublicationBase9getHandleEv
+                0x00000000       0x24
+ .text._ZN4uORB15PublicationBase9getHandleEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::PublicationBase::getHandle()
+
+.text._ZN8ListNodeIPN4uORB15PublicationBaseEEC2Ev
+                0x00000000       0x24
+ .text._ZN8ListNodeIPN4uORB15PublicationBaseEEC2Ev
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                ListNode<uORB::PublicationBase*>::ListNode()
+                0x00000000                ListNode<uORB::PublicationBase*>::ListNode()
+
+.text._ZN4ListIPN4uORB15PublicationBaseEE7getHeadEv
+                0x00000000       0x24
+ .text._ZN4ListIPN4uORB15PublicationBaseEE7getHeadEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                List<uORB::PublicationBase*>::getHead()
+
+.text._ZN8ListNodeIPN4uORB15PublicationBaseEE10setSiblingES2_
+                0x00000000       0x24
+ .text._ZN8ListNodeIPN4uORB15PublicationBaseEE10setSiblingES2_
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                ListNode<uORB::PublicationBase*>::setSibling(uORB::PublicationBase*)
+
+.text._ZN4ListIPN4uORB15PublicationBaseEE7setHeadERS2_
+                0x00000000       0x28
+ .text._ZN4ListIPN4uORB15PublicationBaseEE7setHeadERS2_
+                0x00000000       0x28 Publication.cpp.o
+                0x00000000                List<uORB::PublicationBase*>::setHead(uORB::PublicationBase*&)
+
+.text._ZN4ListIPN4uORB15PublicationBaseEE3addES2_
+                0x00000000       0x44
+ .text._ZN4ListIPN4uORB15PublicationBaseEE3addES2_
+                0x00000000       0x44 Publication.cpp.o
+                0x00000000                List<uORB::PublicationBase*>::add(uORB::PublicationBase*)
+
+.text._ZN4uORB15PublicationBaseC2EP4ListIPS0_EPK12orb_metadata
+                0x00000000       0x44
+ .text._ZN4uORB15PublicationBaseC2EP4ListIPS0_EPK12orb_metadata
+                0x00000000       0x44 Publication.cpp.o
+                0x00000000                uORB::PublicationBase::PublicationBase(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::PublicationBase::PublicationBase(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI10encoders_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48
+ .text._ZN4uORB11PublicationI10encoders_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48 Publication.cpp.o
+                0x00000000                uORB::Publication<encoders_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<encoders_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI18actuator_outputs_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI18actuator_outputs_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<actuator_outputs_s>::getDataVoidPtr()
+
+.text._ZN4uORB11PublicationI18actuator_outputs_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48
+ .text._ZN4uORB11PublicationI18actuator_outputs_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48 Publication.cpp.o
+                0x00000000                uORB::Publication<actuator_outputs_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<actuator_outputs_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI24vehicle_rates_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI24vehicle_rates_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_rates_setpoint_s>::getDataVoidPtr()
+
+.text._ZN4uORB11PublicationI24vehicle_rates_setpoint_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48
+ .text._ZN4uORB11PublicationI24vehicle_rates_setpoint_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_rates_setpoint_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<vehicle_rates_setpoint_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI27vehicle_attitude_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI27vehicle_attitude_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_attitude_setpoint_s>::getDataVoidPtr()
+
+.text._ZN4uORB11PublicationI27vehicle_attitude_setpoint_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48
+ .text._ZN4uORB11PublicationI27vehicle_attitude_setpoint_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_attitude_setpoint_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<vehicle_attitude_setpoint_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI34vehicle_global_velocity_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI34vehicle_global_velocity_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_global_velocity_setpoint_s>::getDataVoidPtr()
+
+.text._ZN4uORB11PublicationI34vehicle_global_velocity_setpoint_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x44
+ .text._ZN4uORB11PublicationI34vehicle_global_velocity_setpoint_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x44 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_global_velocity_setpoint_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<vehicle_global_velocity_setpoint_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI19actuator_controls_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI19actuator_controls_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<actuator_controls_s>::getDataVoidPtr()
+
+.text._ZN4uORB11PublicationI19actuator_controls_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48
+ .text._ZN4uORB11PublicationI19actuator_controls_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48 Publication.cpp.o
+                0x00000000                uORB::Publication<actuator_controls_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<actuator_controls_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI17debug_key_value_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI17debug_key_value_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<debug_key_value_s>::getDataVoidPtr()
+
+.text._ZN4uORB11PublicationI17debug_key_value_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48
+ .text._ZN4uORB11PublicationI17debug_key_value_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48 Publication.cpp.o
+                0x00000000                uORB::Publication<debug_key_value_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<debug_key_value_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI25vehicle_global_position_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI25vehicle_global_position_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_global_position_s>::getDataVoidPtr()
+
+.text._ZN4uORB11PublicationI25vehicle_global_position_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48
+ .text._ZN4uORB11PublicationI25vehicle_global_position_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_global_position_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<vehicle_global_position_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI24vehicle_local_position_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI24vehicle_local_position_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_local_position_s>::getDataVoidPtr()
+
+.text._ZN4uORB11PublicationI24vehicle_local_position_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48
+ .text._ZN4uORB11PublicationI24vehicle_local_position_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_local_position_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<vehicle_local_position_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB11PublicationI18vehicle_attitude_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB11PublicationI18vehicle_attitude_sE14getDataVoidPtrEv
+                0x00000000       0x24 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_attitude_s>::getDataVoidPtr()
+
+.text._ZN4uORB11PublicationI18vehicle_attitude_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48
+ .text._ZN4uORB11PublicationI18vehicle_attitude_sEC2EP4ListIPNS_15PublicationBaseEEPK12orb_metadata
+                0x00000000       0x48 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_attitude_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+                0x00000000                uORB::Publication<vehicle_attitude_s>::Publication(List<uORB::PublicationBase*>*, orb_metadata const*)
+
+.text._ZN4uORB15PublicationBaseD2Ev
+                0x00000000       0x34
+ .text._ZN4uORB15PublicationBaseD2Ev
+                0x00000000       0x34 Publication.cpp.o
+                0x00000000                uORB::PublicationBase::~PublicationBase()
+                0x00000000                uORB::PublicationBase::~PublicationBase()
+
+.text._ZN4uORB11PublicationI10encoders_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI10encoders_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<encoders_s>::~Publication()
+                0x00000000                uORB::Publication<encoders_s>::~Publication()
+
+.text._ZN4uORB11PublicationI10encoders_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI10encoders_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<encoders_s>::~Publication()
+
+.text._ZN4uORB11PublicationI18actuator_outputs_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI18actuator_outputs_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<actuator_outputs_s>::~Publication()
+                0x00000000                uORB::Publication<actuator_outputs_s>::~Publication()
+
+.text._ZN4uORB11PublicationI18actuator_outputs_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI18actuator_outputs_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<actuator_outputs_s>::~Publication()
+
+.text._ZN4uORB11PublicationI24vehicle_rates_setpoint_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI24vehicle_rates_setpoint_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_rates_setpoint_s>::~Publication()
+                0x00000000                uORB::Publication<vehicle_rates_setpoint_s>::~Publication()
+
+.text._ZN4uORB11PublicationI24vehicle_rates_setpoint_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI24vehicle_rates_setpoint_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_rates_setpoint_s>::~Publication()
+
+.text._ZN4uORB11PublicationI27vehicle_attitude_setpoint_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI27vehicle_attitude_setpoint_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_attitude_setpoint_s>::~Publication()
+                0x00000000                uORB::Publication<vehicle_attitude_setpoint_s>::~Publication()
+
+.text._ZN4uORB11PublicationI27vehicle_attitude_setpoint_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI27vehicle_attitude_setpoint_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_attitude_setpoint_s>::~Publication()
+
+.text._ZN4uORB11PublicationI34vehicle_global_velocity_setpoint_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI34vehicle_global_velocity_setpoint_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_global_velocity_setpoint_s>::~Publication()
+                0x00000000                uORB::Publication<vehicle_global_velocity_setpoint_s>::~Publication()
+
+.text._ZN4uORB11PublicationI34vehicle_global_velocity_setpoint_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI34vehicle_global_velocity_setpoint_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_global_velocity_setpoint_s>::~Publication()
+
+.text._ZN4uORB11PublicationI19actuator_controls_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI19actuator_controls_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<actuator_controls_s>::~Publication()
+                0x00000000                uORB::Publication<actuator_controls_s>::~Publication()
+
+.text._ZN4uORB11PublicationI19actuator_controls_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI19actuator_controls_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<actuator_controls_s>::~Publication()
+
+.text._ZN4uORB11PublicationI17debug_key_value_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI17debug_key_value_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<debug_key_value_s>::~Publication()
+                0x00000000                uORB::Publication<debug_key_value_s>::~Publication()
+
+.text._ZN4uORB11PublicationI17debug_key_value_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI17debug_key_value_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<debug_key_value_s>::~Publication()
+
+.text._ZN4uORB11PublicationI25vehicle_global_position_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI25vehicle_global_position_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_global_position_s>::~Publication()
+                0x00000000                uORB::Publication<vehicle_global_position_s>::~Publication()
+
+.text._ZN4uORB11PublicationI25vehicle_global_position_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI25vehicle_global_position_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_global_position_s>::~Publication()
+
+.text._ZN4uORB11PublicationI24vehicle_local_position_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI24vehicle_local_position_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_local_position_s>::~Publication()
+                0x00000000                uORB::Publication<vehicle_local_position_s>::~Publication()
+
+.text._ZN4uORB11PublicationI24vehicle_local_position_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI24vehicle_local_position_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_local_position_s>::~Publication()
+
+.text._ZN4uORB11PublicationI18vehicle_attitude_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB11PublicationI18vehicle_attitude_sED2Ev
+                0x00000000       0x30 Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_attitude_s>::~Publication()
+                0x00000000                uORB::Publication<vehicle_attitude_s>::~Publication()
+
+.text._ZN4uORB11PublicationI18vehicle_attitude_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB11PublicationI18vehicle_attitude_sED0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::Publication<vehicle_attitude_s>::~Publication()
+
+.text._ZN4uORB15PublicationBaseD0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB15PublicationBaseD0Ev
+                0x00000000       0x2c Publication.cpp.o
+                0x00000000                uORB::PublicationBase::~PublicationBase()
+
+.text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sE7getDataEv
+                0x00000000       0x3c
+ .text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sE7getDataEv
+                0x00000000       0x3c Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_rates_setpoint_s>::getData()
+
+.text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_rates_setpoint_s>::getDataVoidPtr()
+
+.text._ZN8ListNodeIPN4uORB16SubscriptionBaseEEC2Ev
+                0x00000000       0x24
+ .text._ZN8ListNodeIPN4uORB16SubscriptionBaseEEC2Ev
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                ListNode<uORB::SubscriptionBase*>::ListNode()
+                0x00000000                ListNode<uORB::SubscriptionBase*>::ListNode()
+
+.text._ZN4ListIPN4uORB16SubscriptionBaseEE7getHeadEv
+                0x00000000       0x24
+ .text._ZN4ListIPN4uORB16SubscriptionBaseEE7getHeadEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                List<uORB::SubscriptionBase*>::getHead()
+
+.text._ZN8ListNodeIPN4uORB16SubscriptionBaseEE10setSiblingES2_
+                0x00000000       0x24
+ .text._ZN8ListNodeIPN4uORB16SubscriptionBaseEE10setSiblingES2_
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                ListNode<uORB::SubscriptionBase*>::setSibling(uORB::SubscriptionBase*)
+
+.text._ZN4ListIPN4uORB16SubscriptionBaseEE7setHeadERS2_
+                0x00000000       0x28
+ .text._ZN4ListIPN4uORB16SubscriptionBaseEE7setHeadERS2_
+                0x00000000       0x28 Subscription.cpp.o
+                0x00000000                List<uORB::SubscriptionBase*>::setHead(uORB::SubscriptionBase*&)
+
+.text._ZN4ListIPN4uORB16SubscriptionBaseEE3addES2_
+                0x00000000       0x44
+ .text._ZN4ListIPN4uORB16SubscriptionBaseEE3addES2_
+                0x00000000       0x44 Subscription.cpp.o
+                0x00000000                List<uORB::SubscriptionBase*>::add(uORB::SubscriptionBase*)
+
+.text._ZN4uORB16SubscriptionBaseC2EP4ListIPS0_EPK12orb_metadata
+                0x00000000       0x40
+ .text._ZN4uORB16SubscriptionBaseC2EP4ListIPS0_EPK12orb_metadata
+                0x00000000       0x40 Subscription.cpp.o
+                0x00000000                uORB::SubscriptionBase::SubscriptionBase(List<uORB::SubscriptionBase*>*, orb_metadata const*)
+                0x00000000                uORB::SubscriptionBase::SubscriptionBase(List<uORB::SubscriptionBase*>*, orb_metadata const*)
+
+.text._ZN4uORB16SubscriptionBase7getMetaEv
+                0x00000000       0x24
+ .text._ZN4uORB16SubscriptionBase7getMetaEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::SubscriptionBase::getMeta()
+
+.text._ZN4uORB16SubscriptionBase9setHandleEi
+                0x00000000       0x24
+ .text._ZN4uORB16SubscriptionBase9setHandleEi
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::SubscriptionBase::setHandle(int)
+
+.text._ZN4uORB16SubscriptionBase9getHandleEv
+                0x00000000       0x24
+ .text._ZN4uORB16SubscriptionBase9getHandleEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::SubscriptionBase::getHandle()
+
+.text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sE7getDataEv
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sE7getDataEv
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_setpoint_s>::getData()
+
+.text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_setpoint_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI24vehicle_local_position_sE7getDataEv
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI24vehicle_local_position_sE7getDataEv
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_s>::getData()
+
+.text._ZN4uORB12SubscriptionI24vehicle_local_position_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI24vehicle_local_position_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sE7getDataEv
+                0x00000000       0x40
+ .text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sE7getDataEv
+                0x00000000       0x40 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_setpoint_s>::getData()
+
+.text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_setpoint_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI25manual_control_setpoint_sE7getDataEv
+                0x00000000       0x48
+ .text._ZN4uORB12SubscriptionI25manual_control_setpoint_sE7getDataEv
+                0x00000000       0x48 Subscription.cpp.o
+                0x00000000                uORB::Subscription<manual_control_setpoint_s>::getData()
+
+.text._ZN4uORB12SubscriptionI25manual_control_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI25manual_control_setpoint_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<manual_control_setpoint_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI16vehicle_status_sE7getDataEv
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI16vehicle_status_sE7getDataEv
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_status_s>::getData()
+
+.text._ZN4uORB12SubscriptionI16vehicle_status_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI16vehicle_status_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_status_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sE7getDataEv
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sE7getDataEv
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<position_setpoint_triplet_s>::getData()
+
+.text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<position_setpoint_triplet_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI10encoders_sE7getDataEv
+                0x00000000       0x48
+ .text._ZN4uORB12SubscriptionI10encoders_sE7getDataEv
+                0x00000000       0x48 Subscription.cpp.o
+                0x00000000                uORB::Subscription<encoders_s>::getData()
+
+.text._ZN4uORB12SubscriptionI10encoders_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI10encoders_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<encoders_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI25vehicle_global_position_sE7getDataEv
+                0x00000000       0x48
+ .text._ZN4uORB12SubscriptionI25vehicle_global_position_sE7getDataEv
+                0x00000000       0x48 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_global_position_s>::getData()
+
+.text._ZN4uORB12SubscriptionI25vehicle_global_position_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI25vehicle_global_position_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_global_position_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI18vehicle_attitude_sE7getDataEv
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI18vehicle_attitude_sE7getDataEv
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_s>::getData()
+
+.text._ZN4uORB12SubscriptionI18vehicle_attitude_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI18vehicle_attitude_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI17sensor_combined_sE7getDataEv
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI17sensor_combined_sE7getDataEv
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<sensor_combined_s>::getData()
+
+.text._ZN4uORB12SubscriptionI17sensor_combined_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI17sensor_combined_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<sensor_combined_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI22vehicle_gps_position_sE7getDataEv
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI22vehicle_gps_position_sE7getDataEv
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_gps_position_s>::getData()
+
+.text._ZN4uORB12SubscriptionI22vehicle_gps_position_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI22vehicle_gps_position_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_gps_position_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI19actuator_controls_sE7getDataEv
+                0x00000000       0x40
+ .text._ZN4uORB12SubscriptionI19actuator_controls_sE7getDataEv
+                0x00000000       0x40 Subscription.cpp.o
+                0x00000000                uORB::Subscription<actuator_controls_s>::getData()
+
+.text._ZN4uORB12SubscriptionI19actuator_controls_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI19actuator_controls_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<actuator_controls_s>::getDataVoidPtr()
+
+.text._ZN4uORB12SubscriptionI18parameter_update_sE7getDataEv
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI18parameter_update_sE7getDataEv
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<parameter_update_s>::getData()
+
+.text._ZN4uORB12SubscriptionI18parameter_update_sE14getDataVoidPtrEv
+                0x00000000       0x24
+ .text._ZN4uORB12SubscriptionI18parameter_update_sE14getDataVoidPtrEv
+                0x00000000       0x24 Subscription.cpp.o
+                0x00000000                uORB::Subscription<parameter_update_s>::getDataVoidPtr()
+
+.text._ZN4uORB16SubscriptionBaseD2Ev
+                0x00000000       0x30
+ .text._ZN4uORB16SubscriptionBaseD2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::SubscriptionBase::~SubscriptionBase()
+                0x00000000                uORB::SubscriptionBase::~SubscriptionBase()
+
+.text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_rates_setpoint_s>::~Subscription()
+                0x00000000                uORB::Subscription<vehicle_rates_setpoint_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_rates_setpoint_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_setpoint_s>::~Subscription()
+                0x00000000                uORB::Subscription<vehicle_attitude_setpoint_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_setpoint_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI24vehicle_local_position_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI24vehicle_local_position_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_s>::~Subscription()
+                0x00000000                uORB::Subscription<vehicle_local_position_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI24vehicle_local_position_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI24vehicle_local_position_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_setpoint_s>::~Subscription()
+                0x00000000                uORB::Subscription<vehicle_local_position_setpoint_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_setpoint_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI25manual_control_setpoint_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI25manual_control_setpoint_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<manual_control_setpoint_s>::~Subscription()
+                0x00000000                uORB::Subscription<manual_control_setpoint_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI25manual_control_setpoint_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI25manual_control_setpoint_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<manual_control_setpoint_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI16vehicle_status_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI16vehicle_status_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_status_s>::~Subscription()
+                0x00000000                uORB::Subscription<vehicle_status_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI16vehicle_status_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI16vehicle_status_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_status_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<position_setpoint_triplet_s>::~Subscription()
+                0x00000000                uORB::Subscription<position_setpoint_triplet_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<position_setpoint_triplet_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI10encoders_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI10encoders_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<encoders_s>::~Subscription()
+                0x00000000                uORB::Subscription<encoders_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI10encoders_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI10encoders_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<encoders_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI25vehicle_global_position_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI25vehicle_global_position_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_global_position_s>::~Subscription()
+                0x00000000                uORB::Subscription<vehicle_global_position_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI25vehicle_global_position_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI25vehicle_global_position_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_global_position_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI18vehicle_attitude_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI18vehicle_attitude_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_s>::~Subscription()
+                0x00000000                uORB::Subscription<vehicle_attitude_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI18vehicle_attitude_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI18vehicle_attitude_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI17sensor_combined_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI17sensor_combined_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<sensor_combined_s>::~Subscription()
+                0x00000000                uORB::Subscription<sensor_combined_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI17sensor_combined_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI17sensor_combined_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<sensor_combined_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI22vehicle_gps_position_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI22vehicle_gps_position_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_gps_position_s>::~Subscription()
+                0x00000000                uORB::Subscription<vehicle_gps_position_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI22vehicle_gps_position_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI22vehicle_gps_position_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_gps_position_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI19actuator_controls_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI19actuator_controls_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<actuator_controls_s>::~Subscription()
+                0x00000000                uORB::Subscription<actuator_controls_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI19actuator_controls_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI19actuator_controls_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<actuator_controls_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI18parameter_update_sED2Ev
+                0x00000000       0x30
+ .text._ZN4uORB12SubscriptionI18parameter_update_sED2Ev
+                0x00000000       0x30 Subscription.cpp.o
+                0x00000000                uORB::Subscription<parameter_update_s>::~Subscription()
+                0x00000000                uORB::Subscription<parameter_update_s>::~Subscription()
+
+.text._ZN4uORB12SubscriptionI18parameter_update_sED0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB12SubscriptionI18parameter_update_sED0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::Subscription<parameter_update_s>::~Subscription()
+
+.text._ZN4uORB16SubscriptionBaseD0Ev
+                0x00000000       0x2c
+ .text._ZN4uORB16SubscriptionBaseD0Ev
+                0x00000000       0x2c Subscription.cpp.o
+                0x00000000                uORB::SubscriptionBase::~SubscriptionBase()
+
+.text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI24vehicle_rates_setpoint_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_rates_setpoint_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<vehicle_rates_setpoint_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI27vehicle_attitude_setpoint_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_setpoint_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<vehicle_attitude_setpoint_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI24vehicle_local_position_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI24vehicle_local_position_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<vehicle_local_position_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI33vehicle_local_position_setpoint_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_local_position_setpoint_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<vehicle_local_position_setpoint_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI25manual_control_setpoint_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI25manual_control_setpoint_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<manual_control_setpoint_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<manual_control_setpoint_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI16vehicle_status_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI16vehicle_status_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_status_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<vehicle_status_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI27position_setpoint_triplet_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<position_setpoint_triplet_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<position_setpoint_triplet_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI10encoders_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI10encoders_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<encoders_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<encoders_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI25vehicle_global_position_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI25vehicle_global_position_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_global_position_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<vehicle_global_position_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI18vehicle_attitude_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI18vehicle_attitude_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_attitude_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<vehicle_attitude_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI17sensor_combined_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI17sensor_combined_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<sensor_combined_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<sensor_combined_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI22vehicle_gps_position_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI22vehicle_gps_position_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<vehicle_gps_position_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<vehicle_gps_position_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI19actuator_controls_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68
+ .text._ZN4uORB12SubscriptionI19actuator_controls_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x68 Subscription.cpp.o
+                0x00000000                uORB::Subscription<actuator_controls_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<actuator_controls_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB12SubscriptionI18parameter_update_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x64
+ .text._ZN4uORB12SubscriptionI18parameter_update_sEC2EP4ListIPNS_16SubscriptionBaseEEPK12orb_metadataj
+                0x00000000       0x64 Subscription.cpp.o
+                0x00000000                uORB::Subscription<parameter_update_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+                0x00000000                uORB::Subscription<parameter_update_s>::Subscription(List<uORB::SubscriptionBase*>*, orb_metadata const*, unsigned int)
+
+.text._ZN4uORB16SubscriptionBase7updatedEv
+                0x00000000       0x34
+ .text._ZN4uORB16SubscriptionBase7updatedEv
+                0x00000000       0x34 Subscription.cpp.o
+                0x00000000                uORB::SubscriptionBase::updated()
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.1  0x00000000      0x5f7
+ .rodata.str1.1
+                0x00000000      0x222 uORB.cpp.o
+ .rodata.str1.1
+                0x00000222      0x3d5 objects_common.cpp.o
+
+.rodata._ZTV10ORBDevNode
+                0x00000000       0x60
+ .rodata._ZTV10ORBDevNode
+                0x00000000       0x60 uORB.cpp.o
+                0x00000000                vtable for ORBDevNode
+
+.rodata._ZN12_GLOBAL__N_1L14__orb_orb_testE
+                0x00000000        0x8
+ .rodata._ZN12_GLOBAL__N_1L14__orb_orb_testE
+                0x00000000        0x8 uORB.cpp.o
+
+.rodata._ZTV12ORBDevMaster
+                0x00000000       0x60
+ .rodata._ZTV12ORBDevMaster
+                0x00000000       0x60 uORB.cpp.o
+                0x00000000                vtable for ORBDevMaster
+
+.rodata.__orb_airspeed
+                0x00000000        0x8
+ .rodata.__orb_airspeed
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_airspeed
+
+.rodata.__orb_actuator_controls_1
+                0x00000000        0x8
+ .rodata.__orb_actuator_controls_1
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_actuator_controls_1
+
+.rodata.__orb_debug_key_value
+                0x00000000        0x8
+ .rodata.__orb_debug_key_value
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_debug_key_value
+
+.rodata.__orb_vehicle_global_position
+                0x00000000        0x8
+ .rodata.__orb_vehicle_global_position
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_global_position
+
+.rodata.__orb_actuator_controls_3
+                0x00000000        0x8
+ .rodata.__orb_actuator_controls_3
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_actuator_controls_3
+
+.rodata.__orb_vehicle_vicon_position
+                0x00000000        0x8
+ .rodata.__orb_vehicle_vicon_position
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_vicon_position
+
+.rodata.__orb_subsystem_info
+                0x00000000        0x8
+ .rodata.__orb_subsystem_info
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_subsystem_info
+
+.rodata.__orb_vehicle_control_debug
+                0x00000000        0x8
+ .rodata.__orb_vehicle_control_debug
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_control_debug
+
+.rodata.__orb_output_pwm
+                0x00000000        0x8
+ .rodata.__orb_output_pwm
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_output_pwm
+
+.rodata.__orb_vehicle_command
+                0x00000000        0x8
+ .rodata.__orb_vehicle_command
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_command
+
+.rodata.__orb_vehicle_gps_position
+                0x00000000        0x8
+ .rodata.__orb_vehicle_gps_position
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_gps_position
+
+.rodata.__orb_telemetry_status
+                0x00000000        0x8
+ .rodata.__orb_telemetry_status
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_telemetry_status
+
+.rodata.__orb_vehicle_control_mode
+                0x00000000        0x8
+ .rodata.__orb_vehicle_control_mode
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_control_mode
+
+.rodata.__orb_filtered_bottom_flow
+                0x00000000        0x8
+ .rodata.__orb_filtered_bottom_flow
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_filtered_bottom_flow
+
+.rodata.__orb_servorail_status
+                0x00000000        0x8
+ .rodata.__orb_servorail_status
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_servorail_status
+
+.rodata.__orb_differential_pressure
+                0x00000000        0x8
+ .rodata.__orb_differential_pressure
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_differential_pressure
+
+.rodata.__orb_actuator_controls_0
+                0x00000000        0x8
+ .rodata.__orb_actuator_controls_0
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_actuator_controls_0
+
+.rodata.__orb_omnidirectional_flow
+                0x00000000        0x8
+ .rodata.__orb_omnidirectional_flow
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_omnidirectional_flow
+
+.rodata.__orb_actuator_controls_2
+                0x00000000        0x8
+ .rodata.__orb_actuator_controls_2
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_actuator_controls_2
+
+.rodata.__orb_battery_status
+                0x00000000        0x8
+ .rodata.__orb_battery_status
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_battery_status
+
+.rodata.__orb_sensor_gyro
+                0x00000000        0x8
+ .rodata.__orb_sensor_gyro
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_sensor_gyro
+
+.rodata.__orb_optical_flow
+                0x00000000        0x8
+ .rodata.__orb_optical_flow
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_optical_flow
+
+.rodata.__orb_vehicle_local_position_setpoint
+                0x00000000        0x8
+ .rodata.__orb_vehicle_local_position_setpoint
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_local_position_setpoint
+
+.rodata.__orb_input_rc
+                0x00000000        0x8
+ .rodata.__orb_input_rc
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_input_rc
+
+.rodata.__orb_position_setpoint_triplet
+                0x00000000        0x8
+ .rodata.__orb_position_setpoint_triplet
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_position_setpoint_triplet
+
+.rodata.__orb_mission_result
+                0x00000000        0x8
+ .rodata.__orb_mission_result
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_mission_result
+
+.rodata.__orb_actuator_armed
+                0x00000000        0x8
+ .rodata.__orb_actuator_armed
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_actuator_armed
+
+.rodata.__orb_encoders
+                0x00000000        0x8
+ .rodata.__orb_encoders
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_encoders
+
+.rodata.__orb_vehicle_local_position
+                0x00000000        0x8
+ .rodata.__orb_vehicle_local_position
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_local_position
+
+.rodata.__orb_fence
+                0x00000000        0x8
+ .rodata.__orb_fence
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_fence
+
+.rodata.__orb_vehicle_rates_setpoint
+                0x00000000        0x8
+ .rodata.__orb_vehicle_rates_setpoint
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_rates_setpoint
+
+.rodata.__orb_sensor_baro
+                0x00000000        0x8
+ .rodata.__orb_sensor_baro
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_sensor_baro
+
+.rodata.__orb_navigation_capabilities
+                0x00000000        0x8
+ .rodata.__orb_navigation_capabilities
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_navigation_capabilities
+
+.rodata.__orb_esc_status
+                0x00000000        0x8
+ .rodata.__orb_esc_status
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_esc_status
+
+.rodata.__orb_mission
+                0x00000000        0x8
+ .rodata.__orb_mission
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_mission
+
+.rodata.__orb_vehicle_global_velocity_setpoint
+                0x00000000        0x8
+ .rodata.__orb_vehicle_global_velocity_setpoint
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_global_velocity_setpoint
+
+.rodata.__orb_vehicle_status
+                0x00000000        0x8
+ .rodata.__orb_vehicle_status
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_status
+
+.rodata.__orb_sensor_accel
+                0x00000000        0x8
+ .rodata.__orb_sensor_accel
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_sensor_accel
+
+.rodata.__orb_sensor_mag
+                0x00000000        0x8
+ .rodata.__orb_sensor_mag
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_sensor_mag
+
+.rodata.__orb_sensor_combined
+                0x00000000        0x8
+ .rodata.__orb_sensor_combined
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_sensor_combined
+
+.rodata.__orb_home_position
+                0x00000000        0x8
+ .rodata.__orb_home_position
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_home_position
+
+.rodata.__orb_offboard_control_setpoint
+                0x00000000        0x8
+ .rodata.__orb_offboard_control_setpoint
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_offboard_control_setpoint
+
+.rodata.__orb_manual_control_setpoint
+                0x00000000        0x8
+ .rodata.__orb_manual_control_setpoint
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_manual_control_setpoint
+
+.rodata.__orb_actuator_outputs_0
+                0x00000000        0x8
+ .rodata.__orb_actuator_outputs_0
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_actuator_outputs_0
+
+.rodata.__orb_actuator_outputs_1
+                0x00000000        0x8
+ .rodata.__orb_actuator_outputs_1
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_actuator_outputs_1
+
+.rodata.__orb_actuator_outputs_2
+                0x00000000        0x8
+ .rodata.__orb_actuator_outputs_2
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_actuator_outputs_2
+
+.rodata.__orb_actuator_outputs_3
+                0x00000000        0x8
+ .rodata.__orb_actuator_outputs_3
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_actuator_outputs_3
+
+.rodata.__orb_vehicle_bodyframe_speed_setpoint
+                0x00000000        0x8
+ .rodata.__orb_vehicle_bodyframe_speed_setpoint
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_bodyframe_speed_setpoint
+
+.rodata.__orb_system_power
+                0x00000000        0x8
+ .rodata.__orb_system_power
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_system_power
+
+.rodata.__orb_sensor_range_finder
+                0x00000000        0x8
+ .rodata.__orb_sensor_range_finder
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_sensor_range_finder
+
+.rodata.__orb_vehicle_attitude
+                0x00000000        0x8
+ .rodata.__orb_vehicle_attitude
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_attitude
+
+.rodata.__orb_rc_channels
+                0x00000000        0x8
+ .rodata.__orb_rc_channels
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_rc_channels
+
+.rodata.__orb_safety
+                0x00000000        0x8
+ .rodata.__orb_safety
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_safety
+
+.rodata.__orb_vehicle_attitude_setpoint
+                0x00000000        0x8
+ .rodata.__orb_vehicle_attitude_setpoint
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_vehicle_attitude_setpoint
+
+.rodata.__orb_onboard_mission
+                0x00000000        0x8
+ .rodata.__orb_onboard_mission
+                0x00000000        0x8 objects_common.cpp.o
+                0x00000000                __orb_onboard_mission
+
+.rodata._ZTVN4uORB11PublicationI18vehicle_attitude_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI18vehicle_attitude_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<vehicle_attitude_s>
+
+.rodata._ZTVN4uORB11PublicationI24vehicle_local_position_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI24vehicle_local_position_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<vehicle_local_position_s>
+
+.rodata._ZTVN4uORB11PublicationI25vehicle_global_position_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI25vehicle_global_position_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<vehicle_global_position_s>
+
+.rodata._ZTVN4uORB11PublicationI17debug_key_value_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI17debug_key_value_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<debug_key_value_s>
+
+.rodata._ZTVN4uORB11PublicationI19actuator_controls_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI19actuator_controls_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<actuator_controls_s>
+
+.rodata._ZTVN4uORB11PublicationI34vehicle_global_velocity_setpoint_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI34vehicle_global_velocity_setpoint_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<vehicle_global_velocity_setpoint_s>
+
+.rodata._ZTVN4uORB11PublicationI27vehicle_attitude_setpoint_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI27vehicle_attitude_setpoint_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<vehicle_attitude_setpoint_s>
+
+.rodata._ZTVN4uORB11PublicationI24vehicle_rates_setpoint_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI24vehicle_rates_setpoint_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<vehicle_rates_setpoint_s>
+
+.rodata._ZTVN4uORB11PublicationI18actuator_outputs_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI18actuator_outputs_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<actuator_outputs_s>
+
+.rodata._ZTVN4uORB11PublicationI10encoders_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB11PublicationI10encoders_sEE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::Publication<encoders_s>
+
+.rodata._ZTVN4uORB15PublicationBaseE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB15PublicationBaseE
+                0x00000000       0x18 Publication.cpp.o
+                0x00000000                vtable for uORB::PublicationBase
+
+.rodata._ZTVN4uORB12SubscriptionI18parameter_update_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI18parameter_update_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<parameter_update_s>
+
+.rodata._ZTVN4uORB12SubscriptionI19actuator_controls_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI19actuator_controls_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<actuator_controls_s>
+
+.rodata._ZTVN4uORB12SubscriptionI22vehicle_gps_position_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI22vehicle_gps_position_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<vehicle_gps_position_s>
+
+.rodata._ZTVN4uORB12SubscriptionI17sensor_combined_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI17sensor_combined_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<sensor_combined_s>
+
+.rodata._ZTVN4uORB12SubscriptionI18vehicle_attitude_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI18vehicle_attitude_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<vehicle_attitude_s>
+
+.rodata._ZTVN4uORB12SubscriptionI25vehicle_global_position_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI25vehicle_global_position_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<vehicle_global_position_s>
+
+.rodata._ZTVN4uORB12SubscriptionI10encoders_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI10encoders_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<encoders_s>
+
+.rodata._ZTVN4uORB12SubscriptionI27position_setpoint_triplet_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI27position_setpoint_triplet_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<position_setpoint_triplet_s>
+
+.rodata._ZTVN4uORB12SubscriptionI16vehicle_status_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI16vehicle_status_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<vehicle_status_s>
+
+.rodata._ZTVN4uORB12SubscriptionI25manual_control_setpoint_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI25manual_control_setpoint_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<manual_control_setpoint_s>
+
+.rodata._ZTVN4uORB12SubscriptionI33vehicle_local_position_setpoint_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI33vehicle_local_position_setpoint_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<vehicle_local_position_setpoint_s>
+
+.rodata._ZTVN4uORB12SubscriptionI24vehicle_local_position_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI24vehicle_local_position_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<vehicle_local_position_s>
+
+.rodata._ZTVN4uORB12SubscriptionI27vehicle_attitude_setpoint_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI27vehicle_attitude_setpoint_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<vehicle_attitude_setpoint_s>
+
+.rodata._ZTVN4uORB12SubscriptionI24vehicle_rates_setpoint_sEE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB12SubscriptionI24vehicle_rates_setpoint_sEE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::Subscription<vehicle_rates_setpoint_s>
+
+.rodata._ZTVN4uORB16SubscriptionBaseE
+                0x00000000       0x18
+ .rodata._ZTVN4uORB16SubscriptionBaseE
+                0x00000000       0x18 Subscription.cpp.o
+                0x00000000                vtable for uORB::SubscriptionBase
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 uORB.cpp.o
+ .data          0x00000000        0x0 objects_common.cpp.o
+ .data          0x00000000        0x0 Publication.cpp.o
+ .data          0x00000000        0x0 Subscription.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 uORB.cpp.o
+ .bss           0x00000000        0x0 objects_common.cpp.o
+ .bss           0x00000000        0x0 Publication.cpp.o
+ .bss           0x00000000        0x0 Subscription.cpp.o
+ *(COMMON)
+
+.bss._ZN12_GLOBAL__N_15g_devE
+                0x00000000        0x4
+ .bss._ZN12_GLOBAL__N_15g_devE
+                0x00000000        0x4 uORB.cpp.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x1c4
+ *(.comment)
+ .comment       0x00000000       0x71 uORB.cpp.o
+ .comment       0x00000071       0x71 objects_common.cpp.o
+ .comment       0x000000e2       0x71 Publication.cpp.o
+ .comment       0x00000153       0x71 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 uORB.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 uORB.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 uORB.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Publication.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 Subscription.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x588
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x140 uORB.cpp.o
+ .debug_aranges
+                0x00000140      0x1a0 Publication.cpp.o
+ .debug_aranges
+                0x000002e0      0x2a8 Subscription.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x776f
+ *(.debug_info)
+ .debug_info    0x00000000     0x2396 uORB.cpp.o
+ .debug_info    0x00002396      0x520 objects_common.cpp.o
+ .debug_info    0x000028b6     0x1c6a Publication.cpp.o
+ .debug_info    0x00004520     0x324f Subscription.cpp.o
+
+.debug_abbrev   0x00000000      0xc8c
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x694 uORB.cpp.o
+ .debug_abbrev  0x00000694       0x95 objects_common.cpp.o
+ .debug_abbrev  0x00000729      0x298 Publication.cpp.o
+ .debug_abbrev  0x000009c1      0x2cb Subscription.cpp.o
+
+.debug_line     0x00000000     0x1ad7
+ *(.debug_line)
+ .debug_line    0x00000000      0x88e uORB.cpp.o
+ .debug_line    0x0000088e      0x1f9 objects_common.cpp.o
+ .debug_line    0x00000a87      0x674 Publication.cpp.o
+ .debug_line    0x000010fb      0x9dc Subscription.cpp.o
+
+.debug_frame    0x00000000     0x1430
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x4bc uORB.cpp.o
+ .debug_frame   0x000004bc      0x5a8 Publication.cpp.o
+ .debug_frame   0x00000a64      0x9cc Subscription.cpp.o
+
+.debug_str      0x00000000     0x3d83
+ *(.debug_str)
+ .debug_str     0x00000000      0xd98 uORB.cpp.o
+ .debug_str     0x00000d98      0x6f1 objects_common.cpp.o
+ .debug_str     0x00001489      0xb7f Publication.cpp.o
+ .debug_str     0x00002008     0x1d7b Subscription.cpp.o
+
+.debug_loc      0x00000000     0x3b18
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x129f uORB.cpp.o
+ .debug_loc     0x0000129f      0xed8 Publication.cpp.o
+ .debug_loc     0x00002177     0x19a1 Subscription.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x738
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x310 uORB.cpp.o
+ .debug_ranges  0x00000310      0x190 Publication.cpp.o
+ .debug_ranges  0x000004a0      0x298 Subscription.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 uORB.cpp.o
+ .ARM.attributes
+                0x00000037       0x37 objects_common.cpp.o
+ .ARM.attributes
+                0x0000006e       0x37 Publication.cpp.o
+ .ARM.attributes
+                0x000000a5       0x37 Subscription.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/c/px4/workspace/PX4Firmware/src/modules/uORB/module.pre.o elf32-littlearm)

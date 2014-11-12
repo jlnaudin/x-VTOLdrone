@@ -1,0 +1,1517 @@
+
+Discarded input sections
+
+ .group         0x00000000        0xc ../systemlib/mixer/mixer_group.cpp.o
+ .group         0x00000000        0x8 ../systemlib/mixer/mixer_group.cpp.o
+ .text._ZN5MixerD2Ev
+                0x00000000        0xc ../systemlib/mixer/mixer_group.cpp.o
+ .text._ZN5MixerD0Ev
+                0x00000000       0x14 ../systemlib/mixer/mixer_group.cpp.o
+ .rodata._ZTV5Mixer
+                0x00000000       0x18 ../systemlib/mixer/mixer_group.cpp.o
+ .group         0x00000000        0xc ../systemlib/mixer/mixer_multirotor.cpp.o
+ .group         0x00000000        0x8 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .text._ZN5MixerD2Ev
+                0x00000000        0xc ../systemlib/mixer/mixer_multirotor.cpp.o
+ .text._ZN5MixerD0Ev
+                0x00000000       0x14 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .rodata._ZTV5Mixer
+                0x00000000       0x18 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .group         0x00000000        0xc ../systemlib/mixer/mixer_simple.cpp.o
+ .group         0x00000000        0x8 ../systemlib/mixer/mixer_simple.cpp.o
+ .text._ZN5MixerD2Ev
+                0x00000000        0xc ../systemlib/mixer/mixer_simple.cpp.o
+ .text._ZN5MixerD0Ev
+                0x00000000       0x14 ../systemlib/mixer/mixer_simple.cpp.o
+ .rodata._ZTV5Mixer
+                0x00000000       0x18 ../systemlib/mixer/mixer_simple.cpp.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD adc.c.o
+LOAD controls.c.o
+LOAD dsm.c.o
+LOAD px4io.c.o
+LOAD registers.c.o
+LOAD safety.c.o
+LOAD sbus.c.o
+LOAD ../systemlib/up_cxxinitialize.c.o
+LOAD ../systemlib/perf_counter.c.o
+LOAD mixer.cpp.o
+LOAD ../systemlib/mixer/mixer.cpp.o
+LOAD ../systemlib/mixer/mixer_group.cpp.o
+LOAD ../systemlib/mixer/mixer_multirotor.cpp.o
+LOAD ../systemlib/mixer/mixer_simple.cpp.o
+LOAD ../systemlib/pwm_limit/pwm_limit.c.o
+LOAD i2c.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 adc.c.o
+ .text          0x00000000        0x0 controls.c.o
+ .text          0x00000000        0x0 dsm.c.o
+ .text          0x00000000        0x0 px4io.c.o
+ .text          0x00000000        0x0 registers.c.o
+ .text          0x00000000        0x0 safety.c.o
+ .text          0x00000000        0x0 sbus.c.o
+ .text          0x00000000        0x0 ../systemlib/up_cxxinitialize.c.o
+ .text          0x00000000        0x0 ../systemlib/perf_counter.c.o
+ .text          0x00000000        0x0 mixer.cpp.o
+ .text          0x00000000        0x0 ../systemlib/mixer/mixer.cpp.o
+ .text          0x00000000        0x0 ../systemlib/mixer/mixer_group.cpp.o
+ .text          0x00000000        0x0 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .text          0x00000000        0x0 ../systemlib/mixer/mixer_simple.cpp.o
+ .text          0x00000000        0x0 ../systemlib/pwm_limit/pwm_limit.c.o
+ .text          0x00000000        0x0 i2c.c.o
+ *(.gnu.warning)
+
+.text.adc_init  0x00000000       0xc4
+ .text.adc_init
+                0x00000000       0xc4 adc.c.o
+                0x00000000                adc_init
+
+.text.adc_measure
+                0x00000000       0xa0
+ .text.adc_measure
+                0x00000000       0xa0 adc.c.o
+                0x00000000                adc_measure
+
+.text.controls_init
+                0x00000000       0xb0
+ .text.controls_init
+                0x00000000       0xb0 controls.c.o
+                0x00000000                controls_init
+
+.text.controls_tick
+                0x00000000      0x6e8
+ .text.controls_tick
+                0x00000000      0x6e8 controls.c.o
+                0x00000000                controls_tick
+
+.text.dsm_guess_format
+                0x00000000      0x254
+ .text.dsm_guess_format
+                0x00000000      0x254 dsm.c.o
+
+.text.dsm_init  0x00000000       0x70
+ .text.dsm_init
+                0x00000000       0x70 dsm.c.o
+                0x00000000                dsm_init
+
+.text.dsm_bind  0x00000000      0x100
+ .text.dsm_bind
+                0x00000000      0x100 dsm.c.o
+                0x00000000                dsm_bind
+
+.text.dsm_input
+                0x00000000      0x738
+ .text.dsm_input
+                0x00000000      0x738 dsm.c.o
+                0x00000000                dsm_input
+
+.text.isr_debug
+                0x00000000       0x5c
+ .text.isr_debug
+                0x00000000       0x5c px4io.c.o
+                0x00000000                isr_debug
+
+.text.schedule_reboot
+                0x00000000       0x1c
+ .text.schedule_reboot
+                0x00000000       0x1c px4io.c.o
+                0x00000000                schedule_reboot
+
+.text.user_start
+                0x00000000      0x33c
+ .text.user_start
+                0x00000000      0x33c px4io.c.o
+                0x00000000                user_start
+
+.text.pwm_configure_rates
+                0x00000000      0x2fc
+ .text.pwm_configure_rates
+                0x00000000      0x2fc registers.c.o
+
+.text.registers_set
+                0x00000000      0x878
+ .text.registers_set
+                0x00000000      0x878 registers.c.o
+                0x00000000                registers_set
+
+.text.registers_get
+                0x00000000      0x2b4
+ .text.registers_get
+                0x00000000      0x2b4 registers.c.o
+                0x00000000                registers_get
+
+.text.safety_check_button
+                0x00000000      0x104
+ .text.safety_check_button
+                0x00000000      0x104 safety.c.o
+
+.text.failsafe_blink
+                0x00000000       0x3c
+ .text.failsafe_blink
+                0x00000000       0x3c safety.c.o
+
+.text.safety_init
+                0x00000000       0x38
+ .text.safety_init
+                0x00000000       0x38 safety.c.o
+                0x00000000                safety_init
+
+.text.failsafe_led_init
+                0x00000000       0x38
+ .text.failsafe_led_init
+                0x00000000       0x38 safety.c.o
+                0x00000000                failsafe_led_init
+
+.text.sbus_init
+                0x00000000       0x80
+ .text.sbus_init
+                0x00000000       0x80 sbus.c.o
+                0x00000000                sbus_init
+
+.text.sbus_input
+                0x00000000      0x1e0
+ .text.sbus_input
+                0x00000000      0x1e0 sbus.c.o
+                0x00000000                sbus_input
+
+.text.up_cxxinitialize
+                0x00000000       0x94
+ .text.up_cxxinitialize
+                0x00000000       0x94 ../systemlib/up_cxxinitialize.c.o
+                0x00000000                up_cxxinitialize
+
+.text.perf_alloc
+                0x00000000       0x50
+ .text.perf_alloc
+                0x00000000       0x50 ../systemlib/perf_counter.c.o
+                0x00000000                perf_alloc
+
+.text.perf_free
+                0x00000000       0x1c
+ .text.perf_free
+                0x00000000       0x1c ../systemlib/perf_counter.c.o
+                0x00000000                perf_free
+
+.text.perf_count
+                0x00000000       0xa8
+ .text.perf_count
+                0x00000000       0xa8 ../systemlib/perf_counter.c.o
+                0x00000000                perf_count
+
+.text.perf_begin
+                0x00000000       0x1c
+ .text.perf_begin
+                0x00000000       0x1c ../systemlib/perf_counter.c.o
+                0x00000000                perf_begin
+
+.text.perf_end  0x00000000       0x84
+ .text.perf_end
+                0x00000000       0x84 ../systemlib/perf_counter.c.o
+                0x00000000                perf_end
+
+.text.perf_cancel
+                0x00000000       0x14
+ .text.perf_cancel
+                0x00000000       0x14 ../systemlib/perf_counter.c.o
+                0x00000000                perf_cancel
+
+.text.perf_reset
+                0x00000000       0x50
+ .text.perf_reset
+                0x00000000       0x50 ../systemlib/perf_counter.c.o
+                0x00000000                perf_reset
+
+.text.perf_print_counter
+                0x00000000       0xb8
+ .text.perf_print_counter
+                0x00000000       0xb8 ../systemlib/perf_counter.c.o
+                0x00000000                perf_print_counter
+
+.text.perf_event_count
+                0x00000000       0x24
+ .text.perf_event_count
+                0x00000000       0x24 ../systemlib/perf_counter.c.o
+                0x00000000                perf_event_count
+
+.text.perf_print_all
+                0x00000000       0x1c
+ .text.perf_print_all
+                0x00000000       0x1c ../systemlib/perf_counter.c.o
+                0x00000000                perf_print_all
+
+.text.perf_reset_all
+                0x00000000       0x5c
+ .text.perf_reset_all
+                0x00000000       0x5c ../systemlib/perf_counter.c.o
+                0x00000000                perf_reset_all
+
+.text._ZL14mixer_callbackjhhRf
+                0x00000000       0xcc
+ .text._ZL14mixer_callbackjhhRf
+                0x00000000       0xcc mixer.cpp.o
+
+.text.mixer_tick
+                0x00000000      0x5ac
+ .text.mixer_tick
+                0x00000000      0x5ac mixer.cpp.o
+                0x00000000                mixer_tick
+
+.text.mixer_handle_text
+                0x00000000      0x2e0
+ .text.mixer_handle_text
+                0x00000000      0x2e0 mixer.cpp.o
+                0x00000000                mixer_handle_text
+
+.text.startup._GLOBAL__sub_I_mixer_tick
+                0x00000000       0x34
+ .text.startup._GLOBAL__sub_I_mixer_tick
+                0x00000000       0x34 mixer.cpp.o
+
+.text._ZN5MixerD2Ev
+                0x00000000        0xc
+ .text._ZN5MixerD2Ev
+                0x00000000        0xc ../systemlib/mixer/mixer.cpp.o
+                0x00000000                Mixer::~Mixer()
+                0x00000000                Mixer::~Mixer()
+
+.text._ZN9NullMixerD2Ev
+                0x00000000        0xc
+ .text._ZN9NullMixerD2Ev
+                0x00000000        0xc ../systemlib/mixer/mixer.cpp.o
+                0x00000000                NullMixer::~NullMixer()
+                0x00000000                NullMixer::~NullMixer()
+
+.text._ZN9NullMixer3mixEPfj
+                0x00000000       0x10
+ .text._ZN9NullMixer3mixEPfj
+                0x00000000       0x10 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                NullMixer::mix(float*, unsigned int)
+
+.text._ZN9NullMixer15groups_requiredERj
+                0x00000000        0x4
+ .text._ZN9NullMixer15groups_requiredERj
+                0x00000000        0x4 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                NullMixer::groups_required(unsigned int&)
+
+.text._ZN9NullMixerD0Ev
+                0x00000000       0x14
+ .text._ZN9NullMixerD0Ev
+                0x00000000       0x14 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                NullMixer::~NullMixer()
+
+.text._ZN5MixerD0Ev
+                0x00000000       0x14
+ .text._ZN5MixerD0Ev
+                0x00000000       0x14 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                Mixer::~Mixer()
+
+.text._ZN5MixerC2EPFijhhRfEj
+                0x00000000       0x14
+ .text._ZN5MixerC2EPFijhhRfEj
+                0x00000000       0x14 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                Mixer::Mixer(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int)
+                0x00000000                Mixer::Mixer(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int)
+
+.text._ZN5Mixer11get_controlEhh
+                0x00000000       0x14
+ .text._ZN5Mixer11get_controlEhh
+                0x00000000       0x14 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                Mixer::get_control(unsigned char, unsigned char)
+
+.text._ZN5Mixer5scaleERK14mixer_scaler_sf
+                0x00000000       0x44
+ .text._ZN5Mixer5scaleERK14mixer_scaler_sf
+                0x00000000       0x44 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                Mixer::scale(mixer_scaler_s const&, float)
+
+.text._ZN5Mixer11scale_checkER14mixer_scaler_s
+                0x00000000       0x6c
+ .text._ZN5Mixer11scale_checkER14mixer_scaler_s
+                0x00000000       0x6c ../systemlib/mixer/mixer.cpp.o
+                0x00000000                Mixer::scale_check(mixer_scaler_s&)
+
+.text._ZN5Mixer7findtagEPKcRjc
+                0x00000000       0x70
+ .text._ZN5Mixer7findtagEPKcRjc
+                0x00000000       0x70 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                Mixer::findtag(char const*, unsigned int&, char)
+
+.text._ZN5Mixer8skiplineEPKcRj
+                0x00000000       0x30
+ .text._ZN5Mixer8skiplineEPKcRj
+                0x00000000       0x30 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                Mixer::skipline(char const*, unsigned int&)
+
+.text._ZN9NullMixerC2Ev
+                0x00000000       0x14
+ .text._ZN9NullMixerC2Ev
+                0x00000000       0x14 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                NullMixer::NullMixer()
+                0x00000000                NullMixer::NullMixer()
+
+.text._ZN9NullMixer9from_textEPKcRj
+                0x00000000       0x78
+ .text._ZN9NullMixer9from_textEPKcRj
+                0x00000000       0x78 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                NullMixer::from_text(char const*, unsigned int&)
+
+.text._ZN10MixerGroupD2Ev
+                0x00000000       0x30
+ .text._ZN10MixerGroupD2Ev
+                0x00000000       0x30 ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                MixerGroup::~MixerGroup()
+                0x00000000                MixerGroup::~MixerGroup()
+
+.text._ZN10MixerGroup3mixEPfj
+                0x00000000       0x34
+ .text._ZN10MixerGroup3mixEPfj
+                0x00000000       0x34 ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                MixerGroup::mix(float*, unsigned int)
+
+.text._ZN10MixerGroup15groups_requiredERj
+                0x00000000       0x1c
+ .text._ZN10MixerGroup15groups_requiredERj
+                0x00000000       0x1c ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                MixerGroup::groups_required(unsigned int&)
+
+.text._ZN10MixerGroupD0Ev
+                0x00000000       0x34
+ .text._ZN10MixerGroupD0Ev
+                0x00000000       0x34 ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                MixerGroup::~MixerGroup()
+
+.text._ZN10MixerGroupC2EPFijhhRfEj
+                0x00000000       0x18
+ .text._ZN10MixerGroupC2EPFijhhRfEj
+                0x00000000       0x18 ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                MixerGroup::MixerGroup(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int)
+                0x00000000                MixerGroup::MixerGroup(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int)
+
+.text._ZN10MixerGroup9add_mixerEP5Mixer
+                0x00000000       0x18
+ .text._ZN10MixerGroup9add_mixerEP5Mixer
+                0x00000000       0x18 ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                MixerGroup::add_mixer(Mixer*)
+
+.text._ZN10MixerGroup5resetEv
+                0x00000000       0x1c
+ .text._ZN10MixerGroup5resetEv
+                0x00000000       0x1c ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                MixerGroup::reset()
+
+.text._ZN10MixerGroup5countEv
+                0x00000000       0x14
+ .text._ZN10MixerGroup5countEv
+                0x00000000       0x14 ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                MixerGroup::count()
+
+.text._ZN10MixerGroup13load_from_bufEPKcRj
+                0x00000000       0x8c
+ .text._ZN10MixerGroup13load_from_bufEPKcRj
+                0x00000000       0x8c ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                MixerGroup::load_from_buf(char const*, unsigned int&)
+
+.text._ZN15MultirotorMixerD2Ev
+                0x00000000        0xc
+ .text._ZN15MultirotorMixerD2Ev
+                0x00000000        0xc ../systemlib/mixer/mixer_multirotor.cpp.o
+                0x00000000                MultirotorMixer::~MultirotorMixer()
+                0x00000000                MultirotorMixer::~MultirotorMixer()
+
+.text._ZN15MultirotorMixer15groups_requiredERj
+                0x00000000        0xc
+ .text._ZN15MultirotorMixer15groups_requiredERj
+                0x00000000        0xc ../systemlib/mixer/mixer_multirotor.cpp.o
+                0x00000000                MultirotorMixer::groups_required(unsigned int&)
+
+.text._ZN15MultirotorMixer3mixEPfj
+                0x00000000      0x190
+ .text._ZN15MultirotorMixer3mixEPfj
+                0x00000000      0x190 ../systemlib/mixer/mixer_multirotor.cpp.o
+                0x00000000                MultirotorMixer::mix(float*, unsigned int)
+
+.text._ZN15MultirotorMixerD0Ev
+                0x00000000       0x14
+ .text._ZN15MultirotorMixerD0Ev
+                0x00000000       0x14 ../systemlib/mixer/mixer_multirotor.cpp.o
+                0x00000000                MultirotorMixer::~MultirotorMixer()
+
+.text._ZN15MultirotorMixerC2EPFijhhRfEjNS_8GeometryEffff
+                0x00000000       0x4c
+ .text._ZN15MultirotorMixerC2EPFijhhRfEjNS_8GeometryEffff
+                0x00000000       0x4c ../systemlib/mixer/mixer_multirotor.cpp.o
+                0x00000000                MultirotorMixer::MultirotorMixer(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int, MultirotorMixer::Geometry, float, float, float, float)
+                0x00000000                MultirotorMixer::MultirotorMixer(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int, MultirotorMixer::Geometry, float, float, float, float)
+
+.text._ZN15MultirotorMixer9from_textEPFijhhRfEjPKcRj
+                0x00000000      0x1e0
+ .text._ZN15MultirotorMixer9from_textEPFijhhRfEjPKcRj
+                0x00000000      0x1e0 ../systemlib/mixer/mixer_multirotor.cpp.o
+                0x00000000                MultirotorMixer::from_text(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int, char const*, unsigned int&)
+
+.text._ZN11SimpleMixer15groups_requiredERj
+                0x00000000       0x2c
+ .text._ZN11SimpleMixer15groups_requiredERj
+                0x00000000       0x2c ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::groups_required(unsigned int&)
+
+.text._ZN11SimpleMixerD2Ev
+                0x00000000       0x20
+ .text._ZN11SimpleMixerD2Ev
+                0x00000000       0x20 ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::~SimpleMixer()
+                0x00000000                SimpleMixer::~SimpleMixer()
+
+.text._ZN11SimpleMixer3mixEPfj
+                0x00000000       0x70
+ .text._ZN11SimpleMixer3mixEPfj
+                0x00000000       0x70 ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::mix(float*, unsigned int)
+
+.text._ZN11SimpleMixerD0Ev
+                0x00000000       0x28
+ .text._ZN11SimpleMixerD0Ev
+                0x00000000       0x28 ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::~SimpleMixer()
+
+.text._ZN11SimpleMixerC2EPFijhhRfEjP14mixer_simple_s
+                0x00000000       0x18
+ .text._ZN11SimpleMixerC2EPFijhhRfEjP14mixer_simple_s
+                0x00000000       0x18 ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::SimpleMixer(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int, mixer_simple_s*)
+                0x00000000                SimpleMixer::SimpleMixer(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int, mixer_simple_s*)
+
+.text._ZN11SimpleMixer19parse_output_scalerEPKcRjR14mixer_scaler_s
+                0x00000000       0xcc
+ .text._ZN11SimpleMixer19parse_output_scalerEPKcRjR14mixer_scaler_s
+                0x00000000       0xcc ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::parse_output_scaler(char const*, unsigned int&, mixer_scaler_s&)
+
+.text._ZN11SimpleMixer20parse_control_scalerEPKcRjR14mixer_scaler_sRhS5_
+                0x00000000       0xdc
+ .text._ZN11SimpleMixer20parse_control_scalerEPKcRjR14mixer_scaler_sRhS5_
+                0x00000000       0xdc ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::parse_control_scaler(char const*, unsigned int&, mixer_scaler_s&, unsigned char&, unsigned char&)
+
+.text._ZN11SimpleMixer9from_textEPFijhhRfEjPKcRj
+                0x00000000       0xc0
+ .text._ZN11SimpleMixer9from_textEPFijhhRfEjPKcRj
+                0x00000000       0xc0 ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::from_text(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int, char const*, unsigned int&)
+
+.text._ZN11SimpleMixer9pwm_inputEPFijhhRfEjjttt
+                0x00000000       0xb8
+ .text._ZN11SimpleMixer9pwm_inputEPFijhhRfEjjttt
+                0x00000000       0xb8 ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::pwm_input(int (*)(unsigned int, unsigned char, unsigned char, float&), unsigned int, unsigned int, unsigned short, unsigned short, unsigned short)
+
+.text._ZN11SimpleMixer5checkEv
+                0x00000000       0x78
+ .text._ZN11SimpleMixer5checkEv
+                0x00000000       0x78 ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                SimpleMixer::check()
+
+.text.pwm_limit_init
+                0x00000000       0x10
+ .text.pwm_limit_init
+                0x00000000       0x10 ../systemlib/pwm_limit/pwm_limit.c.o
+                0x00000000                pwm_limit_init
+
+.text.pwm_limit_calc
+                0x00000000      0x568
+ .text.pwm_limit_calc
+                0x00000000      0x568 ../systemlib/pwm_limit/pwm_limit.c.o
+                0x00000000                pwm_limit_calc
+
+.text.i2c_interrupt
+                0x00000000      0x1ec
+ .text.i2c_interrupt
+                0x00000000      0x1ec i2c.c.o
+
+.text.interface_init
+                0x00000000      0x180
+ .text.interface_init
+                0x00000000      0x180 i2c.c.o
+                0x00000000                interface_init
+
+.text.i2c_reset
+                0x00000000       0x8c
+ .text.i2c_reset
+                0x00000000       0x8c i2c.c.o
+                0x00000000                i2c_reset
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.4  0x00000000      0x288
+ .rodata.str1.4
+                0x00000000        0x4 adc.c.o
+ .rodata.str1.4
+                0x00000004       0x48 controls.c.o
+ .rodata.str1.4
+                0x0000004c       0x80 px4io.c.o
+ .rodata.str1.4
+                0x000000cc       0x38 registers.c.o
+ .rodata.str1.4
+                0x00000104       0x24 sbus.c.o
+ .rodata.str1.4
+                0x00000128       0x8c ../systemlib/perf_counter.c.o
+ .rodata.str1.4
+                0x000001b4       0x64 mixer.cpp.o
+ .rodata.str1.4
+                0x00000218       0x38 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .rodata.str1.4
+                0x00000250       0x38 ../systemlib/mixer/mixer_simple.cpp.o
+
+.rodata.r_page_config
+                0x00000000       0x14
+ .rodata.r_page_config
+                0x00000000       0x14 registers.c.o
+
+.rodata.sbus_decoder
+                0x00000000       0xc0
+ .rodata.sbus_decoder
+                0x00000000       0xc0 sbus.c.o
+
+.rodata._ZTV5Mixer
+                0x00000000       0x18
+ .rodata._ZTV5Mixer
+                0x00000000       0x18 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                vtable for Mixer
+
+.rodata._ZTV9NullMixer
+                0x00000000       0x18
+ .rodata._ZTV9NullMixer
+                0x00000000       0x18 ../systemlib/mixer/mixer.cpp.o
+                0x00000000                vtable for NullMixer
+
+.rodata._ZTV10MixerGroup
+                0x00000000       0x18
+ .rodata._ZTV10MixerGroup
+                0x00000000       0x18 ../systemlib/mixer/mixer_group.cpp.o
+                0x00000000                vtable for MixerGroup
+
+.rodata._ZN12_GLOBAL__N_1L13_config_hex_xE
+                0x00000000       0x48
+ .rodata._ZN12_GLOBAL__N_1L13_config_hex_xE
+                0x00000000       0x48 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_1L14_config_octa_xE
+                0x00000000       0x60
+ .rodata._ZN12_GLOBAL__N_1L14_config_octa_xE
+                0x00000000       0x60 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_1L19_config_rotor_countE
+                0x00000000       0x24
+ .rodata._ZN12_GLOBAL__N_1L19_config_rotor_countE
+                0x00000000       0x24 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_1L16_config_hex_plusE
+                0x00000000       0x48
+ .rodata._ZN12_GLOBAL__N_1L16_config_hex_plusE
+                0x00000000       0x48 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_1L17_config_octa_plusE
+                0x00000000       0x60
+ .rodata._ZN12_GLOBAL__N_1L17_config_octa_plusE
+                0x00000000       0x60 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_1L17_config_quad_plusE
+                0x00000000       0x30
+ .rodata._ZN12_GLOBAL__N_1L17_config_quad_plusE
+                0x00000000       0x30 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_113_config_indexE
+                0x00000000       0x24
+ .rodata._ZN12_GLOBAL__N_113_config_indexE
+                0x00000000       0x24 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_1L17_config_quad_wideE
+                0x00000000       0x30
+ .rodata._ZN12_GLOBAL__N_1L17_config_quad_wideE
+                0x00000000       0x30 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_1L16_config_octa_coxE
+                0x00000000       0x60
+ .rodata._ZN12_GLOBAL__N_1L16_config_octa_coxE
+                0x00000000       0x60 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_1L14_config_quad_vE
+                0x00000000       0x30
+ .rodata._ZN12_GLOBAL__N_1L14_config_quad_vE
+                0x00000000       0x30 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZN12_GLOBAL__N_1L14_config_quad_xE
+                0x00000000       0x30
+ .rodata._ZN12_GLOBAL__N_1L14_config_quad_xE
+                0x00000000       0x30 ../systemlib/mixer/mixer_multirotor.cpp.o
+
+.rodata._ZTV15MultirotorMixer
+                0x00000000       0x18
+ .rodata._ZTV15MultirotorMixer
+                0x00000000       0x18 ../systemlib/mixer/mixer_multirotor.cpp.o
+                0x00000000                vtable for MultirotorMixer
+
+.rodata._ZTV11SimpleMixer
+                0x00000000       0x18
+ .rodata._ZTV11SimpleMixer
+                0x00000000       0x18 ../systemlib/mixer/mixer_simple.cpp.o
+                0x00000000                vtable for SimpleMixer
+
+.rodata.junk_buf
+                0x00000000        0x4
+ .rodata.junk_buf
+                0x00000000        0x4 i2c.c.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 adc.c.o
+ .data          0x00000000        0x0 controls.c.o
+ .data          0x00000000        0x0 dsm.c.o
+ .data          0x00000000        0x0 px4io.c.o
+ .data          0x00000000        0x0 registers.c.o
+ .data          0x00000000        0x0 safety.c.o
+ .data          0x00000000        0x0 sbus.c.o
+ .data          0x00000000        0x0 ../systemlib/up_cxxinitialize.c.o
+ .data          0x00000000        0x0 ../systemlib/perf_counter.c.o
+ .data          0x00000000        0x0 mixer.cpp.o
+ .data          0x00000000        0x0 ../systemlib/mixer/mixer.cpp.o
+ .data          0x00000000        0x0 ../systemlib/mixer/mixer_group.cpp.o
+ .data          0x00000000        0x0 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .data          0x00000000        0x0 ../systemlib/mixer/mixer_simple.cpp.o
+ .data          0x00000000        0x0 ../systemlib/pwm_limit/pwm_limit.c.o
+ .data          0x00000000        0x0 i2c.c.o
+
+.data.dsm_fd    0x00000000        0x4
+ .data.dsm_fd   0x00000000        0x4 dsm.c.o
+
+.data.r_page_servo_control_min
+                0x00000000       0x10
+ .data.r_page_servo_control_min
+                0x00000000       0x10 registers.c.o
+                0x00000000                r_page_servo_control_min
+
+.data.r_page_servo_control_max
+                0x00000000       0x10
+ .data.r_page_servo_control_max
+                0x00000000       0x10 registers.c.o
+                0x00000000                r_page_servo_control_max
+
+.data.r_page_setup
+                0x00000000       0x1c
+ .data.r_page_setup
+                0x00000000       0x1c registers.c.o
+                0x00000000                r_page_setup
+
+.data.sbus_fd   0x00000000        0x4
+ .data.sbus_fd  0x00000000        0x4 sbus.c.o
+
+.init_array     0x00000000        0x4
+ .init_array    0x00000000        0x4 mixer.cpp.o
+
+.data.tx_len    0x00000000        0x4
+ .data.tx_len   0x00000000        0x4 i2c.c.o
+
+.data.tx_buf    0x00000000        0x4
+ .data.tx_buf   0x00000000        0x4 i2c.c.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 adc.c.o
+ .bss           0x00000000        0x0 controls.c.o
+ .bss           0x00000000        0x0 dsm.c.o
+ .bss           0x00000000        0x0 px4io.c.o
+ .bss           0x00000000        0x0 registers.c.o
+ .bss           0x00000000        0x0 safety.c.o
+ .bss           0x00000000        0x0 sbus.c.o
+ .bss           0x00000000        0x0 ../systemlib/up_cxxinitialize.c.o
+ .bss           0x00000000        0x0 ../systemlib/perf_counter.c.o
+ .bss           0x00000000        0x0 mixer.cpp.o
+ .bss           0x00000000        0x0 ../systemlib/mixer/mixer.cpp.o
+ .bss           0x00000000        0x0 ../systemlib/mixer/mixer_group.cpp.o
+ .bss           0x00000000        0x0 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .bss           0x00000000        0x0 ../systemlib/mixer/mixer_simple.cpp.o
+ .bss           0x00000000        0x0 ../systemlib/pwm_limit/pwm_limit.c.o
+ .bss           0x00000000        0x0 i2c.c.o
+ *(COMMON)
+
+.bss.adc_perf   0x00000000        0x4
+ .bss.adc_perf  0x00000000        0x4 adc.c.o
+                0x00000000                adc_perf
+
+.bss.c_gather_dsm
+                0x00000000        0x4
+ .bss.c_gather_dsm
+                0x00000000        0x4 controls.c.o
+
+.bss.c_gather_ppm
+                0x00000000        0x4
+ .bss.c_gather_ppm
+                0x00000000        0x4 controls.c.o
+
+.bss.c_gather_sbus
+                0x00000000        0x4
+ .bss.c_gather_sbus
+                0x00000000        0x4 controls.c.o
+
+.bss.cs11.5844  0x00000000        0x4
+ .bss.cs11.5844
+                0x00000000        0x4 dsm.c.o
+
+.bss.dsm_partial_frame_count
+                0x00000000        0x4
+ .bss.dsm_partial_frame_count
+                0x00000000        0x4 dsm.c.o
+
+.bss.samples.5845
+                0x00000000        0x4
+ .bss.samples.5845
+                0x00000000        0x4 dsm.c.o
+
+.bss.dsm_last_rx_time
+                0x00000000        0x8
+ .bss.dsm_last_rx_time
+                0x00000000        0x8 dsm.c.o
+
+.bss.cs10.5843  0x00000000        0x4
+ .bss.cs10.5843
+                0x00000000        0x4 dsm.c.o
+
+.bss.dsm_frame  0x00000000       0x10
+ .bss.dsm_frame
+                0x00000000       0x10 dsm.c.o
+
+.bss.dsm_frame_drops
+                0x00000000        0x4
+ .bss.dsm_frame_drops
+                0x00000000        0x4 dsm.c.o
+
+.bss.dsm_last_frame_time
+                0x00000000        0x8
+ .bss.dsm_last_frame_time
+                0x00000000        0x8 dsm.c.o
+
+.bss.dsm_channel_shift
+                0x00000000        0x4
+ .bss.dsm_channel_shift
+                0x00000000        0x4 dsm.c.o
+
+.bss.last_msg_counter
+                0x00000000        0x4
+ .bss.last_msg_counter
+                0x00000000        0x4 px4io.c.o
+
+.bss.system_state
+                0x00000000       0x18
+ .bss.system_state
+                0x00000000       0x18 px4io.c.o
+                0x00000000                system_state
+
+.bss.msg_next_out
+                0x00000000        0x1
+ .bss.msg_next_out
+                0x00000000        0x1 px4io.c.o
+
+.bss.serial_dma_call
+                0x00000000       0x20
+ .bss.serial_dma_call
+                0x00000000       0x20 px4io.c.o
+
+.bss.msg_counter
+                0x00000000        0x4
+ .bss.msg_counter
+                0x00000000        0x4 px4io.c.o
+
+.bss.msg        0x00000000       0x50
+ .bss.msg       0x00000000       0x50 px4io.c.o
+
+.bss.msg_next_in
+                0x00000000        0x1
+ .bss.msg_next_in
+                0x00000000        0x1 px4io.c.o
+
+.bss.pwm_limit  0x00000000       0x10
+ .bss.pwm_limit
+                0x00000000       0x10 px4io.c.o
+                0x00000000                pwm_limit
+
+.bss.heartbeat.6165
+                0x00000000        0x1
+ .bss.heartbeat.6165
+                0x00000000        0x1 px4io.c.o
+
+.bss.reboot_time
+                0x00000000        0x8
+ .bss.reboot_time
+                0x00000000        0x8 px4io.c.o
+
+.bss.r_page_rc_input
+                0x00000000       0x14
+ .bss.r_page_rc_input
+                0x00000000       0x14 registers.c.o
+                0x00000000                r_page_rc_input
+
+.bss.r_page_scratch
+                0x00000000       0x40
+ .bss.r_page_scratch
+                0x00000000       0x40 registers.c.o
+                0x00000000                r_page_scratch
+
+.bss.r_page_servos
+                0x00000000       0x10
+ .bss.r_page_servos
+                0x00000000       0x10 registers.c.o
+                0x00000000                r_page_servos
+
+.bss.last_offset
+                0x00000000        0x1
+ .bss.last_offset
+                0x00000000        0x1 registers.c.o
+                0x00000000                last_offset
+
+.bss.r_page_status
+                0x00000000       0x14
+ .bss.r_page_status
+                0x00000000       0x14 registers.c.o
+                0x00000000                r_page_status
+
+.bss.r_page_rc_input_config
+                0x00000000       0xd8
+ .bss.r_page_rc_input_config
+                0x00000000       0xd8 registers.c.o
+                0x00000000                r_page_rc_input_config
+
+.bss.r_page_servo_disarmed
+                0x00000000       0x10
+ .bss.r_page_servo_disarmed
+                0x00000000       0x10 registers.c.o
+                0x00000000                r_page_servo_disarmed
+
+.bss.r_page_controls
+                0x00000000       0x40
+ .bss.r_page_controls
+                0x00000000       0x40 registers.c.o
+                0x00000000                r_page_controls
+
+.bss.r_page_servo_failsafe
+                0x00000000       0x10
+ .bss.r_page_servo_failsafe
+                0x00000000       0x10 registers.c.o
+                0x00000000                r_page_servo_failsafe
+
+.bss.r_page_raw_rc_input
+                0x00000000       0x34
+ .bss.r_page_raw_rc_input
+                0x00000000       0x34 registers.c.o
+                0x00000000                r_page_raw_rc_input
+
+.bss.last_page  0x00000000        0x1
+ .bss.last_page
+                0x00000000        0x1 registers.c.o
+                0x00000000                last_page
+
+.bss.r_page_actuators
+                0x00000000       0x10
+ .bss.r_page_actuators
+                0x00000000       0x10 registers.c.o
+                0x00000000                r_page_actuators
+
+.bss.arming_call
+                0x00000000       0x20
+ .bss.arming_call
+                0x00000000       0x20 safety.c.o
+
+.bss.blink_counter
+                0x00000000        0x4
+ .bss.blink_counter
+                0x00000000        0x4 safety.c.o
+
+.bss.safety_button_pressed
+                0x00000000        0x1
+ .bss.safety_button_pressed
+                0x00000000        0x1 safety.c.o
+
+.bss.failsafe.5291
+                0x00000000        0x1
+ .bss.failsafe.5291
+                0x00000000        0x1 safety.c.o
+
+.bss.failsafe_call
+                0x00000000       0x20
+ .bss.failsafe_call
+                0x00000000       0x20 safety.c.o
+
+.bss.counter    0x00000000        0x4
+ .bss.counter   0x00000000        0x4 safety.c.o
+
+.bss.frame      0x00000000       0x1c
+ .bss.frame     0x00000000       0x1c sbus.c.o
+
+.bss.last_frame_time
+                0x00000000        0x8
+ .bss.last_frame_time
+                0x00000000        0x8 sbus.c.o
+
+.bss.partial_frame_count
+                0x00000000        0x4
+ .bss.partial_frame_count
+                0x00000000        0x4 sbus.c.o
+
+.bss.last_rx_time
+                0x00000000        0x8
+ .bss.last_rx_time
+                0x00000000        0x8 sbus.c.o
+
+.bss.sbus_frame_drops
+                0x00000000        0x4
+ .bss.sbus_frame_drops
+                0x00000000        0x4 sbus.c.o
+                0x00000000                sbus_frame_drops
+
+.bss.perf_counters
+                0x00000000        0x8
+ .bss.perf_counters
+                0x00000000        0x8 ../systemlib/perf_counter.c.o
+
+.bss._ZL11mixer_group
+                0x00000000       0x14
+ .bss._ZL11mixer_group
+                0x00000000       0x14 mixer.cpp.o
+
+.bss._ZL17mixer_text_length
+                0x00000000        0x4
+ .bss._ZL17mixer_text_length
+                0x00000000        0x4 mixer.cpp.o
+
+.bss._ZL10should_arm
+                0x00000000        0x1
+ .bss._ZL10should_arm
+                0x00000000        0x1 mixer.cpp.o
+
+.bss._ZL18mixer_servos_armed
+                0x00000000        0x1
+ .bss._ZL18mixer_servos_armed
+                0x00000000        0x1 mixer.cpp.o
+
+.bss._ZL24should_always_enable_pwm
+                0x00000000        0x1
+ .bss._ZL24should_always_enable_pwm
+                0x00000000        0x1 mixer.cpp.o
+
+.bss._ZL10mixer_text
+                0x00000000      0x100
+ .bss._ZL10mixer_text
+                0x00000000      0x100 mixer.cpp.o
+
+.bss._ZL8in_mixer
+                0x00000000        0x1
+ .bss._ZL8in_mixer
+                0x00000000        0x1 mixer.cpp.o
+
+.bss._ZL6source
+                0x00000000        0x1
+ .bss._ZL6source
+                0x00000000        0x1 mixer.cpp.o
+
+.bss.rx_dma     0x00000000        0x4
+ .bss.rx_dma    0x00000000        0x4 i2c.c.o
+
+.bss.selected_offset
+                0x00000000        0x1
+ .bss.selected_offset
+                0x00000000        0x1 i2c.c.o
+
+.bss.rx_len     0x00000000        0x4
+ .bss.rx_len    0x00000000        0x4 i2c.c.o
+
+.bss.direction  0x00000000        0x1
+ .bss.direction
+                0x00000000        0x1 i2c.c.o
+                0x00000000                direction
+
+.bss.tx_dma     0x00000000        0x4
+ .bss.tx_dma    0x00000000        0x4 i2c.c.o
+
+.bss.tx_count   0x00000000        0x4
+ .bss.tx_count  0x00000000        0x4 i2c.c.o
+                0x00000000                tx_count
+
+.bss.selected_page
+                0x00000000        0x1
+ .bss.selected_page
+                0x00000000        0x1 i2c.c.o
+
+.bss.rx_buf     0x00000000       0x44
+ .bss.rx_buf    0x00000000       0x44 i2c.c.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x710
+ *(.comment)
+ .comment       0x00000000       0x71 adc.c.o
+ .comment       0x00000071       0x71 controls.c.o
+ .comment       0x000000e2       0x71 dsm.c.o
+ .comment       0x00000153       0x71 px4io.c.o
+ .comment       0x000001c4       0x71 registers.c.o
+ .comment       0x00000235       0x71 safety.c.o
+ .comment       0x000002a6       0x71 sbus.c.o
+ .comment       0x00000317       0x71 ../systemlib/up_cxxinitialize.c.o
+ .comment       0x00000388       0x71 ../systemlib/perf_counter.c.o
+ .comment       0x000003f9       0x71 mixer.cpp.o
+ .comment       0x0000046a       0x71 ../systemlib/mixer/mixer.cpp.o
+ .comment       0x000004db       0x71 ../systemlib/mixer/mixer_group.cpp.o
+ .comment       0x0000054c       0x71 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .comment       0x000005bd       0x71 ../systemlib/mixer/mixer_simple.cpp.o
+ .comment       0x0000062e       0x71 ../systemlib/pwm_limit/pwm_limit.c.o
+ .comment       0x0000069f       0x71 i2c.c.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc ../systemlib/mixer/mixer.cpp.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc ../systemlib/mixer/mixer.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 ../systemlib/mixer/mixer.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x430
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 adc.c.o
+ .debug_aranges
+                0x00000028       0x28 controls.c.o
+ .debug_aranges
+                0x00000050       0x38 dsm.c.o
+ .debug_aranges
+                0x00000088       0x30 px4io.c.o
+ .debug_aranges
+                0x000000b8       0x30 registers.c.o
+ .debug_aranges
+                0x000000e8       0x38 safety.c.o
+ .debug_aranges
+                0x00000120       0x28 sbus.c.o
+ .debug_aranges
+                0x00000148       0x20 ../systemlib/up_cxxinitialize.c.o
+ .debug_aranges
+                0x00000168       0x70 ../systemlib/perf_counter.c.o
+ .debug_aranges
+                0x000001d8       0x38 mixer.cpp.o
+ .debug_aranges
+                0x00000210       0x88 ../systemlib/mixer/mixer.cpp.o
+ .debug_aranges
+                0x00000298       0x70 ../systemlib/mixer/mixer_group.cpp.o
+ .debug_aranges
+                0x00000308       0x58 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .debug_aranges
+                0x00000360       0x78 ../systemlib/mixer/mixer_simple.cpp.o
+ .debug_aranges
+                0x000003d8       0x28 ../systemlib/pwm_limit/pwm_limit.c.o
+ .debug_aranges
+                0x00000400       0x30 i2c.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x6b38
+ *(.debug_info)
+ .debug_info    0x00000000      0x1c0 adc.c.o
+ .debug_info    0x000001c0      0x593 controls.c.o
+ .debug_info    0x00000753      0x692 dsm.c.o
+ .debug_info    0x00000de5      0x68d px4io.c.o
+ .debug_info    0x00001472      0x6f1 registers.c.o
+ .debug_info    0x00001b63      0x2d9 safety.c.o
+ .debug_info    0x00001e3c      0x4eb sbus.c.o
+ .debug_info    0x00002327      0x156 ../systemlib/up_cxxinitialize.c.o
+ .debug_info    0x0000247d      0x5f9 ../systemlib/perf_counter.c.o
+ .debug_info    0x00002a76      0x9bc mixer.cpp.o
+ .debug_info    0x00003432      0x942 ../systemlib/mixer/mixer.cpp.o
+ .debug_info    0x00003d74      0xa3f ../systemlib/mixer/mixer_group.cpp.o
+ .debug_info    0x000047b3      0xf35 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .debug_info    0x000056e8      0xd06 ../systemlib/mixer/mixer_simple.cpp.o
+ .debug_info    0x000063ee      0x2c3 ../systemlib/pwm_limit/pwm_limit.c.o
+ .debug_info    0x000066b1      0x487 i2c.c.o
+
+.debug_abbrev   0x00000000     0x25f5
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x108 adc.c.o
+ .debug_abbrev  0x00000108      0x1f1 controls.c.o
+ .debug_abbrev  0x000002f9      0x25d dsm.c.o
+ .debug_abbrev  0x00000556      0x270 px4io.c.o
+ .debug_abbrev  0x000007c6      0x1eb registers.c.o
+ .debug_abbrev  0x000009b1      0x16a safety.c.o
+ .debug_abbrev  0x00000b1b      0x16f sbus.c.o
+ .debug_abbrev  0x00000c8a       0x94 ../systemlib/up_cxxinitialize.c.o
+ .debug_abbrev  0x00000d1e      0x223 ../systemlib/perf_counter.c.o
+ .debug_abbrev  0x00000f41      0x3e2 mixer.cpp.o
+ .debug_abbrev  0x00001323      0x36f ../systemlib/mixer/mixer.cpp.o
+ .debug_abbrev  0x00001692      0x36a ../systemlib/mixer/mixer_group.cpp.o
+ .debug_abbrev  0x000019fc      0x460 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .debug_abbrev  0x00001e5c      0x477 ../systemlib/mixer/mixer_simple.cpp.o
+ .debug_abbrev  0x000022d3      0x106 ../systemlib/pwm_limit/pwm_limit.c.o
+ .debug_abbrev  0x000023d9      0x21c i2c.c.o
+
+.debug_line     0x00000000     0x3731
+ *(.debug_line)
+ .debug_line    0x00000000      0x226 adc.c.o
+ .debug_line    0x00000226      0x475 controls.c.o
+ .debug_line    0x0000069b      0x7d9 dsm.c.o
+ .debug_line    0x00000e74      0x355 px4io.c.o
+ .debug_line    0x000011c9      0x526 registers.c.o
+ .debug_line    0x000016ef      0x213 safety.c.o
+ .debug_line    0x00001902      0x2b0 sbus.c.o
+ .debug_line    0x00001bb2      0x159 ../systemlib/up_cxxinitialize.c.o
+ .debug_line    0x00001d0b      0x2d9 ../systemlib/perf_counter.c.o
+ .debug_line    0x00001fe4      0x534 mixer.cpp.o
+ .debug_line    0x00002518      0x31b ../systemlib/mixer/mixer.cpp.o
+ .debug_line    0x00002833      0x2f6 ../systemlib/mixer/mixer_group.cpp.o
+ .debug_line    0x00002b29      0x2dc ../systemlib/mixer/mixer_multirotor.cpp.o
+ .debug_line    0x00002e05      0x355 ../systemlib/mixer/mixer_simple.cpp.o
+ .debug_line    0x0000315a      0x29f ../systemlib/pwm_limit/pwm_limit.c.o
+ .debug_line    0x000033f9      0x338 i2c.c.o
+
+.debug_frame    0x00000000      0xa30
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x50 adc.c.o
+ .debug_frame   0x00000050       0x58 controls.c.o
+ .debug_frame   0x000000a8       0x88 dsm.c.o
+ .debug_frame   0x00000130       0x80 px4io.c.o
+ .debug_frame   0x000001b0       0x7c registers.c.o
+ .debug_frame   0x0000022c       0x68 safety.c.o
+ .debug_frame   0x00000294       0x54 sbus.c.o
+ .debug_frame   0x000002e8       0x30 ../systemlib/up_cxxinitialize.c.o
+ .debug_frame   0x00000318      0x11c ../systemlib/perf_counter.c.o
+ .debug_frame   0x00000434       0x94 mixer.cpp.o
+ .debug_frame   0x000004c8      0x148 ../systemlib/mixer/mixer.cpp.o
+ .debug_frame   0x00000610      0x118 ../systemlib/mixer/mixer_group.cpp.o
+ .debug_frame   0x00000728       0xdc ../systemlib/mixer/mixer_multirotor.cpp.o
+ .debug_frame   0x00000804      0x174 ../systemlib/mixer/mixer_simple.cpp.o
+ .debug_frame   0x00000978       0x48 ../systemlib/pwm_limit/pwm_limit.c.o
+ .debug_frame   0x000009c0       0x70 i2c.c.o
+
+.debug_str      0x00000000     0x4194
+ *(.debug_str)
+ .debug_str     0x00000000      0x269 adc.c.o
+ .debug_str     0x00000269      0x421 controls.c.o
+ .debug_str     0x0000068a      0x38b dsm.c.o
+ .debug_str     0x00000a15      0x534 px4io.c.o
+ .debug_str     0x00000f49      0x403 registers.c.o
+ .debug_str     0x0000134c      0x268 safety.c.o
+ .debug_str     0x000015b4      0x37f sbus.c.o
+ .debug_str     0x00001933      0x1f5 ../systemlib/up_cxxinitialize.c.o
+ .debug_str     0x00001b28      0x388 ../systemlib/perf_counter.c.o
+ .debug_str     0x00001eb0      0x79f mixer.cpp.o
+ .debug_str     0x0000264f      0x450 ../systemlib/mixer/mixer.cpp.o
+ .debug_str     0x00002a9f      0x4d7 ../systemlib/mixer/mixer_group.cpp.o
+ .debug_str     0x00002f76      0x66f ../systemlib/mixer/mixer_multirotor.cpp.o
+ .debug_str     0x000035e5      0x5f8 ../systemlib/mixer/mixer_simple.cpp.o
+ .debug_str     0x00003bdd      0x308 ../systemlib/pwm_limit/pwm_limit.c.o
+ .debug_str     0x00003ee5      0x2af i2c.c.o
+
+.debug_loc      0x00000000     0x4e74
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x9a adc.c.o
+ .debug_loc     0x0000009a      0x430 controls.c.o
+ .debug_loc     0x000004ca     0x1301 dsm.c.o
+ .debug_loc     0x000017cb      0x282 px4io.c.o
+ .debug_loc     0x00001a4d      0xc93 registers.c.o
+ .debug_loc     0x000026e0       0xe9 safety.c.o
+ .debug_loc     0x000027c9      0x3a7 sbus.c.o
+ .debug_loc     0x00002b70       0x4b ../systemlib/up_cxxinitialize.c.o
+ .debug_loc     0x00002bbb      0x39d ../systemlib/perf_counter.c.o
+ .debug_loc     0x00002f58      0x440 mixer.cpp.o
+ .debug_loc     0x00003398      0x3d3 ../systemlib/mixer/mixer.cpp.o
+ .debug_loc     0x0000376b      0x5cc ../systemlib/mixer/mixer_group.cpp.o
+ .debug_loc     0x00003d37      0x5cb ../systemlib/mixer/mixer_multirotor.cpp.o
+ .debug_loc     0x00004302      0x7fc ../systemlib/mixer/mixer_simple.cpp.o
+ .debug_loc     0x00004afe      0x1c8 ../systemlib/pwm_limit/pwm_limit.c.o
+ .debug_loc     0x00004cc6      0x1ae i2c.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000     0x15e8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x18 adc.c.o
+ .debug_ranges  0x00000018      0x1b0 controls.c.o
+ .debug_ranges  0x000001c8      0x608 dsm.c.o
+ .debug_ranges  0x000007d0      0x110 px4io.c.o
+ .debug_ranges  0x000008e0      0x198 registers.c.o
+ .debug_ranges  0x00000a78       0x28 safety.c.o
+ .debug_ranges  0x00000aa0      0x100 sbus.c.o
+ .debug_ranges  0x00000ba0       0x40 ../systemlib/up_cxxinitialize.c.o
+ .debug_ranges  0x00000be0       0x80 ../systemlib/perf_counter.c.o
+ .debug_ranges  0x00000c60      0x1b0 mixer.cpp.o
+ .debug_ranges  0x00000e10      0x148 ../systemlib/mixer/mixer.cpp.o
+ .debug_ranges  0x00000f58      0x200 ../systemlib/mixer/mixer_group.cpp.o
+ .debug_ranges  0x00001158      0x130 ../systemlib/mixer/mixer_multirotor.cpp.o
+ .debug_ranges  0x00001288      0x1b0 ../systemlib/mixer/mixer_simple.cpp.o
+ .debug_ranges  0x00001438       0xe0 ../systemlib/pwm_limit/pwm_limit.c.o
+ .debug_ranges  0x00001518       0xd0 i2c.c.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x2f
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x2f adc.c.o
+ .ARM.attributes
+                0x0000002f       0x2f controls.c.o
+ .ARM.attributes
+                0x0000005e       0x2f dsm.c.o
+ .ARM.attributes
+                0x0000008d       0x2f px4io.c.o
+ .ARM.attributes
+                0x000000bc       0x2f registers.c.o
+ .ARM.attributes
+                0x000000eb       0x2f safety.c.o
+ .ARM.attributes
+                0x0000011a       0x2f sbus.c.o
+ .ARM.attributes
+                0x00000149       0x2f ../systemlib/up_cxxinitialize.c.o
+ .ARM.attributes
+                0x00000178       0x2f ../systemlib/perf_counter.c.o
+ .ARM.attributes
+                0x000001a7       0x2f mixer.cpp.o
+ .ARM.attributes
+                0x000001d6       0x2f ../systemlib/mixer/mixer.cpp.o
+ .ARM.attributes
+                0x00000205       0x2f ../systemlib/mixer/mixer_group.cpp.o
+ .ARM.attributes
+                0x00000234       0x2f ../systemlib/mixer/mixer_multirotor.cpp.o
+ .ARM.attributes
+                0x00000263       0x2f ../systemlib/mixer/mixer_simple.cpp.o
+ .ARM.attributes
+                0x00000292       0x2f ../systemlib/pwm_limit/pwm_limit.c.o
+ .ARM.attributes
+                0x000002c1       0x2f i2c.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4io-v1_default.build/c/px4/workspace/PX4Firmware/src/modules/px4iofirmware/module.pre.o elf32-littlearm)

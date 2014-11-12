@@ -1,0 +1,2 @@
+ARCHCFLAGS = -std=gnu99 -mcpu=cortex-m3 -mthumb -march=armv7-m
+ARCHCXXFLAGS = -fno-exceptions -fno-rtti -std=gnu++0x -mcpu=cortex-m3 -mthumb -march=armv7-m

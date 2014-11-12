@@ -1,0 +1,564 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD blinkm.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 blinkm.cpp.o
+ *(.gnu.warning)
+
+.text._Z12blinkm_usagev
+                0x00000000       0x48
+ .text._Z12blinkm_usagev
+                0x00000000       0x48 blinkm.cpp.o
+                0x00000000                blinkm_usage()
+
+.text._ZN6BlinkM20get_firmware_versionEPh
+                0x00000000       0x40
+ .text._ZN6BlinkM20get_firmware_versionEPh
+                0x00000000       0x40 blinkm.cpp.o
+                0x00000000                BlinkM::get_firmware_version(unsigned char*)
+
+.text._ZN6BlinkM7get_rgbERhS0_S0_
+                0x00000000       0x58
+ .text._ZN6BlinkM7get_rgbERhS0_S0_
+                0x00000000       0x58 blinkm.cpp.o
+                0x00000000                BlinkM::get_rgb(unsigned char&, unsigned char&, unsigned char&)
+
+.text._ZN6BlinkM10set_scriptEhh
+                0x00000000       0x4c
+ .text._ZN6BlinkM10set_scriptEhh
+                0x00000000       0x4c blinkm.cpp.o
+                0x00000000                BlinkM::set_script(unsigned char, unsigned char)
+
+.text._ZN6BlinkM16read_script_lineEhRhPh
+                0x00000000       0x70
+ .text._ZN6BlinkM16read_script_lineEhRhPh
+                0x00000000       0x70 blinkm.cpp.o
+                0x00000000                BlinkM::read_script_line(unsigned char, unsigned char&, unsigned char*)
+
+.text._ZN6BlinkM17write_script_lineEhhhhhh
+                0x00000000       0x6c
+ .text._ZN6BlinkM17write_script_lineEhhhhhh
+                0x00000000       0x6c blinkm.cpp.o
+                0x00000000                BlinkM::write_script_line(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
+
+.text._ZN6BlinkM11stop_scriptEv
+                0x00000000       0x38
+ .text._ZN6BlinkM11stop_scriptEv
+                0x00000000       0x38 blinkm.cpp.o
+                0x00000000                BlinkM::stop_script()
+
+.text._ZN6BlinkM11play_scriptEh
+                0x00000000       0x44
+ .text._ZN6BlinkM11play_scriptEh
+                0x00000000       0x44 blinkm.cpp.o
+                0x00000000                BlinkM::play_script(unsigned char)
+
+.text._ZN6BlinkM14set_fade_speedEh
+                0x00000000       0x40
+ .text._ZN6BlinkM14set_fade_speedEh
+                0x00000000       0x40 blinkm.cpp.o
+                0x00000000                BlinkM::set_fade_speed(unsigned char)
+
+.text._ZN6BlinkM15fade_hsb_randomEhhh
+                0x00000000       0x50
+ .text._ZN6BlinkM15fade_hsb_randomEhhh
+                0x00000000       0x50 blinkm.cpp.o
+                0x00000000                BlinkM::fade_hsb_random(unsigned char, unsigned char, unsigned char)
+
+.text._ZN6BlinkM15fade_rgb_randomEhhh
+                0x00000000       0x50
+ .text._ZN6BlinkM15fade_rgb_randomEhhh
+                0x00000000       0x50 blinkm.cpp.o
+                0x00000000                BlinkM::fade_rgb_random(unsigned char, unsigned char, unsigned char)
+
+.text._ZN6BlinkM8fade_hsbEhhh
+                0x00000000       0x50
+ .text._ZN6BlinkM8fade_hsbEhhh
+                0x00000000       0x50 blinkm.cpp.o
+                0x00000000                BlinkM::fade_hsb(unsigned char, unsigned char, unsigned char)
+
+.text._ZN6BlinkM8fade_rgbEhhh
+                0x00000000       0x50
+ .text._ZN6BlinkM8fade_rgbEhhh
+                0x00000000       0x50 blinkm.cpp.o
+                0x00000000                BlinkM::fade_rgb(unsigned char, unsigned char, unsigned char)
+
+.text._ZN6BlinkM7set_rgbEhhh
+                0x00000000       0x50
+ .text._ZN6BlinkM7set_rgbEhhh
+                0x00000000       0x50 blinkm.cpp.o
+                0x00000000                BlinkM::set_rgb(unsigned char, unsigned char, unsigned char)
+
+.text._ZN6BlinkM11setLEDColorEi
+                0x00000000       0x78
+ .text._ZN6BlinkM11setLEDColorEi
+                0x00000000       0x78 blinkm.cpp.o
+                0x00000000                BlinkM::setLEDColor(int)
+
+.text._ZN6BlinkM11play_scriptEPKc
+                0x00000000       0xe0
+ .text._ZN6BlinkM11play_scriptEPKc
+                0x00000000       0xe0 blinkm.cpp.o
+                0x00000000                BlinkM::play_script(char const*)
+
+.text._ZN6BlinkM5ioctlEP4fileim
+                0x00000000       0x94
+ .text._ZN6BlinkM5ioctlEP4fileim
+                0x00000000       0x94 blinkm.cpp.o
+                0x00000000                BlinkM::ioctl(file*, int, unsigned long)
+
+.text._ZN6BlinkM3ledEv
+                0x00000000      0x464
+ .text._ZN6BlinkM3ledEv
+                0x00000000      0x464 blinkm.cpp.o
+                0x00000000                BlinkM::led()
+
+.text._ZN6BlinkM14led_trampolineEPv
+                0x00000000       0x28
+ .text._ZN6BlinkM14led_trampolineEPv
+                0x00000000       0x28 blinkm.cpp.o
+                0x00000000                BlinkM::led_trampoline(void*)
+
+.text._ZN6BlinkM7setModeEi
+                0x00000000       0x5c
+ .text._ZN6BlinkM7setModeEi
+                0x00000000       0x5c blinkm.cpp.o
+                0x00000000                BlinkM::setMode(int)
+
+.text._ZN6BlinkM5probeEv
+                0x00000000       0x40
+ .text._ZN6BlinkM5probeEv
+                0x00000000       0x40 blinkm.cpp.o
+                0x00000000                BlinkM::probe()
+
+.text._ZN6BlinkM4initEv
+                0x00000000       0x48
+ .text._ZN6BlinkM4initEv
+                0x00000000       0x48 blinkm.cpp.o
+                0x00000000                BlinkM::init()
+
+.text._ZN6BlinkMD2Ev
+                0x00000000       0x30
+ .text._ZN6BlinkMD2Ev
+                0x00000000       0x30 blinkm.cpp.o
+                0x00000000                BlinkM::~BlinkM()
+                0x00000000                BlinkM::~BlinkM()
+
+.text._ZN6BlinkMD0Ev
+                0x00000000       0x2c
+ .text._ZN6BlinkMD0Ev
+                0x00000000       0x2c blinkm.cpp.o
+                0x00000000                BlinkM::~BlinkM()
+
+.text._ZN6BlinkMC2Eii
+                0x00000000       0x8c
+ .text._ZN6BlinkMC2Eii
+                0x00000000       0x8c blinkm.cpp.o
+                0x00000000                BlinkM::BlinkM(int, int)
+                0x00000000                BlinkM::BlinkM(int, int)
+
+.text.blinkm_main
+                0x00000000      0x1d0
+ .text.blinkm_main
+                0x00000000      0x1d0 blinkm.cpp.o
+                0x00000000                blinkm_main
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.1  0x00000000      0x284
+ .rodata.str1.1
+                0x00000000      0x284 blinkm.cpp.o
+
+.rodata._ZN6BlinkM12script_namesE
+                0x00000000       0x50
+ .rodata._ZN6BlinkM12script_namesE
+                0x00000000       0x50 blinkm.cpp.o
+                0x00000000                BlinkM::script_names
+
+.rodata._ZTV6BlinkM
+                0x00000000       0x68
+ .rodata._ZTV6BlinkM
+                0x00000000       0x68 blinkm.cpp.o
+                0x00000000                vtable for BlinkM
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 blinkm.cpp.o
+
+.data._ZZN6BlinkM3ledEvE16led_thread_ready
+                0x00000000        0x1
+ .data._ZZN6BlinkM3ledEvE16led_thread_ready
+                0x00000000        0x1 blinkm.cpp.o
+
+.data._ZZN6BlinkM3ledEvE12led_interval
+                0x00000000        0x4
+ .data._ZZN6BlinkM3ledEvE12led_interval
+                0x00000000        0x4 blinkm.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 blinkm.cpp.o
+ *(COMMON)
+
+.bss._ZZN6BlinkM3ledEvE17topic_initialized
+                0x00000000        0x1
+ .bss._ZZN6BlinkM3ledEvE17topic_initialized
+                0x00000000        0x1 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE11t_led_blink
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE11t_led_blink
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE27vehicle_control_mode_sub_fd
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE27vehicle_control_mode_sub_fd
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE28no_data_vehicle_gps_position
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE28no_data_vehicle_gps_position
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE22no_data_vehicle_status
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE22no_data_vehicle_status
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE23detected_cells_runcount
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE23detected_cells_runcount
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE21actuator_armed_sub_fd
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE21actuator_armed_sub_fd
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE27vehicle_gps_position_sub_fd
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE27vehicle_gps_position_sub_fd
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE11t_led_color
+                0x00000000       0x20
+ .bss._ZZN6BlinkM3ledEvE11t_led_color
+                0x00000000       0x20 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE21vehicle_status_sub_fd
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE21vehicle_status_sub_fd
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE28no_data_vehicle_control_mode
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE28no_data_vehicle_control_mode
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE22no_data_actuator_armed
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE22no_data_actuator_armed
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE22detected_cells_blinked
+                0x00000000        0x1
+ .bss._ZZN6BlinkM3ledEvE22detected_cells_blinked
+                0x00000000        0x1 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE12num_of_cells
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE12num_of_cells
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZZN6BlinkM3ledEvE19led_thread_runcount
+                0x00000000        0x4
+ .bss._ZZN6BlinkM3ledEvE19led_thread_runcount
+                0x00000000        0x4 blinkm.cpp.o
+
+.bss._ZN12_GLOBAL__N_18g_blinkmE
+                0x00000000        0x4
+ .bss._ZN12_GLOBAL__N_18g_blinkmE
+                0x00000000        0x4 blinkm.cpp.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x71
+ *(.comment)
+ .comment       0x00000000       0x71 blinkm.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xe8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0xe8 blinkm.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x2866
+ *(.debug_info)
+ .debug_info    0x00000000     0x2866 blinkm.cpp.o
+
+.debug_abbrev   0x00000000      0x446
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x446 blinkm.cpp.o
+
+.debug_line     0x00000000      0x7d5
+ *(.debug_line)
+ .debug_line    0x00000000      0x7d5 blinkm.cpp.o
+
+.debug_frame    0x00000000      0x384
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x384 blinkm.cpp.o
+
+.debug_str      0x00000000     0x1af5
+ *(.debug_str)
+ .debug_str     0x00000000     0x1af5 blinkm.cpp.o
+
+.debug_loc      0x00000000      0xdae
+ *(.debug_loc)
+ .debug_loc     0x00000000      0xdae blinkm.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x190
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x190 blinkm.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 blinkm.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/drivers/blinkm/module.pre.o elf32-littlearm)

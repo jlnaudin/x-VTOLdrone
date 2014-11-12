@@ -1,0 +1,598 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD drv_hrt.c.o
+LOAD drv_pwm_servo.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 drv_hrt.c.o
+ .text          0x00000000        0x0 drv_pwm_servo.c.o
+ *(.gnu.warning)
+
+.text.hrt_called
+                0x00000000       0x2c
+ .text.hrt_called
+                0x00000000       0x2c drv_hrt.c.o
+                0x00000000                hrt_called
+
+.text.hrt_latency_update
+                0x00000000       0x60
+ .text.hrt_latency_update
+                0x00000000       0x60 drv_hrt.c.o
+
+.text.abstime_to_ts
+                0x00000000       0x50
+ .text.abstime_to_ts
+                0x00000000       0x50 drv_hrt.c.o
+                0x00000000                abstime_to_ts
+
+.text.ts_to_abstime
+                0x00000000       0x3c
+ .text.ts_to_abstime
+                0x00000000       0x3c drv_hrt.c.o
+                0x00000000                ts_to_abstime
+
+.text.hrt_absolute_time
+                0x00000000       0x68
+ .text.hrt_absolute_time
+                0x00000000       0x68 drv_hrt.c.o
+                0x00000000                hrt_absolute_time
+
+.text.hrt_call_delay
+                0x00000000       0x34
+ .text.hrt_call_delay
+                0x00000000       0x34 drv_hrt.c.o
+                0x00000000                hrt_call_delay
+
+.text.hrt_call_reschedule
+                0x00000000       0x7c
+ .text.hrt_call_reschedule
+                0x00000000       0x7c drv_hrt.c.o
+
+.text.hrt_ppm_decode
+                0x00000000      0x15c
+ .text.hrt_ppm_decode
+                0x00000000      0x15c drv_hrt.c.o
+
+.text.hrt_store_absolute_time
+                0x00000000       0x40
+ .text.hrt_store_absolute_time
+                0x00000000       0x40 drv_hrt.c.o
+                0x00000000                hrt_store_absolute_time
+
+.text.hrt_elapsed_time
+                0x00000000       0x54
+ .text.hrt_elapsed_time
+                0x00000000       0x54 drv_hrt.c.o
+                0x00000000                hrt_elapsed_time
+
+.text.hrt_call_init
+                0x00000000       0x2c
+ .text.hrt_call_init
+                0x00000000       0x2c drv_hrt.c.o
+                0x00000000                hrt_call_init
+
+.text.hrt_cancel
+                0x00000000       0x48
+ .text.hrt_cancel
+                0x00000000       0x48 drv_hrt.c.o
+                0x00000000                hrt_cancel
+
+.text.hrt_call_enter
+                0x00000000       0x60
+ .text.hrt_call_enter
+                0x00000000       0x60 drv_hrt.c.o
+
+.text.hrt_call_internal
+                0x00000000       0x74
+ .text.hrt_call_internal
+                0x00000000       0x74 drv_hrt.c.o
+
+.text.hrt_call_every
+                0x00000000       0x5c
+ .text.hrt_call_every
+                0x00000000       0x5c drv_hrt.c.o
+                0x00000000                hrt_call_every
+
+.text.hrt_call_at
+                0x00000000       0x44
+ .text.hrt_call_at
+                0x00000000       0x44 drv_hrt.c.o
+                0x00000000                hrt_call_at
+
+.text.hrt_call_after
+                0x00000000       0x50
+ .text.hrt_call_after
+                0x00000000       0x50 drv_hrt.c.o
+                0x00000000                hrt_call_after
+
+.text.hrt_call_invoke
+                0x00000000       0x8c
+ .text.hrt_call_invoke
+                0x00000000       0x8c drv_hrt.c.o
+
+.text.hrt_tim_isr
+                0x00000000       0x58
+ .text.hrt_tim_isr
+                0x00000000       0x58 drv_hrt.c.o
+
+.text.hrt_tim_init
+                0x00000000       0x90
+ .text.hrt_tim_init
+                0x00000000       0x90 drv_hrt.c.o
+
+.text.hrt_init  0x00000000       0x38
+ .text.hrt_init
+                0x00000000       0x38 drv_hrt.c.o
+                0x00000000                hrt_init
+
+.text.up_pwm_servo_arm
+                0x00000000       0x44
+ .text.up_pwm_servo_arm
+                0x00000000       0x44 drv_pwm_servo.c.o
+                0x00000000                up_pwm_servo_arm
+
+.text.up_pwm_servo_get_rate_group
+                0x00000000       0x4c
+ .text.up_pwm_servo_get_rate_group
+                0x00000000       0x4c drv_pwm_servo.c.o
+                0x00000000                up_pwm_servo_get_rate_group
+
+.text.pwm_timer_set_rate
+                0x00000000       0x3c
+ .text.pwm_timer_set_rate
+                0x00000000       0x3c drv_pwm_servo.c.o
+
+.text.up_pwm_servo_set_rate_group_update
+                0x00000000       0x50
+ .text.up_pwm_servo_set_rate_group_update
+                0x00000000       0x50 drv_pwm_servo.c.o
+                0x00000000                up_pwm_servo_set_rate_group_update
+
+.text.up_pwm_servo_set_rate
+                0x00000000       0x30
+ .text.up_pwm_servo_set_rate
+                0x00000000       0x30 drv_pwm_servo.c.o
+                0x00000000                up_pwm_servo_set_rate
+
+.text.up_pwm_servo_deinit
+                0x00000000       0x24
+ .text.up_pwm_servo_deinit
+                0x00000000       0x24 drv_pwm_servo.c.o
+                0x00000000                up_pwm_servo_deinit
+
+.text.up_pwm_servo_get
+                0x00000000       0x6c
+ .text.up_pwm_servo_get
+                0x00000000       0x6c drv_pwm_servo.c.o
+                0x00000000                up_pwm_servo_get
+
+.text.up_pwm_servo_set
+                0x00000000       0x74
+ .text.up_pwm_servo_set
+                0x00000000       0x74 drv_pwm_servo.c.o
+                0x00000000                up_pwm_servo_set
+
+.text.pwm_timer_init
+                0x00000000       0x7c
+ .text.pwm_timer_init
+                0x00000000       0x7c drv_pwm_servo.c.o
+
+.text.pwm_channel_init
+                0x00000000       0xc4
+ .text.pwm_channel_init
+                0x00000000       0xc4 drv_pwm_servo.c.o
+
+.text.up_pwm_servo_init
+                0x00000000       0x64
+ .text.up_pwm_servo_init
+                0x00000000       0x64 drv_pwm_servo.c.o
+                0x00000000                up_pwm_servo_init
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.latency_buckets
+                0x00000000       0x10
+ .rodata.latency_buckets
+                0x00000000       0x10 drv_hrt.c.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 drv_hrt.c.o
+ .data          0x00000000        0x0 drv_pwm_servo.c.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 drv_hrt.c.o
+ .bss           0x00000000        0x0 drv_pwm_servo.c.o
+ *(COMMON)
+
+.bss.callout_queue
+                0x00000000        0x8
+ .bss.callout_queue
+                0x00000000        0x8 drv_hrt.c.o
+
+.bss.latency_counters
+                0x00000000       0x24
+ .bss.latency_counters
+                0x00000000       0x24 drv_hrt.c.o
+
+.bss.ppm_pulse_history
+                0x00000000       0x40
+ .bss.ppm_pulse_history
+                0x00000000       0x40 drv_hrt.c.o
+                0x00000000                ppm_pulse_history
+
+.bss.ppm_edge_history
+                0x00000000       0x40
+ .bss.ppm_edge_history
+                0x00000000       0x40 drv_hrt.c.o
+                0x00000000                ppm_edge_history
+
+.bss.ppm_decoded_channels
+                0x00000000        0x4
+ .bss.ppm_decoded_channels
+                0x00000000        0x4 drv_hrt.c.o
+                0x00000000                ppm_decoded_channels
+
+.bss.new_channel_holdoff.5943
+                0x00000000        0x4
+ .bss.new_channel_holdoff.5943
+                0x00000000        0x4 drv_hrt.c.o
+
+.bss.ppm_edge_next
+                0x00000000        0x4
+ .bss.ppm_edge_next
+                0x00000000        0x4 drv_hrt.c.o
+                0x00000000                ppm_edge_next
+
+.bss.base_time.5963
+                0x00000000        0x8
+ .bss.base_time.5963
+                0x00000000        0x8 drv_hrt.c.o
+
+.bss.last_count.5964
+                0x00000000        0x4
+ .bss.last_count.5964
+                0x00000000        0x4 drv_hrt.c.o
+
+.bss.ppm_pulse_next
+                0x00000000        0x4
+ .bss.ppm_pulse_next
+                0x00000000        0x4 drv_hrt.c.o
+                0x00000000                ppm_pulse_next
+
+.bss.latency_baseline
+                0x00000000        0x2
+ .bss.latency_baseline
+                0x00000000        0x2 drv_hrt.c.o
+
+.bss.ppm        0x00000000       0x10
+ .bss.ppm       0x00000000       0x10 drv_hrt.c.o
+                0x00000000                ppm
+
+.bss.ppm_buffer
+                0x00000000       0x28
+ .bss.ppm_buffer
+                0x00000000       0x28 drv_hrt.c.o
+                0x00000000                ppm_buffer
+
+.bss.ppm_temp_buffer
+                0x00000000       0x28
+ .bss.ppm_temp_buffer
+                0x00000000       0x28 drv_hrt.c.o
+
+.bss.ppm_frame_length
+                0x00000000        0x2
+ .bss.ppm_frame_length
+                0x00000000        0x2 drv_hrt.c.o
+                0x00000000                ppm_frame_length
+
+.bss.latency_actual
+                0x00000000        0x2
+ .bss.latency_actual
+                0x00000000        0x2 drv_hrt.c.o
+
+.bss.ppm_last_valid_decode
+                0x00000000        0x8
+ .bss.ppm_last_valid_decode
+                0x00000000        0x8 drv_hrt.c.o
+                0x00000000                ppm_last_valid_decode
+
+.bss.new_channel_count.5942
+                0x00000000        0x4
+ .bss.new_channel_count.5942
+                0x00000000        0x4 drv_hrt.c.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0xe2
+ *(.comment)
+ .comment       0x00000000       0x71 drv_hrt.c.o
+ .comment       0x00000071       0x71 drv_pwm_servo.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x130
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0xc0 drv_hrt.c.o
+ .debug_aranges
+                0x000000c0       0x70 drv_pwm_servo.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x1234
+ *(.debug_info)
+ .debug_info    0x00000000      0xdb9 drv_hrt.c.o
+ .debug_info    0x00000db9      0x47b drv_pwm_servo.c.o
+
+.debug_abbrev   0x00000000      0x4da
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x364 drv_hrt.c.o
+ .debug_abbrev  0x00000364      0x176 drv_pwm_servo.c.o
+
+.debug_line     0x00000000      0x7f5
+ *(.debug_line)
+ .debug_line    0x00000000      0x4d5 drv_hrt.c.o
+ .debug_line    0x000004d5      0x320 drv_pwm_servo.c.o
+
+.debug_frame    0x00000000      0x420
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x2c8 drv_hrt.c.o
+ .debug_frame   0x000002c8      0x158 drv_pwm_servo.c.o
+
+.debug_str      0x00000000      0x934
+ *(.debug_str)
+ .debug_str     0x00000000      0x5b7 drv_hrt.c.o
+ .debug_str     0x000005b7      0x37d drv_pwm_servo.c.o
+
+.debug_loc      0x00000000      0xbbb
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x77f drv_hrt.c.o
+ .debug_loc     0x0000077f      0x43c drv_pwm_servo.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x2c8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x1f0 drv_hrt.c.o
+ .debug_ranges  0x000001f0       0xd8 drv_pwm_servo.c.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 drv_hrt.c.o
+ .ARM.attributes
+                0x00000037       0x37 drv_pwm_servo.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/drivers/stm32/module.pre.o elf32-littlearm)

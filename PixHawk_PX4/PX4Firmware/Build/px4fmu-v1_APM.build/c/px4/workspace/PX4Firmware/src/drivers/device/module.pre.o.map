@@ -1,0 +1,799 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD cdev.cpp.o
+LOAD device.cpp.o
+LOAD i2c.cpp.o
+LOAD pio.cpp.o
+LOAD spi.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 cdev.cpp.o
+ .text          0x00000000        0x0 device.cpp.o
+ .text          0x00000000        0x0 i2c.cpp.o
+ .text          0x00000000        0x0 pio.cpp.o
+ .text          0x00000000        0x0 spi.cpp.o
+ *(.gnu.warning)
+
+.text._ZN6deviceL9cdev_pollEP4fileP6pollfdb
+                0x00000000       0x3c
+ .text._ZN6deviceL9cdev_pollEP4fileP6pollfdb
+                0x00000000       0x3c cdev.cpp.o
+
+.text._ZN6deviceL10cdev_ioctlEP4fileim
+                0x00000000       0x3c
+ .text._ZN6deviceL10cdev_ioctlEP4fileim
+                0x00000000       0x3c cdev.cpp.o
+
+.text._ZN6deviceL9cdev_seekEP4fileii
+                0x00000000       0x3c
+ .text._ZN6deviceL9cdev_seekEP4fileii
+                0x00000000       0x3c cdev.cpp.o
+
+.text._ZN6deviceL10cdev_writeEP4filePKcj
+                0x00000000       0x3c
+ .text._ZN6deviceL10cdev_writeEP4filePKcj
+                0x00000000       0x3c cdev.cpp.o
+
+.text._ZN6deviceL9cdev_readEP4filePcj
+                0x00000000       0x3c
+ .text._ZN6deviceL9cdev_readEP4filePcj
+                0x00000000       0x3c cdev.cpp.o
+
+.text._ZN6deviceL10cdev_closeEP4file
+                0x00000000       0x30
+ .text._ZN6deviceL10cdev_closeEP4file
+                0x00000000       0x30 cdev.cpp.o
+
+.text._ZN6deviceL9cdev_openEP4file
+                0x00000000       0x30
+ .text._ZN6deviceL9cdev_openEP4file
+                0x00000000       0x30 cdev.cpp.o
+
+.text._ZN6device4CDev17store_poll_waiterEP6pollfd
+                0x00000000       0x3c
+ .text._ZN6device4CDev17store_poll_waiterEP6pollfd
+                0x00000000       0x3c cdev.cpp.o
+                0x00000000                device::CDev::store_poll_waiter(pollfd*)
+
+.text._ZN6device4CDev10poll_stateEP4file
+                0x00000000       0x20
+ .text._ZN6device4CDev10poll_stateEP4file
+                0x00000000       0x20 cdev.cpp.o
+                0x00000000                device::CDev::poll_state(file*)
+
+.text._ZN6device4CDev11poll_notifyEh
+                0x00000000       0x50
+ .text._ZN6device4CDev11poll_notifyEh
+                0x00000000       0x50 cdev.cpp.o
+                0x00000000                device::CDev::poll_notify(unsigned char)
+
+.text._ZN6device4CDev5ioctlEP4fileim
+                0x00000000       0x6c
+ .text._ZN6device4CDev5ioctlEP4fileim
+                0x00000000       0x6c cdev.cpp.o
+                0x00000000                device::CDev::ioctl(file*, int, unsigned long)
+
+.text._ZN6device4CDev4seekEP4fileii
+                0x00000000       0x20
+ .text._ZN6device4CDev4seekEP4fileii
+                0x00000000       0x20 cdev.cpp.o
+                0x00000000                device::CDev::seek(file*, int, int)
+
+.text._ZN6device4CDev5writeEP4filePKcj
+                0x00000000       0x20
+ .text._ZN6device4CDev5writeEP4filePKcj
+                0x00000000       0x20 cdev.cpp.o
+                0x00000000                device::CDev::write(file*, char const*, unsigned int)
+
+.text._ZN6device4CDev4readEP4filePcj
+                0x00000000       0x20
+ .text._ZN6device4CDev4readEP4filePcj
+                0x00000000       0x20 cdev.cpp.o
+                0x00000000                device::CDev::read(file*, char*, unsigned int)
+
+.text._ZN6device4CDev10close_lastEP4file
+                0x00000000       0x20
+ .text._ZN6device4CDev10close_lastEP4file
+                0x00000000       0x20 cdev.cpp.o
+                0x00000000                device::CDev::close_last(file*)
+
+.text._ZN6device4CDev10open_firstEP4file
+                0x00000000       0x20
+ .text._ZN6device4CDev10open_firstEP4file
+                0x00000000       0x20 cdev.cpp.o
+                0x00000000                device::CDev::open_first(file*)
+
+.text._ZN6device4CDev18remove_poll_waiterEP6pollfd
+                0x00000000       0x4c
+ .text._ZN6device4CDev18remove_poll_waiterEP6pollfd
+                0x00000000       0x4c cdev.cpp.o
+                0x00000000                device::CDev::remove_poll_waiter(pollfd*)
+
+.text._ZN6device4CDev15poll_notify_oneEP6pollfdh
+                0x00000000       0x3c
+ .text._ZN6device4CDev15poll_notify_oneEP6pollfdh
+                0x00000000       0x3c cdev.cpp.o
+                0x00000000                device::CDev::poll_notify_one(pollfd*, unsigned char)
+
+.text._ZN6device6Device6unlockEv
+                0x00000000       0x28
+ .text._ZN6device6Device6unlockEv
+                0x00000000       0x28 cdev.cpp.o
+                0x00000000                device::Device::unlock()
+
+.text._ZN6device6Device4lockEv
+                0x00000000       0x2c
+ .text._ZN6device6Device4lockEv
+                0x00000000       0x2c cdev.cpp.o
+                0x00000000                device::Device::lock()
+
+.text._ZN6device4CDev4pollEP4fileP6pollfdb
+                0x00000000       0x78
+ .text._ZN6device4CDev4pollEP4fileP6pollfdb
+                0x00000000       0x78 cdev.cpp.o
+                0x00000000                device::CDev::poll(file*, pollfd*, bool)
+
+.text._ZN6device4CDev5closeEP4file
+                0x00000000       0x4c
+ .text._ZN6device4CDev5closeEP4file
+                0x00000000       0x4c cdev.cpp.o
+                0x00000000                device::CDev::close(file*)
+
+.text._ZN6device4CDev4openEP4file
+                0x00000000       0x50
+ .text._ZN6device4CDev4openEP4file
+                0x00000000       0x50 cdev.cpp.o
+                0x00000000                device::CDev::open(file*)
+
+.text._ZN6device4CDev4initEv
+                0x00000000       0x48
+ .text._ZN6device4CDev4initEv
+                0x00000000       0x48 cdev.cpp.o
+                0x00000000                device::CDev::init()
+
+.text._ZN6device4CDev22register_class_devnameEPKc
+                0x00000000       0x6c
+ .text._ZN6device4CDev22register_class_devnameEPKc
+                0x00000000       0x6c cdev.cpp.o
+                0x00000000                device::CDev::register_class_devname(char const*)
+
+.text._ZN6device4CDev24unregister_class_devnameEPKcj
+                0x00000000       0x44
+ .text._ZN6device4CDev24unregister_class_devnameEPKcj
+                0x00000000       0x44 cdev.cpp.o
+                0x00000000                device::CDev::unregister_class_devname(char const*, unsigned int)
+
+.text._ZN6device4CDevD2Ev
+                0x00000000       0x38
+ .text._ZN6device4CDevD2Ev
+                0x00000000       0x38 cdev.cpp.o
+                0x00000000                device::CDev::~CDev()
+                0x00000000                device::CDev::~CDev()
+
+.text._ZN6device4CDevD0Ev
+                0x00000000       0x2c
+ .text._ZN6device4CDevD0Ev
+                0x00000000       0x2c cdev.cpp.o
+                0x00000000                device::CDev::~CDev()
+
+.text._ZN6device4CDevC2EPKcS2_i
+                0x00000000       0x5c
+ .text._ZN6device4CDevC2EPKcS2_i
+                0x00000000       0x5c cdev.cpp.o
+                0x00000000                device::CDev::CDev(char const*, char const*, int)
+                0x00000000                device::CDev::CDev(char const*, char const*, int)
+
+.text._ZN6device6Device5ioctlEjRj
+                0x00000000       0x30
+ .text._ZN6device6Device5ioctlEjRj
+                0x00000000       0x30 device.cpp.o
+                0x00000000                device::Device::ioctl(unsigned int, unsigned int&)
+
+.text._ZN6device6Device5writeEjPvj
+                0x00000000       0x20
+ .text._ZN6device6Device5writeEjPvj
+                0x00000000       0x20 device.cpp.o
+                0x00000000                device::Device::write(unsigned int, void*, unsigned int)
+
+.text._ZN6device6Device4readEjPvj
+                0x00000000       0x20
+ .text._ZN6device6Device4readEjPvj
+                0x00000000       0x20 device.cpp.o
+                0x00000000                device::Device::read(unsigned int, void*, unsigned int)
+
+.text._ZN6deviceL9interruptEiPv
+                0x00000000       0x48
+ .text._ZN6deviceL9interruptEiPv
+                0x00000000       0x48 device.cpp.o
+
+.text._ZN6deviceL20unregister_interruptEi
+                0x00000000       0x3c
+ .text._ZN6deviceL20unregister_interruptEi
+                0x00000000       0x3c device.cpp.o
+
+.text._ZN6device6Device5debugEPKcz
+                0x00000000       0x54
+ .text._ZN6device6Device5debugEPKcz
+                0x00000000       0x54 device.cpp.o
+                0x00000000                device::Device::debug(char const*, ...)
+
+.text._ZN6device6Device3logEPKcz
+                0x00000000       0x5c
+ .text._ZN6device6Device3logEPKcz
+                0x00000000       0x5c device.cpp.o
+                0x00000000                device::Device::log(char const*, ...)
+
+.text._ZN6device6Device17interrupt_disableEv
+                0x00000000       0x28
+ .text._ZN6device6Device17interrupt_disableEv
+                0x00000000       0x28 device.cpp.o
+                0x00000000                device::Device::interrupt_disable()
+
+.text._ZN6device6Device9interruptEPv
+                0x00000000       0x28
+ .text._ZN6device6Device9interruptEPv
+                0x00000000       0x28 device.cpp.o
+                0x00000000                device::Device::interrupt(void*)
+
+.text._ZN6device6Device16interrupt_enableEv
+                0x00000000       0x28
+ .text._ZN6device6Device16interrupt_enableEv
+                0x00000000       0x28 device.cpp.o
+                0x00000000                device::Device::interrupt_enable()
+
+.text._ZN6deviceL18register_interruptEiPNS_6DeviceE
+                0x00000000       0x60
+ .text._ZN6deviceL18register_interruptEiPNS_6DeviceE
+                0x00000000       0x60 device.cpp.o
+
+.text._ZN6device6Device4initEv
+                0x00000000       0x3c
+ .text._ZN6device6Device4initEv
+                0x00000000       0x3c device.cpp.o
+                0x00000000                device::Device::init()
+
+.text._ZN6device6DeviceD2Ev
+                0x00000000       0x38
+ .text._ZN6device6DeviceD2Ev
+                0x00000000       0x38 device.cpp.o
+                0x00000000                device::Device::~Device()
+                0x00000000                device::Device::~Device()
+
+.text._ZN6device6DeviceD0Ev
+                0x00000000       0x2c
+ .text._ZN6device6DeviceD0Ev
+                0x00000000       0x2c device.cpp.o
+                0x00000000                device::Device::~Device()
+
+.text._ZN6device6DeviceC2EPKci
+                0x00000000       0x58
+ .text._ZN6device6DeviceC2EPKci
+                0x00000000       0x58 device.cpp.o
+                0x00000000                device::Device::Device(char const*, int)
+                0x00000000                device::Device::Device(char const*, int)
+
+.text._ZN6device3I2C8transferEP9i2c_msg_sj
+                0x00000000       0x70
+ .text._ZN6device3I2C8transferEP9i2c_msg_sj
+                0x00000000       0x70 i2c.cpp.o
+                0x00000000                device::I2C::transfer(i2c_msg_s*, unsigned int)
+
+.text._ZN6device3I2C8transferEPKhjPhj
+                0x00000000       0xc8
+ .text._ZN6device3I2C8transferEPKhjPhj
+                0x00000000       0xc8 i2c.cpp.o
+                0x00000000                device::I2C::transfer(unsigned char const*, unsigned int, unsigned char*, unsigned int)
+
+.text._ZN6device3I2C5probeEv
+                0x00000000       0x20
+ .text._ZN6device3I2C5probeEv
+                0x00000000       0x20 i2c.cpp.o
+                0x00000000                device::I2C::probe()
+
+.text._ZN6device3I2C4initEv
+                0x00000000       0x78
+ .text._ZN6device3I2C4initEv
+                0x00000000       0x78 i2c.cpp.o
+                0x00000000                device::I2C::init()
+
+.text._ZN6device3I2CD2Ev
+                0x00000000       0x34
+ .text._ZN6device3I2CD2Ev
+                0x00000000       0x34 i2c.cpp.o
+                0x00000000                device::I2C::~I2C()
+                0x00000000                device::I2C::~I2C()
+
+.text._ZN6device3I2CD0Ev
+                0x00000000       0x2c
+ .text._ZN6device3I2CD0Ev
+                0x00000000       0x2c i2c.cpp.o
+                0x00000000                device::I2C::~I2C()
+
+.text._ZN6device3I2CC2EPKcS2_itji
+                0x00000000       0x64
+ .text._ZN6device3I2CC2EPKcS2_itji
+                0x00000000       0x64 i2c.cpp.o
+                0x00000000                device::I2C::I2C(char const*, char const*, int, unsigned short, unsigned int, int)
+                0x00000000                device::I2C::I2C(char const*, char const*, int, unsigned short, unsigned int, int)
+
+.text._ZN6device3PIO4initEv
+                0x00000000       0x28
+ .text._ZN6device3PIO4initEv
+                0x00000000       0x28 pio.cpp.o
+                0x00000000                device::PIO::init()
+
+.text._ZN6device3PIOD2Ev
+                0x00000000       0x30
+ .text._ZN6device3PIOD2Ev
+                0x00000000       0x30 pio.cpp.o
+                0x00000000                device::PIO::~PIO()
+                0x00000000                device::PIO::~PIO()
+
+.text._ZN6device3PIOD0Ev
+                0x00000000       0x2c
+ .text._ZN6device3PIOD0Ev
+                0x00000000       0x2c pio.cpp.o
+                0x00000000                device::PIO::~PIO()
+
+.text._ZN6device3PIOC2EPKcS2_ji
+                0x00000000       0x44
+ .text._ZN6device3PIOC2EPKcS2_ji
+                0x00000000       0x44 pio.cpp.o
+                0x00000000                device::PIO::PIO(char const*, char const*, unsigned int, int)
+                0x00000000                device::PIO::PIO(char const*, char const*, unsigned int, int)
+
+.text._ZN6device3SPI9_transferEPhS1_j
+                0x00000000       0x78
+ .text._ZN6device3SPI9_transferEPhS1_j
+                0x00000000       0x78 spi.cpp.o
+                0x00000000                device::SPI::_transfer(unsigned char*, unsigned char*, unsigned int)
+
+.text._ZN6device3SPI13set_frequencyEj
+                0x00000000       0x24
+ .text._ZN6device3SPI13set_frequencyEj
+                0x00000000       0x24 spi.cpp.o
+                0x00000000                device::SPI::set_frequency(unsigned int)
+
+.text._ZN6device3SPI5probeEv
+                0x00000000       0x20
+ .text._ZN6device3SPI5probeEv
+                0x00000000       0x20 spi.cpp.o
+                0x00000000                device::SPI::probe()
+
+.text._ZN6device3SPI8transferEPhS1_j
+                0x00000000       0x9c
+ .text._ZN6device3SPI8transferEPhS1_j
+                0x00000000       0x9c spi.cpp.o
+                0x00000000                device::SPI::transfer(unsigned char*, unsigned char*, unsigned int)
+
+.text._ZN6device3SPI4initEv
+                0x00000000       0x8c
+ .text._ZN6device3SPI4initEv
+                0x00000000       0x8c spi.cpp.o
+                0x00000000                device::SPI::init()
+
+.text._ZN6device3SPID2Ev
+                0x00000000       0x30
+ .text._ZN6device3SPID2Ev
+                0x00000000       0x30 spi.cpp.o
+                0x00000000                device::SPI::~SPI()
+                0x00000000                device::SPI::~SPI()
+
+.text._ZN6device3SPID0Ev
+                0x00000000       0x2c
+ .text._ZN6device3SPID0Ev
+                0x00000000       0x2c spi.cpp.o
+                0x00000000                device::SPI::~SPI()
+
+.text._ZN6device3SPIC2EPKcS2_i9spi_dev_e10spi_mode_eji
+                0x00000000       0x70
+ .text._ZN6device3SPIC2EPKcS2_i9spi_dev_e10spi_mode_eji
+                0x00000000       0x70 spi.cpp.o
+                0x00000000                device::SPI::SPI(char const*, char const*, int, spi_dev_e, spi_mode_e, unsigned int, int)
+                0x00000000                device::SPI::SPI(char const*, char const*, int, spi_dev_e, spi_mode_e, unsigned int, int)
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata._ZTVN6device4CDevE
+                0x00000000       0x60
+ .rodata._ZTVN6device4CDevE
+                0x00000000       0x60 cdev.cpp.o
+                0x00000000                vtable for device::CDev
+
+.rodata.str1.1  0x00000000       0xb9
+ .rodata.str1.1
+                0x00000000       0x1d cdev.cpp.o
+ .rodata.str1.1
+                0x0000001d        0xe device.cpp.o
+ .rodata.str1.1
+                0x0000002b       0x49 i2c.cpp.o
+ .rodata.str1.1
+                0x00000074       0x45 spi.cpp.o
+
+.rodata._ZN6device4CDev4fopsE
+                0x00000000       0x1c
+ .rodata._ZN6device4CDev4fopsE
+                0x00000000       0x1c cdev.cpp.o
+                0x00000000                device::CDev::fops
+
+.rodata._ZTVN6device6DeviceE
+                0x00000000       0x28
+ .rodata._ZTVN6device6DeviceE
+                0x00000000       0x28 device.cpp.o
+                0x00000000                vtable for device::Device
+
+.rodata._ZTVN6device3I2CE
+                0x00000000       0x60
+ .rodata._ZTVN6device3I2CE
+                0x00000000       0x60 i2c.cpp.o
+                0x00000000                vtable for device::I2C
+
+.rodata._ZTVN6device3PIOE
+                0x00000000       0x60
+ .rodata._ZTVN6device3PIOE
+                0x00000000       0x60 pio.cpp.o
+                0x00000000                vtable for device::PIO
+
+.rodata._ZTVN6device3SPIE
+                0x00000000       0x60
+ .rodata._ZTVN6device3SPIE
+                0x00000000       0x60 spi.cpp.o
+                0x00000000                vtable for device::SPI
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 cdev.cpp.o
+ .data          0x00000000        0x0 device.cpp.o
+ .data          0x00000000        0x0 i2c.cpp.o
+ .data          0x00000000        0x0 pio.cpp.o
+ .data          0x00000000        0x0 spi.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 cdev.cpp.o
+ .bss           0x00000000        0x0 device.cpp.o
+ .bss           0x00000000        0x0 i2c.cpp.o
+ .bss           0x00000000        0x0 pio.cpp.o
+ .bss           0x00000000        0x0 spi.cpp.o
+ *(COMMON)
+
+.bss._ZN6deviceL11irq_entriesE
+                0x00000000       0x40
+ .bss._ZN6deviceL11irq_entriesE
+                0x00000000       0x40 device.cpp.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x235
+ *(.comment)
+ .comment       0x00000000       0x71 cdev.cpp.o
+ .comment       0x00000071       0x71 device.cpp.o
+ .comment       0x000000e2       0x71 i2c.cpp.o
+ .comment       0x00000153       0x71 pio.cpp.o
+ .comment       0x000001c4       0x71 spi.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 cdev.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 cdev.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x270
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x100 cdev.cpp.o
+ .debug_aranges
+                0x00000100       0x90 device.cpp.o
+ .debug_aranges
+                0x00000190       0x50 i2c.cpp.o
+ .debug_aranges
+                0x000001e0       0x38 pio.cpp.o
+ .debug_aranges
+                0x00000218       0x58 spi.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x4a1c
+ *(.debug_info)
+ .debug_info    0x00000000     0x1ec6 cdev.cpp.o
+ .debug_info    0x00001ec6     0x1772 device.cpp.o
+ .debug_info    0x00003638      0x749 i2c.cpp.o
+ .debug_info    0x00003d81      0x36a pio.cpp.o
+ .debug_info    0x000040eb      0x931 spi.cpp.o
+
+.debug_abbrev   0x00000000     0x1130
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x52c cdev.cpp.o
+ .debug_abbrev  0x0000052c      0x3db device.cpp.o
+ .debug_abbrev  0x00000907      0x2bf i2c.cpp.o
+ .debug_abbrev  0x00000bc6      0x203 pio.cpp.o
+ .debug_abbrev  0x00000dc9      0x367 spi.cpp.o
+
+.debug_line     0x00000000     0x1164
+ *(.debug_line)
+ .debug_line    0x00000000      0x5a5 cdev.cpp.o
+ .debug_line    0x000005a5      0x48d device.cpp.o
+ .debug_line    0x00000a32      0x28a i2c.cpp.o
+ .debug_line    0x00000cbc      0x163 pio.cpp.o
+ .debug_line    0x00000e1f      0x345 spi.cpp.o
+
+.debug_frame    0x00000000      0x7f8
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x394 cdev.cpp.o
+ .debug_frame   0x00000394      0x1e0 device.cpp.o
+ .debug_frame   0x00000574       0xf0 i2c.cpp.o
+ .debug_frame   0x00000664       0x88 pio.cpp.o
+ .debug_frame   0x000006ec      0x10c spi.cpp.o
+
+.debug_str      0x00000000     0x21ed
+ *(.debug_str)
+ .debug_str     0x00000000      0xc93 cdev.cpp.o
+ .debug_str     0x00000c93      0xbb9 device.cpp.o
+ .debug_str     0x0000184c      0x341 i2c.cpp.o
+ .debug_str     0x00001b8d      0x1df pio.cpp.o
+ .debug_str     0x00001d6c      0x481 spi.cpp.o
+
+.debug_loc      0x00000000     0x1d55
+ *(.debug_loc)
+ .debug_loc     0x00000000      0xddf cdev.cpp.o
+ .debug_loc     0x00000ddf      0x59e device.cpp.o
+ .debug_loc     0x0000137d      0x43e i2c.cpp.o
+ .debug_loc     0x000017bb      0x17c pio.cpp.o
+ .debug_loc     0x00001937      0x41e spi.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x3a8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x1c8 cdev.cpp.o
+ .debug_ranges  0x000001c8       0xc8 device.cpp.o
+ .debug_ranges  0x00000290       0x78 i2c.cpp.o
+ .debug_ranges  0x00000308       0x28 pio.cpp.o
+ .debug_ranges  0x00000330       0x78 spi.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 cdev.cpp.o
+ .ARM.attributes
+                0x00000037       0x37 device.cpp.o
+ .ARM.attributes
+                0x0000006e       0x37 i2c.cpp.o
+ .ARM.attributes
+                0x000000a5       0x37 pio.cpp.o
+ .ARM.attributes
+                0x000000dc       0x37 spi.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/drivers/device/module.pre.o elf32-littlearm)

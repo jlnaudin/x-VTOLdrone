@@ -1,0 +1,507 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD fmu.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 fmu.cpp.o
+ *(.gnu.warning)
+
+.text._ZN12_GLOBAL__N_18fmu_stopEv
+                0x00000000       0x30
+ .text._ZN12_GLOBAL__N_18fmu_stopEv
+                0x00000000       0x30 fmu.cpp.o
+
+.text._ZN6PX4FMU16control_callbackEjhhRf
+                0x00000000       0x34
+ .text._ZN6PX4FMU16control_callbackEjhhRf
+                0x00000000       0x34 fmu.cpp.o
+                0x00000000                PX4FMU::control_callback(unsigned int, unsigned char, unsigned char, float&)
+
+.text._ZN12_GLOBAL__N_14testEv
+                0x00000000      0x1bc
+ .text._ZN12_GLOBAL__N_14testEv
+                0x00000000      0x1bc fmu.cpp.o
+
+.text._ZN12_GLOBAL__N_14fakeEiPPc
+                0x00000000       0xe0
+ .text._ZN12_GLOBAL__N_14fakeEiPPc
+                0x00000000       0xe0 fmu.cpp.o
+
+.text._ZN6device6Device4lockEv
+                0x00000000       0x2c
+ .text._ZN6device6Device4lockEv
+                0x00000000       0x2c fmu.cpp.o
+                0x00000000                device::Device::lock()
+
+.text._ZN6device6Device6unlockEv
+                0x00000000       0x28
+ .text._ZN6device6Device6unlockEv
+                0x00000000       0x28 fmu.cpp.o
+                0x00000000                device::Device::unlock()
+
+.text._ZN6PX4FMU9gpio_readEv
+                0x00000000       0x4c
+ .text._ZN6PX4FMU9gpio_readEv
+                0x00000000       0x4c fmu.cpp.o
+                0x00000000                PX4FMU::gpio_read()
+
+.text._ZN6PX4FMU10gpio_writeEji
+                0x00000000       0x58
+ .text._ZN6PX4FMU10gpio_writeEji
+                0x00000000       0x58 fmu.cpp.o
+                0x00000000                PX4FMU::gpio_write(unsigned int, int)
+
+.text._ZN6PX4FMU17gpio_set_functionEji
+                0x00000000       0x70
+ .text._ZN6PX4FMU17gpio_set_functionEji
+                0x00000000       0x70 fmu.cpp.o
+                0x00000000                PX4FMU::gpio_set_function(unsigned int, int)
+
+.text._ZN6PX4FMU10gpio_resetEv
+                0x00000000       0x38
+ .text._ZN6PX4FMU10gpio_resetEv
+                0x00000000       0x38 fmu.cpp.o
+                0x00000000                PX4FMU::gpio_reset()
+
+.text._ZN6PX4FMU12sensor_resetEi
+                0x00000000      0x168
+ .text._ZN6PX4FMU12sensor_resetEi
+                0x00000000      0x168 fmu.cpp.o
+                0x00000000                PX4FMU::sensor_reset(int)
+
+.text._ZN6PX4FMU10gpio_ioctlEP4fileim
+                0x00000000       0x88
+ .text._ZN6PX4FMU10gpio_ioctlEP4fileim
+                0x00000000       0x88 fmu.cpp.o
+                0x00000000                PX4FMU::gpio_ioctl(file*, int, unsigned long)
+
+.text._ZN6PX4FMU5writeEP4filePKcj
+                0x00000000       0x54
+ .text._ZN6PX4FMU5writeEP4filePKcj
+                0x00000000       0x54 fmu.cpp.o
+                0x00000000                PX4FMU::write(file*, char const*, unsigned int)
+
+.text._ZN6PX4FMU9task_mainEv
+                0x00000000      0x2a4
+ .text._ZN6PX4FMU9task_mainEv
+                0x00000000      0x2a4 fmu.cpp.o
+                0x00000000                PX4FMU::task_main()
+
+.text._ZN6PX4FMU20task_main_trampolineEiPPc
+                0x00000000       0x1c
+ .text._ZN6PX4FMU20task_main_trampolineEiPPc
+                0x00000000       0x1c fmu.cpp.o
+                0x00000000                PX4FMU::task_main_trampoline(int, char**)
+
+.text._ZN6PX4FMU12set_pwm_rateEjjj
+                0x00000000       0xb8
+ .text._ZN6PX4FMU12set_pwm_rateEjjj
+                0x00000000       0xb8 fmu.cpp.o
+                0x00000000                PX4FMU::set_pwm_rate(unsigned int, unsigned int, unsigned int)
+
+.text._ZN6PX4FMU20set_pwm_alt_channelsEj
+                0x00000000       0x30
+ .text._ZN6PX4FMU20set_pwm_alt_channelsEj
+                0x00000000       0x30 fmu.cpp.o
+                0x00000000                PX4FMU::set_pwm_alt_channels(unsigned int)
+
+.text._ZN6PX4FMU16set_pwm_alt_rateEj
+                0x00000000       0x30
+ .text._ZN6PX4FMU16set_pwm_alt_rateEj
+                0x00000000       0x30 fmu.cpp.o
+                0x00000000                PX4FMU::set_pwm_alt_rate(unsigned int)
+
+.text._ZN6PX4FMU8set_modeENS_4ModeE
+                0x00000000       0xb0
+ .text._ZN6PX4FMU8set_modeENS_4ModeE
+                0x00000000       0xb0 fmu.cpp.o
+                0x00000000                PX4FMU::set_mode(PX4FMU::Mode)
+
+.text._ZN12_GLOBAL__N_112fmu_new_modeENS_8PortModeE
+                0x00000000       0x54
+ .text._ZN12_GLOBAL__N_112fmu_new_modeENS_8PortModeE
+                0x00000000       0x54 fmu.cpp.o
+
+.text._ZN6PX4FMU9pwm_ioctlEP4fileim
+                0x00000000      0x4d8
+ .text._ZN6PX4FMU9pwm_ioctlEP4fileim
+                0x00000000      0x4d8 fmu.cpp.o
+                0x00000000                PX4FMU::pwm_ioctl(file*, int, unsigned long)
+
+.text._ZN6PX4FMU5ioctlEP4fileim
+                0x00000000       0x74
+ .text._ZN6PX4FMU5ioctlEP4fileim
+                0x00000000       0x74 fmu.cpp.o
+                0x00000000                PX4FMU::ioctl(file*, int, unsigned long)
+
+.text._ZN6PX4FMU4initEv
+                0x00000000       0xac
+ .text._ZN6PX4FMU4initEv
+                0x00000000       0xac fmu.cpp.o
+                0x00000000                PX4FMU::init()
+
+.text._ZN6PX4FMUD2Ev
+                0x00000000       0x70
+ .text._ZN6PX4FMUD2Ev
+                0x00000000       0x70 fmu.cpp.o
+                0x00000000                PX4FMU::~PX4FMU()
+                0x00000000                PX4FMU::~PX4FMU()
+
+.text._ZN6PX4FMUD0Ev
+                0x00000000       0x2c
+ .text._ZN6PX4FMUD0Ev
+                0x00000000       0x2c fmu.cpp.o
+                0x00000000                PX4FMU::~PX4FMU()
+
+.text._ZN6PX4FMUC2Ev
+                0x00000000       0xac
+ .text._ZN6PX4FMUC2Ev
+                0x00000000       0xac fmu.cpp.o
+                0x00000000                PX4FMU::PX4FMU()
+                0x00000000                PX4FMU::PX4FMU()
+
+.text._ZN12_GLOBAL__N_19fmu_startEv
+                0x00000000       0x5c
+ .text._ZN12_GLOBAL__N_19fmu_startEv
+                0x00000000       0x5c fmu.cpp.o
+
+.text._ZN12_GLOBAL__N_112sensor_resetEi
+                0x00000000       0x54
+ .text._ZN12_GLOBAL__N_112sensor_resetEi
+                0x00000000       0x54 fmu.cpp.o
+
+.text.fmu_main  0x00000000      0x168
+ .text.fmu_main
+                0x00000000      0x168 fmu.cpp.o
+                0x00000000                fmu_main
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata._ZN6PX4FMU9_gpio_tabE
+                0x00000000       0x90
+ .rodata._ZN6PX4FMU9_gpio_tabE
+                0x00000000       0x90 fmu.cpp.o
+                0x00000000                PX4FMU::_gpio_tab
+
+.rodata._ZTV6PX4FMU
+                0x00000000       0x60
+ .rodata._ZTV6PX4FMU
+                0x00000000       0x60 fmu.cpp.o
+                0x00000000                vtable for PX4FMU
+
+.rodata.str1.1  0x00000000      0x425
+ .rodata.str1.1
+                0x00000000      0x425 fmu.cpp.o
+
+.rodata._ZN6PX4FMU6_ngpioE
+                0x00000000        0x4
+ .rodata._ZN6PX4FMU6_ngpioE
+                0x00000000        0x4 fmu.cpp.o
+                0x00000000                PX4FMU::_ngpio
+
+.rodata.CSWTCH.128
+                0x00000000        0x3
+ .rodata.CSWTCH.128
+                0x00000000        0x3 fmu.cpp.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 fmu.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 fmu.cpp.o
+ *(COMMON)
+
+.bss._ZN12_GLOBAL__N_15g_fmuE
+                0x00000000        0x4
+ .bss._ZN12_GLOBAL__N_15g_fmuE
+                0x00000000        0x4 fmu.cpp.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x71
+ *(.comment)
+ .comment       0x00000000       0x71 fmu.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 fmu.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 fmu.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x100
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x100 fmu.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x2739
+ *(.debug_info)
+ .debug_info    0x00000000     0x2739 fmu.cpp.o
+
+.debug_abbrev   0x00000000      0x599
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x599 fmu.cpp.o
+
+.debug_line     0x00000000      0xb20
+ *(.debug_line)
+ .debug_line    0x00000000      0xb20 fmu.cpp.o
+
+.debug_frame    0x00000000      0x3ac
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x3ac fmu.cpp.o
+
+.debug_str      0x00000000     0x1177
+ *(.debug_str)
+ .debug_str     0x00000000     0x1177 fmu.cpp.o
+
+.debug_loc      0x00000000     0x12de
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x12de fmu.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x400
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x400 fmu.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 fmu.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/c/px4/workspace/PX4Firmware/src/drivers/px4fmu/module.pre.o elf32-littlearm)

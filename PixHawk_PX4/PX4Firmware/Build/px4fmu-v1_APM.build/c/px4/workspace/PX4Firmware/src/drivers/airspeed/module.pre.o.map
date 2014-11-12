@@ -1,0 +1,668 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD airspeed.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 airspeed.cpp.o
+ *(.gnu.warning)
+
+.text._ZN8Airspeed16cycle_trampolineEPv
+                0x00000000       0x28
+ .text._ZN8Airspeed16cycle_trampolineEPv
+                0x00000000       0x28 airspeed.cpp.o
+                0x00000000                Airspeed::cycle_trampoline(void*)
+
+.text._ZN8Airspeed5probeEv
+                0x00000000       0x34
+ .text._ZN8Airspeed5probeEv
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                Airspeed::probe()
+
+.text._ZN10RingBuffer5spaceEv
+                0x00000000       0x38
+ .text._ZN10RingBuffer5spaceEv
+                0x00000000       0x38 airspeed.cpp.o
+                0x00000000                RingBuffer::space()
+
+.text._ZN10RingBuffer5countEv
+                0x00000000       0x2c
+ .text._ZN10RingBuffer5countEv
+                0x00000000       0x2c airspeed.cpp.o
+                0x00000000                RingBuffer::count()
+
+.text._ZN10RingBuffer4sizeEv
+                0x00000000       0x24
+ .text._ZN10RingBuffer4sizeEv
+                0x00000000       0x24 airspeed.cpp.o
+                0x00000000                RingBuffer::size()
+
+.text._ZN10RingBuffer5emptyEv
+                0x00000000       0x2c
+ .text._ZN10RingBuffer5emptyEv
+                0x00000000       0x2c airspeed.cpp.o
+                0x00000000                RingBuffer::empty()
+
+.text._ZN10RingBuffer5_nextEj
+                0x00000000       0x28
+ .text._ZN10RingBuffer5_nextEj
+                0x00000000       0x28 airspeed.cpp.o
+                0x00000000                RingBuffer::_next(unsigned int)
+
+.text._ZN10RingBuffer4fullEv
+                0x00000000       0x34
+ .text._ZN10RingBuffer4fullEv
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::full()
+
+.text._ZN8Airspeed4stopEv
+                0x00000000       0x2c
+ .text._ZN8Airspeed4stopEv
+                0x00000000       0x2c airspeed.cpp.o
+                0x00000000                Airspeed::stop()
+
+.text._ZN8AirspeedD2Ev
+                0x00000000       0x68
+ .text._ZN8AirspeedD2Ev
+                0x00000000       0x68 airspeed.cpp.o
+                0x00000000                Airspeed::~Airspeed()
+                0x00000000                Airspeed::~Airspeed()
+
+.text._ZN8AirspeedD0Ev
+                0x00000000       0x2c
+ .text._ZN8AirspeedD0Ev
+                0x00000000       0x2c airspeed.cpp.o
+                0x00000000                Airspeed::~Airspeed()
+
+.text._ZN8AirspeedC2EiijPKc
+                0x00000000       0xbc
+ .text._ZN8AirspeedC2EiijPKc
+                0x00000000       0xbc airspeed.cpp.o
+                0x00000000                Airspeed::Airspeed(int, int, unsigned int, char const*)
+                0x00000000                Airspeed::Airspeed(int, int, unsigned int, char const*)
+
+.text._ZN10RingBuffer10print_infoEPKc
+                0x00000000       0x44
+ .text._ZN10RingBuffer10print_infoEPKc
+                0x00000000       0x44 airspeed.cpp.o
+                0x00000000                RingBuffer::print_info(char const*)
+
+.text._ZN8Airspeed10print_infoEv
+                0x00000000       0x50
+ .text._ZN8Airspeed10print_infoEv
+                0x00000000       0x50 airspeed.cpp.o
+                0x00000000                Airspeed::print_info()
+
+.text._ZN10RingBufferC2Ejj
+                0x00000000       0x44
+ .text._ZN10RingBufferC2Ejj
+                0x00000000       0x44 airspeed.cpp.o
+                0x00000000                RingBuffer::RingBuffer(unsigned int, unsigned int)
+                0x00000000                RingBuffer::RingBuffer(unsigned int, unsigned int)
+
+.text._ZN10RingBuffer6resizeEj
+                0x00000000       0x48
+ .text._ZN10RingBuffer6resizeEj
+                0x00000000       0x48 airspeed.cpp.o
+                0x00000000                RingBuffer::resize(unsigned int)
+
+.text._ZN10RingBufferD2Ev
+                0x00000000       0x30
+ .text._ZN10RingBufferD2Ev
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::~RingBuffer()
+                0x00000000                RingBuffer::~RingBuffer()
+
+.text._ZN10RingBufferD0Ev
+                0x00000000       0x2c
+ .text._ZN10RingBufferD0Ev
+                0x00000000       0x2c airspeed.cpp.o
+                0x00000000                RingBuffer::~RingBuffer()
+
+.text._ZN10RingBuffer3putEPKvj
+                0x00000000       0x60
+ .text._ZN10RingBuffer3putEPKvj
+                0x00000000       0x60 airspeed.cpp.o
+                0x00000000                RingBuffer::put(void const*, unsigned int)
+
+.text._ZN10RingBuffer3putEd
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEd
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(double)
+
+.text._ZN10RingBuffer3putEf
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEf
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(float)
+
+.text._ZN10RingBuffer3putEy
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEy
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(unsigned long long)
+
+.text._ZN10RingBuffer3putEx
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEx
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(long long)
+
+.text._ZN10RingBuffer3putEj
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEj
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(unsigned int)
+
+.text._ZN10RingBuffer3putEi
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEi
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(int)
+
+.text._ZN10RingBuffer3putEt
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEt
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(unsigned short)
+
+.text._ZN10RingBuffer3putEs
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEs
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(short)
+
+.text._ZN10RingBuffer3putEh
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEh
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(unsigned char)
+
+.text._ZN10RingBuffer3putEa
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEa
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::put(signed char)
+
+.text._ZN10RingBuffer3getEPvj
+                0x00000000       0x84
+ .text._ZN10RingBuffer3getEPvj
+                0x00000000       0x84 airspeed.cpp.o
+                0x00000000                RingBuffer::get(void*, unsigned int)
+
+.text._ZN8Airspeed4initEv
+                0x00000000       0x94
+ .text._ZN8Airspeed4initEv
+                0x00000000       0x94 airspeed.cpp.o
+                0x00000000                Airspeed::init()
+
+.text._ZN10RingBuffer3getERd
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERd
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(double&)
+
+.text._ZN10RingBuffer3getERf
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERf
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(float&)
+
+.text._ZN10RingBuffer3getERy
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERy
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(unsigned long long&)
+
+.text._ZN10RingBuffer3getERx
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERx
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(long long&)
+
+.text._ZN10RingBuffer3getERj
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERj
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(unsigned int&)
+
+.text._ZN10RingBuffer3getERi
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERi
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(int&)
+
+.text._ZN10RingBuffer3getERt
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERt
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(unsigned short&)
+
+.text._ZN10RingBuffer3getERs
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERs
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(short&)
+
+.text._ZN10RingBuffer3getERh
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERh
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(unsigned char&)
+
+.text._ZN10RingBuffer3getERa
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERa
+                0x00000000       0x30 airspeed.cpp.o
+                0x00000000                RingBuffer::get(signed char&)
+
+.text._ZN10RingBuffer5forceEPKvj
+                0x00000000       0x44
+ .text._ZN10RingBuffer5forceEPKvj
+                0x00000000       0x44 airspeed.cpp.o
+                0x00000000                RingBuffer::force(void const*, unsigned int)
+
+.text._ZN8Airspeed10new_reportERK23differential_pressure_s
+                0x00000000       0x34
+ .text._ZN8Airspeed10new_reportERK23differential_pressure_s
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                Airspeed::new_report(differential_pressure_s const&)
+
+.text._ZN10RingBuffer5forceEd
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEd
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(double)
+
+.text._ZN10RingBuffer5forceEf
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEf
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(float)
+
+.text._ZN10RingBuffer5forceEy
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEy
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(unsigned long long)
+
+.text._ZN10RingBuffer5forceEx
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEx
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(long long)
+
+.text._ZN10RingBuffer5forceEj
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEj
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(unsigned int)
+
+.text._ZN10RingBuffer5forceEi
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEi
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(int)
+
+.text._ZN10RingBuffer5forceEt
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEt
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(unsigned short)
+
+.text._ZN10RingBuffer5forceEs
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEs
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(short)
+
+.text._ZN10RingBuffer5forceEh
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEh
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(unsigned char)
+
+.text._ZN10RingBuffer5forceEa
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEa
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::force(signed char)
+
+.text._ZN10RingBuffer5flushEv
+                0x00000000       0x34
+ .text._ZN10RingBuffer5flushEv
+                0x00000000       0x34 airspeed.cpp.o
+                0x00000000                RingBuffer::flush()
+
+.text._ZN8Airspeed5startEv
+                0x00000000       0x70
+ .text._ZN8Airspeed5startEv
+                0x00000000       0x70 airspeed.cpp.o
+                0x00000000                Airspeed::start()
+
+.text._ZN8Airspeed5ioctlEP4fileim
+                0x00000000      0x158
+ .text._ZN8Airspeed5ioctlEP4fileim
+                0x00000000      0x158 airspeed.cpp.o
+                0x00000000                Airspeed::ioctl(file*, int, unsigned long)
+
+.text._ZN8Airspeed4readEP4filePcj
+                0x00000000       0x9c
+ .text._ZN8Airspeed4readEP4filePcj
+                0x00000000       0x9c airspeed.cpp.o
+                0x00000000                Airspeed::read(file*, char*, unsigned int)
+
+.fini
+ *(.fini)
+
+.rodata         0x00000000        0x8
+ *(.rodata)
+ .rodata        0x00000000        0x8 airspeed.cpp.o
+
+.rodata.str1.1  0x00000000       0xc9
+ .rodata.str1.1
+                0x00000000       0xc9 airspeed.cpp.o
+
+.rodata._ZTV10RingBuffer
+                0x00000000       0x10
+ .rodata._ZTV10RingBuffer
+                0x00000000       0x10 airspeed.cpp.o
+                0x00000000                vtable for RingBuffer
+
+.rodata._ZTV8Airspeed
+                0x00000000       0x70
+ .rodata._ZTV8Airspeed
+                0x00000000       0x70 airspeed.cpp.o
+                0x00000000                vtable for Airspeed
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 airspeed.cpp.o
+
+.data._ZZN8Airspeed5startEvE3pub
+                0x00000000        0x4
+ .data._ZZN8Airspeed5startEvE3pub
+                0x00000000        0x4 airspeed.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 airspeed.cpp.o
+ *(COMMON)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x71
+ *(.comment)
+ .comment       0x00000000       0x71 airspeed.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x1e0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x1e0 airspeed.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x2c43
+ *(.debug_info)
+ .debug_info    0x00000000     0x2c43 airspeed.cpp.o
+
+.debug_abbrev   0x00000000      0x5c5
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x5c5 airspeed.cpp.o
+
+.debug_line     0x00000000      0xa5a
+ *(.debug_line)
+ .debug_line    0x00000000      0xa5a airspeed.cpp.o
+
+.debug_frame    0x00000000      0x758
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x758 airspeed.cpp.o
+
+.debug_str      0x00000000     0x1379
+ *(.debug_str)
+ .debug_str     0x00000000     0x1379 airspeed.cpp.o
+
+.debug_loc      0x00000000     0x183b
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x183b airspeed.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x348
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x348 airspeed.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 airspeed.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/drivers/airspeed/module.pre.o elf32-littlearm)

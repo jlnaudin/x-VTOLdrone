@@ -1,0 +1,841 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD px4io.cpp.o
+LOAD px4io_uploader.cpp.o
+LOAD px4io_serial.cpp.o
+LOAD px4io_i2c.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 px4io.cpp.o
+ .text          0x00000000        0x0 px4io_uploader.cpp.o
+ .text          0x00000000        0x0 px4io_serial.cpp.o
+ .text          0x00000000        0x0 px4io_i2c.cpp.o
+ *(.gnu.warning)
+
+.text._ZN5PX4IO15set_dsm_vcc_ctlEb
+                0x00000000       0x28
+ .text._ZN5PX4IO15set_dsm_vcc_ctlEb
+                0x00000000       0x28 px4io.cpp.o
+                0x00000000                PX4IO::set_dsm_vcc_ctl(bool)
+
+.text._ZN5PX4IO15get_dsm_vcc_ctlEv
+                0x00000000       0x24
+ .text._ZN5PX4IO15get_dsm_vcc_ctlEv
+                0x00000000       0x24 px4io.cpp.o
+                0x00000000                PX4IO::get_dsm_vcc_ctl()
+
+.text._ZNK5PX4IO13system_statusEv
+                0x00000000       0x24
+ .text._ZNK5PX4IO13system_statusEv
+                0x00000000       0x24 px4io.cpp.o
+                0x00000000                PX4IO::system_status() const
+
+.text._ZN5PX4IO27set_battery_current_scalingEff
+                0x00000000       0x38
+ .text._ZN5PX4IO27set_battery_current_scalingEff
+                0x00000000       0x38 px4io.cpp.o
+                0x00000000                PX4IO::set_battery_current_scaling(float, float)
+
+.text._ZN5PX4IO11print_debugEv
+                0x00000000       0x20
+ .text._ZN5PX4IO11print_debugEv
+                0x00000000       0x20 px4io.cpp.o
+                0x00000000                PX4IO::print_debug()
+
+.text._ZN5PX4IO16io_handle_alarmsEt
+                0x00000000       0x28
+ .text._ZN5PX4IO16io_handle_alarmsEt
+                0x00000000       0x28 px4io.cpp.o
+                0x00000000                PX4IO::io_handle_alarms(unsigned short)
+
+.text._ZN5PX4IO14dsm_bind_ioctlEi
+                0x00000000       0x44
+ .text._ZN5PX4IO14dsm_bind_ioctlEi
+                0x00000000       0x44 px4io.cpp.o
+                0x00000000                PX4IO::dsm_bind_ioctl(int)
+
+.text._ZN5PX4IO15set_update_rateEi
+                0x00000000       0x58
+ .text._ZN5PX4IO15set_update_rateEi
+                0x00000000       0x58 px4io.cpp.o
+                0x00000000                PX4IO::set_update_rate(int)
+
+.text._ZN12_GLOBAL__N_14bindEiPPc
+                0x00000000       0xd4
+ .text._ZN12_GLOBAL__N_14bindEiPPc
+                0x00000000       0xd4 px4io.cpp.o
+
+.text._ZN12_GLOBAL__N_14testEv
+                0x00000000      0x180
+ .text._ZN12_GLOBAL__N_14testEv
+                0x00000000      0x180 px4io.cpp.o
+
+.text._ZN12_GLOBAL__N_18lockdownEiPPc
+                0x00000000      0x120
+ .text._ZN12_GLOBAL__N_18lockdownEiPPc
+                0x00000000      0x120 px4io.cpp.o
+
+.text._ZN5PX4IO10io_reg_getEhhPtj
+                0x00000000       0x78
+ .text._ZN5PX4IO10io_reg_getEhhPtj
+                0x00000000       0x78 px4io.cpp.o
+                0x00000000                PX4IO::io_reg_get(unsigned char, unsigned char, unsigned short*, unsigned int)
+
+.text._ZN5PX4IO10io_reg_getEhh
+                0x00000000       0x44
+ .text._ZN5PX4IO10io_reg_getEhh
+                0x00000000       0x44 px4io.cpp.o
+                0x00000000                PX4IO::io_reg_get(unsigned char, unsigned char)
+
+.text._ZN5PX4IO10io_reg_setEhhPKtj
+                0x00000000       0x78
+ .text._ZN5PX4IO10io_reg_setEhhPKtj
+                0x00000000       0x78 px4io.cpp.o
+                0x00000000                PX4IO::io_reg_set(unsigned char, unsigned char, unsigned short const*, unsigned int)
+
+.text._ZN5PX4IO5writeEP4filePKcj
+                0x00000000       0x54
+ .text._ZN5PX4IO5writeEP4filePKcj
+                0x00000000       0x54 px4io.cpp.o
+                0x00000000                PX4IO::write(file*, char const*, unsigned int)
+
+.text._ZN5PX4IO10io_reg_setEhht
+                0x00000000       0x44
+ .text._ZN5PX4IO10io_reg_setEhht
+                0x00000000       0x44 px4io.cpp.o
+                0x00000000                PX4IO::io_reg_set(unsigned char, unsigned char, unsigned short)
+
+.text._ZN5PX4IO12print_statusEv
+                0x00000000      0x7d0
+ .text._ZN5PX4IO12print_statusEv
+                0x00000000      0x7d0 px4io.cpp.o
+                0x00000000                PX4IO::print_status()
+
+.text._ZN12_GLOBAL__N_17monitorEv
+                0x00000000       0x8c
+ .text._ZN12_GLOBAL__N_17monitorEv
+                0x00000000       0x8c px4io.cpp.o
+
+.text._ZN5PX4IO13io_reg_modifyEhhtt
+                0x00000000       0x64
+ .text._ZN5PX4IO13io_reg_modifyEhhtt
+                0x00000000       0x64 px4io.cpp.o
+                0x00000000                PX4IO::io_reg_modify(unsigned char, unsigned char, unsigned short, unsigned short)
+
+.text._ZN5PX4IO22io_disable_rc_handlingEv
+                0x00000000       0x34
+ .text._ZN5PX4IO22io_disable_rc_handlingEv
+                0x00000000       0x34 px4io.cpp.o
+                0x00000000                PX4IO::io_disable_rc_handling()
+
+.text._ZN5PX4IO19disable_rc_handlingEv
+                0x00000000       0x28
+ .text._ZN5PX4IO19disable_rc_handlingEv
+                0x00000000       0x28 px4io.cpp.o
+                0x00000000                PX4IO::disable_rc_handling()
+
+.text._ZN5PX4IO10mixer_sendEPKcjj
+                0x00000000      0x184
+ .text._ZN5PX4IO10mixer_sendEPKcjj
+                0x00000000      0x184 px4io.cpp.o
+                0x00000000                PX4IO::mixer_send(char const*, unsigned int, unsigned int)
+
+.text._ZN5PX4IO5ioctlEP4fileim
+                0x00000000      0x594
+ .text._ZN5PX4IO5ioctlEP4fileim
+                0x00000000      0x594 px4io.cpp.o
+                0x00000000                PX4IO::ioctl(file*, int, unsigned long)
+
+.text._ZN5PX4IO22io_publish_pwm_outputsEv
+                0x00000000       0xb4
+ .text._ZN5PX4IO22io_publish_pwm_outputsEv
+                0x00000000       0xb4 px4io.cpp.o
+                0x00000000                PX4IO::io_publish_pwm_outputs()
+
+.text._ZN5PX4IO16io_handle_vservoEtt
+                0x00000000       0x74
+ .text._ZN5PX4IO16io_handle_vservoEtt
+                0x00000000       0x74 px4io.cpp.o
+                0x00000000                PX4IO::io_handle_vservo(unsigned short, unsigned short)
+
+.text._ZN5PX4IO16io_handle_statusEt
+                0x00000000       0xb0
+ .text._ZN5PX4IO16io_handle_statusEt
+                0x00000000       0xb0 px4io.cpp.o
+                0x00000000                PX4IO::io_handle_status(unsigned short)
+
+.text._ZN5PX4IO19io_get_raw_rc_inputER15rc_input_values
+                0x00000000       0xc4
+ .text._ZN5PX4IO19io_get_raw_rc_inputER15rc_input_values
+                0x00000000       0xc4 px4io.cpp.o
+                0x00000000                PX4IO::io_get_raw_rc_input(rc_input_values&)
+
+.text._ZN5PX4IO17io_publish_raw_rcEv
+                0x00000000       0x88
+ .text._ZN5PX4IO17io_publish_raw_rcEv
+                0x00000000       0x88 px4io.cpp.o
+                0x00000000                PX4IO::io_publish_raw_rc()
+
+.text._ZN5PX4IO16io_set_rc_configEv
+                0x00000000      0x24c
+ .text._ZN5PX4IO16io_set_rc_configEv
+                0x00000000      0x24c px4io.cpp.o
+                0x00000000                PX4IO::io_set_rc_config()
+
+.text._ZN5PX4IO19io_set_arming_stateEv
+                0x00000000       0x98
+ .text._ZN5PX4IO19io_set_arming_stateEv
+                0x00000000       0x98 px4io.cpp.o
+                0x00000000                PX4IO::io_set_arming_state()
+
+.text._ZN5PX4IO20io_set_control_stateEj
+                0x00000000      0x114
+ .text._ZN5PX4IO20io_set_control_stateEj
+                0x00000000      0x114 px4io.cpp.o
+                0x00000000                PX4IO::io_set_control_state(unsigned int)
+
+.text._ZN5PX4IO21io_set_control_groupsEv
+                0x00000000       0x44
+ .text._ZN5PX4IO21io_set_control_groupsEv
+                0x00000000       0x44 px4io.cpp.o
+                0x00000000                PX4IO::io_set_control_groups()
+
+.text._ZN6device6Device4lockEv
+                0x00000000       0x2c
+ .text._ZN6device6Device4lockEv
+                0x00000000       0x2c px4io.cpp.o
+                0x00000000                device::Device::lock()
+
+.text._ZN6device6Device6unlockEv
+                0x00000000       0x28
+ .text._ZN6device6Device6unlockEv
+                0x00000000       0x28 px4io.cpp.o
+                0x00000000                device::Device::unlock()
+
+.text._ZN5PX4IO6detectEv
+                0x00000000       0x68
+ .text._ZN5PX4IO6detectEv
+                0x00000000       0x68 px4io.cpp.o
+                0x00000000                PX4IO::detect()
+
+.text._ZN5PX4IOD2Ev
+                0x00000000       0x74
+ .text._ZN5PX4IOD2Ev
+                0x00000000       0x74 px4io.cpp.o
+                0x00000000                PX4IO::~PX4IO()
+                0x00000000                PX4IO::~PX4IO()
+
+.text._ZN5PX4IOD0Ev
+                0x00000000       0x2c
+ .text._ZN5PX4IOD0Ev
+                0x00000000       0x2c px4io.cpp.o
+                0x00000000                PX4IO::~PX4IO()
+
+.text._ZN5PX4IOC2EPN6device6DeviceE
+                0x00000000      0x124
+ .text._ZN5PX4IOC2EPN6device6DeviceE
+                0x00000000      0x124 px4io.cpp.o
+                0x00000000                PX4IO::PX4IO(device::Device*)
+                0x00000000                PX4IO::PX4IO(device::Device*)
+
+.text._ZN12_GLOBAL__N_113get_interfaceEv
+                0x00000000       0x54
+ .text._ZN12_GLOBAL__N_113get_interfaceEv
+                0x00000000       0x54 px4io.cpp.o
+
+.text._ZN12_GLOBAL__N_17if_testEj
+                0x00000000       0x48
+ .text._ZN12_GLOBAL__N_17if_testEj
+                0x00000000       0x48 px4io.cpp.o
+
+.text._ZN12_GLOBAL__N_15startEiPPc
+                0x00000000       0xe4
+ .text._ZN12_GLOBAL__N_15startEiPPc
+                0x00000000       0xe4 px4io.cpp.o
+
+.text._ZN12_GLOBAL__N_16detectEiPPc
+                0x00000000       0x6c
+ .text._ZN12_GLOBAL__N_16detectEiPPc
+                0x00000000       0x6c px4io.cpp.o
+
+.text._ZN12_GLOBAL__N_18checkcrcEiPPc
+                0x00000000      0x10c
+ .text._ZN12_GLOBAL__N_18checkcrcEiPPc
+                0x00000000      0x10c px4io.cpp.o
+
+.text.px4io_main
+                0x00000000      0x504
+ .text.px4io_main
+                0x00000000      0x504 px4io.cpp.o
+                0x00000000                px4io_main
+
+.text._ZN5PX4IO17io_handle_batteryEtt
+                0x00000000       0xf0
+ .text._ZN5PX4IO17io_handle_batteryEtt
+                0x00000000       0xf0 px4io.cpp.o
+                0x00000000                PX4IO::io_handle_battery(unsigned short, unsigned short)
+
+.text._ZN5PX4IO13io_get_statusEv
+                0x00000000       0x58
+ .text._ZN5PX4IO13io_get_statusEv
+                0x00000000       0x58 px4io.cpp.o
+                0x00000000                PX4IO::io_get_status()
+
+.text._ZN5PX4IO9task_mainEv
+                0x00000000      0x30c
+ .text._ZN5PX4IO9task_mainEv
+                0x00000000      0x30c px4io.cpp.o
+                0x00000000                PX4IO::task_main()
+
+.text._ZN5PX4IO20task_main_trampolineEiPPc
+                0x00000000       0x1c
+ .text._ZN5PX4IO20task_main_trampolineEiPPc
+                0x00000000       0x1c px4io.cpp.o
+                0x00000000                PX4IO::task_main_trampoline(int, char**)
+
+.text._ZN5PX4IO4initEv
+                0x00000000      0x2e8
+ .text._ZN5PX4IO4initEv
+                0x00000000      0x2e8 px4io.cpp.o
+                0x00000000                PX4IO::init()
+
+.text._ZN14PX4IO_Uploader3logEPKcz
+                0x00000000       0x54
+ .text._ZN14PX4IO_Uploader3logEPKcz
+                0x00000000       0x54 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::log(char const*, ...)
+
+.text._ZN14PX4IO_UploaderC2Ev
+                0x00000000       0x30
+ .text._ZN14PX4IO_UploaderC2Ev
+                0x00000000       0x30 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::PX4IO_Uploader()
+                0x00000000                PX4IO_Uploader::PX4IO_Uploader()
+
+.text._ZN14PX4IO_UploaderD2Ev
+                0x00000000       0x28
+ .text._ZN14PX4IO_UploaderD2Ev
+                0x00000000       0x28 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::~PX4IO_Uploader()
+                0x00000000                PX4IO_Uploader::~PX4IO_Uploader()
+
+.text._ZL15read_with_retryiPvj
+                0x00000000       0x54
+ .text._ZL15read_with_retryiPvj
+                0x00000000       0x54 px4io_uploader.cpp.o
+
+.text._ZN14PX4IO_Uploader4sendEh
+                0x00000000       0x40
+ .text._ZN14PX4IO_Uploader4sendEh
+                0x00000000       0x40 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::send(unsigned char)
+
+.text._ZN14PX4IO_Uploader6rebootEv
+                0x00000000       0x30
+ .text._ZN14PX4IO_Uploader6rebootEv
+                0x00000000       0x30 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::reboot()
+
+.text._ZN14PX4IO_Uploader4sendEPhj
+                0x00000000       0x40
+ .text._ZN14PX4IO_Uploader4sendEPhj
+                0x00000000       0x40 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::send(unsigned char*, unsigned int)
+
+.text._ZN14PX4IO_Uploader4recvERhj
+                0x00000000       0x54
+ .text._ZN14PX4IO_Uploader4recvERhj
+                0x00000000       0x54 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::recv(unsigned char&, unsigned int)
+
+.text._ZN14PX4IO_Uploader8get_syncEj
+                0x00000000       0x60
+ .text._ZN14PX4IO_Uploader8get_syncEj
+                0x00000000       0x60 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::get_sync(unsigned int)
+
+.text._ZN14PX4IO_Uploader7programEj
+                0x00000000       0xd8
+ .text._ZN14PX4IO_Uploader7programEj
+                0x00000000       0xd8 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::program(unsigned int)
+
+.text._ZN14PX4IO_Uploader5eraseEv
+                0x00000000       0x48
+ .text._ZN14PX4IO_Uploader5eraseEv
+                0x00000000       0x48 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::erase()
+
+.text._ZN14PX4IO_Uploader11verify_rev2Ej
+                0x00000000      0x150
+ .text._ZN14PX4IO_Uploader11verify_rev2Ej
+                0x00000000      0x150 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::verify_rev2(unsigned int)
+
+.text._ZN14PX4IO_Uploader5drainEv
+                0x00000000       0x2c
+ .text._ZN14PX4IO_Uploader5drainEv
+                0x00000000       0x2c px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::drain()
+
+.text._ZN14PX4IO_Uploader4syncEv
+                0x00000000       0x4c
+ .text._ZN14PX4IO_Uploader4syncEv
+                0x00000000       0x4c px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::sync()
+
+.text._ZN14PX4IO_Uploader4recvEPhj
+                0x00000000       0x48
+ .text._ZN14PX4IO_Uploader4recvEPhj
+                0x00000000       0x48 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::recv(unsigned char*, unsigned int)
+
+.text._ZN14PX4IO_Uploader8get_infoEiRj
+                0x00000000       0x54
+ .text._ZN14PX4IO_Uploader8get_infoEiRj
+                0x00000000       0x54 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::get_info(int, unsigned int&)
+
+.text._ZN14PX4IO_Uploader11verify_rev3Ej
+                0x00000000      0x124
+ .text._ZN14PX4IO_Uploader11verify_rev3Ej
+                0x00000000      0x124 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::verify_rev3(unsigned int)
+
+.text._ZN14PX4IO_Uploader6uploadEPPKc
+                0x00000000      0x248
+ .text._ZN14PX4IO_Uploader6uploadEPPKc
+                0x00000000      0x248 px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::upload(char const**)
+
+.text._ZN14PX4IO_UploaderD0Ev
+                0x00000000       0x2c
+ .text._ZN14PX4IO_UploaderD0Ev
+                0x00000000       0x2c px4io_uploader.cpp.o
+                0x00000000                PX4IO_Uploader::~PX4IO_Uploader()
+
+.text._ZN9PX4IO_I2C4readEjPvj
+                0x00000000       0x64
+ .text._ZN9PX4IO_I2C4readEjPvj
+                0x00000000       0x64 px4io_i2c.cpp.o
+                0x00000000                PX4IO_I2C::read(unsigned int, void*, unsigned int)
+
+.text._ZN9PX4IO_I2C5writeEjPvj
+                0x00000000       0x64
+ .text._ZN9PX4IO_I2C5writeEjPvj
+                0x00000000       0x64 px4io_i2c.cpp.o
+                0x00000000                PX4IO_I2C::write(unsigned int, void*, unsigned int)
+
+.text._ZN9PX4IO_I2C5ioctlEjRj
+                0x00000000       0x20
+ .text._ZN9PX4IO_I2C5ioctlEjRj
+                0x00000000       0x20 px4io_i2c.cpp.o
+                0x00000000                PX4IO_I2C::ioctl(unsigned int, unsigned int&)
+
+.text._ZN9PX4IO_I2C4initEv
+                0x00000000       0x28
+ .text._ZN9PX4IO_I2C4initEv
+                0x00000000       0x28 px4io_i2c.cpp.o
+                0x00000000                PX4IO_I2C::init()
+
+.text._ZN9PX4IO_I2CD2Ev
+                0x00000000       0x30
+ .text._ZN9PX4IO_I2CD2Ev
+                0x00000000       0x30 px4io_i2c.cpp.o
+                0x00000000                PX4IO_I2C::~PX4IO_I2C()
+                0x00000000                PX4IO_I2C::~PX4IO_I2C()
+
+.text._ZN9PX4IO_I2CD0Ev
+                0x00000000       0x2c
+ .text._ZN9PX4IO_I2CD0Ev
+                0x00000000       0x2c px4io_i2c.cpp.o
+                0x00000000                PX4IO_I2C::~PX4IO_I2C()
+
+.text._ZN9PX4IO_I2CC2Eih
+                0x00000000       0x54
+ .text._ZN9PX4IO_I2CC2Eih
+                0x00000000       0x54 px4io_i2c.cpp.o
+                0x00000000                PX4IO_I2C::PX4IO_I2C(int, unsigned char)
+                0x00000000                PX4IO_I2C::PX4IO_I2C(int, unsigned char)
+
+.text._Z19PX4IO_i2c_interfacev
+                0x00000000       0x30
+ .text._Z19PX4IO_i2c_interfacev
+                0x00000000       0x30 px4io_i2c.cpp.o
+                0x00000000                PX4IO_i2c_interface()
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.1  0x00000000     0x15c6
+ .rodata.str1.1
+                0x00000000     0x12e9 px4io.cpp.o
+ .rodata.str1.1
+                0x000012e9      0x2d3 px4io_uploader.cpp.o
+ .rodata.str1.1
+                0x000015bc        0xa px4io_i2c.cpp.o
+
+.rodata._ZTV5PX4IO
+                0x00000000       0x60
+ .rodata._ZTV5PX4IO
+                0x00000000       0x60 px4io.cpp.o
+                0x00000000                vtable for PX4IO
+
+.rodata._ZTV14PX4IO_Uploader
+                0x00000000       0x10
+ .rodata._ZTV14PX4IO_Uploader
+                0x00000000       0x10 px4io_uploader.cpp.o
+                0x00000000                vtable for PX4IO_Uploader
+
+.rodata._ZTV9PX4IO_I2C
+                0x00000000       0x60
+ .rodata._ZTV9PX4IO_I2C
+                0x00000000       0x60 px4io_i2c.cpp.o
+                0x00000000                vtable for PX4IO_I2C
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 px4io.cpp.o
+ .data          0x00000000        0x0 px4io_uploader.cpp.o
+ .data          0x00000000        0x0 px4io_serial.cpp.o
+ .data          0x00000000        0x0 px4io_i2c.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 px4io.cpp.o
+ .bss           0x00000000        0x0 px4io_uploader.cpp.o
+ .bss           0x00000000        0x0 px4io_serial.cpp.o
+ .bss           0x00000000        0x0 px4io_i2c.cpp.o
+ *(COMMON)
+
+.bss._ZN12_GLOBAL__N_15g_devE
+                0x00000000        0x4
+ .bss._ZN12_GLOBAL__N_15g_devE
+                0x00000000        0x4 px4io.cpp.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x1c4
+ *(.comment)
+ .comment       0x00000000       0x71 px4io.cpp.o
+ .comment       0x00000071       0x71 px4io_uploader.cpp.o
+ .comment       0x000000e2       0x71 px4io_serial.cpp.o
+ .comment       0x00000153       0x71 px4io_i2c.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 px4io.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 px4io.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 px4io.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 px4io.cpp.o
+
+.group          0x00000000        0x8
+ .group         0x00000000        0x8 px4io.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x2a8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x1a0 px4io.cpp.o
+ .debug_aranges
+                0x000001a0       0xb0 px4io_uploader.cpp.o
+ .debug_aranges
+                0x00000250       0x58 px4io_i2c.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x5bf7
+ *(.debug_info)
+ .debug_info    0x00000000     0x3a60 px4io.cpp.o
+ .debug_info    0x00003a60     0x1b51 px4io_uploader.cpp.o
+ .debug_info    0x000055b1       0xb0 px4io_serial.cpp.o
+ .debug_info    0x00005661      0x596 px4io_i2c.cpp.o
+
+.debug_abbrev   0x00000000      0xc08
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x5a2 px4io.cpp.o
+ .debug_abbrev  0x000005a2      0x3bf px4io_uploader.cpp.o
+ .debug_abbrev  0x00000961       0x5b px4io_serial.cpp.o
+ .debug_abbrev  0x000009bc      0x24c px4io_i2c.cpp.o
+
+.debug_line     0x00000000     0x1a8e
+ *(.debug_line)
+ .debug_line    0x00000000     0x1122 px4io.cpp.o
+ .debug_line    0x00001122      0x666 px4io_uploader.cpp.o
+ .debug_line    0x00001788       0x9e px4io_serial.cpp.o
+ .debug_line    0x00001826      0x268 px4io_i2c.cpp.o
+
+.debug_frame    0x00000000      0xa24
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x688 px4io.cpp.o
+ .debug_frame   0x00000688      0x290 px4io_uploader.cpp.o
+ .debug_frame   0x00000918      0x10c px4io_i2c.cpp.o
+
+.debug_str      0x00000000     0x2fdb
+ *(.debug_str)
+ .debug_str     0x00000000     0x1ecd px4io.cpp.o
+ .debug_str     0x00001ecd      0xca5 px4io_uploader.cpp.o
+ .debug_str     0x00002b72      0x19b px4io_serial.cpp.o
+ .debug_str     0x00002d0d      0x2ce px4io_i2c.cpp.o
+
+.debug_loc      0x00000000     0x3587
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x26a1 px4io.cpp.o
+ .debug_loc     0x000026a1      0xb9a px4io_uploader.cpp.o
+ .debug_loc     0x0000323b      0x34c px4io_i2c.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x620
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x4b8 px4io.cpp.o
+ .debug_ranges  0x000004b8      0x120 px4io_uploader.cpp.o
+ .debug_ranges  0x000005d8       0x48 px4io_i2c.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 px4io.cpp.o
+ .ARM.attributes
+                0x00000037       0x37 px4io_uploader.cpp.o
+ .ARM.attributes
+                0x0000006e       0x37 px4io_serial.cpp.o
+ .ARM.attributes
+                0x000000a5       0x37 px4io_i2c.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v1_APM.build/c/px4/workspace/PX4Firmware/src/drivers/px4io/module.pre.o elf32-littlearm)

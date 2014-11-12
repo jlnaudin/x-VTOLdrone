@@ -1,0 +1,837 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ms5611.cpp.o
+LOAD ms5611_spi.cpp.o
+LOAD ms5611_i2c.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000        0x0
+ *(.text .stub)
+ .text          0x00000000        0x0 ms5611.cpp.o
+ .text          0x00000000        0x0 ms5611_spi.cpp.o
+ .text          0x00000000        0x0 ms5611_i2c.cpp.o
+ *(.gnu.warning)
+
+.text._Z12ms5611_usagev
+                0x00000000       0x3c
+ .text._Z12ms5611_usagev
+                0x00000000       0x3c ms5611.cpp.o
+                0x00000000                ms5611_usage()
+
+.text._ZN6ms56114crc4EPt
+                0x00000000       0x74
+ .text._ZN6ms56114crc4EPt
+                0x00000000       0x74 ms5611.cpp.o
+                0x00000000                ms5611::crc4(unsigned short*)
+
+.text._ZN10RingBuffer5spaceEv
+                0x00000000       0x38
+ .text._ZN10RingBuffer5spaceEv
+                0x00000000       0x38 ms5611.cpp.o
+                0x00000000                RingBuffer::space()
+
+.text._ZN10RingBuffer5countEv
+                0x00000000       0x2c
+ .text._ZN10RingBuffer5countEv
+                0x00000000       0x2c ms5611.cpp.o
+                0x00000000                RingBuffer::count()
+
+.text._ZN10RingBuffer4sizeEv
+                0x00000000       0x24
+ .text._ZN10RingBuffer4sizeEv
+                0x00000000       0x24 ms5611.cpp.o
+                0x00000000                RingBuffer::size()
+
+.text._ZN10RingBuffer5emptyEv
+                0x00000000       0x2c
+ .text._ZN10RingBuffer5emptyEv
+                0x00000000       0x2c ms5611.cpp.o
+                0x00000000                RingBuffer::empty()
+
+.text._ZN10RingBuffer5_nextEj
+                0x00000000       0x28
+ .text._ZN10RingBuffer5_nextEj
+                0x00000000       0x28 ms5611.cpp.o
+                0x00000000                RingBuffer::_next(unsigned int)
+
+.text._ZN10RingBuffer4fullEv
+                0x00000000       0x34
+ .text._ZN10RingBuffer4fullEv
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::full()
+
+.text._ZN6ms56115resetEv
+                0x00000000       0x68
+ .text._ZN6ms56115resetEv
+                0x00000000       0x68 ms5611.cpp.o
+                0x00000000                ms5611::reset()
+
+.text._ZN6ms56114testEv
+                0x00000000      0x164
+ .text._ZN6ms56114testEv
+                0x00000000      0x164 ms5611.cpp.o
+                0x00000000                ms5611::test()
+
+.text._ZN6ms56119calibrateEj
+                0x00000000      0x14c
+ .text._ZN6ms56119calibrateEj
+                0x00000000      0x14c ms5611.cpp.o
+                0x00000000                ms5611::calibrate(unsigned int)
+
+.text._ZN10RingBuffer10print_infoEPKc
+                0x00000000       0x44
+ .text._ZN10RingBuffer10print_infoEPKc
+                0x00000000       0x44 ms5611.cpp.o
+                0x00000000                RingBuffer::print_info(char const*)
+
+.text._ZN6ms56115test2Ev
+                0x00000000      0x178
+ .text._ZN6ms56115test2Ev
+                0x00000000      0x178 ms5611.cpp.o
+                0x00000000                ms5611::test2()
+
+.text._ZN6MS561110print_infoEv
+                0x00000000      0x15c
+ .text._ZN6MS561110print_infoEv
+                0x00000000      0x15c ms5611.cpp.o
+                0x00000000                MS5611::print_info()
+
+.text._ZN6ms56114infoEv
+                0x00000000       0x3c
+ .text._ZN6ms56114infoEv
+                0x00000000       0x3c ms5611.cpp.o
+                0x00000000                ms5611::info()
+
+.text._ZN6MS56117measureEv
+                0x00000000       0x58
+ .text._ZN6MS56117measureEv
+                0x00000000       0x58 ms5611.cpp.o
+                0x00000000                MS5611::measure()
+
+.text._ZN6MS561110stop_cycleEv
+                0x00000000       0x2c
+ .text._ZN6MS561110stop_cycleEv
+                0x00000000       0x2c ms5611.cpp.o
+                0x00000000                MS5611::stop_cycle()
+
+.text._ZN6MS5611D2Ev
+                0x00000000       0x7c
+ .text._ZN6MS5611D2Ev
+                0x00000000       0x7c ms5611.cpp.o
+                0x00000000                MS5611::~MS5611()
+                0x00000000                MS5611::~MS5611()
+
+.text._ZN6MS5611D0Ev
+                0x00000000       0x2c
+ .text._ZN6MS5611D0Ev
+                0x00000000       0x2c ms5611.cpp.o
+                0x00000000                MS5611::~MS5611()
+
+.text._ZN6MS5611C2EPN6device6DeviceERN6ms56116prom_uE
+                0x00000000       0xdc
+ .text._ZN6MS5611C2EPN6device6DeviceERN6ms56116prom_uE
+                0x00000000       0xdc ms5611.cpp.o
+                0x00000000                MS5611::MS5611(device::Device*, ms5611::prom_u&)
+                0x00000000                MS5611::MS5611(device::Device*, ms5611::prom_u&)
+
+.text._ZN6ms56115startEb
+                0x00000000      0x100
+ .text._ZN6ms56115startEb
+                0x00000000      0x100 ms5611.cpp.o
+                0x00000000                ms5611::start(bool)
+
+.text.ms5611_main
+                0x00000000       0xe0
+ .text.ms5611_main
+                0x00000000       0xe0 ms5611.cpp.o
+                0x00000000                ms5611_main
+
+.text._ZN10RingBufferC2Ejj
+                0x00000000       0x44
+ .text._ZN10RingBufferC2Ejj
+                0x00000000       0x44 ms5611.cpp.o
+                0x00000000                RingBuffer::RingBuffer(unsigned int, unsigned int)
+                0x00000000                RingBuffer::RingBuffer(unsigned int, unsigned int)
+
+.text._ZN10RingBuffer6resizeEj
+                0x00000000       0x48
+ .text._ZN10RingBuffer6resizeEj
+                0x00000000       0x48 ms5611.cpp.o
+                0x00000000                RingBuffer::resize(unsigned int)
+
+.text._ZN10RingBufferD2Ev
+                0x00000000       0x30
+ .text._ZN10RingBufferD2Ev
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::~RingBuffer()
+                0x00000000                RingBuffer::~RingBuffer()
+
+.text._ZN10RingBufferD0Ev
+                0x00000000       0x2c
+ .text._ZN10RingBufferD0Ev
+                0x00000000       0x2c ms5611.cpp.o
+                0x00000000                RingBuffer::~RingBuffer()
+
+.text._ZN10RingBuffer3putEPKvj
+                0x00000000       0x60
+ .text._ZN10RingBuffer3putEPKvj
+                0x00000000       0x60 ms5611.cpp.o
+                0x00000000                RingBuffer::put(void const*, unsigned int)
+
+.text._ZN10RingBuffer3putEd
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEd
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(double)
+
+.text._ZN10RingBuffer3putEf
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEf
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(float)
+
+.text._ZN10RingBuffer3putEy
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEy
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(unsigned long long)
+
+.text._ZN10RingBuffer3putEx
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEx
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(long long)
+
+.text._ZN10RingBuffer3putEj
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEj
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(unsigned int)
+
+.text._ZN10RingBuffer3putEi
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEi
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(int)
+
+.text._ZN10RingBuffer3putEt
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEt
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(unsigned short)
+
+.text._ZN10RingBuffer3putEs
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEs
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(short)
+
+.text._ZN10RingBuffer3putEh
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEh
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(unsigned char)
+
+.text._ZN10RingBuffer3putEa
+                0x00000000       0x34
+ .text._ZN10RingBuffer3putEa
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::put(signed char)
+
+.text._ZN10RingBuffer3getEPvj
+                0x00000000       0x84
+ .text._ZN10RingBuffer3getEPvj
+                0x00000000       0x84 ms5611.cpp.o
+                0x00000000                RingBuffer::get(void*, unsigned int)
+
+.text._ZN10RingBuffer3getERd
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERd
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(double&)
+
+.text._ZN10RingBuffer3getERf
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERf
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(float&)
+
+.text._ZN10RingBuffer3getERy
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERy
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(unsigned long long&)
+
+.text._ZN10RingBuffer3getERx
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERx
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(long long&)
+
+.text._ZN10RingBuffer3getERj
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERj
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(unsigned int&)
+
+.text._ZN10RingBuffer3getERi
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERi
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(int&)
+
+.text._ZN10RingBuffer3getERt
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERt
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(unsigned short&)
+
+.text._ZN10RingBuffer3getERs
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERs
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(short&)
+
+.text._ZN10RingBuffer3getERh
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERh
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(unsigned char&)
+
+.text._ZN10RingBuffer3getERa
+                0x00000000       0x30
+ .text._ZN10RingBuffer3getERa
+                0x00000000       0x30 ms5611.cpp.o
+                0x00000000                RingBuffer::get(signed char&)
+
+.text._ZN10RingBuffer5forceEPKvj
+                0x00000000       0x44
+ .text._ZN10RingBuffer5forceEPKvj
+                0x00000000       0x44 ms5611.cpp.o
+                0x00000000                RingBuffer::force(void const*, unsigned int)
+
+.text._ZN6MS56117collectEv
+                0x00000000      0x2d0
+ .text._ZN6MS56117collectEv
+                0x00000000      0x2d0 ms5611.cpp.o
+                0x00000000                MS5611::collect()
+
+.text._ZN10RingBuffer5forceEd
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEd
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(double)
+
+.text._ZN10RingBuffer5forceEf
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEf
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(float)
+
+.text._ZN10RingBuffer5forceEy
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEy
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(unsigned long long)
+
+.text._ZN10RingBuffer5forceEx
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEx
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(long long)
+
+.text._ZN10RingBuffer5forceEj
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEj
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(unsigned int)
+
+.text._ZN10RingBuffer5forceEi
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEi
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(int)
+
+.text._ZN10RingBuffer5forceEt
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEt
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(unsigned short)
+
+.text._ZN10RingBuffer5forceEs
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEs
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(short)
+
+.text._ZN10RingBuffer5forceEh
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEh
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(unsigned char)
+
+.text._ZN10RingBuffer5forceEa
+                0x00000000       0x34
+ .text._ZN10RingBuffer5forceEa
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::force(signed char)
+
+.text._ZN10RingBuffer5flushEv
+                0x00000000       0x34
+ .text._ZN10RingBuffer5flushEv
+                0x00000000       0x34 ms5611.cpp.o
+                0x00000000                RingBuffer::flush()
+
+.text._ZN6MS561111start_cycleEv
+                0x00000000       0x4c
+ .text._ZN6MS561111start_cycleEv
+                0x00000000       0x4c ms5611.cpp.o
+                0x00000000                MS5611::start_cycle()
+
+.text._ZN6MS56115cycleEv
+                0x00000000       0x78
+ .text._ZN6MS56115cycleEv
+                0x00000000       0x78 ms5611.cpp.o
+                0x00000000                MS5611::cycle()
+
+.text._ZN6MS561116cycle_trampolineEPv
+                0x00000000       0x28
+ .text._ZN6MS561116cycle_trampolineEPv
+                0x00000000       0x28 ms5611.cpp.o
+                0x00000000                MS5611::cycle_trampoline(void*)
+
+.text._ZN6MS56115ioctlEP4fileim
+                0x00000000      0x148
+ .text._ZN6MS56115ioctlEP4fileim
+                0x00000000      0x148 ms5611.cpp.o
+                0x00000000                MS5611::ioctl(file*, int, unsigned long)
+
+.text._ZN6MS56114readEP4filePcj
+                0x00000000       0xc0
+ .text._ZN6MS56114readEP4filePcj
+                0x00000000       0xc0 ms5611.cpp.o
+                0x00000000                MS5611::read(file*, char*, unsigned int)
+
+.text._ZN6MS56114initEv
+                0x00000000       0xf0
+ .text._ZN6MS56114initEv
+                0x00000000       0xf0 ms5611.cpp.o
+                0x00000000                MS5611::init()
+
+.text._ZN10MS5611_SPI9_transferEPhS0_j
+                0x00000000       0x38
+ .text._ZN10MS5611_SPI9_transferEPhS0_j
+                0x00000000       0x38 ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::_transfer(unsigned char*, unsigned char*, unsigned int)
+
+.text._ZN10MS5611_SPI6_reg16Ej
+                0x00000000       0x4c
+ .text._ZN10MS5611_SPI6_reg16Ej
+                0x00000000       0x4c ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::_reg16(unsigned int)
+
+.text._ZN10MS5611_SPI8_measureEj
+                0x00000000       0x34
+ .text._ZN10MS5611_SPI8_measureEj
+                0x00000000       0x34 ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::_measure(unsigned int)
+
+.text._ZN10MS5611_SPI6_resetEv
+                0x00000000       0x34
+ .text._ZN10MS5611_SPI6_resetEv
+                0x00000000       0x34 ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::_reset()
+
+.text._ZN10MS5611_SPI4readEjPvj
+                0x00000000       0x50
+ .text._ZN10MS5611_SPI4readEjPvj
+                0x00000000       0x50 ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::read(unsigned int, void*, unsigned int)
+
+.text._ZN10MS5611_SPI10_read_promEv
+                0x00000000       0x80
+ .text._ZN10MS5611_SPI10_read_promEv
+                0x00000000       0x80 ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::_read_prom()
+
+.text._ZN10MS5611_SPI5ioctlEjRj
+                0x00000000       0x50
+ .text._ZN10MS5611_SPI5ioctlEjRj
+                0x00000000       0x50 ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::ioctl(unsigned int, unsigned int&)
+
+.text._ZN10MS5611_SPI4initEv
+                0x00000000       0x58
+ .text._ZN10MS5611_SPI4initEv
+                0x00000000       0x58 ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::init()
+
+.text._ZN10MS5611_SPID2Ev
+                0x00000000       0x30
+ .text._ZN10MS5611_SPID2Ev
+                0x00000000       0x30 ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::~MS5611_SPI()
+                0x00000000                MS5611_SPI::~MS5611_SPI()
+
+.text._ZN10MS5611_SPID0Ev
+                0x00000000       0x2c
+ .text._ZN10MS5611_SPID0Ev
+                0x00000000       0x2c ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::~MS5611_SPI()
+
+.text._ZN10MS5611_SPIC2Ei9spi_dev_eRN6ms56116prom_uE
+                0x00000000       0x60
+ .text._ZN10MS5611_SPIC2Ei9spi_dev_eRN6ms56116prom_uE
+                0x00000000       0x60 ms5611_spi.cpp.o
+                0x00000000                MS5611_SPI::MS5611_SPI(int, spi_dev_e, ms5611::prom_u&)
+                0x00000000                MS5611_SPI::MS5611_SPI(int, spi_dev_e, ms5611::prom_u&)
+
+.text._Z20MS5611_spi_interfaceRN6ms56116prom_uEb
+                0x00000000       0x40
+ .text._Z20MS5611_spi_interfaceRN6ms56116prom_uEb
+                0x00000000       0x40 ms5611_spi.cpp.o
+                0x00000000                MS5611_spi_interface(ms5611::prom_u&, bool)
+
+.fini
+ *(.fini)
+
+.rodata
+ *(.rodata)
+
+.rodata._ZTV6MS5611
+                0x00000000       0x68
+ .rodata._ZTV6MS5611
+                0x00000000       0x68 ms5611.cpp.o
+                0x00000000                vtable for MS5611
+
+.rodata.str1.1  0x00000000      0x6ca
+ .rodata.str1.1
+                0x00000000      0x675 ms5611.cpp.o
+ .rodata.str1.1
+                0x00000675       0x55 ms5611_spi.cpp.o
+
+.rodata._ZTV10RingBuffer
+                0x00000000       0x10
+ .rodata._ZTV10RingBuffer
+                0x00000000       0x10 ms5611.cpp.o
+                0x00000000                vtable for RingBuffer
+
+.rodata._ZTV10MS5611_SPI
+                0x00000000       0x60
+ .rodata._ZTV10MS5611_SPI
+                0x00000000       0x60 ms5611_spi.cpp.o
+                0x00000000                vtable for MS5611_SPI
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 ms5611.cpp.o
+ .data          0x00000000        0x0 ms5611_spi.cpp.o
+ .data          0x00000000        0x0 ms5611_i2c.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000        0x0 ms5611.cpp.o
+ .bss           0x00000000        0x0 ms5611_spi.cpp.o
+ .bss           0x00000000        0x0 ms5611_i2c.cpp.o
+ *(COMMON)
+
+.bss._ZN6ms56115g_devE
+                0x00000000        0x4
+ .bss._ZN6ms56115g_devE
+                0x00000000        0x4 ms5611.cpp.o
+                0x00000000                ms5611::g_dev
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x153
+ *(.comment)
+ .comment       0x00000000       0x71 ms5611.cpp.o
+ .comment       0x00000071       0x71 ms5611_spi.cpp.o
+ .comment       0x000000e2       0x71 ms5611_i2c.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x2a8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x230 ms5611.cpp.o
+ .debug_aranges
+                0x00000230       0x78 ms5611_spi.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x3aca
+ *(.debug_info)
+ .debug_info    0x00000000     0x31d2 ms5611.cpp.o
+ .debug_info    0x000031d2      0x869 ms5611_spi.cpp.o
+ .debug_info    0x00003a3b       0x8f ms5611_i2c.cpp.o
+
+.debug_abbrev   0x00000000      0x970
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x634 ms5611.cpp.o
+ .debug_abbrev  0x00000634      0x307 ms5611_spi.cpp.o
+ .debug_abbrev  0x0000093b       0x35 ms5611_i2c.cpp.o
+
+.debug_line     0x00000000     0x105d
+ *(.debug_line)
+ .debug_line    0x00000000      0xce0 ms5611.cpp.o
+ .debug_line    0x00000ce0      0x2e8 ms5611_spi.cpp.o
+ .debug_line    0x00000fc8       0x95 ms5611_i2c.cpp.o
+
+.debug_frame    0x00000000      0xa30
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x898 ms5611.cpp.o
+ .debug_frame   0x00000898      0x198 ms5611_spi.cpp.o
+
+.debug_str      0x00000000     0x190c
+ *(.debug_str)
+ .debug_str     0x00000000     0x1289 ms5611.cpp.o
+ .debug_str     0x00001289      0x4f3 ms5611_spi.cpp.o
+ .debug_str     0x0000177c      0x190 ms5611_i2c.cpp.o
+
+.debug_loc      0x00000000     0x259a
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x1fe4 ms5611.cpp.o
+ .debug_loc     0x00001fe4      0x5b6 ms5611_spi.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x480
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x3c8 ms5611.cpp.o
+ .debug_ranges  0x000003c8       0xb8 ms5611_spi.cpp.o
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x37 ms5611.cpp.o
+ .ARM.attributes
+                0x00000037       0x37 ms5611_spi.cpp.o
+ .ARM.attributes
+                0x0000006e       0x37 ms5611_i2c.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(c:/px4/workspace/PX4Firmware/Build/px4fmu-v2_APM.build/c/px4/workspace/PX4Firmware/src/drivers/ms5611/module.pre.o elf32-littlearm)

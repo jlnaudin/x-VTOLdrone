@@ -1,0 +1,47 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"file_exclude_patterns":
+			[
+				"*.o",
+				"*.a",
+				"*.d",
+				".built",
+				".context",
+				".depend",
+				".config",
+				".version",
+				"Make.dep",
+				".configured",
+				"*.sublime-project",
+				"*.sublime-workspace",
+				".project",
+				".cproject",
+				"cscope.out"
+			],
+			"folder_exclude_patterns":
+			[
+				".settings",
+				"nuttx/arch/arm/src/board",
+				"nuttx/arch/arm/src/chip"
+			]
+		}
+	],
+	"settings":
+	{
+		"tab_size": 8,
+		"translate_tabs_to_spaces": false,
+	       "highlight_line": true
+	},
+	"build_systems":
+	[
+		{
+			"name": "PX4",
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+			"cmd": ["make"]
+		}
+	]
+}
